@@ -60,6 +60,10 @@ Jo a posé 4 questions types dans Cowork (Sonnet, réflexion élevée). Le plugi
 
 Deux essais réels ont montré que Claude n'agit pas de lui-même dans le navigateur réel de l'utilisateur. Depuis la 0.3.2, la première réponse propose « réponds oui » ; sur accord, l'annonce est lue dans le navigateur. Essai réel du cas 4 en 0.3.2 dans Cowork : réussi (proposition au premier tour, lecture sur accord, verdict, questions au vendeur, 5 tests de remise, négociation argumentée, « non vérifié », source datée). Écarts mineurs : verdict pas toujours formulé avec l'un des trois mots, statut de lecture des sources parfois absent.
 
+### Version 0.3.3 : exemples remplis dans les gabarits (D27)
+
+Essais réels dans Cowork en 0.3.3 : cas 2 (compatibilité) entièrement conforme (colonne Source par ligne, verdict global avec points à confirmer, 10 sources datées avec statut, plus de forum exclu, navigateur proposé pour la page support MSI) ; cas 3 (IA locale) conforme (bilan mémoire ligne par ligne, puissance chiffrée, référence citée). Écarts mineurs reportés à la prochaine version : formulation « ne passe pas » quand seule la marge de sécurité dépasse, deux sources sans date de lecture.
+
 ## 3. Décisions prises seul (extrait de DECISIONS.md)
 
 - D1 : projet dans `Projects\pc-hardware-advisor` (le dossier « Projet » n'existe pas).

@@ -6,6 +6,11 @@ The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.1.0/),
 
 ## [Unreleased]
 
+### To do (not released)
+
+- `size-local-ai`: when only the safety margin exceeds the card memory, say "fits without margin, risky" rather than "does not fit".
+- Every external source with read date and status (two were missing in a real try).
+
 ## [0.3.3] - 2026-11-07
 
 ### Fixed
