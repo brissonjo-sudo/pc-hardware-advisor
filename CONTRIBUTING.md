@@ -38,19 +38,27 @@ This is not legal advice; these terms were written for the project and have not 
 
 ## Validate and test
 
-From the repository root, validate the plugin structure:
+From the repository root, install the check dependency, then run the content checks and the build (these two also run in CI on every push and pull request):
+
+```
+python -m pip install -r requirements-dev.txt
+python scripts/check_content.py
+python scripts/build_plugin.py
+```
+
+Validate the plugin structure with Claude Code:
 
 ```
 claude plugin validate . --profile directory
 ```
 
-Run the eval suite:
+Run the eval suite (manual only: it runs real Claude sessions, needs your own Claude Code login and costs usage, so CI does not run it):
 
 ```
 claude plugin eval . --eval-dir tests --no-publish --trust-plugin --judge-model sonnet
 ```
 
-Both should pass before you open a pull request. Say in the description if you could not run them.
+The checks, the build and the validation should pass before you open a pull request. Say in the description whether you ran the eval suite and its scores.
 
 ## Commits
 
