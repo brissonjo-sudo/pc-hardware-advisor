@@ -31,7 +31,7 @@ Hors périmètre : consoles, smartphones, tablettes, ordinateurs portables en ta
 - **Prix livré, ou « hors frais ».** Les prix incluent la TVA, les droits de douane et l'expédition vers votre pays. Lorsqu'un élément ne peut pas être établi, la ligne indique « hors frais » au lieu de deviner.
 - **La fiabilité est affichée.** Chaque chiffre indique à quel point il est étayé.
 - **Rien n'est inventé.** Si une caractéristique, un prix ou une règle ne peut pas être sourcé, Claude le dit.
-- **Les sites bloquants ne sont jamais contournés.** Si un site refuse la lecture automatisée, Claude le note comme bloqué et vous demande une capture d'écran ou un texte copié. Aucun user agent alternatif, cache, miroir ni automatisation de navigateur n'est utilisé pour contourner ce blocage.
+- **Sites bloqués : repli sur le navigateur, jamais de contournement.** Si un site refuse la lecture automatisée et qu'un outil de navigateur est disponible, Claude ouvre de sa propre initiative les quelques pages qui comptent dans le navigateur, en lecture seule, et le signale. Il s'arrête à tout captcha ou contrôle anti-robot et n'imite jamais un humain pour le franchir. Sinon, il vous demande une capture d'écran ou un texte copié. Aucun user agent alternatif, cache ni miroir n'est utilisé.
 - **Lecture seule.** Le plugin n'achète jamais, ne crée jamais de compte, ne soumet jamais de formulaire et ne contacte jamais de vendeur. C'est à vous de le faire.
 
 Dix références partagées (méthode de recherche, revendeurs par pays, critères de revendeur, achat à l'international, liste de contrôle du marché d'occasion, sockets et chipsets, mémoire, alimentations et connectiques, formats et boîtiers, bande passante des GPU pour l'IA) sont datées et sourcées. Elles ont été vérifiées pour la dernière fois le 2026-11-07.
@@ -80,7 +80,7 @@ Claude choisit le bon skill à partir de la demande. Quelques exemples :
 
 ## Connecteurs
 
-Les skills désignent les outils par catégorie (recherche web, récupération de pages web, comparateur de prix, site d'annonces, planificateur, notifications), et non par produit : tout outil équivalent convient. Rien dans le plugin n'exige un compte, une clé d'API ou un service payant. Les catégories, les sources de données facultatives et les règles qui s'appliquent à tous les outils sont décrites dans [CONNECTORS.md](../CONNECTORS.md).
+Les skills désignent les outils par catégorie (recherche web, récupération de pages web, comparateur de prix, site d'annonces, navigateur, planificateur, notifications), et non par produit : tout outil équivalent convient. Rien dans le plugin n'exige un compte, une clé d'API ou un service payant. Les catégories, les sources de données facultatives et les règles qui s'appliquent à tous les outils sont décrites dans [CONNECTORS.md](../CONNECTORS.md).
 
 ## Limites
 

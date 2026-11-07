@@ -20,7 +20,7 @@ If the item spec or the source list is missing, return one line saying what is m
 For each source, once:
 
 1. Fetch the page (or run the given query, then fetch the matching result page). If it is a search or category listing, find the matching item in it and fetch that item's PRODUCT page: report price, seller line, stock and shipping from the product page. Report a listing price only if the product page is unreadable, with Page read `partial (listing only)` and confidence `medium` at most. One fetch per page. Do not retry a failed page.
-2. Never circumvent a block. No alternate user agents, caches, mirrors, archive copies, logins or account creation. If the page returns a refusal, captcha, login wall, rate limit or JavaScript-only content without the price in the text, put it in "Unreadable" with the reason.
+2. Never circumvent a block, and never use a browser (the caller decides on any browser fallback). No alternate user agents, caches, mirrors, archive copies, logins or account creation. If the page returns a refusal, captcha, login wall, rate limit or JavaScript-only content without the price in the text, put it in "Unreadable" with the reason.
 3. Take the exact item shown. If it differs from the requested spec (other capacity, speed, SKU, OEM vs boxed), still report it only if it is the closest match, and write the differences in the Item cell. Never relabel it as the requested item.
 4. Capture from the page text only:
    - Item as shown (model, SKU, capacity, speed).

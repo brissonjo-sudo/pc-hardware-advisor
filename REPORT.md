@@ -52,6 +52,10 @@ Lecture honnête :
 
 Jo a posé 4 questions types dans Cowork (Sonnet, réflexion élevée). Le plugin s'y déclenche et l'agent `price-scout` travaille en lots. Le raisonnement était fiable dans les 4 cas ; les défauts portaient sur la finition (notes de travail, gabarits incomplets, sources non datées) et sur un contournement : lecture d'une annonce Leboncoin bloquée via le navigateur de l'utilisateur, à sa demande. Corrigé par un contrôle final commun et une règle explicite (D23), avec un cas de test 08. Passage 11 complet : score global 0,80 (meilleur), 5 cas sur 8 au seuil, cas 08 réussi.
 
+### Version 0.3.0 : repli sur le navigateur (D24)
+
+À la demande de Jo, le plugin ouvre de lui-même dans le navigateur, en lecture seule, les quelques pages bloquées dont une réponse a besoin, et s'arrête à tout captcha ou contrôle anti-robot. Jamais d'imitation d'un humain, jamais dans les tâches planifiées ni dans `price-scout`. Passage 12 : cas 04 et 08 à 1,00. Risque résiduel : les conditions d'utilisation de certains sites peuvent interdire toute lecture automatisée (non vérifié).
+
 ## 3. Décisions prises seul (extrait de DECISIONS.md)
 
 - D1 : projet dans `Projects\pc-hardware-advisor` (le dossier « Projet » n'existe pas).

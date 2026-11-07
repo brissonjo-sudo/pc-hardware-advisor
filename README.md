@@ -29,7 +29,7 @@ Out of scope: consoles, smartphones, tablets, laptops as products, and anything 
 - **Landed price, or "excluding fees".** Prices include VAT, duties and shipping to your country. When a component cannot be established, the row says "excluding fees" instead of guessing.
 - **Confidence is shown.** Each figure says how well it is supported.
 - **Nothing is invented.** If a spec, a price or a rule cannot be sourced, Claude says so.
-- **Blocked sites are never circumvented.** If a site refuses automated reading, Claude records it as blocked and asks you for a screenshot or pasted text. No alternate user agents, caches, mirrors or browser automation are used to get around it.
+- **Blocked sites: browser fallback, never tricks.** If a site refuses automated reading and a browser tool is available, Claude opens the few pages that matter in the browser on its own initiative, read-only, and says so. It stops at any captcha or bot check and never imitates a human to pass one. Otherwise it asks you for a screenshot or pasted text. No alternate user agents, caches or mirrors are used.
 - **Read-only.** The plugin never buys, never creates accounts, never submits forms and never contacts sellers. You do that yourself.
 
 Ten shared references (research method, retailers by country, retailer criteria, international buying, used-market checklist, sockets and chipsets, memory, power supplies and connectors, form factors and cases, GPU bandwidth for AI) are dated and sourced. They were last checked on 2026-11-07.
@@ -78,7 +78,7 @@ Claude picks the right skill from the request. A few examples:
 
 ## Connectors
 
-Skills refer to tools by category (web search, web fetch, price comparator, classifieds site, scheduler, notifications), not by product, so any equivalent tool works. Nothing in the plugin requires an account, an API key or a paid service. Categories, optional data sources and the rules that apply to every tool are in [CONNECTORS.md](CONNECTORS.md).
+Skills refer to tools by category (web search, web fetch, price comparator, classifieds site, browser, scheduler, notifications), not by product, so any equivalent tool works. Nothing in the plugin requires an account, an API key or a paid service. Categories, optional data sources and the rules that apply to every tool are in [CONNECTORS.md](CONNECTORS.md).
 
 ## Limits
 

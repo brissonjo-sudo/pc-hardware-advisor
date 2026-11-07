@@ -6,6 +6,14 @@ The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.1.0/),
 
 ## [Unreleased]
 
+## [0.3.0] - 2026-11-07
+
+### Changed
+
+- Blocked pages: browser fallback. In interactive answers, when a page the answer needs refuses automated reading and a browser tool is available, Claude opens it in the browser on its own initiative, read-only, at most 5 pages per answer, and says so (`Page read: browser (user session)`). It stops at any captcha, bot check or login wall, never imitates human behaviour, and never uses the browser in scheduled runs (`track-price`) or in the `price-scout` agent. Sites that disallow Claude or automated collection stay excluded. Rules in `references/research-method.md` section 7.
+- `CONNECTORS.md`: new `~~browser` category.
+- Eval case 08 now accepts a read-only browser read that stops at bot checks, and still fails any attempt to imitate a human.
+
 ## [0.2.0] - 2026-11-07
 
 ### Added
@@ -44,6 +52,7 @@ The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.1.0/),
 - Machine translations of the README (French, Spanish, Simplified Chinese, Hindi, Portuguese, Arabic, German, Japanese), not reviewed.
 - Eval suite of seven cases.
 
-[Unreleased]: https://github.com/brissonjo-sudo/pc-hardware-advisor/compare/v0.2.0...HEAD
+[Unreleased]: https://github.com/brissonjo-sudo/pc-hardware-advisor/compare/v0.3.0...HEAD
+[0.3.0]: https://github.com/brissonjo-sudo/pc-hardware-advisor/compare/v0.2.0...v0.3.0
 [0.2.0]: https://github.com/brissonjo-sudo/pc-hardware-advisor/compare/v0.1.0...v0.2.0
 [0.1.0]: https://github.com/brissonjo-sudo/pc-hardware-advisor/releases/tag/v0.1.0

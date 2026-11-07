@@ -101,7 +101,7 @@ Keep prose short. No narration of the search process.
 
 ## 9. Blocked or unreadable sources
 
-Never circumvent. No alternate user agents, caches, mirrors or archive copies used to dodge a block; no browser automation to get around a block; no login attempts.
+Never circumvent with tricks: no alternate user agents, caches, mirrors or archive copies used to dodge a block; no login attempts. For at most 5 decisive pages (the cheapest candidates first), apply the browser fallback of `${CLAUDE_PLUGIN_ROOT}/references/research-method.md` section 7; `price-scout` itself never uses a browser.
 
 1. Record the page as `blocked (<reason>)` or `partial (<what was missing>)`.
 2. List it in "Unreadable sources" in the answer. Do not drop it silently.

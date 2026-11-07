@@ -14,12 +14,13 @@ Nothing in this plugin requires an account, an API key or a paid service. Option
 | Web fetch | `~~web fetch` | Read one public page as text (retailer, comparator, official page) | Built-in web fetch, a page-reader connector |
 | Price comparator | `~~price comparator` | Discover which merchants list an item; never quoted as a final price | Country comparators listed in `references/retailers-by-country.md`, or a comparator connector |
 | Classifieds site | `~~classifieds site` | Recent sold or asking prices for used parts | Country classifieds listed in `references/retailers-by-country.md` |
+| Browser | `~~browser` | Fallback to read a few pages that refuse automated reading, read-only, in interactive answers only | Built-in browser pane, a browser extension connected to the user's browser |
 | Scheduler | `~~scheduler` | Run `track-price` checks on a schedule | Session scheduler, desktop-app scheduled tasks, cloud scheduled routines |
 | Notifications | `~~notifications` | Deliver a price alert | The scheduler's own run notice, a chat or e-mail connector |
 
 ## Rules that apply whatever the tool
 
-- **No circumvention.** A page that refuses automated reading (403, captcha, login wall, robots rules, JavaScript-only content) is recorded as blocked. No alternate user agents, caches, mirrors, archive copies or browser automation are used to get around it. Claude asks the user for a screenshot or pasted text instead.
+- **No tricks, browser fallback only.** A page that refuses automated reading (403, JavaScript-only content) may be opened in a `~~browser` tool, read-only, for the few pages an interactive answer needs. Claude stops at any captcha, bot check or login wall, never imitates human behaviour, never uses alternate user agents, caches, mirrors or archive copies, and never uses the browser in scheduled runs or sub-agents. Without a browser, Claude asks the user for a screenshot or pasted text. Rules: `references/research-method.md` section 7.
 - **Read-only.** No tool is ever used to buy, create an account, submit a form or contact a seller.
 - **Dated data.** Every value read through a connector carries its source and read date.
 

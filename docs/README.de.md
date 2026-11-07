@@ -31,7 +31,7 @@ Nicht im Umfang enthalten: Konsolen, Smartphones, Tablets, Laptops als Produkte 
 - **Endpreis, oder „ohne Gebühren".** Preise enthalten MwSt., Zölle und Versand in dein Land. Lässt sich ein Bestandteil nicht ermitteln, steht in der Zeile „ohne Gebühren", statt zu raten.
 - **Die Verlässlichkeit wird angezeigt.** Jede Angabe zeigt, wie gut sie belegt ist.
 - **Nichts wird erfunden.** Lässt sich eine Spezifikation, ein Preis oder eine Regel nicht belegen, sagt Claude das.
-- **Gesperrte Seiten werden nie umgangen.** Verweigert eine Seite das automatisierte Auslesen, erfasst Claude sie als gesperrt und bittet dich um einen Screenshot oder eingefügten Text. Es werden keine alternativen User-Agents, Caches, Spiegel oder Browser-Automatisierung verwendet, um das zu umgehen.
+- **Gesperrte Seiten: Ausweichen auf den Browser, niemals Tricks.** Verweigert eine Seite das automatisierte Auslesen und steht ein Browser-Werkzeug zur Verfügung, öffnet Claude die wenigen wichtigen Seiten von sich aus im Browser, nur lesend, und sagt das. Bei Captchas oder Bot-Prüfungen hält es an und gibt sich nie als Mensch aus, um sie zu umgehen. Andernfalls bittet es dich um einen Screenshot oder eingefügten Text. Es werden keine alternativen User-Agents, Caches oder Spiegel verwendet.
 - **Nur lesend.** Das Plugin kauft nie, legt keine Konten an, sendet keine Formulare ab und kontaktiert keine Verkäufer. Das machst du selbst.
 
 Zehn gemeinsame Referenzen (Rechercheverfahren, Händler nach Land, Kriterien für Händler, internationaler Einkauf, Checkliste für den Gebrauchtmarkt, Sockel und Chipsätze, Speicher, Netzteile und Anschlüsse, Formfaktoren und Gehäuse, GPU-Bandbreite für KI) sind datiert und mit Quellen belegt. Sie wurden zuletzt am 2026-11-07 geprüft.
@@ -80,7 +80,7 @@ Claude wählt den passenden Skill anhand der Anfrage. Ein paar Beispiele:
 
 ## Connectors
 
-Die Skills verweisen auf Werkzeuge nach Kategorie (Websuche, Web-Abruf, Preisvergleich, Kleinanzeigen-Seite, Terminplaner, Benachrichtigungen), nicht nach Produkt, daher funktioniert jedes gleichwertige Werkzeug. Nichts im Plugin erfordert ein Konto, einen API-Schlüssel oder einen kostenpflichtigen Dienst. Kategorien, optionale Datenquellen und die Regeln, die für jedes Werkzeug gelten, stehen in [CONNECTORS.md](../CONNECTORS.md).
+Die Skills verweisen auf Werkzeuge nach Kategorie (Websuche, Web-Abruf, Preisvergleich, Kleinanzeigen-Seite, Browser, Terminplaner, Benachrichtigungen), nicht nach Produkt, daher funktioniert jedes gleichwertige Werkzeug. Nichts im Plugin erfordert ein Konto, einen API-Schlüssel oder einen kostenpflichtigen Dienst. Kategorien, optionale Datenquellen und die Regeln, die für jedes Werkzeug gelten, stehen in [CONNECTORS.md](../CONNECTORS.md).
 
 ## Grenzen
 
