@@ -8,3 +8,6 @@ tests/results/*/
 .DS_Store
 Thumbs.db
 graphify-out/cache/
+tests/results/*.json
+tests/results/*.html
+tests/results/*.log
