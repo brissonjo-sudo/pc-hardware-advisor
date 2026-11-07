@@ -96,6 +96,8 @@ Fiables (lues en entier, confiance haute) : pages produit et spécifications Int
 - Variance des tests à prix réels : passer à `--runs 3` et à une suite de cas « hors ligne » (pages fournies en capture) pour isoler le comportement du skill du web du jour.
 - Pistes : connecteur comparateur de prix par catégorie, API à clé utilisateur (eBay Browse, Keepa), nouvelles zones (Pologne, pays nordiques, Corée, Inde), mode « capture d'écran d'abord » pour les sites bloqués.
 
+- **Vérifications automatiques** (audit Manus, D28) : la CI exécute le contrôle du contenu et la construction du paquet. Les évaluations comportementales restent manuelles (sessions Claude réelles, coût d'usage) : `tests/results/` est un historique, pas un test rejoué à chaque changement.
+
 ## 6. Consommation par phase et par modèle
 
 Jetons des sous-agents (relevés en fin de tâche) :

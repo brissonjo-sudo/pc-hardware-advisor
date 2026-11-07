@@ -10,6 +10,8 @@ Vault : `C:\Users\Krn\Documents\ClaudeMemory\02-Projects\pc-hardware-advisor\`
 - Plugin Claude Code / Cowork, contenu Markdown uniquement (skills, références, agent).
 - Langue du paquet : anglais. Fichiers de pilotage (`DECISIONS.md`, `ORCHESTRATION.md`, `REPORT.md`) : français, sans tiret cadratin.
 - Licence : PolyForm Noncommercial 1.0.0. Ne jamais écrire « open source » ni MIT.
+- Dépendance des contrôles : `python -m pip install -r requirements-dev.txt` (PyYAML)
+- Contrôler : `python scripts/check_content.py` (aussi en CI, `.github/workflows/checks.yml`)
 - Valider : `claude plugin validate . --profile directory`
 - Tester : `claude plugin eval . --eval-dir tests --no-publish --trust-plugin --judge-model sonnet`
 - Construire : `python scripts/build_plugin.py` (exclut tests, research, pilotage)
