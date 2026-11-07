@@ -67,7 +67,7 @@ If a page is blocked, JavaScript-only or unreadable, record it as "blocked (<rea
 
 ### Step 6. Self-check
 
-Before answering: every verdict has a source and a confidence; every condition is an action; nothing comes from memory only; blocked pages and gaps are listed; the overall verdict matches the worst pair.
+Before answering: every verdict has a source and a confidence; every condition is an action; nothing comes from memory only; blocked pages and gaps are listed (for the minimum BIOS, say whether the board's CPU support list was read or blocked); the overall verdict matches the worst pair. Then run the final answer gate in `${CLAUDE_PLUGIN_ROOT}/references/research-method.md` section 11.
 
 ## 3. Output template
 
@@ -93,7 +93,8 @@ One sentence: the main blocker or condition.
 ```
 
 Rules for the table:
-- One row per pair checked, in the fixed order of step 2. The overall line equals the worst row.
+- Always use the table, even for one or two pairs; a numbered list does not replace it. One row per pair checked, in the fixed order of step 2. The overall line equals the worst row.
+- Prefer the manufacturer page or the reference row over a retailer page for any spec (dimensions, power, connectors).
 - Confidence: `high` (official page read in full, or a high-confidence reference row), `medium` (secondary or snippet, or an older reference), `low` (forum, retailer or unconfirmed). Add "solid / plausible / to verify" in the user's language if it helps.
 - For references, cite the shared file and its source number, then list the underlying URL in Sources.
 - Keep part names exact. Label assumptions in the Condition column.

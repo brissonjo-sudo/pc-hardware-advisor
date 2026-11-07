@@ -117,3 +117,5 @@ Never circumvent. No alternate user agents, caches, mirrors or archive copies us
 5. Do the table columns match the canonical row exactly?
 6. Is anything from memory only? Remove it or mark `not verified`.
 7. Did you avoid any purchase, account creation, form or contact?
+8. Did you flag struck-through "was" prices and run the red-flag check on marketplace or unconfirmed sellers cheaper than the best direct price?
+9. Run the final answer gate in `${CLAUDE_PLUGIN_ROOT}/references/research-method.md` section 11 (no working notes, full template, complete dated sources).

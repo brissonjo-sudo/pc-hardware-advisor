@@ -117,3 +117,4 @@ Keep prose short; no narration of the search process.
 8. Are variants priced as deltas, with compatibility re-run?
 9. Are watch-outs, sacrifices, not-verified items and exactly one next action present?
 10. No purchase, account, form or contact; blocked pages recorded without workaround.
+11. Run the final answer gate in `${CLAUDE_PLUGIN_ROOT}/references/research-method.md` section 11.

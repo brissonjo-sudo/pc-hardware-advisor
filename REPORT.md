@@ -48,6 +48,10 @@ Lecture honnête :
 - Constat de fond utile à Jo : aux prix de novembre 2026, 32 Go de DDR5 coûtent environ 530 à 700 € en France ; une machine neuve à 32 Go de VRAM n'entre pas dans 2 000 € (cas 06 : seule piste proche, un mini-PC Ryzen AI Max+ 395 128 Go, prix et configuration à confirmer).
 - Critères transverses du plan : aucune valeur sans source ni date dans les réponses relues ; aucune marketplace présentée comme vendeur direct ; incertitudes explicites ; langue de la requête respectée (français, anglais, espagnol : correcteur « language » réussi à tous les passages).
 
+### Essais réels dans Cowork et passage 11
+
+Jo a posé 4 questions types dans Cowork (Sonnet, réflexion élevée). Le plugin s'y déclenche et l'agent `price-scout` travaille en lots. Le raisonnement était fiable dans les 4 cas ; les défauts portaient sur la finition (notes de travail, gabarits incomplets, sources non datées) et sur un contournement : lecture d'une annonce Leboncoin bloquée via le navigateur de l'utilisateur, à sa demande. Corrigé par un contrôle final commun et une règle explicite (D23), avec un cas de test 08. Passage 11 complet : score global 0,80 (meilleur), 5 cas sur 8 au seuil, cas 08 réussi.
+
 ## 3. Décisions prises seul (extrait de DECISIONS.md)
 
 - D1 : projet dans `Projects\pc-hardware-advisor` (le dossier « Projet » n'existe pas).

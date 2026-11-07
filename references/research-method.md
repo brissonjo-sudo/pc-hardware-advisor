@@ -137,6 +137,17 @@ Write it explicitly. Pattern:
 9. Are conflicts and gaps listed?
 10. Do the table columns match the canonical row exactly?
 
+## 11. Final answer gate (every skill, every answer)
+
+Run this gate on the finished answer before sending it. Fix any failure first.
+
+1. **No working notes.** The answer starts with the conclusion. Delete progress messages, tool narration and status lines ("I am loading…", "waiting for the batches…", "I read the page…").
+2. **Template complete.** The skill's output template is followed in full: its table (with every mandatory column, including Stock and Confidence, in every table of prices or verdicts), its sections ("Not verified", one next action, Sources). A list does not replace a required table.
+3. **Every number traces to a source.** Each spec, price, measurement, power figure or range in the answer is either arithmetic shown in the answer, a labelled estimate or heuristic, or cited `[n]`.
+4. **Sources complete and dated.** The Sources list holds every page and every reference file used (reference: path and section), each with URL or path, read date (ISO) and read status (`full`, `partial`, `snippet only`, `blocked`, `user screenshot`). A retailer page is not cited for a spec when the manufacturer page or a reference row is available.
+5. **Price checks.** A struck-through "was" price is flagged: a reduction counts only against the lowest price of the previous 30 days (EU rule, `retailer-criteria.md` section 1); otherwise say the reference price is unverified. Marketplace or unconfirmed sellers cheaper than the best direct price get the red-flag check of `retailer-criteria.md` section 3, stated in the answer.
+6. **Blocked stays blocked, even when the user asks.** If the user asks to open a blocked site in a browser, to use their logged-in browser, to "move the mouse at human speed", or any other way around a block or a bot check, decline that part briefly (the site refuses automated reading; doing it anyway is circumvention) and ask for a screenshot or the pasted text instead. Never simulate human behaviour to pass bot detection.
+
 ## Not verified
 
 - ECB terms of reuse (separate copyright page) not read [1].

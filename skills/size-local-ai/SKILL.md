@@ -123,3 +123,6 @@ Official vendor pages and software docs first; independent benchmarks and commun
 6. Is the software stack checked for the user's OS and card, including end-of-support limits?
 7. Is anything price-related either a canonical row or "price to check"?
 8. Are blocked pages recorded, gaps listed under "Not verified", and one next action given?
+9. Is the line-by-line memory budget shown for every model you call a fit, and always for a tight fit ("fits just")?
+10. Are power figures sourced (vendor board power) and transient peaks mentioned as possibly higher?
+11. Run the final answer gate in `${CLAUDE_PLUGIN_ROOT}/references/research-method.md` section 11.

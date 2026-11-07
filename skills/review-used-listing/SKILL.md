@@ -79,4 +79,6 @@ For a negotiation margin, give a number or percentage only if the market compari
 8. **Next action**: one concrete step for the user.
 9. `## Sources`: numbered, each with URL or "user screenshot", date read, read status.
 
-Self-check before answering: every price has a date, seller type, currency and VAT status or `unknown`; no stale snapshot presented as current; blocked pages recorded with no workaround; hard avoid triggers checked; nothing unverified stated as fact.
+Always include the handover tests (section 5) in the first answer, even when you also send seller questions: the user may meet the seller before writing back. A market range ("similar listings 855 to 1,400") carries its source, date, basis (sold or asking) and sample size.
+
+Self-check before answering: every price has a date, seller type, currency and VAT status or `unknown`; no stale snapshot presented as current; blocked pages recorded with no workaround; hard avoid triggers checked; nothing unverified stated as fact. Then run the final answer gate in `${CLAUDE_PLUGIN_ROOT}/references/research-method.md` section 11.

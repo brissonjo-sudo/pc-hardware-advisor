@@ -96,3 +96,10 @@ State in the confirmation what the tracker cannot guarantee: pages that need Jav
 ## Modify or stop
 
 When the user asks to change the threshold, frequency, item or channel: update the scheduled task through the scheduler tool (or give the new definition), append a `config change` note to the history, and confirm only what the tool confirmed. When the user asks to stop: disable or delete the task through the scheduler tool, confirm it, and keep the history file unless the user asks to delete it. Ask before deleting any file.
+
+## Self-check before answering
+
+1. Were the baseline hunt run and the history file created before any question?
+2. For a persistent scheduler, was the full definition shown and one explicit confirmation asked before creating it?
+3. Is a task reported as created only when the tool confirmed it?
+4. Run the final answer gate in `${CLAUDE_PLUGIN_ROOT}/references/research-method.md` section 11.
