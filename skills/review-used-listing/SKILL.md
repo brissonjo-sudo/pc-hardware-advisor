@@ -10,7 +10,7 @@ Judge one second-hand listing for a desktop PC part and answer with a verdict. A
 ## 1. Collect inputs
 
 - Listing content: link, pasted text, or screenshot(s). Ask for photos too if only text was given.
-- If only a link was given: try `~~web fetch`. If the page is blocked, needs a login, or is JavaScript-only, record it as `blocked (<reason>)` or `partial (<what was missing>)`. Never circumvent with tricks (no alternate user agents, caches, mirrors, archive copies). Before asking the user for anything, apply the browser fallback of `${CLAUDE_PLUGIN_ROOT}/references/research-method.md` section 7 on your own initiative (search and load a deferred browser tool if needed): open the listing in the browser, read it (text, price, photos, seller profile), stop at any bot check. If the fallback stops or no browser is available, ask for a screenshot or pasted text and continue with that (Page read: `user screenshot`, with the capture date).
+- If only a link was given: try `~~web fetch`. If the page is blocked, needs a login, or is JavaScript-only, record it as `blocked (<reason>)` or `partial (<what was missing>)`. Never circumvent with tricks (no alternate user agents, caches, mirrors, archive copies). Apply the browser fallback of `${CLAUDE_PLUGIN_ROOT}/references/research-method.md` section 7: search and load a deferred browser tool if needed, then end this first answer with the one-line offer ("I can open the listing in your browser: reply yes, or send a screenshot"). On the user's yes, open the listing, read text, price, photos and seller profile, stop at any bot check, and give the full review in that answer. Without a browser, ask for a screenshot or pasted text and continue with that (Page read: `user screenshot`, with the capture date).
 - Buyer location (country, currency, region): needed to pick the right market. Ask if missing.
 - Intended use (gaming, AI/local inference, workstation, upgrade of an existing PC): ask only if it changes the verdict (for example VRAM need). Ask for the target PC when compatibility matters.
 
@@ -79,6 +79,6 @@ For a negotiation margin, give a number or percentage only if the market compari
 8. **Next action**: one concrete step for the user.
 9. `## Sources`: numbered, each with URL or "user screenshot", date read, read status.
 
-Always include the handover tests (section 5) in the first answer, even when you also send seller questions: the user may meet the seller before writing back. A market range ("similar listings 855 to 1,400") carries its source, date, basis (sold or asking) and sample size.
+Every answer that gives a verdict includes the handover tests (section 5), including follow-up turns after reading the listing in a browser or a screenshot, even when you also send seller questions: the user may meet the seller before writing back. A market range ("similar listings 855 to 1,400") carries its source, date, basis (sold or asking) and sample size.
 
 Self-check before answering: every price has a date, seller type, currency and VAT status or `unknown`; no stale snapshot presented as current; blocked pages recorded with no workaround; hard avoid triggers checked; nothing unverified stated as fact. Then run the final answer gate in `${CLAUDE_PLUGIN_ROOT}/references/research-method.md` section 11.

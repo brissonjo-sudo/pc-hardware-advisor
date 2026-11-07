@@ -20,7 +20,7 @@ Nothing in this plugin requires an account, an API key or a paid service. Option
 
 ## Rules that apply whatever the tool
 
-- **No tricks, browser fallback only.** A page that refuses automated reading (403, JavaScript-only content) may be opened in a `~~browser` tool, read-only, for the few pages an interactive answer needs. Claude stops at any captcha, bot check or login wall, never imitates human behaviour, never uses alternate user agents, caches, mirrors or archive copies, and never uses the browser in scheduled runs or sub-agents. Without a browser, Claude asks the user for a screenshot or pasted text. Rules: `references/research-method.md` section 7.
+- **No tricks, browser fallback only.** A page that refuses automated reading (403, JavaScript-only content) may be opened in a `~~browser` tool, read-only, for the few pages an interactive answer needs, after Claude offers it in one line and the user says yes. Claude stops at any captcha, bot check or login wall, never imitates human behaviour, never uses alternate user agents, caches, mirrors or archive copies, and never uses the browser in scheduled runs or sub-agents. Without a browser, Claude asks the user for a screenshot or pasted text. Rules: `references/research-method.md` section 7.
 - **Read-only.** No tool is ever used to buy, create an account, submit a form or contact a seller.
 - **Dated data.** Every value read through a connector carries its source and read date.
 
