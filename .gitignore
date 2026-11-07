@@ -11,3 +11,5 @@ graphify-out/cache/
 tests/results/*.json
 tests/results/*.html
 tests/results/*.log
+graphify-out/.graphify_python
+graphify-out/.graphify_root

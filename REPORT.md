@@ -15,7 +15,7 @@ Rapport de fin de mission. Rédigé le 2026-11-07 par l'orchestrateur (session p
 | Recherche | `research/` (10 relevés + 2 compléments AMD, briefs communs) | hors paquet |
 | Tests | `tests/cases/` (7 cas `claude plugin eval`), `tests/results/*.md` (résumés commentés) | voir §2 |
 | Pilotage | `DECISIONS.md` (D1 à D20), `ORCHESTRATION.md`, ce rapport | hors paquet |
-| Mémoire | vault `02-Projects/pc-hardware-advisor/`, MOC mis à jour, index Graphify | voir §7 |
+| Mémoire | vault `02-Projects/pc-hardware-advisor/`, MOC mis à jour, index Graphify `graphify-out/` (661 nœuds, 866 arêtes, 62 communautés, `GRAPH_REPORT.md`, `graph.html`) | contrôle d'intégrité non disponible dans la version installée (D21) |
 
 ## 2. Résultats des sept tests
 
@@ -91,13 +91,14 @@ Jetons des sous-agents (relevés en fin de tâche) :
 | 5 README, CONTRIBUTING, CHANGELOG | Sonnet | 1 | 118 443 |
 | 5 traductions | Haiku | 8 | 932 870 |
 | 6 audit du correcteur | Sonnet | 1 | 114 978 |
-| **Total sous-agents** | | **35** | **5 035 701** |
+| 7 index Graphify (extraction) | Haiku | 7 | 1 383 527 |
+| **Total sous-agents** | | **42** | **6 419 228** |
 
 Orchestrateur (Opus, session principale) : fenêtre de contexte à environ 470 000 jetons en fin de mission ; consommation exacte non exposée par l'outil. Forfait Max : 17 % du quota hebdomadaire tous modèles consommé à la fin de la phase de tests.
 
 Tests (`claude plugin eval`, coût équivalent indiqué par l'outil) : 7 passages, 2,64 + 2,14 + 3,19 + 1,68 + 3,66 + 4,71 + 3,81 = **22,03 $** (sessions Sonnet et juge Sonnet, imputés sur le forfait Max, pas de dépense supplémentaire).
 
-Rendement : les jetons Haiku (lecture, traduction) représentent 39 % du total sous-agents ; Opus n'a écrit aucun fichier volumineux (relectures, corrections ciblées, scripts, pilotage).
+Rendement : les jetons Haiku (lecture, traduction, extraction Graphify) représentent 52 % du total sous-agents ; Opus n'a écrit aucun fichier volumineux (relectures, corrections ciblées, scripts, pilotage).
 
 ## 7. Réserves à rappeler à Jo
 

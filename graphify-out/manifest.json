@@ -1,0 +1,317 @@
+{
+  "E:\\Claude code\\Projects\\pc-hardware-advisor\\.claude-plugin\\marketplace.json": {
+    "mtime": 1794074736.634963,
+    "ast_hash": "544ad8dacd1002737473e8fdb448258f",
+    "semantic_hash": "544ad8dacd1002737473e8fdb448258f"
+  },
+  "E:\\Claude code\\Projects\\pc-hardware-advisor\\.claude-plugin\\plugin.json": {
+    "mtime": 1794073813.8269098,
+    "ast_hash": "3a1e7f5ec40d6dc12a568754909418b6",
+    "semantic_hash": "3a1e7f5ec40d6dc12a568754909418b6"
+  },
+  "E:\\Claude code\\Projects\\pc-hardware-advisor\\scripts\\build_plugin.py": {
+    "mtime": 1794074066.810794,
+    "ast_hash": "000cdb5aa76ccd77c1dc2b0d48830e11",
+    "semantic_hash": "000cdb5aa76ccd77c1dc2b0d48830e11"
+  },
+  "E:\\Claude code\\Projects\\pc-hardware-advisor\\scripts\\check_content.py": {
+    "mtime": 1794075214.0771563,
+    "ast_hash": "db32bdcabb5e46bd2e7e2369c2e840ed",
+    "semantic_hash": "db32bdcabb5e46bd2e7e2369c2e840ed"
+  },
+  "E:\\Claude code\\Projects\\pc-hardware-advisor\\scripts\\make_icon.py": {
+    "mtime": 1794074289.6998107,
+    "ast_hash": "5b7dc57a9e0672d1a0c033fd4e51584e",
+    "semantic_hash": "5b7dc57a9e0672d1a0c033fd4e51584e"
+  },
+  "E:\\Claude code\\Projects\\pc-hardware-advisor\\CHANGELOG.md": {
+    "mtime": 1794074802.8405316,
+    "ast_hash": "e465110c700e54525f40c1352ac81dec",
+    "semantic_hash": "e465110c700e54525f40c1352ac81dec"
+  },
+  "E:\\Claude code\\Projects\\pc-hardware-advisor\\CLAUDE.md": {
+    "mtime": 1794074265.290105,
+    "ast_hash": "4da23a47e797fe355782ed2f710f80a2",
+    "semantic_hash": "4da23a47e797fe355782ed2f710f80a2"
+  },
+  "E:\\Claude code\\Projects\\pc-hardware-advisor\\CONNECTORS.md": {
+    "mtime": 1794074708.6517155,
+    "ast_hash": "dbeabd53f53ec0837784865885bdcb81",
+    "semantic_hash": "dbeabd53f53ec0837784865885bdcb81"
+  },
+  "E:\\Claude code\\Projects\\pc-hardware-advisor\\CONTRIBUTING.md": {
+    "mtime": 1794075214.1342156,
+    "ast_hash": "1a3dd0fcacf5f61e9398f6e6a6594180",
+    "semantic_hash": "1a3dd0fcacf5f61e9398f6e6a6594180"
+  },
+  "E:\\Claude code\\Projects\\pc-hardware-advisor\\DECISIONS.md": {
+    "mtime": 1794079328.5528674,
+    "ast_hash": "70600accbb7d41f11c2436cc6edb2307",
+    "semantic_hash": "70600accbb7d41f11c2436cc6edb2307"
+  },
+  "E:\\Claude code\\Projects\\pc-hardware-advisor\\ORCHESTRATION.md": {
+    "mtime": 1794079812.2662678,
+    "ast_hash": "1c64d8a68279f6a99804097e1d5a46e6",
+    "semantic_hash": "1c64d8a68279f6a99804097e1d5a46e6"
+  },
+  "E:\\Claude code\\Projects\\pc-hardware-advisor\\README.md": {
+    "mtime": 1794074816.180048,
+    "ast_hash": "5ba86d5d9f39f206a10ecdad2c95ca29",
+    "semantic_hash": "5ba86d5d9f39f206a10ecdad2c95ca29"
+  },
+  "E:\\Claude code\\Projects\\pc-hardware-advisor\\REPORT.md": {
+    "mtime": 1794079802.294671,
+    "ast_hash": "ff0d5dd77ed10338aad4c83a025e42b0",
+    "semantic_hash": "ff0d5dd77ed10338aad4c83a025e42b0"
+  },
+  "E:\\Claude code\\Projects\\pc-hardware-advisor\\agents\\price-scout.md": {
+    "mtime": 1794076786.6820421,
+    "ast_hash": "32b59c5389967fa1067e198fbb9285a4",
+    "semantic_hash": "32b59c5389967fa1067e198fbb9285a4"
+  },
+  "E:\\Claude code\\Projects\\pc-hardware-advisor\\references\\form-factors-cases.md": {
+    "mtime": 1794075061.258791,
+    "ast_hash": "0b99682ac2c888b9fb629e67acde18a3",
+    "semantic_hash": "0b99682ac2c888b9fb629e67acde18a3"
+  },
+  "E:\\Claude code\\Projects\\pc-hardware-advisor\\references\\gpu-bandwidth-ai.md": {
+    "mtime": 1794074971.4221168,
+    "ast_hash": "8d39b8227caf80c64390319274612890",
+    "semantic_hash": "8d39b8227caf80c64390319274612890"
+  },
+  "E:\\Claude code\\Projects\\pc-hardware-advisor\\references\\international-buying.md": {
+    "mtime": 1794074545.8570778,
+    "ast_hash": "3be999339e42e7da72535c9625d7b9d2",
+    "semantic_hash": "3be999339e42e7da72535c9625d7b9d2"
+  },
+  "E:\\Claude code\\Projects\\pc-hardware-advisor\\references\\memory.md": {
+    "mtime": 1794075848.9959807,
+    "ast_hash": "6d969defbae20f7d52a61a4ebf2ec0af",
+    "semantic_hash": "6d969defbae20f7d52a61a4ebf2ec0af"
+  },
+  "E:\\Claude code\\Projects\\pc-hardware-advisor\\references\\power-supplies-connectors.md": {
+    "mtime": 1794075011.6460428,
+    "ast_hash": "0fb89767c35b21342d599584126ea563",
+    "semantic_hash": "0fb89767c35b21342d599584126ea563"
+  },
+  "E:\\Claude code\\Projects\\pc-hardware-advisor\\references\\research-method.md": {
+    "mtime": 1794079328.1932878,
+    "ast_hash": "78a70d54550f5bc9540d1e60dbadab1c",
+    "semantic_hash": "78a70d54550f5bc9540d1e60dbadab1c"
+  },
+  "E:\\Claude code\\Projects\\pc-hardware-advisor\\references\\retailer-criteria.md": {
+    "mtime": 1794074366.7030463,
+    "ast_hash": "1c513f635885d54905088b89c49e323e",
+    "semantic_hash": "1c513f635885d54905088b89c49e323e"
+  },
+  "E:\\Claude code\\Projects\\pc-hardware-advisor\\references\\retailers-by-country.md": {
+    "mtime": 1794074503.7906854,
+    "ast_hash": "f61ae60aff7b6ddf77dbee2aec52c9f7",
+    "semantic_hash": "f61ae60aff7b6ddf77dbee2aec52c9f7"
+  },
+  "E:\\Claude code\\Projects\\pc-hardware-advisor\\references\\sockets-chipsets.md": {
+    "mtime": 1794075865.3527892,
+    "ast_hash": "c9e173e6d6c941188f34693bfa760a88",
+    "semantic_hash": "c9e173e6d6c941188f34693bfa760a88"
+  },
+  "E:\\Claude code\\Projects\\pc-hardware-advisor\\references\\used-market-checklist.md": {
+    "mtime": 1794074366.7555947,
+    "ast_hash": "e50a816b05a4ac03e202618fc4f06e5f",
+    "semantic_hash": "e50a816b05a4ac03e202618fc4f06e5f"
+  },
+  "E:\\Claude code\\Projects\\pc-hardware-advisor\\research\\r1-retailers-anglophone.md": {
+    "mtime": 1794074156.8910537,
+    "ast_hash": "e85b4995f71320ceab14157e6fc382ff",
+    "semantic_hash": "e85b4995f71320ceab14157e6fc382ff"
+  },
+  "E:\\Claude code\\Projects\\pc-hardware-advisor\\research\\r1-retailers-asia.md": {
+    "mtime": 1794074336.6911633,
+    "ast_hash": "38871ba1fd996c082fbf71454ff99f53",
+    "semantic_hash": "38871ba1fd996c082fbf71454ff99f53"
+  },
+  "E:\\Claude code\\Projects\\pc-hardware-advisor\\research\\r1-retailers-europe-south-central.md": {
+    "mtime": 1794074132.971077,
+    "ast_hash": "ef3be2ec0d312cbbbb170a0936705906",
+    "semantic_hash": "ef3be2ec0d312cbbbb170a0936705906"
+  },
+  "E:\\Claude code\\Projects\\pc-hardware-advisor\\research\\r1-retailers-europe-west.md": {
+    "mtime": 1794074141.1945593,
+    "ast_hash": "1e7d11b299f9a93277b8d0d5ee26e042",
+    "semantic_hash": "1e7d11b299f9a93277b8d0d5ee26e042"
+  },
+  "E:\\Claude code\\Projects\\pc-hardware-advisor\\research\\r2-apis-feeds.md": {
+    "mtime": 1794074201.5460894,
+    "ast_hash": "3dc88c843168d0d0120ef2274905adfb",
+    "semantic_hash": "3dc88c843168d0d0120ef2274905adfb"
+  },
+  "E:\\Claude code\\Projects\\pc-hardware-advisor\\research\\r2-international-buying.md": {
+    "mtime": 1794074444.4082658,
+    "ast_hash": "ace6d461d64c1844f67cbc45f9aa1cac",
+    "semantic_hash": "ace6d461d64c1844f67cbc45f9aa1cac"
+  },
+  "E:\\Claude code\\Projects\\pc-hardware-advisor\\research\\r3-retailer-criteria.md": {
+    "mtime": 1794074142.7873142,
+    "ast_hash": "62825152fc0a73c8b0a87f3376803ba9",
+    "semantic_hash": "62825152fc0a73c8b0a87f3376803ba9"
+  },
+  "E:\\Claude code\\Projects\\pc-hardware-advisor\\research\\r4-gpu-ai.md": {
+    "mtime": 1794074644.2114885,
+    "ast_hash": "ba8246b9c3e4b0ec19f9ce946c8f41db",
+    "semantic_hash": "ba8246b9c3e4b0ec19f9ce946c8f41db"
+  },
+  "E:\\Claude code\\Projects\\pc-hardware-advisor\\research\\r4-platforms-amd-addendum.md": {
+    "mtime": 1794075707.6822815,
+    "ast_hash": "7751792ef04a0a2a7aa79c0ef1d323e0",
+    "semantic_hash": "7751792ef04a0a2a7aa79c0ef1d323e0"
+  },
+  "E:\\Claude code\\Projects\\pc-hardware-advisor\\research\\r4-platforms-memory.md": {
+    "mtime": 1794074614.7501922,
+    "ast_hash": "ff202eddf4965f913bd6c594e5406dd2",
+    "semantic_hash": "ff202eddf4965f913bd6c594e5406dd2"
+  },
+  "E:\\Claude code\\Projects\\pc-hardware-advisor\\research\\r4-power-form-factors.md": {
+    "mtime": 1794074696.8711946,
+    "ast_hash": "9fc2ff74f24a8648464a0b3c673703b9",
+    "semantic_hash": "9fc2ff74f24a8648464a0b3c673703b9"
+  },
+  "E:\\Claude code\\Projects\\pc-hardware-advisor\\research\\r4-radeon-addendum.md": {
+    "mtime": 1794074935.1503222,
+    "ast_hash": "78167163550ce6b028c103c936f8fded",
+    "semantic_hash": "78167163550ce6b028c103c936f8fded"
+  },
+  "E:\\Claude code\\Projects\\pc-hardware-advisor\\research\\r5-used-market.md": {
+    "mtime": 1794074198.1499968,
+    "ast_hash": "c7e2c7de8917d6b5ca07c5c133b9e3a4",
+    "semantic_hash": "c7e2c7de8917d6b5ca07c5c133b9e3a4"
+  },
+  "E:\\Claude code\\Projects\\pc-hardware-advisor\\research\\_brief-common.md": {
+    "mtime": 1794074248.3582861,
+    "ast_hash": "80d0b00a340832daae121442d79aec0c",
+    "semantic_hash": "80d0b00a340832daae121442d79aec0c"
+  },
+  "E:\\Claude code\\Projects\\pc-hardware-advisor\\research\\_brief-skills.md": {
+    "mtime": 1794074328.9989839,
+    "ast_hash": "84a4a3a5e0ad2153956ca3cb33a86c79",
+    "semantic_hash": "84a4a3a5e0ad2153956ca3cb33a86c79"
+  },
+  "E:\\Claude code\\Projects\\pc-hardware-advisor\\skills\\build-config\\SKILL.md": {
+    "mtime": 1794079328.1227212,
+    "ast_hash": "57121a68bde72d59edf5b4b6e43499bb",
+    "semantic_hash": "57121a68bde72d59edf5b4b6e43499bb"
+  },
+  "E:\\Claude code\\Projects\\pc-hardware-advisor\\skills\\build-config\\references\\build-playbook.md": {
+    "mtime": 1794075164.685134,
+    "ast_hash": "6bb9f984e63693506373479a101a72bf",
+    "semantic_hash": "6bb9f984e63693506373479a101a72bf"
+  },
+  "E:\\Claude code\\Projects\\pc-hardware-advisor\\skills\\check-compatibility\\SKILL.md": {
+    "mtime": 1794075163.6017933,
+    "ast_hash": "e6ad02b974c28386f069c6a1590d7503",
+    "semantic_hash": "e6ad02b974c28386f069c6a1590d7503"
+  },
+  "E:\\Claude code\\Projects\\pc-hardware-advisor\\skills\\check-compatibility\\references\\pair-checklist.md": {
+    "mtime": 1794075163.8986342,
+    "ast_hash": "de6518aef9d8360e4a70f6bb9ddbc3bb",
+    "semantic_hash": "de6518aef9d8360e4a70f6bb9ddbc3bb"
+  },
+  "E:\\Claude code\\Projects\\pc-hardware-advisor\\skills\\hunt-prices\\SKILL.md": {
+    "mtime": 1794077853.7443123,
+    "ast_hash": "cf8724c31905c1ca0560e223b8f2e778",
+    "semantic_hash": "cf8724c31905c1ca0560e223b8f2e778"
+  },
+  "E:\\Claude code\\Projects\\pc-hardware-advisor\\skills\\hunt-prices\\references\\search-playbook.md": {
+    "mtime": 1794076786.5852816,
+    "ast_hash": "0cc39f095aac9c024c26397940047d1f",
+    "semantic_hash": "0cc39f095aac9c024c26397940047d1f"
+  },
+  "E:\\Claude code\\Projects\\pc-hardware-advisor\\skills\\review-used-listing\\SKILL.md": {
+    "mtime": 1794074658.9020455,
+    "ast_hash": "fb0839cf724ff1af83547fc00ef887cb",
+    "semantic_hash": "fb0839cf724ff1af83547fc00ef887cb"
+  },
+  "E:\\Claude code\\Projects\\pc-hardware-advisor\\skills\\review-used-listing\\references\\verdict-rubric.md": {
+    "mtime": 1794074670.9952023,
+    "ast_hash": "31f44e67f3da2362ebf3989c7890a92a",
+    "semantic_hash": "31f44e67f3da2362ebf3989c7890a92a"
+  },
+  "E:\\Claude code\\Projects\\pc-hardware-advisor\\skills\\size-local-ai\\SKILL.md": {
+    "mtime": 1794077853.6203957,
+    "ast_hash": "4333e1dda83c325bb12660218cf1606a",
+    "semantic_hash": "4333e1dda83c325bb12660218cf1606a"
+  },
+  "E:\\Claude code\\Projects\\pc-hardware-advisor\\skills\\size-local-ai\\references\\sizing-worksheet.md": {
+    "mtime": 1794074971.4221168,
+    "ast_hash": "4b96b5b674adca6e99674b3911c379af",
+    "semantic_hash": "4b96b5b674adca6e99674b3911c379af"
+  },
+  "E:\\Claude code\\Projects\\pc-hardware-advisor\\skills\\track-price\\SKILL.md": {
+    "mtime": 1794077864.5761654,
+    "ast_hash": "b5326f3984bd7bc74a1fd553c495cd80",
+    "semantic_hash": "b5326f3984bd7bc74a1fd553c495cd80"
+  },
+  "E:\\Claude code\\Projects\\pc-hardware-advisor\\skills\\track-price\\references\\tracking-setup.md": {
+    "mtime": 1794074675.7834663,
+    "ast_hash": "1f363492c86e888c460ea0220f635ae7",
+    "semantic_hash": "1f363492c86e888c460ea0220f635ae7"
+  },
+  "E:\\Claude code\\Projects\\pc-hardware-advisor\\tests\\cases\\01-ai-mini-itx-14700kf\\prompt.md": {
+    "mtime": 1794076393.8196688,
+    "ast_hash": "ccf584bb10fa08ce4f6c6e6dea1e06ce",
+    "semantic_hash": "ccf584bb10fa08ce4f6c6e6dea1e06ce"
+  },
+  "E:\\Claude code\\Projects\\pc-hardware-advisor\\tests\\cases\\02-gaming-am5-xmp7200\\prompt.md": {
+    "mtime": 1794076393.8201687,
+    "ast_hash": "7aaba62776fbfed120aa656fbf01589b",
+    "semantic_hash": "7aaba62776fbfed120aa656fbf01589b"
+  },
+  "E:\\Claude code\\Projects\\pc-hardware-advisor\\tests\\cases\\03-ddr5-kit-best-price\\prompt.md": {
+    "mtime": 1794076393.8201687,
+    "ast_hash": "4bff7d7bcd53af59829e7254a8b81ae3",
+    "semantic_hash": "4bff7d7bcd53af59829e7254a8b81ae3"
+  },
+  "E:\\Claude code\\Projects\\pc-hardware-advisor\\tests\\cases\\04-used-3090-listing\\prompt.md": {
+    "mtime": 1794076393.8201687,
+    "ast_hash": "e6f58f876e5297ac775f84e8124fba95",
+    "semantic_hash": "e6f58f876e5297ac775f84e8124fba95"
+  },
+  "E:\\Claude code\\Projects\\pc-hardware-advisor\\tests\\cases\\05-track-3090-under-800\\prompt.md": {
+    "mtime": 1794076393.820669,
+    "ast_hash": "832626e6036d30ab6e7ee58d526b4063",
+    "semantic_hash": "832626e6036d30ab6e7ee58d526b4063"
+  },
+  "E:\\Claude code\\Projects\\pc-hardware-advisor\\tests\\cases\\06-ai-32gb-vram-2000eur\\prompt.md": {
+    "mtime": 1794076393.820669,
+    "ast_hash": "aa3ad01406e5ef38d958442f1bebb5a3",
+    "semantic_hash": "aa3ad01406e5ef38d958442f1bebb5a3"
+  },
+  "E:\\Claude code\\Projects\\pc-hardware-advisor\\tests\\cases\\07-out-of-scope\\prompt.md": {
+    "mtime": 1794076393.820669,
+    "ast_hash": "597c5b6ce1390af4a62612dc156211c1",
+    "semantic_hash": "597c5b6ce1390af4a62612dc156211c1"
+  },
+  "E:\\Claude code\\Projects\\pc-hardware-advisor\\tests\\results\\run1.md": {
+    "mtime": 1794076813.6515462,
+    "ast_hash": "8c7bcdb348434a63d28b002610fa8a9b",
+    "semantic_hash": "8c7bcdb348434a63d28b002610fa8a9b"
+  },
+  "E:\\Claude code\\Projects\\pc-hardware-advisor\\tests\\results\\run2.md": {
+    "mtime": 1794077305.7307053,
+    "ast_hash": "0ebf7fbaa5698a186f8cbf372ef67665",
+    "semantic_hash": "0ebf7fbaa5698a186f8cbf372ef67665"
+  },
+  "E:\\Claude code\\Projects\\pc-hardware-advisor\\tests\\results\\run3-4.md": {
+    "mtime": 1794078153.1769826,
+    "ast_hash": "9710a84d52aec806fd520650541a38bf",
+    "semantic_hash": "9710a84d52aec806fd520650541a38bf"
+  },
+  "E:\\Claude code\\Projects\\pc-hardware-advisor\\tests\\results\\run5.md": {
+    "mtime": 1794078612.419455,
+    "ast_hash": "b268b6bf1efe91c8ae2f63bb369c5435",
+    "semantic_hash": "b268b6bf1efe91c8ae2f63bb369c5435"
+  },
+  "E:\\Claude code\\Projects\\pc-hardware-advisor\\tests\\results\\run6-7.md": {
+    "mtime": 1794079787.878304,
+    "ast_hash": "7c18e98172d4c5d2bd1b527d8766f82b",
+    "semantic_hash": "7c18e98172d4c5d2bd1b527d8766f82b"
+  }
+}
