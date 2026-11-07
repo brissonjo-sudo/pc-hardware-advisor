@@ -10,7 +10,7 @@ Judge one second-hand listing for a desktop PC part and answer with a verdict. A
 ## 1. Collect inputs
 
 - Listing content: link, pasted text, or screenshot(s). Ask for photos too if only text was given.
-- If only a link was given: try `~~web fetch`. If the page is blocked, needs a login, or is JavaScript-only, record it as `blocked (<reason>)` or `partial (<what was missing>)`. Never circumvent: no alternate user agents, caches, mirrors, archive copies or browser automation to get around the block. Ask for a screenshot or pasted text and continue with that (Page read: `user screenshot`, with the capture date).
+- If only a link was given: try `~~web fetch`. If the page is blocked, needs a login, or is JavaScript-only, record it as `blocked (<reason>)` or `partial (<what was missing>)`. Never circumvent with tricks (no alternate user agents, caches, mirrors, archive copies). Apply the browser fallback of `${CLAUDE_PLUGIN_ROOT}/references/research-method.md` section 7 on your own initiative: open the listing in the browser, read it (text, price, photos, seller profile), stop at any bot check. If the fallback stops or no browser is available, ask for a screenshot or pasted text and continue with that (Page read: `user screenshot`, with the capture date).
 - Buyer location (country, currency, region): needed to pick the right market. Ask if missing.
 - Intended use (gaming, AI/local inference, workstation, upgrade of an existing PC): ask only if it changes the verdict (for example VRAM need). Ask for the target PC when compatibility matters.
 

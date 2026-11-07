@@ -31,7 +31,7 @@ Fuera del alcance: consolas, smartphones, tabletas, portátiles como productos, 
 - **Precio entregado, o "sin gastos".** Los precios incluyen IVA, aranceles y envío a tu país. Cuando no se puede establecer un componente, la fila indica "sin gastos" en lugar de adivinar.
 - **La confianza se muestra.** Cada cifra indica cuán bien está respaldada.
 - **Nada se inventa.** Si una especificación, un precio o una norma no se puede justificar con una fuente, Claude lo dice.
-- **Nunca se eluden los sitios bloqueados.** Si un sitio rechaza la lectura automatizada, Claude lo registra como bloqueado y te pide una captura de pantalla o texto pegado. No se usan agentes de usuario alternativos, cachés, espejos ni automatización del navegador para sortear el bloqueo.
+- **Sitios bloqueados: recurso al navegador, nunca trucos.** Si un sitio rechaza la lectura automatizada y hay una herramienta de navegador disponible, Claude abre por iniciativa propia las pocas páginas que importan en el navegador, solo de lectura, y lo indica. Se detiene ante cualquier captcha o control de bots y nunca imita a una persona para superarlo. Si no, te pide una captura de pantalla o texto pegado. No se usan agentes de usuario alternativos, cachés ni espejos.
 - **Solo lectura.** El plugin nunca compra, nunca crea cuentas, nunca envía formularios y nunca contacta con vendedores. Eso lo haces tú.
 
 Diez referencias compartidas (método de investigación, tiendas por país, criterios para tiendas, compra internacional, lista de verificación del mercado de segunda mano, zócalos y chipsets, memoria, fuentes de alimentación y conectores, factores de forma y cajas, ancho de banda de GPU para IA) están fechadas y tienen fuentes. Se revisaron por última vez el 2026-11-07.
@@ -80,7 +80,7 @@ Claude elige la skill adecuada según la petición. Algunos ejemplos:
 
 ## Conectores
 
-Las skills se refieren a las herramientas por categoría (búsqueda web, lectura web, comparador de precios, sitio de anuncios clasificados, programador, notificaciones), no por producto, así que cualquier herramienta equivalente sirve. Nada en el plugin requiere una cuenta, una clave de API ni un servicio de pago. Las categorías, las fuentes de datos opcionales y las reglas que se aplican a todas las herramientas están en [CONNECTORS.md](../CONNECTORS.md).
+Las skills se refieren a las herramientas por categoría (búsqueda web, lectura web, comparador de precios, sitio de anuncios clasificados, navegador, programador, notificaciones), no por producto, así que cualquier herramienta equivalente sirve. Nada en el plugin requiere una cuenta, una clave de API ni un servicio de pago. Las categorías, las fuentes de datos opcionales y las reglas que se aplican a todas las herramientas están en [CONNECTORS.md](../CONNECTORS.md).
 
 ## Límites
 

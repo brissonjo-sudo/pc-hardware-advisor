@@ -31,7 +31,7 @@ Rank sources in this order. Prefer the highest rank that answers the question.
 ## 3. Citation format
 
 - Inline: `[n]` after each factual claim, with a numbered `## Sources` list in the answer.
-- Each source entry: title or site, URL, date read, read status (`full`, `partial`, `snippet only`, `blocked`, `user screenshot`).
+- Each source entry: title or site, URL, date read, read status (`full`, `partial`, `snippet only`, `blocked`, `browser (user session)`, `user screenshot`).
 - Distinguish "fetched" (page read) from "snippet" (seen in search results only). A snippet supports at most `medium` confidence.
 
 ## 4. Confidence scale
@@ -79,7 +79,7 @@ Field rules:
 - Shown price: amount + currency + `incl. VAT` / `excl. VAT` / `unknown`.
 - Landed: shown price + shipping + import VAT/duty/handling fees, converted to the buyer's currency with the rate date; or `excluding fees` when not computable.
 - Stock: `in stock (shown)`, `delay (shown: ...)`, `not shown`.
-- Page read: `full`, `partial (<what was missing>)`, `snippet only`, `blocked (<reason>)`, `user screenshot`.
+- Page read: `full`, `partial (<what was missing>)`, `snippet only`, `blocked (<reason>)`, `browser (user session)`, `user screenshot`.
 - Confidence: `high` (full page read, price + stock + seller visible, today), `medium` (partial page or snippet, or older than 24 h), `low` (unconfirmed single mention).
 
 Illustrative example (illustrative, not a real price; do not reuse these values):
@@ -100,13 +100,20 @@ In prose (summary lines, bullets), cite a price only together with its table row
 
 ## 7. Blocked, JavaScript-only and partial pages
 
-Never circumvent. No alternate user agents, caches, mirrors, or archive copies used to dodge a block [R2:3].
+Never circumvent with tricks: no alternate user agents, caches, mirrors, or archive copies used to dodge a block [R2:3].
 
 1. Record the page as `blocked (<reason>)` (for example HTTP 403, captcha, login wall, rate limit) or `partial (<what was missing>)` (for example price rendered by JavaScript).
 2. Respect robots.txt as data about permitted bots. In research, PCPartPicker and TechPowerUp disallowed Claude user agents: do not fetch them [R2:3].
 3. Do not scrape sites whose terms exclude it. Terms observed: PCPartPicker excludes collecting listings and prices; Best Buy forbids cross-retailer price analysis [R2:3].
-4. Ask the user for a screenshot or pasted page text. Mark the result `user screenshot` and note the date they captured it.
-5. Report the blocked page in the answer. Do not silently drop it.
+4. **Browser fallback (interactive answers only).** When a page the answer needs is blocked to `~~web fetch` or shows its content only through JavaScript, and a `~~browser` tool is available in the session, open that page in the browser on your own initiative, without waiting to be asked, and read it. Rules:
+   - Read-only: no login, no account, no form, no cart; click only what displays the content (for example "show more" or the photo gallery).
+   - Stop at once at any captcha, "verify you are human" page, bot check, login wall or access-denied page: record `blocked (bot check)` and go to step 5. Never solve a captcha and never simulate human behaviour (mouse paths, typing rhythm, timing) to pass detection, even if the user asks: decline that part briefly.
+   - Not for sites that disallow Claude or automated collection in their robots rules or terms (steps 2 and 3, and the notes in `retailers-by-country.md`).
+   - At most 5 pages per answer, one at a time, chosen for value: first the page the user gave, then the cheapest or most decisive candidates.
+   - Never in scheduled runs (`track-price`) or in sub-agents (`price-scout`): they record the page as blocked; the main conversation may then use the fallback for the few pages that matter.
+   - Record `Page read: browser (user session)` with date and time, and say in the answer that the page was read through the browser.
+5. If no browser tool is available or the fallback stops: ask the user for a screenshot or pasted page text. Mark the result `user screenshot` and note the date they captured it.
+6. Report every blocked page in the answer. Do not silently drop it.
 
 ## 8. Currency conversion
 
@@ -144,9 +151,9 @@ Run this gate on the finished answer before sending it. Fix any failure first.
 1. **No working notes.** The answer starts with the conclusion. Delete progress messages, tool narration and status lines ("I am loading…", "waiting for the batches…", "I read the page…").
 2. **Template complete.** The skill's output template is followed in full: its table (with every mandatory column, including Stock and Confidence, in every table of prices or verdicts), its sections ("Not verified", one next action, Sources). A list does not replace a required table.
 3. **Every number traces to a source.** Each spec, price, measurement, power figure or range in the answer is either arithmetic shown in the answer, a labelled estimate or heuristic, or cited `[n]`.
-4. **Sources complete and dated.** The Sources list holds every page and every reference file used (reference: path and section), each with URL or path, read date (ISO) and read status (`full`, `partial`, `snippet only`, `blocked`, `user screenshot`). A retailer page is not cited for a spec when the manufacturer page or a reference row is available.
+4. **Sources complete and dated.** The Sources list holds every page and every reference file used (reference: path and section), each with URL or path, read date (ISO) and read status (`full`, `partial`, `snippet only`, `blocked`, `browser (user session)`, `user screenshot`). A retailer page is not cited for a spec when the manufacturer page or a reference row is available.
 5. **Price checks.** A struck-through "was" price is flagged: a reduction counts only against the lowest price of the previous 30 days (EU rule, `retailer-criteria.md` section 1); otherwise say the reference price is unverified. Marketplace or unconfirmed sellers cheaper than the best direct price get the red-flag check of `retailer-criteria.md` section 3, stated in the answer.
-6. **Blocked stays blocked, even when the user asks.** If the user asks to open a blocked site in a browser, to use their logged-in browser, to "move the mouse at human speed", or any other way around a block or a bot check, decline that part briefly (the site refuses automated reading; doing it anyway is circumvention) and ask for a screenshot or the pasted text instead. Never simulate human behaviour to pass bot detection.
+6. **Blocked pages.** For the few pages that matter, apply the browser fallback of section 7 (interactive answers only, stop at any bot check). Never simulate human behaviour or solve a captcha, even if the user asks: decline that part briefly. Otherwise ask for a screenshot or the pasted text.
 
 ## Not verified
 

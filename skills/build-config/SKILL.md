@@ -16,7 +16,7 @@ This skill orchestrates three other methods and does not duplicate them: compati
 - Memory is a hypothesis. Parts newer than the references' check date may exist, and specs, stock and prices change. Verify with `~~web search` and `~~web fetch` (manufacturer pages first) before putting a part in a table. Read `${CLAUDE_PLUGIN_ROOT}/references/research-method.md` once for the source hierarchy, dating, confidence scale and canonical price row.
 - Never state a price or spec you did not read. Unknown cells say `not shown` or `unknown`.
 - Market context: DRAM and NAND prices moved strongly in 2025-2026 (see section 1 of `${CLAUDE_PLUGIN_ROOT}/references/used-market-checklist.md`, dated, partly low confidence). Check current memory and SSD prices for every build; never assume an older price level or a trend direction. Memory and storage can take a larger share of the budget than usual: re-balance accordingly.
-- Blocked or unreadable pages: record them as `blocked (<reason>)` in the answer. Never circumvent (no alternate user agents, caches, mirrors, archive copies, no browser automation to dodge a block). Ask the user for a screenshot or pasted text and continue with other sources.
+- Blocked or unreadable pages: record them as `blocked (<reason>)` in the answer. Never circumvent with tricks (no alternate user agents, caches, mirrors, archive copies). For the few pages that matter, apply the browser fallback of `${CLAUDE_PLUGIN_ROOT}/references/research-method.md` section 7; otherwise ask the user for a screenshot or pasted text and continue with other sources.
 
 ## Step 0: collect inputs
 

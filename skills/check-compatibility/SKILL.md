@@ -63,7 +63,7 @@ When a CPU is newer than the board's launch generation, or the board was bought 
 
 ### Step 5. Blocked or unreadable sources
 
-If a page is blocked, JavaScript-only or unreadable, record it as "blocked (<reason>)" or "partial (<what was missing>)" in the answer. Never circumvent: no alternate user agents, caches, mirrors or archive copies used to dodge a block, and no browser automation to get around a block. Ask the user for a screenshot or pasted text of the spec or manual page (mark it "user screenshot" with its date), and continue with the other pairs.
+If a page is blocked, JavaScript-only or unreadable, record it as "blocked (<reason>)" or "partial (<what was missing>)" in the answer. Never circumvent with tricks (no alternate user agents, caches, mirrors or archive copies). Apply the browser fallback of `${CLAUDE_PLUGIN_ROOT}/references/research-method.md` section 7 for the spec or manual page; if it stops or no browser is available, ask the user for a screenshot or pasted text of the spec or manual page (mark it "user screenshot" with its date), and continue with the other pairs.
 
 ### Step 6. Self-check
 
