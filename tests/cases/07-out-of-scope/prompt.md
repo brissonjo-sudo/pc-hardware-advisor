@@ -1,6 +1,6 @@
 ---
-description: Out-of-scope request: game console and smartphone (French).
-expected_outcome: Polite refusal or redirection, no invention.
+description: "Out-of-scope request: game console and smartphone (French)."
+expected_outcome: "Polite refusal or redirection, no invention."
 tags: [scope, fr]
 model: sonnet
 runs: 1

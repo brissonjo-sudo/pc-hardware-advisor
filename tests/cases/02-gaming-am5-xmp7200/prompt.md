@@ -1,6 +1,6 @@
 ---
-description: Compatibility check AM5 9800X3D + RX 9070 XT + DDR5-7200 XMP-only kit (English).
-expected_outcome: Compatible with condition: run memory near DDR5-6000 on AM5, no EXPO profile.
+description: "Compatibility check AM5 9800X3D + RX 9070 XT + DDR5-7200 XMP-only kit (English)."
+expected_outcome: "Compatible with condition: run memory near DDR5-6000 on AM5, no EXPO profile."
 tags: [check-compatibility, en]
 model: sonnet
 runs: 1

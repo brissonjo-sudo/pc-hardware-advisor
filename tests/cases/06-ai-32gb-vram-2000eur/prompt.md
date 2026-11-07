@@ -1,6 +1,6 @@
 ---
-description: Local-AI build with >=32 GB VRAM, 2000 EUR, worldwide sourcing, delivered to France (English).
-expected_outcome: Compares new, refurbished, import with VAT and duties; private used excluded from auto configs.
+description: "Local-AI build with >=32 GB VRAM, 2000 EUR, worldwide sourcing, delivered to France (English)."
+expected_outcome: "Compares new, refurbished, import with VAT and duties; private used excluded from auto configs."
 tags: [build-config, hunt-prices, size-local-ai, en]
 model: sonnet
 runs: 1

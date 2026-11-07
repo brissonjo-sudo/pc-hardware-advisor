@@ -1,6 +1,6 @@
 ---
-description: Review a used RTX 3090 listing at 900 EUR with a GPU-Z screenshot (Spanish).
-expected_outcome: Argued three-level verdict, seller questions, handover tests, recent market price.
+description: "Review a used RTX 3090 listing at 900 EUR with a GPU-Z screenshot (Spanish)."
+expected_outcome: "Argued three-level verdict, seller questions, handover tests, recent market price."
 tags: [review-used-listing, es]
 model: sonnet
 runs: 1

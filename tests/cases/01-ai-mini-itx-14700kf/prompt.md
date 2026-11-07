@@ -1,6 +1,6 @@
 ---
-description: Compact local-AI build around owned i7-14700KF + RTX 3090, 32 GB RAM (French).
-expected_outcome: Mini-ITX LGA1700 board, compatible RAM, adequate PSU, tok/s estimate, BIOS and GPU-length warnings.
+description: "Compact local-AI build around owned i7-14700KF + RTX 3090, 32 GB RAM (French)."
+expected_outcome: "Mini-ITX LGA1700 board, compatible RAM, adequate PSU, tok/s estimate, BIOS and GPU-length warnings."
 tags: [build-config, check-compatibility, size-local-ai, fr]
 model: sonnet
 runs: 1

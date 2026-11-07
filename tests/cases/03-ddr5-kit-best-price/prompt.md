@@ -1,6 +1,6 @@
 ---
-description: Best landed price for a DDR5 2x16 GB 6000 kit, direct retailers, France then Europe (French).
-expected_outcome: Dated table, typed sellers, landed price, partial pages flagged.
+description: "Best landed price for a DDR5 2x16 GB 6000 kit, direct retailers, France then Europe (French)."
+expected_outcome: "Dated table, typed sellers, landed price, partial pages flagged."
 tags: [hunt-prices, price-scout, fr]
 model: sonnet
 runs: 1
