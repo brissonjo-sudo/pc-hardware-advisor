@@ -22,6 +22,7 @@ Do not trust a search snippet for a price. A snippet supports `medium` confidenc
 - Never quote a comparator price as final. Open the merchant page and fill the row from that page.
 - Check that the comparator's product match really is your SKU: compare MPN/EAN, capacity, speed, box vs OEM.
 - Skip comparators that disallow automated access. Record them as unreadable.
+- A retailer's own search or category page is also discovery only: it rarely shows the seller line, shipping or exact stock. Open the PRODUCT page of each candidate and fill the row from it. Use a listing price only when the product page is unreadable, with `Page read: partial (listing only)` and confidence `medium` at most.
 
 ## 3. Reading a retailer page
 
@@ -41,8 +42,10 @@ If the price is rendered by JavaScript and absent from the text, mark `partial (
 1. Read "sold by" and "shipped by" / "fulfilled by". A seller name different from the marketplace name means `marketplace (third-party seller)`, even when the marketplace ships it.
 2. Look for words such as "marketplace", "partner seller", "other sellers", "offers from", "new from".
 3. Open the seller profile or imprint when reachable: legal name, address, trader statement.
-4. If the seller line is missing: Seller = `seller not shown`, Page read = `partial (seller line missing)`.
-5. Never infer from the domain.
+4. If the product page has no seller line, check the site in `${CLAUDE_PLUGIN_ROOT}/references/retailers-by-country.md`:
+   - listed as a direct retailer with no marketplace: Seller = site name, Seller type = `direct retailer (site type; seller line not shown)`, confidence `medium` at most;
+   - known to run a marketplace, or not listed: Seller = `seller not shown`, Seller type = `unconfirmed (site may host third-party sellers)`, Page read = `partial (seller line missing)`. Keep these rows in a separate "Seller unconfirmed" group, never in the direct-retailer ranking.
+5. Never type a seller from the domain name alone, without the reference or the page.
 
 ## 5. Stock and delay wording
 
@@ -67,9 +70,11 @@ Record the page's own words; map to the canonical Stock values.
 
 ## 7. When to stop searching
 
+A source counts as read only when a product page for the item (or its closest match) was read. A homepage, a search page or an error page does not count: try the next source instead.
+
 Stop when any of these is true:
 
-1. At least 5 readable sources in the buyer's country and neighbours were read, and further sources are not cheaper by shown price + shipping.
+1. At least 5 product pages from distinct direct retailers in the buyer's country were read, plus at least 3 per additional country or zone the user asked for, and further sources are not cheaper by shown price + shipping.
 2. Two consecutive batches add no row cheaper than the current best.
 3. All sources in the buyer-country section and the accepted import countries were tried once.
 4. The user's delay or country limits leave nothing more to try.

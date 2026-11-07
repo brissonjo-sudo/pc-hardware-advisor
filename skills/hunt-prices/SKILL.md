@@ -53,12 +53,13 @@ Defaults when the user does not answer: new, all seller types shown separately, 
 2. If sub-agents are unavailable, read the pages yourself with `~~web fetch`, one fetch per page, same procedure.
 3. `price-scout` returns canonical rows only, plus an "Unreadable" list. Its Landed column is `excluding fees` unless shipping to the buyer was shown. You compute taxes and fees.
 4. Verify before trusting: if a returned row looks too cheap, or its seller type is unclear, open the page yourself once. Spot-check at least the cheapest three rows.
-5. Stop when the playbook's stopping rule is met. Do not loop on blocked pages.
+5. Read PRODUCT pages, not search listings: listings are for discovery only (they rarely show seller, shipping or real stock). A homepage, search page or error page does not count as a source read; move to the next source.
+6. Stop only when the playbook's stopping rule is met (minimum: 5 product pages from distinct direct retailers in the buyer's country, plus 3 per other country or zone the user asked for). If you cannot reach that minimum, say so and list what was tried. Do not loop on blocked pages.
 
 ## 5. Normalise and compute landed price
 
 1. Deduplicate rows: same seller, same item, same page counts once (keep the freshest read).
-2. Type every seller with exactly one of the seven canonical seller types. Derive it from the "sold by" / "shipped by" lines, not from the domain.
+2. Type every seller with exactly one of the seven canonical seller types. Derive it from the "sold by" / "shipped by" lines of the product page. If the line is missing, apply the playbook rule (section 4): `direct retailer (site type; seller line not shown)` only for sites the country reference lists as direct with no marketplace; otherwise the row goes to a separate "Seller unconfirmed" group.
 3. Compute the landed price in the buyer's currency. Read `${CLAUDE_PLUGIN_ROOT}/references/international-buying.md` for the formula and the "Volatile items" table, then:
    1. Same customs zone as the buyer (for example intra-EU): shown price (check VAT status) + shipping. No customs. Convert currency if needed.
    2. Different customs zone: decide who collects tax (seller at checkout, or the border), then apply the formula: customs value, duty, handling fee, import VAT, carrier fee, card FX fee.
@@ -86,8 +87,8 @@ After the main table, propose at most 3 close alternatives that a user would pla
 
 Start with the conclusion. Use this structure, in the user's language.
 
-1. **Summary line**: best landed price, seller, seller type, country, date read, confidence. Example shape: "Best landed price: X CUR at <seller> (<type>, <country>), read <date>, confidence <level>. Next cheapest: Y CUR."
-2. **Main table**: canonical rows (exact 14 columns from research-method.md), sorted by landed price ascending. Rows with `excluding fees` go after computed ones, sorted by shown price + shipping. Direct retailers, manufacturer stores and professional refurbishers only.
+1. **Summary line**: best landed price, seller, seller type, country, date read, confidence. Any other price mentioned in prose carries the same fields or its row number. Out-of-stock items go to "Excluded", never in the ranked table. Example shape: "Best landed price: X CUR at <seller> (<type>, <country>), read <date>, confidence <level>. Next cheapest: Y CUR."
+2. **Main table**: canonical rows (the 14 columns, or the compact display of research-method.md section 6 with its mandatory columns: never drop Seller type, Country, Landed or Confidence, even when translating headers), sorted by landed price ascending. Rows with `excluding fees` go after computed ones, sorted by shown price + shipping. Direct retailers, manufacturer stores and professional refurbishers only.
 3. **Marketplace table**: same columns, for marketplace rows (first-party and third-party), never merged into the main table. Add one line on third-party risk (warranty with the seller, not the marketplace).
 4. **Close alternatives**: short table or list, clearly labelled.
 5. **Excluded and not recommended**: rows removed by delay, by red flags, or out of stock, one line each with reason.

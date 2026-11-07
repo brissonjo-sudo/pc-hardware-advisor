@@ -19,12 +19,12 @@ If the item spec or the source list is missing, return one line saying what is m
 
 For each source, once:
 
-1. Fetch the page (or run the given query, then fetch the matching result page). One fetch per page. Do not retry a failed page.
+1. Fetch the page (or run the given query, then fetch the matching result page). If it is a search or category listing, find the matching item in it and fetch that item's PRODUCT page: report price, seller line, stock and shipping from the product page. Report a listing price only if the product page is unreadable, with Page read `partial (listing only)` and confidence `medium` at most. One fetch per page. Do not retry a failed page.
 2. Never circumvent a block. No alternate user agents, caches, mirrors, archive copies, logins or account creation. If the page returns a refusal, captcha, login wall, rate limit or JavaScript-only content without the price in the text, put it in "Unreadable" with the reason.
 3. Take the exact item shown. If it differs from the requested spec (other capacity, speed, SKU, OEM vs boxed), still report it only if it is the closest match, and write the differences in the Item cell. Never relabel it as the requested item.
 4. Capture from the page text only:
    - Item as shown (model, SKU, capacity, speed).
-   - Seller identity. Read the "sold by" and "shipped by" lines. Seller type from the page, not from the domain: `direct retailer`, `marketplace (first-party)`, `marketplace (third-party seller)`, `professional refurbisher`, `manufacturer store`, `private party`, `proxy-buying service`. If no seller line: Seller = `seller not shown`, Page read = `partial (seller line missing)`.
+   - Seller identity. Read the "sold by" and "shipped by" lines. Seller type from the page, not from the domain: `direct retailer`, `marketplace (first-party)`, `marketplace (third-party seller)`, `professional refurbisher`, `manufacturer store`, `private party`, `proxy-buying service`. If no seller line: Seller = `seller not shown`, Seller type = `not shown`, Page read = `partial (seller line missing)` (the caller types it from its reference).
    - Shown price with currency and `incl. VAT`, `excl. VAT` or `unknown`.
    - Shipping to the buyer country, only if shown on the page.
    - Stock wording: `in stock (shown)`, `delay (shown: <wording>)`, or `not shown`.

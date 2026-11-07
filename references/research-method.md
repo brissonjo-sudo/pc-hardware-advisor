@@ -88,6 +88,16 @@ Illustrative example (illustrative, not a real price; do not reuse these values)
 |---|---|---|---|---|---|---|---|---|---|---|---|---|---|
 | 2026-01-01T10:00 | Example GPU 16GB, SKU EX-1234 | Example Shop GmbH | direct retailer | DE | 500.00 EUR incl. VAT | 5.00 EUR | included in price | 505.00 EUR (rate: n/a, same currency) | in stock (shown) | 2 years legal guarantee (page states EU) | full | high | https://example.invalid/item |
 
+### Compact display (allowed in answers)
+
+The 14 columns are the data model. In an answer you may show a compact table, with headers translated into the user's language, but these columns are mandatory in every price table, including summary tables, variants and route comparisons: **Date read | Item | Seller | Seller type | Country | Shown price (VAT status) | Landed or `excluding fees` | Stock | Confidence | Source [n]**. Never drop Seller type, Country, Landed or Confidence to save space; write `not shown` or `unconfirmed` when unknown. Shipping, tax estimate, warranty and page-read status may move to notes below the table.
+
+Fill rules for the compact display: Date read in full ISO form (2026-11-07, never "11-07"). Country = the seller's country from the page or, failing that, from the retailer's row in `retailers-by-country.md`. Seller type = from the page's sold-by line, or the playbook rule of `hunt-prices` for direct retailers listed without a marketplace; `not shown` only when neither source settles it. Sort rows strictly ascending by landed price, then rows marked `excluding fees` ascending by shown price.
+
+Put every price row of a seller group in ONE table with the mandatory columns, all countries together (Country column), rather than one full table plus lighter secondary tables or bullet lists of prices. Seller groups: direct retailers, manufacturer stores and refurbishers / marketplaces / seller unconfirmed / excluded.
+
+In prose (summary lines, bullets), cite a price only together with its table row ("row 3: 529.99 EUR, Cybertek, direct retailer, FR, out of stock") or with the same mandatory fields. Never give a bare price in text. A price range quoted from a reference snapshot (for example used-market ranges) carries the snapshot date, region, currency and basis (sold or asking, sample) and the words "reference snapshot, verify". Out-of-stock rows never appear in a ranked table: list them under "Excluded".
+
 ## 7. Blocked, JavaScript-only and partial pages
 
 Never circumvent. No alternate user agents, caches, mirrors, or archive copies used to dodge a block [R2:3].

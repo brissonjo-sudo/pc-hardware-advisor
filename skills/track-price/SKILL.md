@@ -20,7 +20,7 @@ Shared rules apply: `${CLAUDE_PLUGIN_ROOT}/references/research-method.md` (canon
 
 ## Step 0: confirm the inputs
 
-Ask once, in one message, only for what is missing. Propose defaults.
+If the request already gives the item, a threshold and a frequency (or "daily"), do NOT stop to ask: apply the defaults below, run Steps 1 to 4 now, and list the defaults used in the confirmation so the user can change them afterwards. Ask first only when the item or the threshold is missing or ambiguous; then ask once, in one message, and propose defaults.
 
 1. **Item**: exact model/SKU, or the list of acceptable equivalents (for example capacity or speed variants). Ask what is NOT acceptable (a different VRAM size, a different memory type).
 2. **Condition**: new, refurbished, used, or any. Used items follow the market method of `review-used-listing`; read `${CLAUDE_PLUGIN_ROOT}/references/used-market-checklist.md` for fair-price rules.
@@ -37,14 +37,14 @@ If the item is ambiguous (for example "a 4090"), ask one clarifying question ins
 
 Look for a `~~scheduler` capability among the tools actually available: a session scheduler, a desktop-app scheduled task, a cloud scheduled routine, or equivalent. Read the tool's own description for its limits (minimum interval, whether it needs the session or computer to stay on, whether it can write local files, which tools the fired run may use).
 
-- **A scheduler exists**: note its minimum interval and constraints, and tell the user any that matter (for example "runs only while the app is open", "cannot write to your local disk"). If the fired run cannot write to the chosen history location, pick a location it can reach or tell the user the limit.
+- **A scheduler exists**: note its minimum interval and constraints. If several exist, prefer one whose runs can write the history file; otherwise use the one available. Do not stop to ask which one: proceed, and state the limits that matter in the confirmation (for example "runs only while the app is open", "cannot write to your local disk: history rows appear in each run's output"). The user can switch later.
 - **No scheduler exists**: say so plainly. Do not pretend. Give the user the complete task definition (filled prompt from the reference, cron-style schedule or plain interval, history path) so they can create it in whatever scheduler they use. Still run Step 2 and give the baseline.
 
 ## Step 2: run one hunt now (baseline and history initialisation)
 
 Run a full hunt with the `hunt-prices` method (or the `review-used-listing` market method for used items). Use `~~web search`, `~~web fetch` and `~~price comparator` only to find candidates, then read each merchant page. Produce canonical price rows with the shared method: date, seller type, landed price (or `excluding fees`), stock, page read, confidence.
 
-1. Create the history file with its header (formats in the reference). Append the baseline rows with trigger flag `baseline`.
+1. Always create the history file now, from this session, with its header (formats in the reference), and append the baseline rows with trigger flag `baseline`, even if the scheduled runs will not be able to write to it. Give its path in the confirmation.
 2. Report the baseline: best landed price, which sources were read, which were blocked, and how it compares to the threshold.
 3. If the baseline is already below the threshold, say so now. Ask whether the threshold should be lowered, or keep it and let the tracker alert on a new low only.
 4. Check realism: if the threshold is far below anything seen, say so and keep the user's choice.
@@ -66,7 +66,7 @@ Short, in the user's language. State only what is confirmed:
 - Task name and identifier as returned by the tool.
 - Frequency and next run if the tool states it.
 - Item, condition, threshold (landed or shown), currency.
-- History file location.
+- History file location and its header line (the columns recorded: run timestamp, date read, item, seller, seller type, country, prices, landed, stock, page read, confidence, link, trigger flag).
 - What triggers a notification (below) and what stays silent.
 - How to stop or change it (the scheduler's own list/disable/delete controls, or ask Claude to do it; see the reference).
 - Limits that matter: "runs only while the app is open", sources that are blocked, gaps not verified.
