@@ -74,12 +74,13 @@ Before answering: every verdict has a source and a confidence; every condition i
 Start with the conclusion. Use this structure.
 
 ```
-**Overall: <Compatible | Compatible with N conditions | Incompatible (N blockers) | Cannot conclude (N items not verified)>**
+**Overall: <Compatible | Compatible with N conditions | Incompatible (N blockers) | Cannot conclude (N items not verified)>**, adding ", M items to confirm" whenever a row says to confirm or not verified
 One sentence: the main blocker or condition.
 
 | Pair | Verdict | Condition / action | Source [n] | Confidence |
 |---|---|---|---|---|
-| CPU - motherboard | ... | ... | [1] | high / medium / low |
+| CPU - motherboard | Compatible with conditions | Flash a BIOS that lists the CPU (board CPU support list read: minimum version not shown) | [1][2] | medium |
+| PSU - GPU | To confirm | 750 W is enough for the partner model with a 750 W recommendation, not for those asking 850 W or more: give the exact GPU model | [3] | medium |
 
 **Power budget** (GPU board power + CPU max turbo or PPT + rest of system = estimated draw; vendor-recommended PSU; which figure set the requirement; connectors counted: PCIe 8-pin / 12V-2x6 / EPS)
 
@@ -93,6 +94,8 @@ One sentence: the main blocker or condition.
 ```
 
 Rules for the table:
+- The Source column is filled on every row with `[n]` (never only a source list under the table).
+- Never fetch or cite sites the references exclude (robots rules or terms): PCPartPicker and TechPowerUp, forums included. A forum or user post elsewhere is `low` confidence and labelled as such.
 - Always use the table, even for one or two pairs; a numbered list does not replace it. One row per pair checked, in the fixed order of step 2. The overall line equals the worst row.
 - Prefer the manufacturer page or the reference row over a retailer page for any spec (dimensions, power, connectors).
 - Confidence: `high` (official page read in full, or a high-confidence reference row), `medium` (secondary or snippet, or an older reference), `low` (forum, retailer or unconfirmed). Add "solid / plausible / to verify" in the user's language if it helps.
