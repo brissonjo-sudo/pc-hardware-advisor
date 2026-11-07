@@ -1,0 +1,10 @@
+# Build output
+dist/
+*.plugin
+# Eval run outputs (raw transcripts); curated summaries live in tests/results/*.md
+tests/results/*/
+# Local
+.env
+.DS_Store
+Thumbs.db
+graphify-out/cache/

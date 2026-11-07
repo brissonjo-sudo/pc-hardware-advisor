@@ -1,0 +1,24 @@
+{
+  "$schema": "https://json.schemastore.org/claude-code-plugin-manifest.json",
+  "name": "pc-hardware-advisor",
+  "displayName": "PC Hardware Advisor",
+  "version": "0.1.0",
+  "description": "PC hardware expertise for Claude: worldwide landed-price hunting, part compatibility checks, complete builds by need and budget, local-AI machine sizing, used-listing review, and scheduled price tracking.",
+  "author": {
+    "name": "Jo (brissonjo-sudo)",
+    "url": "https://github.com/brissonjo-sudo"
+  },
+  "homepage": "https://github.com/brissonjo-sudo/pc-hardware-advisor",
+  "repository": "https://github.com/brissonjo-sudo/pc-hardware-advisor",
+  "license": "PolyForm-Noncommercial-1.0.0",
+  "keywords": [
+    "pc-building",
+    "hardware",
+    "compatibility",
+    "price-comparison",
+    "local-ai",
+    "gpu",
+    "used-market",
+    "price-tracking"
+  ]
+}
