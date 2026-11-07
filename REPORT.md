@@ -62,7 +62,7 @@ Deux essais réels ont montré que Claude n'agit pas de lui-même dans le naviga
 
 ### Version 0.3.3 : exemples remplis dans les gabarits (D27)
 
-Essais réels dans Cowork en 0.3.3 : cas 2 (compatibilité) entièrement conforme (colonne Source par ligne, verdict global avec points à confirmer, 10 sources datées avec statut, plus de forum exclu, navigateur proposé pour la page support MSI) ; cas 3 (IA locale) conforme (bilan mémoire ligne par ligne, puissance chiffrée, référence citée). Écarts mineurs reportés à la prochaine version : formulation « ne passe pas » quand seule la marge de sécurité dépasse, deux sources sans date de lecture.
+Essais réels dans Cowork en 0.3.3 : cas 2 (compatibilité) entièrement conforme (colonne Source par ligne, verdict global avec points à confirmer, 10 sources datées avec statut, plus de forum exclu, navigateur proposé pour la page support MSI) ; cas 3 (IA locale) conforme (bilan mémoire ligne par ligne, puissance chiffrée, référence citée). Écarts mineurs reportés à la prochaine version : formulation « ne passe pas » quand seule la marge de sécurité dépasse, deux sources sans date de lecture. Cas 1 rejoué en 0.3.3 le 2026-11-08 : conforme, PcComponentes retrouvé à 356,39 € livrés (le correctif des offres manquées fonctionne) ; écarts mineurs : navigateur proposé pour des sites qui refusent les robots, pays non repris de la référence.
 
 ## 3. Décisions prises seul (extrait de DECISIONS.md)
 

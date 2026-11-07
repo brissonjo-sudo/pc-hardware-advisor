@@ -10,6 +10,8 @@ The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.1.0/),
 
 - `size-local-ai`: when only the safety margin exceeds the card memory, say "fits without margin, risky" rather than "does not fit".
 - Every external source with read date and status (two were missing in a real try).
+- `hunt-prices`: never offer the browser for sites that refuse robots or automated collection (Amazon, Cdiscount in a real try); offer only a screenshot for those.
+- Country column: take it from `retailers-by-country.md` when the page does not show it (PcComponentes was left as "not shown").
 
 ## [0.3.3] - 2026-11-07
 
