@@ -99,13 +99,24 @@ When recommending used or datacenter cards (3090, P40, V100, MI50, others), stat
 Use this structure, conclusion first:
 
 1. **Recommended**: one card or machine, with capacity, bandwidth (value and confidence), and why it fits `needed`.
-2. **Memory budget**: the line-by-line sum from Step 1.
+2. **Memory budget** (mandatory, never only a conclusion such as "about 20 GB, short context"): the line-by-line sum from Step 1 for the recommended model, and for any model you say "fits just". Shape (illustrative numbers, recompute every line):
+
+   | Line | Value | Basis |
+   |---|---|---|
+   | Weights: 32.8 B params x 4.89 bpw / 8 | 20.0 GB | arithmetic, bpw from reference section 4 |
+   | KV cache at 8k: 2 x 64 layers x 8 KV heads x 128 x 8,192 x 2 bytes | 2.1 GB | arithmetic, config `assumption` if not read |
+   | Overhead (runtime buffers + display) | 1.5 GB | reference section 4 |
+   | Margin 10 % | 2.4 GB | rule of thumb |
+   | **Total vs 24 GB card** | **23.6 GB before margin, 26.0 GB with it: tight at 8k (runs, little headroom), comfortable at about 4k** | |
+
 3. **Speed**: decode range labelled `estimate`, the formula with the efficiency used, prefill note, and the matching measured benchmark if any (conditions and source).
 4. **Alternatives** (one or two): for example a cheaper smaller-quant option, a unified-memory option, or two cards. Each with the trade-off.
 5. **What it will NOT do**: for example models that do not fit at the wanted context, slow dense 70B on an APU, training limits, missing software support, prefill on Apple, speed not scaling with a second GPU.
 6. **Budget**: compare with the user's budget using canonical price rows from the `hunt-prices` method, shown with the mandatory columns of the compact display in `${CLAUDE_PLUGIN_ROOT}/references/research-method.md` section 6 (date, seller, seller type, country, landed or `excluding fees`, confidence) on every row, including route-comparison and build tables; otherwise write "price to check". Never invent a price. For a complete build, follow the `build-config` method.
-7. **Not verified**: list every unchecked item (config not read, bandwidth derived, no matching benchmark, software support to re-check).
-8. **Next action**: one concrete step, for example "run the `hunt-prices` method for this card in your country", or "send me the model's config link".
+7. **Power** (whenever more than one GPU or a PSU is discussed): vendor board power per card and recommended PSU from `${CLAUDE_PLUGIN_ROOT}/references/power-supplies-connectors.md` (for example RTX 3090: 350 W per card, NVIDIA), plus the note that transient peaks can exceed it. Never only "to check".
+8. **Not verified**: list every unchecked item (config not read, bandwidth derived, no matching benchmark, software support to re-check).
+9. **Next action**: one concrete step, for example "run the `hunt-prices` method for this card in your country", or "send me the model's config link".
+10. **Sources**: numbered; each with URL or plugin reference path and section (cite `gpu-bandwidth-ai.md` section 1 for every bandwidth figure and section 3 for every measurement), read date (ISO) and read status. Example: `1. llama.cpp CUDA scoreboard, https://github.com/ggml-org/llama.cpp/discussions/15013, read 2026-11-07, partial`.
 
 Typical shape of the trade-off to explain (from the reference, not a recommendation to repeat blindly): small and mid dense models favour high-bandwidth discrete GPUs; large MoE models favour large unified memory (APU, DGX Spark, Mac) because only active experts are read per token; dense 70B at Q4 needs about 40+ GB plus KV and runs slowly on 256 GB/s class memory.
 

@@ -70,6 +70,8 @@ Record the page's own words; map to the canonical Stock values.
 
 ## 7. When to stop searching
 
+Before writing "no listing found" for a retailer listed for the buyer's country (including foreign retailers with a storefront for that country, such as a `.fr` site), make two attempts: the retailer's own search with the exact manufacturer part number (for example MZ-V9P2T0BW), then a web search `site:<domain> <part number>`. Only then record it as not found.
+
 A source counts as read only when a product page for the item (or its closest match) was read. A homepage, a search page or an error page does not count: try the next source instead.
 
 Stop when any of these is true:

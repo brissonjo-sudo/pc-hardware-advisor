@@ -6,6 +6,16 @@ The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.1.0/),
 
 ## [Unreleased]
 
+## [0.3.3] - 2026-11-07
+
+### Fixed
+
+From real Cowork tries of cases 1 to 3 in 0.3.2 (rules placed at the end of a skill were skipped; filled templates were followed):
+
+- `size-local-ai`: filled example of the line-by-line memory budget, a mandatory power line (vendor board power, transient note) and a source format with read date and status, all inside the output template.
+- `check-compatibility`: Source column filled on every row (filled example rows), overall verdict adds "M items to confirm", PCPartPicker and TechPowerUp (forums included) never fetched or cited, forum posts labelled low confidence.
+- `hunt-prices`: two attempts (site search with the exact part number, then `site:` web search) before recording "no listing found" for a listed retailer. One run had missed a cheaper offer.
+
 ## [0.3.2] - 2026-11-07
 
 ### Changed
@@ -66,7 +76,8 @@ The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.1.0/),
 - Machine translations of the README (French, Spanish, Simplified Chinese, Hindi, Portuguese, Arabic, German, Japanese), not reviewed.
 - Eval suite of seven cases.
 
-[Unreleased]: https://github.com/brissonjo-sudo/pc-hardware-advisor/compare/v0.3.2...HEAD
+[Unreleased]: https://github.com/brissonjo-sudo/pc-hardware-advisor/compare/v0.3.3...HEAD
+[0.3.3]: https://github.com/brissonjo-sudo/pc-hardware-advisor/compare/v0.3.2...v0.3.3
 [0.3.2]: https://github.com/brissonjo-sudo/pc-hardware-advisor/compare/v0.3.1...v0.3.2
 [0.3.1]: https://github.com/brissonjo-sudo/pc-hardware-advisor/compare/v0.3.0...v0.3.1
 [0.3.0]: https://github.com/brissonjo-sudo/pc-hardware-advisor/compare/v0.2.0...v0.3.0
