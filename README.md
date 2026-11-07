@@ -1,3 +1,7 @@
+<!-- language-bar -->
+**English** · [Français](docs/README.fr.md) · [Español](docs/README.es.md) · [Deutsch](docs/README.de.md) · [Português](docs/README.pt.md) · [简体中文](docs/README.zh-CN.md) · [日本語](docs/README.ja.md) · [हिन्दी](docs/README.hi.md) · [العربية](docs/README.ar.md)
+<!-- /language-bar -->
+
 # PC Hardware Advisor
 
 PC Hardware Advisor is a plugin for Claude (Claude Code, and Cowork in the Claude desktop app) that makes Claude dependable on desktop PC hardware. It finds the best delivered price for a part anywhere in the world, checks that parts work together, designs complete builds for a use and a budget, sizes machines for local AI, judges second-hand listings, and watches prices on a schedule. Every figure it gives is dated, sourced and graded for confidence, and the plugin only reads: it never buys anything and never contacts a seller.

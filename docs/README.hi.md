@@ -1,3 +1,7 @@
+<!-- language-bar -->
+[English](../README.md) · [Français](README.fr.md) · [Español](README.es.md) · [Deutsch](README.de.md) · [Português](README.pt.md) · [简体中文](README.zh-CN.md) · [日本語](README.ja.md) · **हिन्दी** · [العربية](README.ar.md)
+<!-- /language-bar -->
+
 > **नोट:** यह मशीन अनुवाद है, जिसकी समीक्षा किसी मनुष्य ने नहीं की है। अंग्रेज़ी संस्करण ([../README.md](../README.md)) ही मान्य है। सुधार का स्वागत है, देखें [../CONTRIBUTING.md](../CONTRIBUTING.md)।
 
 # PC Hardware Advisor

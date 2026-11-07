@@ -1,3 +1,7 @@
+<!-- language-bar -->
+[English](../README.md) · [Français](README.fr.md) · [Español](README.es.md) · [Deutsch](README.de.md) · [Português](README.pt.md) · [简体中文](README.zh-CN.md) · **日本語** · [हिन्दी](README.hi.md) · [العربية](README.ar.md)
+<!-- /language-bar -->
+
 > 機械翻訳であり、人間によるレビューは受けていません。英語版（[../README.md](../README.md)）が優先されます。修正のご提案を歓迎します。詳しくは [../CONTRIBUTING.md](../CONTRIBUTING.md) をご覧ください。
 
 # PC Hardware Advisor

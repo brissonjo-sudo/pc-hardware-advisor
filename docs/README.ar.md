@@ -1,3 +1,7 @@
+<!-- language-bar -->
+[English](../README.md) · [Français](README.fr.md) · [Español](README.es.md) · [Deutsch](README.de.md) · [Português](README.pt.md) · [简体中文](README.zh-CN.md) · [日本語](README.ja.md) · [हिन्दी](README.hi.md) · **العربية**
+<!-- /language-bar -->
+
 <div dir="rtl">
 
 > **ملاحظة:** هذه ترجمة آلية لم يراجعها إنسان. النسخة الإنجليزية ([../README.md](../README.md)) هي المرجع. التصحيحات مرحّب بها، راجع [../CONTRIBUTING.md](../CONTRIBUTING.md).

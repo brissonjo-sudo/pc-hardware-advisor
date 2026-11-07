@@ -1,3 +1,7 @@
+<!-- language-bar -->
+[English](../README.md) · [Français](README.fr.md) · [Español](README.es.md) · [Deutsch](README.de.md) · [Português](README.pt.md) · **简体中文** · [日本語](README.ja.md) · [हिन्दी](README.hi.md) · [العربية](README.ar.md)
+<!-- /language-bar -->
+
 > **机器翻译，未经人工审校。** 以英文版 [../README.md](../README.md) 为准。欢迎提出修正意见，参见 [../CONTRIBUTING.md](../CONTRIBUTING.md)。
 
 # PC Hardware Advisor

@@ -1,3 +1,7 @@
+<!-- language-bar -->
+[English](../README.md) · [Français](README.fr.md) · [Español](README.es.md) · **Deutsch** · [Português](README.pt.md) · [简体中文](README.zh-CN.md) · [日本語](README.ja.md) · [हिन्दी](README.hi.md) · [العربية](README.ar.md)
+<!-- /language-bar -->
+
 # PC Hardware Advisor
 
 > Maschinelle Übersetzung, nicht von einem Menschen geprüft. Maßgeblich ist die englische Version (../README.md). Korrekturen sind willkommen, siehe ../CONTRIBUTING.md.
