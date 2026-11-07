@@ -56,6 +56,10 @@ Jo a posé 4 questions types dans Cowork (Sonnet, réflexion élevée). Le plugi
 
 À la demande de Jo, le plugin ouvre de lui-même dans le navigateur, en lecture seule, les quelques pages bloquées dont une réponse a besoin, et s'arrête à tout captcha ou contrôle anti-robot. Jamais d'imitation d'un humain, jamais dans les tâches planifiées ni dans `price-scout`. Passage 12 : cas 04 et 08 à 1,00. Risque résiduel : les conditions d'utilisation de certains sites peuvent interdire toute lecture automatisée (non vérifié).
 
+### Versions 0.3.1 et 0.3.2 : navigateur proposé en un mot (D25, D26)
+
+Deux essais réels ont montré que Claude n'agit pas de lui-même dans le navigateur réel de l'utilisateur. Depuis la 0.3.2, la première réponse propose « réponds oui » ; sur accord, l'annonce est lue dans le navigateur. Essai réel du cas 4 en 0.3.2 dans Cowork : réussi (proposition au premier tour, lecture sur accord, verdict, questions au vendeur, 5 tests de remise, négociation argumentée, « non vérifié », source datée). Écarts mineurs : verdict pas toujours formulé avec l'un des trois mots, statut de lecture des sources parfois absent.
+
 ## 3. Décisions prises seul (extrait de DECISIONS.md)
 
 - D1 : projet dans `Projects\pc-hardware-advisor` (le dossier « Projet » n'existe pas).
