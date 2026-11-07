@@ -1,6 +1,6 @@
 ---
 name: track-price
-description: This skill should be used when the user wants a recurring price watch on a desktop PC part, a complete desktop build, or local-AI hardware, with an alert only when the price drops below a threshold. Trigger phrases: "track the price of", "alert me when this drops below", "watch this GPU price", "notify me if it goes under", "monitor prices daily", "tell me when the RTX gets cheaper". The user may write in any language. Not for a one-off price search (use hunt-prices), for vetting one used listing (use review-used-listing), or for anything that buys, registers or contacts a seller.
+description: "This skill should be used when the user wants a recurring price watch on a desktop PC part, a complete desktop build, or local-AI hardware (new, refurbished or used), with an alert only when the price drops below a threshold. Use it instead of a generic scheduling or routine skill whenever the thing to watch is the price of PC hardware: it runs a first price check, starts a price history and then sets up the schedule. Trigger phrases: \"track the price of\", \"alert me when this drops below\", \"watch this GPU price\", \"notify me if it goes under\", \"monitor used RTX prices every day\", \"tell me when the RTX gets cheaper\". The user may write in any language (for example \"surveille le prix\", \"avísame cuando baje\"). Not for a one-off price search (use hunt-prices), for vetting one used listing (use review-used-listing), or for anything that buys, registers or contacts a seller."
 ---
 
 # Track a price on a schedule
@@ -20,7 +20,7 @@ Shared rules apply: `${CLAUDE_PLUGIN_ROOT}/references/research-method.md` (canon
 
 ## Step 0: confirm the inputs
 
-If the request already gives the item, a threshold and a frequency (or "daily"), do NOT stop to ask: apply the defaults below, run Steps 1 to 4 now, and list the defaults used in the confirmation so the user can change them afterwards. Ask first only when the item or the threshold is missing or ambiguous; then ask once, in one message, and propose defaults.
+If the request already gives the item, a threshold and a frequency (or "daily"), do NOT stop to ask about inputs: apply the defaults below, run Steps 1 and 2 now, and list the defaults used so the user can change them. The only stop is the creation confirmation of Step 3 for a persistent scheduler. Ask first only when the item or the threshold is missing or ambiguous; then ask once, in one message, and propose defaults.
 
 1. **Item**: exact model/SKU, or the list of acceptable equivalents (for example capacity or speed variants). Ask what is NOT acceptable (a different VRAM size, a different memory type).
 2. **Condition**: new, refurbished, used, or any. Used items follow the market method of `review-used-listing`; read `${CLAUDE_PLUGIN_ROOT}/references/used-market-checklist.md` for fair-price rules.
@@ -37,7 +37,7 @@ If the item is ambiguous (for example "a 4090"), ask one clarifying question ins
 
 Look for a `~~scheduler` capability among the tools actually available: a session scheduler, a desktop-app scheduled task, a cloud scheduled routine, or equivalent. Read the tool's own description for its limits (minimum interval, whether it needs the session or computer to stay on, whether it can write local files, which tools the fired run may use).
 
-- **A scheduler exists**: note its minimum interval and constraints. If several exist, prefer one whose runs can write the history file; otherwise use the one available. Do not stop to ask which one: proceed, and state the limits that matter in the confirmation (for example "runs only while the app is open", "cannot write to your local disk: history rows appear in each run's output"). The user can switch later.
+- **A scheduler exists**: note its minimum interval and constraints. If several exist, prefer one whose runs can write the history file; otherwise use the one available. Do not stop to ask which one: pick it, and state the limits that matter (for example "runs only while the app is open", "cannot write to your local disk: history rows appear in each run's output"). Note whether it is **persistent** (it survives this session: cloud routine, desktop-app scheduled task, operating-system task) or **session-only** (it ends with this conversation).
 - **No scheduler exists**: say so plainly. Do not pretend. Give the user the complete task definition (filled prompt from the reference, cron-style schedule or plain interval, history path) so they can create it in whatever scheduler they use. Still run Step 2 and give the baseline.
 
 ## Step 2: run one hunt now (baseline and history initialisation)
@@ -54,8 +54,9 @@ Before creating the task, read `${CLAUDE_PLUGIN_ROOT}/skills/track-price/referen
 ## Step 3: create the task
 
 1. Fill the template from the reference with the confirmed inputs. The prompt must be self-contained: the fired run has no memory of this conversation. Include the guardrails verbatim, the source list from Step 2 (names and URLs that worked, plus those blocked), the history path, the trigger rules and the failure rule.
-2. Call the scheduler tool with that prompt and the chosen interval. Use a name that identifies the item, for example "Price watch: <item>".
-3. Read the tool's result. Only a successful confirmation counts as created.
+2. Persistent scheduler: ask for ONE explicit confirmation before creating the task. In the same message (after the baseline and the history file of Step 2), show the full definition: task name, frequency and time, item and threshold, sources, history location, notification rule, guardrails, where it runs (for a cloud routine: on a remote service under the user's account, and that the task prompt is sent there). Create it only after the user says yes. Session-only scheduler: no confirmation needed; create it and say it ends with this conversation.
+3. Call the scheduler tool with that prompt and the chosen interval. Use a name that identifies the item, for example "Price watch: <item>".
+4. Read the tool's result. Only a successful confirmation counts as created.
 
 Never claim a task was created unless the tool confirmed it. If the call failed, say so, show the error in one line, and give the user the task definition to create manually.
 

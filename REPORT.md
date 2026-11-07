@@ -71,6 +71,9 @@ Fiables (lues en entier, confiance haute) : pages produit et spécifications Int
 
 ## 5. Limites connues et pistes pour la v0.2
 
+- **Déclenchement de `track-price`** (passages 8 à 10, décision D22) : avec sa description d'origine, une demande formulée surtout comme une planification était prise par le skill intégré de routines planifiées (ni relevé initial ni historique). Après renforcement de la description (et correction d'une erreur YAML détectée au passage), `track-price` est déclenché 2 fois sur 2 au passage 10 (scores 1,00 et 0,25). Contournement si besoin : nommer le skill (« utilise track-price »). Non testé dans Cowork.
+- **Frontmatters** : trois descriptions (`hunt-prices`, `track-price`, agent `price-scout`) n'étaient pas du YAML strictement valide (tolérées par Claude Code, risque de rejet dans claude.ai ou Cowork). Corrigé ; le script de contrôle utilise désormais un vrai analyseur YAML.
+
 - Couverture : des dizaines de sites marqués « not tested (rate limit) » à cause du parallélisme de la phase R ; repasse séquentielle à prévoir. Luxembourg et données d'occasion européennes faibles.
 - Données AMD : tableaux de chipsets, nombre de lignes PCIe et AGESA par processeur non lus sur amd.com.
 - Règles fiscales volatiles : exclusions Section 301 américaines expirant le 2026-11-09, suppression annoncée du seuil britannique de 135 GBP, droit forfaitaire européen de 3 € jusqu'en 2028 : à revérifier à chaque version.

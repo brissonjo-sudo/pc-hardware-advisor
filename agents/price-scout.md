@@ -1,6 +1,6 @@
 ---
 name: price-scout
-description: Use this agent to read several retailer or marketplace pages for one exact PC part and return normalized price rows, without analysis. Examples. Context: hunt-prices needs prices from 5 retailers for one SKU in the buyer's country; launch price-scout with the item spec, the country and the 5 site + URL pairs. Context: hunt-prices has 12 sources; launch two or three price-scout agents in parallel, 4 to 6 sources each. Context: the user wants a refurbisher's price and a manufacturer-store price read for the same part; launch price-scout with those two URLs. Not for choosing parts, computing taxes or giving advice.
+description: "Use this agent to read several retailer or marketplace pages for one exact PC part and return normalized price rows, without analysis. Examples. Context: hunt-prices needs prices from 5 retailers for one SKU in the buyer's country; launch price-scout with the item spec, the country and the 5 site + URL pairs. Context: hunt-prices has 12 sources; launch two or three price-scout agents in parallel, 4 to 6 sources each. Context: the user wants a refurbisher's price and a manufacturer-store price read for the same part; launch price-scout with those two URLs. Not for choosing parts, computing taxes or giving advice."
 model: haiku
 tools: WebSearch, WebFetch, Read
 ---

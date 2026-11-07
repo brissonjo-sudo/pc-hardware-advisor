@@ -6,6 +6,8 @@ import re
 import sys
 from pathlib import Path
 
+import yaml  # PyYAML
+
 ROOT = Path(__file__).resolve().parent.parent
 REFS = [
     "sockets-chipsets", "memory", "power-supplies-connectors", "form-factors-cases", "gpu-bandwidth-ai",
@@ -21,10 +23,16 @@ def fail(msg: str) -> None:
 
 
 def frontmatter(text: str) -> dict[str, str]:
+    """Parse with a real YAML parser: a parse error makes the skill load with empty metadata."""
     m = re.match(r"^---\n(.*?)\n---\n", text, re.S)
     if not m:
         return {}
-    return dict(line.split(":", 1) for line in m.group(1).splitlines() if ":" in line and not line.startswith(" "))
+    try:
+        data = yaml.safe_load(m.group(1))
+    except yaml.YAMLError as exc:
+        fail(f"frontmatter YAML parse error: {str(exc).splitlines()[0]}")
+        return {}
+    return {k: str(v) for k, v in (data or {}).items()}
 
 
 def check_reference(path: Path) -> None:
@@ -100,6 +108,9 @@ for ref in REFS:
     check_reference(p) if p.exists() else fail(f"references/{ref}.md missing")
 for skill in SKILLS:
     check_skill(skill)
+for agent in sorted(ROOT.glob("agents/*.md")):
+    if not frontmatter(agent.read_text(encoding="utf-8")).get("description"):
+        fail(f"{agent.name}: frontmatter missing or unparsable")
 check_paths()
 check_license_mentions()
 

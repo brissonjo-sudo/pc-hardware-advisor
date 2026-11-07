@@ -21,3 +21,8 @@ The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.1.0/),
 
 [Unreleased]: https://github.com/brissonjo-sudo/pc-hardware-advisor/compare/v0.1.0...HEAD
 [0.1.0]: https://github.com/brissonjo-sudo/pc-hardware-advisor/releases/tag/v0.1.0
+
+### Known issues
+
+- In Claude Code, a request phrased mainly as a schedule could be routed to the built-in scheduling skill instead of `track-price`; its description now states it takes precedence for PC-hardware price watches. If it still happens, name the skill: "use track-price".
+- `track-price` asks for one explicit confirmation before creating a persistent scheduled task (cloud routine, desktop or system task).
