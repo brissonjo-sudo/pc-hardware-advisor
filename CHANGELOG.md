@@ -16,6 +16,7 @@ The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.1.0/),
 ### Added
 
 - `retailers-by-country.md`: Alternate.fr in the France table as a direct retailer (homepage, footer and product page read 2026-11-08: no marketplace wording, no seller line). The two models had typed it differently.
+- Case 03 grader `comparator-and-from`. Case 03 on Sonnet, 2 runs: `no-working-notes`, `comparator-and-from`, `labels-translated` 2/2; both runs found Alternate.fr at 544,00 EUR, typed direct, landed "from 553,90 EUR". `table` and `prices` still fail, a known issue from before 0.3.6.
 
 ## [0.3.9] - 2026-11-08
 
