@@ -13,7 +13,10 @@ Vault : `C:\Users\Krn\Documents\ClaudeMemory\02-Projects\pc-hardware-advisor\`
 - Dépendance des contrôles : `python -m pip install -r requirements-dev.txt` (PyYAML)
 - Contrôler : `python scripts/check_content.py` (aussi en CI, `.github/workflows/checks.yml`)
 - Valider : `claude plugin validate . --profile directory`
-- Tester : `claude plugin eval . --eval-dir tests --no-publish --trust-plugin --judge-model sonnet`
+- Tester : `claude plugin eval . --eval-dir tests --no-publish --trust-plugin --judge-model sonnet --ablation none --allow-tools Write WebFetch WebSearch --case <cas> --json tests/results/<run>.json`
+  - `--allow-tools WebFetch WebSearch` est indispensable pour les cas web : sans lui, aucune page n'est lue et le banc ne vaut rien.
+  - `--ablation none` évite le bras « sans plugin » lancé par défaut (coût doublé).
+  - Un seul `--case` par commande : seul le dernier est pris en compte. Lancer en arrière-plan, un cas dure 5 à 10 minutes.
 - Construire : `python scripts/build_plugin.py` (exclut tests, research, pilotage)
 - Branche par défaut : `main`
 

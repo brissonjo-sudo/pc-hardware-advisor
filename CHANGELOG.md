@@ -6,6 +6,15 @@ The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.1.0/),
 
 ## [Unreleased]
 
+## [0.3.11] - 2026-11-08
+
+### Fixed
+
+- `hunt-prices` output template aligned with `research-method.md` section 6: excluded offers and unconfirmed sellers go in tables with the mandatory columns, never bullet lists of prices; `excluding fees` rows sorted by shown price ascending whatever the country (the template said shown price + shipping); a price in prose cites its row number, not only its source. Root cause of the case 03 `prices` and `table` failures seen since before 0.3.6.
+- Case 03 `table` grader aligned with section 6: page-read status may sit in notes or Sources. `prices` grader aligned with section 5: `seller not shown` with the site named is valid for unconfirmed rows.
+- Section 6: `marketplace (third-party seller)` gets its French form, heading included.
+- Case 03 on Sonnet, 2 runs, before the `prices` grader alignment (`tests/results/run-0311.json`): both answers now put excluded and unconfirmed offers in tables; `table` 1/2 (was 0/2); `prices` 0/2, not re-measured after the alignment.
+
 ## [0.3.10] - 2026-11-08
 
 ### Fixed
