@@ -57,6 +57,7 @@ Fix every conflict by changing a part, then re-run the affected pairs. Never shi
 ## Step 4: price every part
 
 1. Apply the `hunt-prices` method per part for the buyer's country: direct retailers and manufacturer stores first, professional refurbishers if allowed, then neighbouring countries that ship, marketplaces last and flagged. Follow its source list rules and its landed-price computation (`${CLAUDE_PLUGIN_ROOT}/references/international-buying.md` when importing).
+   For the GPU, memory, CPU and motherboard, read at least 3 direct retailers of the buyer's country when that many sell the part, and keep the cheapest in stock unless you state a reason (warranty, delivery, a spec). One retailer per part is not a comparison.
 2. Batch lookups: when the `price-scout` sub-agent is available, dispatch several parts per round in parallel, then spot-check the cheapest rows yourself. Otherwise read pages with `~~web fetch`, one fetch per page.
 3. Keep canonical price rows (14 columns of `research-method.md`) in a separate rows table or appendix, or fold the key fields (date, seller, seller type, country, landed) into the main table. Either way every number traces to a row.
 4. Compute the landed total in the buyer's currency with the rate date. If any price could not be read, mark that part `price not read`, keep the total as **partial** and say which parts are missing. Never fill a gap with an estimate presented as a price.
@@ -70,7 +71,8 @@ Fix every conflict by changing a part, then re-run the affected pairs. Never shi
 1. Start from the plugin heuristic priorities for the use in the playbook. They are rules of thumb, labelled as such, not measured facts. Do not state percentages as facts.
 2. Replace the heuristic with real prices: the first draft is allocated by priority, the final one by what the priced parts cost. Re-balance when memory, SSD or GPU prices make a default split unrealistic.
 3. Keep a reserve line for things users forget (OS licence, fans, cables, thermal paste, a monitor if in scope). Price them or mark them `not priced`.
-4. If the main config exceeds the budget, say so in the conclusion line and by how much. Do not hide an overrun.
+4. Before declaring an overrun, fit the budget: apply the playbook's cheaper levers in order (memory capacity down to the use's minimum, stated in the assumptions, a cheaper CPU or board on the same platform, the GPU one tier down) and re-price. The main config is the best one that fits the budget when one exists. Say the budget cannot be met only if the cheapest config that still meets the use is over it, and show that config with its total.
+5. If the main config exceeds the budget, say so in the conclusion line and by how much. Do not hide an overrun.
 
 ## Step 6: variants
 
@@ -91,10 +93,10 @@ Start with the conclusion; use the user's language.
 2. **Assumptions and defaults used**, one line each.
 3. **Main table**, one row per part:
 
-   | Part | Choice (exact model/SKU) | Why | Date | Seller | Seller type | Country | Landed | Confidence |
+   | Part | Choice (exact model/SKU) | Why | Date | Seller | Seller type | Country | Shown price | Landed | Stock | Confidence | Source |
 
    End with the landed total (or `partial total`) and the currency and FX rate date. If you kept full canonical rows elsewhere, add a reference column and give the rows after the table.
-4. **Compatibility summary**: one line per critical pair with its verdict, linking to the per-pair verdicts from `check-compatibility`.
+4. **Compatibility summary**: one line per critical pair with its verdict, linking to the per-pair verdicts from `check-compatibility`. Every number in it (length, height, wattage, connector count, slot generation) cites its `[n]`.
 5. **Variants**: cheaper and stronger, each with changed parts, delta, effect.
 6. **Watch-outs**.
 7. **Sacrificed**.
@@ -102,7 +104,7 @@ Start with the conclusion; use the user's language.
 9. **Not verified**: pattern "Not verified: <claim>. Reason: <...>. Next step: <...>". Include unread prices, unchecked BIOS notes, unchecked stock, plugin-heuristic priorities.
 10. **Blocked or unreadable sources**: offer in one line to open the page in the user's browser (reply yes), except for sites that refuse robots or automated collection, for which only a screenshot or pasted text is requested; never imitate human behaviour.
 11. **One next action** for the user (for example "Open row 1 and confirm the cart total before paying").
-12. **Sources**: numbered, URL, date read, read status; cite with `[n]`.
+12. **Sources**: numbered, URL, date read, read status on each entry; cite with `[n]`. A page whose URL was not kept is not a source: re-read it or drop the figure it gave.
 
 Keep prose short; no narration of the search process.
 
