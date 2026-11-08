@@ -65,6 +65,23 @@ claude --plugin-dir <path to this repository>
 
 احصل على الملف `pc-hardware-advisor.plugin` (مرفق بإصدار عند نشر إصدار، أو يُبنى من نسخة عمل بالأمر `python scripts/build_plugin.py` الذي يكتبه في `dist/`)، ثم اسحبه إلى تطبيق Claude لسطح المكتب، ووافق على مطالبة التثبيت.
 
+## التحديث والتحقق والإزالة
+
+**التحديث (Claude Code).** حدّث المتجر (marketplace) أولاً، ثم حدّث الإضافة، ثم أعد تشغيل Claude Code:
+
+```
+claude plugin marketplace update pc-hardware-advisor
+claude plugin update pc-hardware-advisor@pc-hardware-advisor
+```
+
+لا يُعرض التحديث إلا عند تغيّر `version` في `plugin.json`.
+
+**التحقق.** اسأل Claude «ما مهارات الإضافات المتاحة لديك لعتاد الحاسوب؟»، أو شغّل `claude plugin list` وابحث عن `pc-hardware-advisor` ونسخته.
+
+**الإزالة.** شغّل `claude plugin uninstall pc-hardware-advisor@pc-hardware-advisor`. في تطبيق Claude لسطح المكتب، أزل الإضافة من إعدادات الإضافات. تبقى ملفات سجل الأسعار التي أنشأتها في المكان الذي حفظتها فيه.
+
+المستودع خاص حالياً، لذا لا يعمل مسار المتجر إلا للحسابات التي لديها صلاحية الوصول؛ ملف `.plugin` هو البديل.
+
 ## أمثلة على الطلبات
 
 يختار Claude المهارة المناسبة من الطلب. بعض الأمثلة:

@@ -63,6 +63,23 @@ claude --plugin-dir <path to this repository>
 
 获取 `pc-hardware-advisor.plugin` 文件（发布版本时会附在发行版中；也可以用工作副本通过 `python scripts/build_plugin.py` 构建，输出到 `dist/` 目录），将其拖入 Claude 桌面应用，然后接受安装提示。
 
+## 更新、验证与卸载
+
+**更新（Claude Code）。** 先刷新 marketplace，再更新插件，然后重启 Claude Code：
+
+```
+claude plugin marketplace update pc-hardware-advisor
+claude plugin update pc-hardware-advisor@pc-hardware-advisor
+```
+
+只有当 `plugin.json` 中的 `version` 发生变化时，才会提示更新。
+
+**验证。** 向 Claude 提问“你有哪些 PC 硬件相关的插件 skill？”，或运行 `claude plugin list`，查看是否有 `pc-hardware-advisor` 及其版本。
+
+**卸载。** 运行 `claude plugin uninstall pc-hardware-advisor@pc-hardware-advisor`。在 Claude 桌面应用中，请在插件设置里移除该插件。你创建的价格历史文件仍保留在你存放的位置。
+
+该仓库目前为私有，因此 marketplace 方式仅适用于有访问权限的账号；`.plugin` 文件是替代方案。
+
 ## 请求示例
 
 Claude 会根据请求自动选择合适的技能。以下是几个例子：

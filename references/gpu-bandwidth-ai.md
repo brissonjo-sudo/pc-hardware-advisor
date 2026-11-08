@@ -93,8 +93,8 @@ llama.cpp unless noted; pp512/tg128 unless noted; n/s = not stated. Scoreboard r
 | 1 vs 2x RTX 3090 | Qwen3 32B Q4_K_M | CUDA, tensor split for 2 | 1198 vs 1578 | 35.3 vs 59.8 | [28] 2026-10-19 |
 | 2x RTX 3090 | Llama 3.3 70B AWQ, 1 user | vLLM 0.31.0 TP=2 | TTFT 0.72 s | 31.25 (148.8 aggregate at 8 users) | [28] 2026-10-19 |
 | DGX Spark | gpt-oss 120B MXFP4, pp2048/tg32, depth 0 | CUDA b6922 | 1956 | 60.6 | [29] ~Oct 2025 |
-| M3 Ultra (80 GPU) | same | Metal | 1471 | 92.1 | [21] commit 8e672ef |
-| M4 Max (40 GPU) | same | Metal | 886 | 83.1 | [21] commit 8e672ef |
+| M3 Ultra (80 GPU) | Llama 2 7B Q4_0 (not gpt-oss 120B) | Metal | 1471 | 92.1 | [21] commit 8e672ef |
+| M4 Max (40 GPU) | Llama 2 7B Q4_0 (not gpt-oss 120B) | Metal | 886 | 83.1 | [21] commit 8e672ef |
 | M5 Max (40 GPU) | Llama 2 7B Q4_0 / Q8_0 / F16 | Metal | 3220 / 3144 / 3158 | 119.9 / 72.4 / 37.1 | [21] c1d0e7a, 2026 |
 | M5 Ultra (80 GPU) | same | Metal | 4945 / 4911 / 5207 | 179.1 / 119.0 / 73.6 | [21] c1d0e7a, 2026 |
 

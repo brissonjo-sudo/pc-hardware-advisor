@@ -3,7 +3,7 @@ description: "Local-AI build with >=32 GB VRAM, 2000 EUR, worldwide sourcing, de
 expected_outcome: "Compares new, refurbished, import with VAT and duties; private used excluded from auto configs."
 tags: [build-config, hunt-prices, size-local-ai, en]
 model: sonnet
-runs: 1
+runs: 2
 max_turns: 40
 timeout_seconds: 1500
 allowed_tools: [Read, Glob, Grep, Skill, Agent, WebSearch, WebFetch, Write, ToolSearch]

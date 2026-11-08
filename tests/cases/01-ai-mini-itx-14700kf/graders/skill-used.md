@@ -1,5 +1,5 @@
 ---
 type: tool_used
 tool: Skill
-input_match: '"skill"\s*:\s*"(?:[\w-]+:)?(?:build-config|check-compatibility|size-local-ai)"'
+input_match: '"skill"\s*:\s*"(?:[\w-]+:)?(?:build-config)"'
 ---

@@ -63,6 +63,23 @@ claude --plugin-dir <path to this repository>
 
 `pc-hardware-advisor.plugin` फ़ाइल प्राप्त करें (जब कोई release प्रकाशित हो तो वह उससे जुड़ी होती है, या `python scripts/build_plugin.py` से working copy में बनाई जा सकती है, जो इसे `dist/` में लिखती है), उसे Claude डेस्कटॉप ऐप में खींचें, और इंस्टॉलेशन prompt स्वीकार करें।
 
+## अपडेट, सत्यापन और अनइंस्टॉल
+
+**अपडेट (Claude Code)।** पहले मार्केटप्लेस को रीफ़्रेश करें, फिर प्लगइन अपडेट करें, फिर Claude Code को रीस्टार्ट करें:
+
+```
+claude plugin marketplace update pc-hardware-advisor
+claude plugin update pc-hardware-advisor@pc-hardware-advisor
+```
+
+अपडेट तभी सुझाया जाता है जब `plugin.json` में `version` बदलता है।
+
+**सत्यापन।** Claude से पूछें "PC हार्डवेयर के लिए तुम्हारे पास कौन-से प्लगइन skills हैं?", या `claude plugin list` चलाएँ और `pc-hardware-advisor` तथा उसका संस्करण देखें।
+
+**अनइंस्टॉल।** `claude plugin uninstall pc-hardware-advisor@pc-hardware-advisor` चलाएँ। Claude डेस्कटॉप ऐप में प्लगइन सेटिंग्स से इसे हटाएँ। आपकी बनाई कीमत-इतिहास फ़ाइलें वहीं रहती हैं जहाँ आपने उन्हें रखा था।
+
+रिपॉज़िटरी फ़िलहाल निजी है, इसलिए मार्केटप्लेस वाला रास्ता केवल पहुँच वाले खातों के लिए काम करता है; `.plugin` फ़ाइल विकल्प है।
+
 ## उदाहरण अनुरोध
 
 Claude अनुरोध से सही skill चुनता है। कुछ उदाहरण:

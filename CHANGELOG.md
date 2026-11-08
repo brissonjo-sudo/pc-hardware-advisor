@@ -6,12 +6,38 @@ The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.1.0/),
 
 ## [Unreleased]
 
-### To do (not released)
+## [0.3.4] - 2026-11-08
 
-- `size-local-ai`: when only the safety margin exceeds the card memory, say "fits without margin, risky" rather than "does not fit".
-- Every external source with read date and status (two were missing in a real try).
-- `hunt-prices`: never offer the browser for sites that refuse robots or automated collection (Amazon, Cdiscount in a real try); offer only a screenshot for those.
-- Country column: take it from `retailers-by-country.md` when the page does not show it (PcComponentes was left as "not shown").
+Audit-driven fixes. Findings and ids are in `AUDIT.md`; evidence is in `research/audit/`.
+
+### Fixed
+
+- Section 301 (#3): the 178 exclusions were extended through 2027-01-09 by a USTR notice dated 2026-11-06 (previous operative date 2026-11-09). Corrected in `international-buying.md` and `used-market-checklist.md`; GPU and motherboard scope stays unverified; re-check by 2027-01-05.
+- EU handling fee (#18): the EUR 2 fee applies per item irrespective of value for distance sales and is part of the VAT base (Commission guidance 3.2, 9.2). Worked example 1 recomputed (VAT 61.60, landed about EUR 375.72 excluding the carrier fee).
+- Carrier fees (#24): DHL France and Royal Mail fee rows marked as not verified on the official page; the DHL France fee is removed from example 1.
+- US de minimis (#19): the suspension covers all modes other than the international postal network; the postal route is not covered by the CBP rule.
+- Forced-labor Section 301 (#25): the 10% and 12.5% tiers are confirmed by a USTR fact sheet; China's tier, effective date and PC-part scope remain unverified.
+- RTX 5090 FE power (#20): "4x PCIe 8-pin (adapter in box) or 1x 600 W PCIe Gen 5 cable"; the "450 W or more" wording is removed.
+- Cooler Master NR200P V2, MAX V2 and V3 (#21): GPU length, thickness and PSU type corrected from coolermaster.com; Lian Li A4-H2O confidence lowered to low because the page returned 404 (#26).
+- B840 and B850 GPU-slot generation (#22): ASUS pages cited correctly; the unsourced HWCooling 3.0 value for B840 is removed.
+- Retailer rows (#23): shop24.lu typed `marketplace (mixed)`, pccomponentes.es redirect recorded, StaticICE set to `partial`, Janpara described as a used-goods retailer, readability column header carries the 2026-11-08 re-sample.
+- "When a site is blocked" (#7) now points to the browser fallback of `research-method.md` section 7 and says "one fetch attempt per page per answer".
+- Directive 2019/771 (#14): article 11 is "Burden of proof" (one-year presumption, two years at Member State option); article 13 is remedies.
+- Local-AI table (#15): the M3 Ultra and M4 Max rows are Llama 2 7B Q4_0 measurements, not gpt-oss 120B.
+- Former to-do items (#17): size-local-ai margin wording, read date and status on every external source, no browser offer for robots-refusing sites, country taken from `retailers-by-country.md`.
+
+### Changed
+
+- Canonical seller types (#6): nine values only; added `direct retailer (seller line not shown)` and `seller type unconfirmed`. `seller not shown` is a Seller-column value, not a type.
+- Browser click rule (#11): only "show more" on the description or the photo gallery; never anything that reveals a phone number, e-mail, address or login, adds to a cart or sends a message.
+- Mandatory columns of the compact display are the single reference list (#16).
+- Caps on parallel reading and guardrails for scheduled runs, in the skills and agents.
+
+### Added
+
+- Eval cases 09 to 12.
+- `AUDIT.md`, with the audit evidence in `research/audit/`.
+- Content-check assertions in CI.
 
 ## [0.3.3] - 2026-11-07
 
@@ -83,7 +109,8 @@ From real Cowork tries of cases 1 to 3 in 0.3.2 (rules placed at the end of a sk
 - Machine translations of the README (French, Spanish, Simplified Chinese, Hindi, Portuguese, Arabic, German, Japanese), not reviewed.
 - Eval suite of seven cases.
 
-[Unreleased]: https://github.com/brissonjo-sudo/pc-hardware-advisor/compare/v0.3.3...HEAD
+[Unreleased]: https://github.com/brissonjo-sudo/pc-hardware-advisor/compare/v0.3.4...HEAD
+[0.3.4]: https://github.com/brissonjo-sudo/pc-hardware-advisor/compare/v0.3.3...v0.3.4
 [0.3.3]: https://github.com/brissonjo-sudo/pc-hardware-advisor/compare/v0.3.2...v0.3.3
 [0.3.2]: https://github.com/brissonjo-sudo/pc-hardware-advisor/compare/v0.3.1...v0.3.2
 [0.3.1]: https://github.com/brissonjo-sudo/pc-hardware-advisor/compare/v0.3.0...v0.3.1

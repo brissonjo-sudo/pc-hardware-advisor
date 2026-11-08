@@ -52,14 +52,14 @@ AMD's chipset pages could not be read. The table mixes ASUS (high for ASUS produ
 | B650 | Yes | Yes | 5.0 optional (vendor choice) | one 5.0 M.2 required (recalled) | optional | Not re-verified | [12] | low |
 | B650E / X670E | Yes | Yes | 5.0 mandatory | 5.0 mandatory | optional on 600 series (HWCooling) | X670/X670E use two chipset dies; B650/B650E one | [19] | medium |
 | X670 | Yes | Yes | 5.0 optional | 5.0 M.2 | optional | two dies | [19] | low |
-| B840 | No (Corsair; HWCooling: reportedly not) | Yes (EXPO/XMP/manual) | CONFLICT, see below | PCIe 4.0 x4 (Corsair); 3.0/4.0 (ASUS) | optional, needs extra chip | Corsair: 34 total chipset lanes, 0 PCIe 5.0 | [19] [20] [21] | medium |
+| B840 | No (Corsair; HWCooling: reportedly not) | Yes (EXPO/XMP/manual) | PCIe 4.0 per Corsair and the ASUS board page (see below) | PCIe 4.0 x4 (Corsair); 3.0/4.0 (ASUS) | optional, needs extra chip | Corsair: 34 total chipset lanes, 0 PCIe 5.0 | [19] [20] [21] | medium |
 | B850 | Yes (Corsair); ASUS: AI OC features only on some models | Yes | CONFLICT, see below | PCIe 5.0 x4 (Corsair, HWCooling; ASUS: 1 to 3 slots) | optional, extra chip required | Corsair: 36 chipset lanes, 4 PCIe 5.0 | [19] [20] [21] | medium |
 | X870 | not stated by HWCooling; ASUS lists AI OC on most | Yes | PCIe 5.0 x16 | PCIe 5.0 (ASUS: two or more 5.0 M.2) | Required (HWCooling); ASUS PRIME X870-P WIFI has two rear USB4 | One Promontory 21 die + USB4 controller | [19] [21] [22] | medium |
 | X870E | same as X870 | Yes (HWCooling: boards expected to reach DDR5-8000) | PCIe 5.0 x16 (or x8/x8) | PCIe 5.0 x4 | Required | Two Promontory 21 dies + ASM4242 USB4 controller; more PCIe 4.0 lanes, SATA, USB than X870 | [19] [21] | medium |
 
 Conflicts, shown side by side:
-- B840 GPU slot generation: Corsair table says PCIe 4.0 x16 or 2x8 [20]; HWCooling pre-launch says PCIe 3.0 x16 only [19]; ASUS microsite says B840 boards are limited to PCIe 4.0 slots and PCIe 4.0 and 3.0 M.2 [21].
-- B850 GPU slot generation: Corsair table says PCIe 4.0 x16/2x8 [20]; HWCooling pre-launch says PCIe 5.0 x16 optional, x8/x8 supported [19]; ASUS states 5.0 x16 only for X870/X870E and PCIe 5.0 M.2 for B850 [21].
+- B840 GPU slot generation: Corsair table says PCIe 4.0 x16 or 2x8 [20]; the ASUS board page (PRIME B840-PLUS WIFI techspec, read 2026-11-08) says "1 x PCIe 4.0 x16 slot (supports x16 mode)"; the ASUS microsite says B840 is "PCIe 4.0 ready" and lists PCIe 4.0 and 3.0 M.2 [21]. A HWCooling pre-launch value of 3.0 is not supported by either and is dropped.
+- B850 GPU slot generation: Corsair table says PCIe 4.0 x16/2x8 [20]; HWCooling pre-launch says PCIe 5.0 x16 optional, x8/x8 supported [19]; the ASUS microsite (read 2026-11-08) says B850 boards are "PCIe 5.0 ready", X870/X870E offer up to two PCIe 5.0 x16 slots, and B850 has PCIe 5.0 M.2 [21]. ASUS and HWCooling agree on 5.0 per board; Corsair says 4.0.
 
 Do not state the B840 or B850 GPU-slot generation, or any 600-series GPU/M.2 rule, as fact. Read the specific board's spec page and quote it.
 
