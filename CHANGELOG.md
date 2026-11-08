@@ -6,6 +6,12 @@ The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.1.0/),
 
 ## [Unreleased]
 
+## [0.3.15] - 2026-11-08
+
+### Fixed
+
+- For a spec that several products match, retailer listings are read sorted by price ascending when the site offers that sort, and the cheapest matching product pages (up to 3 per retailer) are opened first, never only the first match (`search-playbook.md` section 2, `hunt-prices` step 5, `price-scout`). Cowork test on 0.3.14 (Sonnet high) headlined 605 EUR at Alternate.fr while three runs the same day had found a 544 EUR kit at the same retailer. Cause of the miss not established; fix plausible, not measured.
+
 ## [0.3.14] - 2026-11-08
 
 ### Fixed

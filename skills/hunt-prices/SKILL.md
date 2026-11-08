@@ -54,7 +54,7 @@ Defaults when the user does not answer: new, all seller types shown separately, 
 2. If sub-agents are unavailable, read the pages yourself with `~~web fetch`, one fetch per page, same procedure.
 3. `price-scout` returns canonical rows only, plus an "Unreadable" list. Its Landed column is `excluding fees` unless shipping to the buyer was shown. You compute taxes and fees.
 4. Verify before trusting: if a returned row looks too cheap, or its seller type is unclear, open the page yourself once. Spot-check at least the cheapest three rows.
-5. Read PRODUCT pages, not search listings: listings are for discovery only (they rarely show seller, shipping or real stock). A homepage, search page or error page does not count as a source read; move to the next source.
+5. Read PRODUCT pages, not search listings: listings are for discovery only (they rarely show seller, shipping or real stock). A homepage, search page or error page does not count as a source read; move to the next source. For a spec rather than one SKU, read listings sorted by price ascending and open the cheapest matches first, up to 3 per retailer (playbook section 2).
 6. Stop when the playbook's stopping rule (search-playbook.md section 7) is met; report which condition applied. Do not loop on blocked pages.
 
 ## 5. Normalise and compute landed price
