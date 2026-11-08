@@ -49,7 +49,7 @@ Defaults when the user does not answer: new, all seller types shown separately, 
 
 ## 4. Collect prices
 
-1. Prefer parallel reading. Dispatch the `price-scout` sub-agent in batches of about 3 to 6 sources per call. Caps: at most 3 `price-scout` agents at a time, 6 sources per agent, 30 product pages per answer; above that, stop and say what was not read. Use the brief template from the playbook: item spec, buyer country, and site + query pairs or URLs.
+1. Prefer parallel reading. Dispatch the `price-scout` sub-agent in batches of about 3 to 6 sources per call. Caps: at most 3 `price-scout` agents at a time, 6 sources per agent, 30 product pages per answer; above that, stop and say what was not read. Use the brief template from the playbook: item spec, buyer country, and site + query pairs or URLs. Write nothing to the user while the batches run: no "batches are back" or "waiting for" messages (research-method.md section 11, item 1).
 2. If sub-agents are unavailable, read the pages yourself with `~~web fetch`, one fetch per page, same procedure.
 3. `price-scout` returns canonical rows only, plus an "Unreadable" list. Its Landed column is `excluding fees` unless shipping to the buyer was shown. You compute taxes and fees.
 4. Verify before trusting: if a returned row looks too cheap, or its seller type is unclear, open the page yourself once. Spot-check at least the cheapest three rows.

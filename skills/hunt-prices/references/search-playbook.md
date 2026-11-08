@@ -83,7 +83,7 @@ Stop when any of these is true:
 3. All sources in the buyer-country section and the accepted import countries were tried once.
 4. The user's delay or country limits leave nothing more to try.
 
-Say in the answer which stopping rule applied. Do not claim the result is the global minimum: it is the minimum of what was read.
+Say in the answer which stopping rule applied, in plain words ("all French retailers on the list were tried once"), never by its number. Do not claim the result is the global minimum: it is the minimum of what was read.
 
 ## 8. Prices shown excluding VAT (B2B sites)
 
