@@ -6,6 +6,14 @@ The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.1.0/),
 
 ## [Unreleased]
 
+## [0.3.14] - 2026-11-08
+
+### Fixed
+
+- The host-forced line rule covers lines between tool calls too: no price, figure, count, progress tally or estimate (`hunt-prices`, `build-config`, gate item 1). Cowork test on 0.3.13 (Sonnet high) showed "one page read out of nine" mid-run; the opening line was compliant.
+- Gate item 3: a price difference compares shown with shown or landed with landed, and says which. Same test subtracted a landed minimum from a shown price.
+- Gate item 4 and the `hunt-prices` Sources template: each entry carries its own read status; a global "partial unless noted" does not count.
+
 ## [0.3.13] - 2026-11-08
 
 ### Fixed
