@@ -6,6 +6,12 @@ The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.1.0/),
 
 ## [Unreleased]
 
+## [0.3.8] - 2026-11-08
+
+### Fixed
+
+- `retailers-by-country.md`: Materiel.net retyped `marketplace (mixed)`. Its Marketplace terms (supplied by the maintainer, dated 2023-09-01) confirm professional third-party sellers alongside its own stock, and a product page shows the site's own offer if it sells the item, else the cheapest marketplace offer. Seller is read per offer; no seller line stays `seller type unconfirmed`.
+
 ## [0.3.7] - 2026-11-08
 
 ### Fixed
