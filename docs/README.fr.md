@@ -63,6 +63,23 @@ claude --plugin-dir <path to this repository>
 
 Récupérez le fichier `pc-hardware-advisor.plugin` (joint à une version publiée lorsqu'il en existe une, ou généré à partir d'une copie de travail avec `python scripts/build_plugin.py`, qui l'écrit dans `dist/`), glissez-le dans l'application de bureau Claude, puis acceptez l'invite d'installation.
 
+## Mettre à jour, vérifier et désinstaller
+
+**Mise à jour (Claude Code).** Actualisez la place de marché, puis mettez à jour le plugin, puis redémarrez Claude Code :
+
+```
+claude plugin marketplace update pc-hardware-advisor
+claude plugin update pc-hardware-advisor@pc-hardware-advisor
+```
+
+Une mise à jour n'est proposée que si la `version` de `plugin.json` change.
+
+**Vérifier.** Demandez à Claude « quelles skills de plugin as-tu pour le matériel PC ? », ou lancez `claude plugin list` et cherchez `pc-hardware-advisor` et sa version.
+
+**Désinstaller.** Lancez `claude plugin uninstall pc-hardware-advisor@pc-hardware-advisor`. Dans l'application de bureau Claude, retirez le plugin dans les réglages des plugins. Les fichiers d'historique de prix que vous avez créés restent là où vous les avez placés.
+
+Le dépôt est actuellement privé : la voie par place de marché ne fonctionne que pour les comptes qui y ont accès ; le fichier `.plugin` est l'alternative.
+
 ## Exemples de demandes
 
 Claude choisit le bon skill à partir de la demande. Quelques exemples :

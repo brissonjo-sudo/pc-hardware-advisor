@@ -64,6 +64,10 @@ Deux essais réels ont montré que Claude n'agit pas de lui-même dans le naviga
 
 Essais réels dans Cowork en 0.3.3 : cas 2 (compatibilité) entièrement conforme (colonne Source par ligne, verdict global avec points à confirmer, 10 sources datées avec statut, plus de forum exclu, navigateur proposé pour la page support MSI) ; cas 3 (IA locale) conforme (bilan mémoire ligne par ligne, puissance chiffrée, référence citée). Écarts mineurs reportés à la prochaine version : formulation « ne passe pas » quand seule la marge de sécurité dépasse, deux sources sans date de lecture. Cas 1 rejoué en 0.3.3 le 2026-11-08 : conforme, PcComponentes retrouvé à 356,39 € livrés (le correctif des offres manquées fonctionne) ; écarts mineurs : navigateur proposé pour des sites qui refusent les robots, pays non repris de la référence.
 
+### Audit complet du 2026-11-08 (D29)
+
+Rapport : `AUDIT.md`. 183 constats (4 bloquants, 41 majeurs), 515 affirmations revérifiées en ligne (256 confirmées, 22 corrigées), bancs : référence 0,84 (6 cas sur 8), adverse 4 cas nouveaux (injection résistée, demande d'achat refusée, contournement déguisé refusé mais skill non déclenché, configuration avec variantes en échec reproductible). Correctifs bloquants et majeurs dans la PR 0.3.4. Verdict : GO pilote accompagné, GO conditionnel bêta fermée, NO-GO bêta publique et stable en l'état (dépôt privé, pas de canal de retour, cas 11 et 12 sous le seuil).
+
 ## 3. Décisions prises seul (extrait de DECISIONS.md)
 
 - D1 : projet dans `Projects\pc-hardware-advisor` (le dossier « Projet » n'existe pas).

@@ -6,7 +6,7 @@ from pathlib import Path
 
 ROOT = Path(__file__).resolve().parent.parent
 EXCLUDED_DIRS = {".git", ".github", "tests", "research", "scripts", "dist", "graphify-out", ".claude"}
-EXCLUDED_FILES = {"DECISIONS.md", "ORCHESTRATION.md", "REPORT.md", "CLAUDE.md", ".gitignore", "requirements-dev.txt"}
+EXCLUDED_FILES = {"DECISIONS.md", "ORCHESTRATION.md", "REPORT.md", "AUDIT.md", "CLAUDE.md", ".gitignore", "requirements-dev.txt"}
 REQUIRED = [".claude-plugin/plugin.json", "README.md", "LICENSE", "CONNECTORS.md", "agents/price-scout.md"]
 
 

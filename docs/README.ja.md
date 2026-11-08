@@ -63,6 +63,23 @@ claude --plugin-dir <このリポジトリのパス>
 
 `pc-hardware-advisor.plugin` ファイルを取得します（リリースが公開されている場合はリリースに添付されています。そうでなければ、作業コピーから `python scripts/build_plugin.py` で作成でき、`dist/` に出力されます）。それを Claude デスクトップアプリにドラッグし、インストールの確認に同意してください。
 
+## 更新、確認、アンインストール
+
+**更新（Claude Code）。** マーケットプレイスを更新し、次にプラグインを更新して、Claude Code を再起動します。
+
+```
+claude plugin marketplace update pc-hardware-advisor
+claude plugin update pc-hardware-advisor@pc-hardware-advisor
+```
+
+更新が提案されるのは、`plugin.json` の `version` が変わったときだけです。
+
+**確認。** Claude に「PC ハードウェア向けのプラグイン skill は何がありますか？」と尋ねるか、`claude plugin list` を実行して `pc-hardware-advisor` とそのバージョンを探します。
+
+**アンインストール。** `claude plugin uninstall pc-hardware-advisor@pc-hardware-advisor` を実行します。Claude デスクトップアプリでは、プラグイン設定から削除します。作成した価格履歴ファイルは、保存した場所にそのまま残ります。
+
+このリポジトリは現在非公開のため、マーケットプレイス経由はアクセス権のあるアカウントでのみ動作します。代わりに `.plugin` ファイルを使えます。
+
 ## リクエストの例
 
 Claude は依頼内容から適切なスキルを選びます。例をいくつか挙げます:
