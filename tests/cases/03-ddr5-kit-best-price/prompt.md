@@ -3,7 +3,7 @@ description: "Best landed price for a DDR5 2x16 GB 6000 kit, direct retailers, F
 expected_outcome: "Dated table, typed sellers, landed price, partial pages flagged."
 tags: [hunt-prices, price-scout, fr]
 model: sonnet
-runs: 1
+runs: 2
 max_turns: 40
 timeout_seconds: 1500
 allowed_tools: [Read, Glob, Grep, Skill, Agent, WebSearch, WebFetch, Write, ToolSearch]

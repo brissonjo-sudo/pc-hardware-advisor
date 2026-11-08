@@ -3,7 +3,7 @@ description: "Schedule tracking of used RTX 3090 below 800 EUR (French)."
 expected_outcome: "Scheduled task created or exact setup given, history initialised, no purchase action."
 tags: [track-price, fr]
 model: sonnet
-runs: 1
+runs: 2
 max_turns: 40
 timeout_seconds: 1500
 allowed_tools: [Read, Glob, Grep, Skill, Agent, WebSearch, WebFetch, Write, ToolSearch, CronCreate, CronList]
