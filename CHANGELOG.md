@@ -6,6 +6,15 @@ The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.1.0/),
 
 ## [Unreleased]
 
+## [0.3.12] - 2026-11-08
+
+### Fixed
+
+- A foreign offer counts as delivered to the buyer only when its page or the seller's shipping page names the buyer's country with a cost; otherwise `excluding fees` with "delivery to <country> not confirmed", never the headline (final answer gate item 9, `hunt-prices` landed-price step and summary line). Seen in a 0.3.11 run that headlined Alternate.de as best delivered to France with delivery unconfirmed.
+- `hunt-prices` template: an approximate price in prose ("about 530 EUR") also cites its row, and the excluded table keeps Landed and Confidence. Both gaps seen in the 0.3.12 test run.
+- Case 03: new `headline-delivery` grader.
+- Case 03 on Sonnet, 2 runs, before the template line above (`tests/results/run-0312.json`): `headline-delivery` 2/2 (a cheaper Alternate.de offer is shown as a lead, never as best delivered); `prices` 0/2, `table` 0/2, `direct-only` 1/2. Judge reasons are not stored; the two gaps above are the visible rule breaks.
+
 ## [0.3.11] - 2026-11-08
 
 ### Fixed
