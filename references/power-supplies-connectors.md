@@ -20,7 +20,7 @@ Table date: all rows checked 2026-11-07.
 | 12V-2x6 rating | 600 W on the 12 V rail, 16 AWG wire, 9.2 A per pin, four sideband signals (CARD_PWR_STABLE, CARD_CBL_PRES#, SENSE0, SENSE1). Max single-card power raised to 675 W (75 W slot + 600 W cable) | [2] | high |
 | 12VHPWR vs 12V-2x6, physical | Changes are on the GPU/PSU sockets (shorter sense pins, longer power terminals); cable and plug are unchanged. Sense pins make contact only when the power pins are fully seated. Markings: "H+" = 12VHPWR, "H++" = 12V-2x6. The exact pin-length values differ between secondary sources | [3], [4], [5], [6] | medium (qualitative), low (mm values) |
 | Cable reuse | Corsair: a 12VHPWR cable can stay in use with a 12V-2x6 GPU, the difference is not in the cable. An ATX 3.1 PSU cable on a GPU with an old 12VHPWR socket does not give the shorter-sense-pin protection | [7], [8] | medium |
-| Adapters | NVIDIA ships a 3x or 4x 8-pin to 12V-2x6 adapter with FE and many cards. RTX 5090 FE accepts 4x 8-pin or one PCIe Gen5 cable of 450 W or more (600 W in the spec table). The number of 8-pin plugs used must match the adapter | [13], [14] | high |
+| Adapters | NVIDIA ships a 3x or 4x 8-pin to 12V-2x6 adapter with FE and many cards. RTX 5090 FE: "4x PCIe 8-pin cables (adapter in box) OR 1x 600 W PCIe Gen 5 cable" (nvidia.com RTX 5090 page, read 2026-11-08). The number of 8-pin plugs used must match the adapter | [13], [14] | high |
 | "All RTX 50 use 12V-2x6" (Corsair) | Do not generalise. NVIDIA lists 5060 Ti / 5060 as "1x 8-pin OR 300 W Gen5 cable (adapter in box)" for FE/reference; partner models vary | [7], [15] | medium |
 
 ### Sense-pin power table (12V-2x6, Intel guide Table 3-6)

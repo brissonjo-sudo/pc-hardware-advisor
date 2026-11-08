@@ -17,7 +17,7 @@ Last checked: 2026-11-07. Values change: verify online before concluding.
 | Column | Values |
 |---|---|
 | Seller type | `direct retailer`, `marketplace (first-party)`, `marketplace (third-party seller)`, `marketplace (mixed)` (first and third party on one site), `professional refurbisher`, `manufacturer store`, `private party`, `proxy-buying service`, `price comparator` (not a seller) |
-| Auto-readable (2026-11-07) | `yes` = prices and names in the fetched HTML text. `partial (what was missing)`. `blocked (HTTP code or error)` = fetch refused or failed on 2026-11-07. `not tested (reason)` = no fetch was made or the result was unusable (rate limit, search-only, ambiguous). |
+| Auto-readable (2026-11-07, sampled again 2026-11-08: see research/audit/A-6a.md and A-6b.md) | `yes` = prices and names in the fetched HTML text. `partial (what was missing)`. `blocked (HTTP code or error)` = fetch refused or failed on 2026-11-07 (rows re-fetched on 2026-11-08 carry that date). `not tested (reason)` = no fetch was made or the result was unusable (rate limit, search-only, ambiguous). |
 | API/feed | What research found. `none found` means no public buyer-side API found, not proof of absence. Merchant-side or affiliate-only access is not usable by a casual buyer. |
 | Confidence | `high`, `medium`, `low`, as in research. |
 | Source | Numbers in `## Sources`. |
@@ -26,7 +26,7 @@ Last checked: 2026-11-07. Values change: verify online before concluding.
 
 ## France
 
-| Name | URL | Seller type | Role | Auto-readable (2026-11-07) | API/feed | Notes | Confidence | Source |
+| Name | URL | Seller type | Role | Auto-readable (2026-11-07, sampled again 2026-11-08: see research/audit/A-6a.md and A-6b.md) | API/feed | Notes | Confidence | Source |
 |---|---|---|---|---|---|---|---|---|
 | leDénicheur | https://www.ledenicheur.fr/ | price comparator | Comparator | yes | none found | Merchant name per offer (Amazon.fr, Cdiscount, Rue du Commerce, eBay, Carrefour). Mixes marketplace sellers. No price date. | medium (homepage only) | [1] |
 | idealo.fr | https://www.idealo.fr/ | price comparator | Comparator | blocked (fetch error, cause unknown) | Merchant feed/import (CSV/TXT/XML), third-party sources only; not a buyer-read API | Site unread. Verify feed on idealo's business pages. | low | [3], [4], [147] |
@@ -41,7 +41,7 @@ Last checked: 2026-11-07. Values change: verify online before concluding.
 
 ## Belgium
 
-| Name | URL | Seller type | Role | Auto-readable (2026-11-07) | API/feed | Notes | Confidence | Source |
+| Name | URL | Seller type | Role | Auto-readable (2026-11-07, sampled again 2026-11-08: see research/audit/A-6a.md and A-6b.md) | API/feed | Notes | Confidence | Source |
 |---|---|---|---|---|---|---|---|---|
 | Alternate (BE) | https://www.alternate.be/ | direct retailer | Retail | not tested (rate limit) | none found | Old forum threads only. | low | [13] |
 | Vandenborre | https://www.vandenborre.be/ | direct retailer | Retail | not tested (not fetched) | none found | One 2010 blog; too old to rely on. | low | [14] |
@@ -55,7 +55,7 @@ Last checked: 2026-11-07. Values change: verify online before concluding.
 
 ## Netherlands
 
-| Name | URL | Seller type | Role | Auto-readable (2026-11-07) | API/feed | Notes | Confidence | Source |
+| Name | URL | Seller type | Role | Auto-readable (2026-11-07, sampled again 2026-11-08: see research/audit/A-6a.md and A-6b.md) | API/feed | Notes | Confidence | Source |
 |---|---|---|---|---|---|---|---|---|
 | Tweakers Pricewatch | https://tweakers.net/pricewatch/ | price comparator | Comparator | blocked (fetch error, cause unknown) | No official public API. Merchant feed by arrangement. An unofficial endpoint exists: do not use. | Shows shop per price (search only). Refresh four times an hour (vendor claim). | low | [21], [22] |
 | Kieskeurig | https://www.kieskeurig.nl/ | price comparator | Comparator | yes (server vs JS rendering unknown) | none found | "From" price plus "+X andere aanbieders"; 616 affiliated webshops. No price date. | high (shape), medium (price HTML) | [23] |
@@ -71,16 +71,16 @@ Last checked: 2026-11-07. Values change: verify online before concluding.
 
 Coverage is weak: no comparator and no classifieds site verified. Neighbouring countries (BE, FR, DE) are the working option; confirm they ship to Luxembourg.
 
-| Name | URL | Seller type | Role | Auto-readable (2026-11-07) | API/feed | Notes | Confidence | Source |
+| Name | URL | Seller type | Role | Auto-readable (2026-11-07, sampled again 2026-11-08: see research/audit/A-6a.md and A-6b.md) | API/feed | Notes | Confidence | Source |
 |---|---|---|---|---|---|---|---|---|
-| Shop24.lu (eConcept Sàrl-S) | https://shop24.lu/ | direct retailer | Retail | not tested (not fetched) | none found | Wormeldange; TERRA distributor; only online shop with a clear range in search. | low | [29] |
+| Shop24.lu (eConcept Sàrl-S) | https://shop24.lu/ | marketplace (mixed) | Marketplace | yes (prices visible, 2026-11-08) | none found | Wormeldange; TERRA distributor; only online shop with a clear range in search. Homepage lists "Vendeurs" and "Commencez a vendre" (read 2026-11-08): read the seller of each offer. | low | [29] |
 | Linsys (on Letzshop) | https://letzshop.lu/en/vendors/linsys | marketplace (third-party seller) | Retail | not tested (not fetched) | none found | Vendor on the Letzshop marketplace; PCs, laptops, components; claims immediate stock. | low | [30] |
 | Obiwan Computers | https://obiwan.lu/ | direct retailer | Retail (physical) | not tested (not fetched) | none found | Rue de Beggen. Only review is from 2018, negative on service: may be outdated. | low | [31] |
 | Electronic-Shop Sarl | — | direct retailer | Retail | not tested (not fetched) | none found | Niederanven; directories only, no catalogue seen. | low | [32] |
 
 ## Germany
 
-| Name | URL | Seller type | Role | Auto-readable (2026-11-07) | API/feed | Notes | Confidence | Source |
+| Name | URL | Seller type | Role | Auto-readable (2026-11-07, sampled again 2026-11-08: see research/audit/A-6a.md and A-6b.md) | API/feed | Notes | Confidence | Source |
 |---|---|---|---|---|---|---|---|---|
 | Geizhals.de | https://geizhals.de/ | price comparator | Comparator | blocked (HTTP 403) | No official API. Third-party scrapers and feed apps exist: do not use. | Freshness and seller mixing unverified. | low | [33], [60], [61], [148] |
 | idealo.de | https://www.idealo.de/ | price comparator | Comparator | blocked (fetch error) | Partner Web Service 2.0 is merchant-side (secondary sources); feed CSV/TXT/XML about every 30 minutes | Seller display and marketplace mix unverified. | low | [34], [63], [147] |
@@ -98,11 +98,11 @@ Coverage is weak: no comparator and no classifieds site verified. Neighbouring c
 
 ## Spain
 
-| Name | URL | Seller type | Role | Auto-readable (2026-11-07) | API/feed | Notes | Confidence | Source |
+| Name | URL | Seller type | Role | Auto-readable (2026-11-07, sampled again 2026-11-08: see research/audit/A-6a.md and A-6b.md) | API/feed | Notes | Confidence | Source |
 |---|---|---|---|---|---|---|---|---|
 | idealo.es | https://www.idealo.es/ | price comparator | Comparator | blocked (fetch error) | As idealo.de | Unverified. | low | [51] |
 | Kelkoo.es | https://www.kelkoo.es/ | price comparator | Comparator | not tested (rate limit, two attempts) | Publisher-side token, eligibility unknown | Freshness and seller mix unverified. | low | [48], [149] |
-| PcComponentes | https://www.pccomponentes.es/ | direct retailer (marketplace share unchecked) | Retail | partial (search URL redirected 301 to pccomponentes.com, target not fetched) | none found | Sells refurbished tiers (snippet only). | low | [46] |
+| PcComponentes | https://www.pccomponentes.es/ (redirects 301 to https://www.pccomponentes.com/, read 2026-11-08) | direct retailer (marketplace share unchecked) | Retail | partial (redirect to pccomponentes.com; footer shows "Vender en Marketplace"; Spain not stated on the page, 2026-11-08) | none found | Sells refurbished tiers (snippet only). | low | [46] |
 | Coolmod | https://www.coolmod.com/ | direct retailer | Retail | blocked (too many redirects) | none found | Unverified. | low | [47] |
 | LDLC España | https://www.ldlc.com/es-es/ | direct retailer | Retail | partial (categories and links; no prices; error banner) | none found | First-party; no marketplace seen. | medium | [45] |
 | Amazon.es | https://www.amazon.es/ | marketplace (mixed) | Marketplace | not tested (result not reliably attributed) | See Amazon note | Read seller per offer. | low | [49] |
@@ -111,7 +111,7 @@ Coverage is weak: no comparator and no classifieds site verified. Neighbouring c
 
 ## Italy
 
-| Name | URL | Seller type | Role | Auto-readable (2026-11-07) | API/feed | Notes | Confidence | Source |
+| Name | URL | Seller type | Role | Auto-readable (2026-11-07, sampled again 2026-11-08: see research/audit/A-6a.md and A-6b.md) | API/feed | Notes | Confidence | Source |
 |---|---|---|---|---|---|---|---|---|
 | Trovaprezzi | https://www.trovaprezzi.it/ | price comparator | Comparator | blocked (HTTP 403) | none found | Unverified. | low | [52] |
 | idealo.it | https://www.idealo.it/ | price comparator | Comparator | blocked (fetch error) | As idealo.de | Unverified. | low | [53] |
@@ -126,7 +126,7 @@ Coverage is weak: no comparator and no classifieds site verified. Neighbouring c
 
 ## United Kingdom
 
-| Name | URL | Seller type | Role | Auto-readable (2026-11-07) | API/feed | Notes | Confidence | Source |
+| Name | URL | Seller type | Role | Auto-readable (2026-11-07, sampled again 2026-11-08: see research/audit/A-6a.md and A-6b.md) | API/feed | Notes | Confidence | Source |
 |---|---|---|---|---|---|---|---|---|
 | PriceSpy UK | https://pricespy.co.uk/ | price comparator | Comparator | yes (homepage only) | none found | Names sellers (Amazon.co.uk, eBay, OnBuy, Very, ao.com); mixes "Amazon Marketplace" and eBay. "From" price and "+N shops". No freshness stamp. PC-parts coverage unverified. | medium | [67] |
 | PCPartPicker UK | https://uk.pcpartpicker.com/ | price comparator | Comparator | blocked (HTTP 403) | No official API | robots.txt disallows Claude user agents; terms exclude collecting prices. Do not fetch. Global site same (also /api/ 403). | low | [65], [145], [146] |
@@ -141,7 +141,7 @@ Coverage is weak: no comparator and no classifieds site verified. Neighbouring c
 
 ## United States
 
-| Name | URL | Seller type | Role | Auto-readable (2026-11-07) | API/feed | Notes | Confidence | Source |
+| Name | URL | Seller type | Role | Auto-readable (2026-11-07, sampled again 2026-11-08: see research/audit/A-6a.md and A-6b.md) | API/feed | Notes | Confidence | Source |
 |---|---|---|---|---|---|---|---|---|
 | Newegg | https://www.newegg.com/ | marketplace (mixed) | Marketplace | blocked (HTTP 403) | Seller-side only (Elite Seller required); no buyer feed | Check seller per listing. | medium | [75], [94], [152] |
 | Newegg Refreshed | https://www.newegg.com/ | professional refurbisher (Newegg plus partners) | Refurbisher | blocked (no page fetched) | unknown | 2024 launch: 90-day refund or replacement. Re-check current terms. | medium (existence), low (terms) | [97] |
@@ -157,7 +157,7 @@ Coverage is weak: no comparator and no classifieds site verified. Neighbouring c
 
 ## Canada
 
-| Name | URL | Seller type | Role | Auto-readable (2026-11-07) | API/feed | Notes | Confidence | Source |
+| Name | URL | Seller type | Role | Auto-readable (2026-11-07, sampled again 2026-11-08: see research/audit/A-6a.md and A-6b.md) | API/feed | Notes | Confidence | Source |
 |---|---|---|---|---|---|---|---|---|
 | Canada Computers & Electronics | https://www.canadacomputers.com/ | direct retailer | Retail | yes (first 100k of 164k chars) | none found | CPUs, motherboards, GPUs; member-only prices; PC Builder tool; no marketplace mentioned. | high (type), medium (readability) | [80] |
 | Memory Express | https://www.memoryexpress.com/ | direct retailer | Retail | blocked (HTTP 403) | none found | Unverified. | low | [79] |
@@ -167,9 +167,9 @@ Coverage is weak: no comparator and no classifieds site verified. Neighbouring c
 
 ## Australia
 
-| Name | URL | Seller type | Role | Auto-readable (2026-11-07) | API/feed | Notes | Confidence | Source |
+| Name | URL | Seller type | Role | Auto-readable (2026-11-07, sampled again 2026-11-08: see research/audit/A-6a.md and A-6b.md) | API/feed | Notes | Confidence | Source |
 |---|---|---|---|---|---|---|---|---|
-| StaticICE | https://www.staticice.com.au/ | price comparator | Comparator | yes (homepage) | none found | Tracks "199 Australian stores" without naming them. No freshness indicator. Sister sites NZ, UK, US. | medium | [68] |
+| StaticICE | https://www.staticice.com.au/ | price comparator | Comparator | partial (no product or price text on the homepage, 2026-11-08) | none found | Tracks "199 Australian stores" without naming them. No freshness indicator. Sister sites NZ, UK, US. | medium | [68] |
 | PC Case Gear | https://www.pccasegear.com/ | direct retailer (prior knowledge) | Retail | blocked (HTTP 403) | none found | Unverified. | low | [81] |
 | Mwave | https://www.mwave.com.au/ | direct retailer (prior knowledge) | Retail | not tested (rate limit) | unknown | Unverified. | low | — |
 | Scorptec | https://www.scorptec.com.au/ | direct retailer (prior knowledge) | Retail | not tested (rate limit) | unknown | Unverified. | low | — |
@@ -182,7 +182,7 @@ Coverage is weak: no comparator and no classifieds site verified. Neighbouring c
 
 Japanese retailer pages read show domestic delivery only or say nothing about overseas shipping: confirm on each retailer's 特定商取引法 page (not fetched) or use a proxy-buying service (see Cross-border).
 
-| Name | URL | Seller type | Role | Auto-readable (2026-11-07) | API/feed | Notes | Confidence | Source |
+| Name | URL | Seller type | Role | Auto-readable (2026-11-07, sampled again 2026-11-08: see research/audit/A-6a.md and A-6b.md) | API/feed | Notes | Confidence | Source |
 |---|---|---|---|---|---|---|---|---|
 | Kakaku.com | https://kakaku.com/ | price comparator | Comparator | yes (Japanese text garbled, structure readable) | RSS (news) only; 2006 product API, current status unknown | No merchant API found. Third-party scrapers exist (terms not reviewed). | high (site), low (API) | [105], [135] |
 | Dospara | https://www.dospara.co.jp/ | direct retailer (also used sales and buyback) | Retail | yes | none found | BTO PCs and parts; 中古販売 and 中古買取. Domestic only per page evidence. | high | [107] |
@@ -192,7 +192,7 @@ Japanese retailer pages read show domestic delivery only or say nothing about ov
 | Yodobashi | https://www.yodobashi.com/ | direct retailer | Retail | blocked (timeout, 2 attempts) | none found | Not read. | low | [110] |
 | Bic Camera | https://www.biccamera.com/ | direct retailer | Retail | blocked (timeout, 2 attempts) | none found | Not read. | low | [111] |
 | Sofmap | https://www.sofmap.com/ | direct retailer (plus used, Recole) | Retail | yes | none found | PC-parts category; used goods and trade-in. Overseas not mentioned. | high | [112] |
-| Janpara | https://www.janpara.co.jp/ | professional refurbisher | Refurbisher | yes (first 100k of 184k chars) | none found | Used parts with grades A to D. Shipping page linked, not read. | medium | [116] |
+| Janpara | https://www.janpara.co.jp/ | direct retailer | Retail | yes (first 100k of 184k chars) | none found | Used-goods retailer (sales and buyback seen on the homepage, 2026-11-08), not confirmed as a refurbisher; grades A to D not seen. Shipping page linked, not read. | low | [116] |
 | Amazon.co.jp | https://www.amazon.co.jp/ | marketplace (mixed) | Marketplace | blocked (HTTP 403 then 503) | PA-API not checked; see Amazon note | Read seller per offer. | low | [113] |
 | Mercari | https://jp.mercari.com/ | private party (plus Mercari Shops businesses) | Classifieds | yes | none found (not searched) | Buyers abroad usually reach it via proxies. Used review only. | medium | [114] |
 | Yahoo! Auctions | https://auctions.yahoo.co.jp/ | private party | Classifieds | blocked (HTTP 403) | See Yahoo! Shopping API row (different service) | Not read. | low | [115] |
@@ -204,7 +204,7 @@ Japanese retailer pages read show domestic delivery only or say nothing about ov
 
 Only official brand sites and brand-linked stores. Foreign-buyer warranty is not confirmed for any entry. Do not assume EU, US or UK shipping: no brand site read states shipping terms.
 
-| Name | URL | Seller type | Role | Auto-readable (2026-11-07) | API/feed | Notes | Confidence | Source |
+| Name | URL | Seller type | Role | Auto-readable (2026-11-07, sampled again 2026-11-08: see research/audit/A-6a.md and A-6b.md) | API/feed | Notes | Confidence | Source |
 |---|---|---|---|---|---|---|---|---|
 | AliExpress (platform) | https://www.aliexpress.com/ | marketplace (third-party seller) | Marketplace | partial (empty body) | Affiliate API: separate enrolment, signed calls, about 500 requests/day for new apps (third-party guides) | Not a brand store. Choice program and IOSS: see Not verified. | low | [102], [136], [153] |
 | AliExpress Lian Li store | https://www.aliexpress.com/store/1101594887 | manufacturer store (linked from brand site) | Official store | partial (empty body) | none found | Linked from the lian-li.com Support menu, so the brand declares it. Badge not seen. | medium (link), low (badge) | [103], [123] |
@@ -254,9 +254,10 @@ Zones in this table are the only ones research supports. For any other pair, rea
 1. Record the page as `blocked (<reason>)` in the price row, with the HTTP code or error seen.
 2. Do not circumvent: no alternate user agents, no caches, mirrors or archive copies used to dodge a block. Do not use unofficial endpoints or third-party scrapers.
 3. Do not fetch sites whose robots.txt disallows Claude user agents (PCPartPicker, TechPowerUp) [145].
-4. Do not loop. One attempt per page per session. A rate-limited page is `not tested`: try it once, then record the result.
-5. Ask the user for a screenshot or pasted text of the page. Record `Page read: user screenshot`, `Confidence: medium` at best.
-6. Prefer another retailer in the same country that is `yes` or `partial`, and say which retailers could not be read.
+4. Do not loop. One fetch attempt per page per answer; a browser read on the user's yes is a separate step. A rate-limited page is `not tested`: try it once, then record the result.
+5. Offer the browser fallback in one line, as defined in `research-method.md` section 7 (interactive answers only, read-only, stop at any bot check, never for sites whose robots rules or terms exclude automated collection). If the user says yes, read the page there and record `Page read: browser (user session)`.
+6. Otherwise ask the user for a screenshot or pasted text of the page. Record `Page read: user screenshot`, `Confidence: medium` at best.
+7. Prefer another retailer in the same country that is `yes` or `partial`, and say which retailers could not be read.
 
 ## Not verified
 

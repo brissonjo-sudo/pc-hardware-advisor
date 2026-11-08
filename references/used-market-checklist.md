@@ -12,7 +12,7 @@ Use this file to price and vet used parts. All figures below are a dated snapsho
 - Europe (snippet, conflicting): retail DDR5 slowly dropping in Europe; a tracker reported US prices dipping about 20% then reversing through summer. Direction not settled. [23][22] Low.
 - Used knock-on (snippet): used AM4 CPUs and DDR4 demand rose; used Ryzen 7 5800X3D reported up to about 800 USD, above a new 9800X3D (undated mirror). [22] Low.
 - GPU market (snippet): JPR via heise put quarterly graphics card sales just under 11.5 million units, down 4.5%, about 10% decline expected for 2026; Nvidia reportedly will not launch a new desktop generation until 2028. [21] Low (heise URL 404).
-- Tariffs (snippet): 25% Section 301 tariff on Chinese-made electronics (GPUs, motherboards) pushed to 10 Nov 2026. Nothing found on status after that date. [20] Low. Verify on USTR or the Federal Register.
+- Tariffs: exclusions from the 25% Section 301 duty on listed lines extended to 2027-01-09 (USTR notice 2026-11-06, read 2026-11-08); whether GPU and motherboard lines are in scope: unconfirmed. Low. Verify on USTR or the Federal Register.
 - Trend: used high-end NVIDIA prices rose from spring to autumn 2026 (RTX 3090 about 700-850 USD in March to about 1,200-1,600 USD in autumn across trackers). Trend medium, levels low. Memory costs are the main driver (medium).
 
 ## 2. Estimating a fair used price
@@ -141,7 +141,7 @@ Conflict note: the RTX 3090 US figure differs by date (about 1,343 USD in a Sep 
 - Primary tool docs not fetched: GPU-Z, OCCT, CrystalDiskInfo, h2testw, MemTest86, TestMem5. Tool claims are general practice or snippets.
 - No official AMD or NVIDIA spec sheet for temperature limits; figures are secondary (IgorsLab, TechPowerUp).
 - Sample sizes are tracker listing counts, not sold counts; none meet the 10-sold rule.
-- Motherboard BIOS/socket checks and PSU tier list: no source. Tariff status after 10 Nov 2026: not found.
+- Motherboard BIOS/socket checks and PSU tier list: no source. Tariff status after 2027-01-09: not found (exclusions extended to that date by USTR notice 2026-11-06).
 - Asking-vs-sold gap (20-40%) and 60-day / 10-sample rules are unsourced inference.
 
 ## Sources

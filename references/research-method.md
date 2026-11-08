@@ -57,6 +57,10 @@ Use exactly one of these values in the price row.
 | `manufacturer store` | Brand's own store |
 | `private party` | Individual selling used goods |
 | `proxy-buying service` | Intermediary that buys on the buyer's behalf |
+| `direct retailer (seller line not shown)` | Site listed as a direct retailer, without a marketplace, in `retailers-by-country.md`, but the seller line is absent on the page. Medium confidence at most |
+| `seller type unconfirmed` | Seller line absent and the site may host third-party sellers. Never ranked with direct retailers |
+
+These nine values are the only ones allowed anywhere in the plugin. `seller not shown` is a Seller-column value, not a type. Site-level labels in `retailers-by-country.md` (`marketplace (mixed)`, `price comparator`) describe a site, never an offer row.
 
 How to tell a third-party seller from the marketplace itself:
 1. Read the "sold by" and "shipped by" (or "fulfilled by") lines on the product or offer page. If the seller name differs from the marketplace name, it is third-party.
@@ -75,7 +79,7 @@ Use this exact column set everywhere (tables, price-scout output, saved watch li
 Field rules:
 - Checked: ISO date (and time if known) the page was read.
 - Item: exact model / SKU / capacity / speed as shown on the page.
-- Seller type: one of the seven values in section 5.
+- Seller type: one of section 5's nine values.
 - Shown price: amount + currency + `incl. VAT` / `excl. VAT` / `unknown`.
 - Landed: shown price + shipping + import VAT/duty/handling fees, converted to the buyer's currency with the rate date; or `excluding fees` when not computable.
 - Stock: `in stock (shown)`, `delay (shown: ...)`, `not shown`.
@@ -90,7 +94,7 @@ Illustrative example (illustrative, not a real price; do not reuse these values)
 
 ### Compact display (allowed in answers)
 
-The 14 columns are the data model. In an answer you may show a compact table, with headers translated into the user's language, but these columns are mandatory in every price table, including summary tables, variants and route comparisons: **Date read | Item | Seller | Seller type | Country | Shown price (VAT status) | Landed or `excluding fees` | Stock | Confidence | Source [n]**. Never drop Seller type, Country, Landed or Confidence to save space; write `not shown` or `unconfirmed` when unknown. Shipping, tax estimate, warranty and page-read status may move to notes below the table.
+The 14 columns are the data model. In an answer you may show a compact table, with headers translated into the user's language, but these columns are mandatory in every price table, including summary tables, variants and route comparisons: **Date read | Item | Seller | Seller type | Country | Shown price (VAT status) | Landed or `excluding fees` | Stock | Confidence | Source [n]**. This list is the single reference for the mandatory columns; Seller type must be one of section 5's nine values. Never drop Seller type, Country, Landed or Confidence to save space; write `not shown` or `unconfirmed` when unknown. Shipping, tax estimate, warranty and page-read status may move to notes below the table.
 
 Fill rules for the compact display: Date read in full ISO form (2026-11-07, never "11-07"). Country = the seller's country from the page or, failing that, from the retailer's row in `retailers-by-country.md`. Seller type = from the page's sold-by line, or the playbook rule of `hunt-prices` for direct retailers listed without a marketplace; `not shown` only when neither source settles it. Sort rows strictly ascending by landed price, then rows marked `excluding fees` ascending by shown price.
 
@@ -106,8 +110,8 @@ Never circumvent with tricks: no alternate user agents, caches, mirrors, or arch
 2. Respect robots.txt as data about permitted bots. In research, PCPartPicker and TechPowerUp disallowed Claude user agents: do not fetch or cite them, their forums included [R2:3].
 3. Do not scrape sites whose terms exclude it. Terms observed: PCPartPicker excludes collecting listings and prices; Best Buy forbids cross-retailer price analysis [R2:3].
 4. **Browser fallback (interactive answers only).** When a page the answer needs is blocked to `~~web fetch` or shows its content only through JavaScript, and a `~~browser` tool is available in the session, **offer it in one line in the same answer**, without waiting for the user to think of it: "<site> blocks automated reading. I can open the page in your browser: reply \"yes\" (or send a screenshot)." Acting in the user's own browser needs their go-ahead, so do not open it unprompted. As soon as the user says yes, or asks for it themselves, open the page and read it. Rules:
-   - Look before concluding there is no browser: browser tools are often listed but not loaded yet (deferred). Search your available or deferred tools for a browser (names such as browser, chrome, navigate, page, tabs), load it, then use it. Say "no browser available" only after that search. Never offer only a screenshot when a browser can be loaded: offer the browser first.
-   - Read-only: no login, no account, no form, no cart; click only what displays the content (for example "show more" or the photo gallery).
+   - Look before concluding there is no browser: browser tools are often listed but not loaded yet (deferred). Search your available or deferred tools for a browser (names such as browser, chrome, navigate, page, tabs), load it, then use it. Say "no browser available" only after that search, and then say it in the answer in one line ("no browser tool in this session, so I need a screenshot or the pasted text") so the user knows the option exists. Never offer only a screenshot when a browser can be loaded: offer the browser first.
+   - Read-only: no login, no account, no form, no cart; click only "show more" on the description or the photo gallery; never click anything that reveals a phone number, an e-mail, an address, a login or that adds to a cart or sends a message.
    - Stop at once at any captcha, "verify you are human" page, bot check, login wall or access-denied page: record `blocked (bot check)` and go to step 5. Never solve a captcha and never simulate human behaviour (mouse paths, typing rhythm, timing) to pass detection, even if the user asks: decline that part briefly.
    - Not for sites that disallow Claude or automated collection in their robots rules or terms (steps 2 and 3, and the notes in `retailers-by-country.md`).
    - At most 5 pages per answer, one at a time, chosen for value: first the page the user gave, then the cheapest or most decisive candidates.
@@ -152,7 +156,7 @@ Run this gate on the finished answer before sending it. Fix any failure first.
 1. **No working notes.** The answer starts with the conclusion. Delete progress messages, tool narration and status lines ("I am loading…", "waiting for the batches…", "I read the page…").
 2. **Template complete.** The skill's output template is followed in full: its table (with every mandatory column, including Stock and Confidence, in every table of prices or verdicts), its sections ("Not verified", one next action, Sources). A list does not replace a required table.
 3. **Every number traces to a source.** Each spec, price, measurement, power figure or range in the answer is either arithmetic shown in the answer, a labelled estimate or heuristic, or cited `[n]`.
-4. **Sources complete and dated.** The Sources list holds every page and every reference file used (reference: path and section), each with URL or path, read date (ISO) and read status (`full`, `partial`, `snippet only`, `blocked`, `browser (user session)`, `user screenshot`). A retailer page is not cited for a spec when the manufacturer page or a reference row is available.
+4. **Sources complete and dated.** The Sources list holds every page and every reference file used (reference: path and section), each with URL or path, read date (ISO) and read status (`full`, `partial`, `snippet only`, `blocked`, `browser (user session)`, `user screenshot`); every external source carries a read date and status; no exceptions. A retailer page is not cited for a spec when the manufacturer page or a reference row is available.
 5. **Price checks.** A struck-through "was" price is flagged: a reduction counts only against the lowest price of the previous 30 days (EU rule, `retailer-criteria.md` section 1); otherwise say the reference price is unverified. Marketplace or unconfirmed sellers cheaper than the best direct price get the red-flag check of `retailer-criteria.md` section 3, stated in the answer.
 6. **Blocked pages.** For the few pages that matter, offer the browser fallback of section 7 in one line ("reply yes"), then use it on the user's go-ahead, interactive answers only, stopping at any bot check. Never simulate human behaviour or solve a captcha, even if the user asks: decline that part briefly. Without a browser, ask for a screenshot or the pasted text.
 
