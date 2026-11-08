@@ -49,17 +49,17 @@ Defaults when the user does not answer: new, all seller types shown separately, 
 
 ## 4. Collect prices
 
-1. Prefer parallel reading. Dispatch the `price-scout` sub-agent in batches of about 3 to 6 sources per call, several batches at once if the source list is long. Use the brief template from the playbook: item spec, buyer country, and site + query pairs or URLs.
+1. Prefer parallel reading. Dispatch the `price-scout` sub-agent in batches of about 3 to 6 sources per call. Caps: at most 3 `price-scout` agents at a time, 6 sources per agent, 30 product pages per answer; above that, stop and say what was not read. Use the brief template from the playbook: item spec, buyer country, and site + query pairs or URLs.
 2. If sub-agents are unavailable, read the pages yourself with `~~web fetch`, one fetch per page, same procedure.
 3. `price-scout` returns canonical rows only, plus an "Unreadable" list. Its Landed column is `excluding fees` unless shipping to the buyer was shown. You compute taxes and fees.
 4. Verify before trusting: if a returned row looks too cheap, or its seller type is unclear, open the page yourself once. Spot-check at least the cheapest three rows.
 5. Read PRODUCT pages, not search listings: listings are for discovery only (they rarely show seller, shipping or real stock). A homepage, search page or error page does not count as a source read; move to the next source.
-6. Stop only when the playbook's stopping rule is met (minimum: 5 product pages from distinct direct retailers in the buyer's country, plus 3 per other country or zone the user asked for). If you cannot reach that minimum, say so and list what was tried. Do not loop on blocked pages.
+6. Stop when the playbook's stopping rule (search-playbook.md section 7) is met; report which condition applied. Do not loop on blocked pages.
 
 ## 5. Normalise and compute landed price
 
 1. Deduplicate rows: same seller, same item, same page counts once (keep the freshest read).
-2. Type every seller with exactly one of the seven canonical seller types. Derive it from the "sold by" / "shipped by" lines of the product page. If the line is missing, apply the playbook rule (section 4): `direct retailer (site type; seller line not shown)` only for sites the country reference lists as direct with no marketplace; otherwise the row goes to a separate "Seller unconfirmed" group.
+2. Type every seller with exactly one of the seven canonical seller types. Derive it from the "sold by" / "shipped by" lines of the product page. If the line is missing, apply the playbook rule (section 4): `direct retailer (seller line not shown)` only for sites the country reference lists as direct with no marketplace; otherwise the row is typed `seller type unconfirmed` and goes to a separate "Seller unconfirmed" group.
 3. Compute the landed price in the buyer's currency. Read `${CLAUDE_PLUGIN_ROOT}/references/international-buying.md` for the formula and the "Volatile items" table, then:
    1. Same customs zone as the buyer (for example intra-EU): shown price (check VAT status) + shipping. No customs. Convert currency if needed.
    2. Different customs zone: decide who collects tax (seller at checkout, or the border), then apply the formula: customs value, duty, handling fee, import VAT, carrier fee, card FX fee.
@@ -89,10 +89,11 @@ Start with the conclusion. Use this structure, in the user's language.
 
 1. **Summary line**: best landed price, seller, seller type, country, date read, confidence. Any other price mentioned in prose carries the same fields or its row number. Out-of-stock items go to "Excluded", never in the ranked table. Example shape: "Best landed price: X CUR at <seller> (<type>, <country>), read <date>, confidence <level>. Next cheapest: Y CUR."
 2. **Main table**: canonical rows (the 14 columns, or the compact display of research-method.md section 6 with its mandatory columns: never drop Seller type, Country, Landed or Confidence, even when translating headers), sorted by landed price ascending. Rows with `excluding fees` go after computed ones, sorted by shown price + shipping. Direct retailers, manufacturer stores and professional refurbishers only.
+   **Seller unconfirmed** (between the main table and the marketplace table): rows typed `seller type unconfirmed`, same columns, never ranked with the main table.
 3. **Marketplace table**: same columns, for marketplace rows (first-party and third-party), never merged into the main table. Add one line on third-party risk (warranty with the seller, not the marketplace).
 4. **Close alternatives**: short table or list, clearly labelled.
 5. **Excluded and not recommended**: rows removed by delay, by red flags, or out of stock, one line each with reason.
-6. **Unreadable sources**: each blocked or partial page with the reason. Ask: "Send me a screenshot or paste the page text for any of these and I will add it." Rows from user screenshots get `Page read: user screenshot` and the capture date.
+6. **Unreadable sources**: each blocked or partial page with the reason. For each, offer in one line to open the page in the user's browser (reply yes), except for sites that refuse robots or automated collection, for which only a screenshot or pasted text is requested; never imitate human behaviour ("Send me a screenshot or paste the page text for any of these and I will add it"). Rows from user screenshots get `Page read: user screenshot` and the capture date.
 7. **Not verified**: tax rates, thresholds, fees, FX fee, warranty terms, stock, anything not checked. Use the pattern "Not verified: <claim>. Reason: <...>. Next step: <...>".
 8. **Sources**: numbered list with URL, date read and read status; cite with `[n]` inline.
 9. **One next action** for the user (for example "Open row 1 and check the cart total before paying"). One action only.
@@ -105,7 +106,7 @@ Never circumvent with tricks: no alternate user agents, caches, mirrors or archi
 
 1. Record the page as `blocked (<reason>)` or `partial (<what was missing>)`.
 2. List it in "Unreadable sources" in the answer. Do not drop it silently.
-3. Ask the user for a screenshot or pasted text. Continue with other sources without waiting.
+3. Offer in one line to open the page in the user's browser (reply yes), except for sites that refuse robots or automated collection, for which only a screenshot or pasted text is requested; never imitate human behaviour. Continue with other sources without waiting.
 4. Do not retry the same blocked page in a loop.
 
 ## 10. Self-check before answering
@@ -114,7 +115,7 @@ Never circumvent with tricks: no alternate user agents, caches, mirrors or archi
 2. Is the landed price computed with a dated rate, or marked `excluding fees`?
 3. Are marketplace rows separate? Are alternatives labelled?
 4. Are blocked pages listed, with no workaround used?
-5. Do the table columns match the canonical row exactly?
+5. Do the columns match research-method.md section 6 (canonical row or compact display with its mandatory columns)?
 6. Is anything from memory only? Remove it or mark `not verified`.
 7. Did you avoid any purchase, account creation, form or contact?
 8. Did you flag struck-through "was" prices and run the red-flag check on marketplace or unconfirmed sellers cheaper than the best direct price?

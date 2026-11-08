@@ -32,7 +32,7 @@ Capture, from the page text, in this order:
 2. Price, currency, VAT status (`incl. VAT`, `excl. VAT`, `unknown`).
 3. Seller line (sold by / shipped by).
 4. Stock and delay wording.
-5. Shipping cost to the buyer country, if the page or cart estimator shows it without creating an account.
+5. Shipping cost to the buyer country, only if the product page or the retailer's shipping-information page shows it; never use a cart or checkout.
 6. Warranty or returns wording, if shown.
 
 If the price is rendered by JavaScript and absent from the text, mark `partial (price missing)` or `blocked (JavaScript only)`. Do not work around it.
@@ -43,8 +43,8 @@ If the price is rendered by JavaScript and absent from the text, mark `partial (
 2. Look for words such as "marketplace", "partner seller", "other sellers", "offers from", "new from".
 3. Open the seller profile or imprint when reachable: legal name, address, trader statement.
 4. If the product page has no seller line, check the site in `${CLAUDE_PLUGIN_ROOT}/references/retailers-by-country.md`:
-   - listed as a direct retailer with no marketplace: Seller = site name, Seller type = `direct retailer (site type; seller line not shown)`, confidence `medium` at most;
-   - known to run a marketplace, or not listed: Seller = `seller not shown`, Seller type = `unconfirmed (site may host third-party sellers)`, Page read = `partial (seller line missing)`. Keep these rows in a separate "Seller unconfirmed" group, never in the direct-retailer ranking.
+   - listed as a direct retailer with no marketplace: Seller = site name, Seller type = `direct retailer (seller line not shown)`, confidence `medium` at most;
+   - known to run a marketplace, or not listed: Seller = `seller not shown`, Seller type = `seller type unconfirmed`, Page read = `partial (seller line missing)`. Keep these rows in a separate "Seller unconfirmed" group, never in the direct-retailer ranking.
 5. Never type a seller from the domain name alone, without the reference or the page.
 
 ## 5. Stock and delay wording
@@ -73,6 +73,8 @@ Record the page's own words; map to the canonical Stock values.
 Before writing "no listing found" for a retailer listed for the buyer's country (including foreign retailers with a storefront for that country, such as a `.fr` site), make two attempts: the retailer's own search with the exact manufacturer part number (for example MZ-V9P2T0BW), then a web search `site:<domain> <part number>`. Only then record it as not found.
 
 A source counts as read only when a product page for the item (or its closest match) was read. A homepage, a search page or an error page does not count: try the next source instead.
+
+Condition 1 is the primary rule. Conditions 2 to 4 apply only after condition 1's minimum was attempted, or when no more sources exist.
 
 Stop when any of these is true:
 
