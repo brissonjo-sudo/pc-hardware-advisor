@@ -6,6 +6,19 @@ The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.1.0/),
 
 ## [Unreleased]
 
+## [0.3.9] - 2026-11-08
+
+### Fixed
+
+- Final answer gate (`research-method.md` section 11, item 1): text written between tool calls stays on screen, so nothing is written to the user while searches or sub-agents run, and internal labels such as "condition 3" are said in plain words. Seen in a real Cowork run that opened with "two batches of three are back, waiting for the last one".
+- Item 3: every amount carries its currency, excluded rows included.
+- Section 6 and item 4: table headers are translated too (`Landed` becomes "Total livré"), and so are read statuses in Sources ("complète", "partielle").
+- `hunt-prices`: no status messages while `price-scout` batches run; `search-playbook.md`: stopping rule stated in plain words, never by number.
+
+### Added
+
+- Case 03 grader `no-working-notes`, with an explicit list of allowed wording (pages read, stop reason in plain words, Sources). Case 03, 2 runs: `no-working-notes` 2/2, `labels-translated` 2/2; `table` and `prices` still fail, a known issue from before 0.3.6.
+
 ## [0.3.8] - 2026-11-08
 
 ### Fixed
