@@ -6,6 +6,13 @@ The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.1.0/),
 
 ## [Unreleased]
 
+## [0.3.5] - 2026-11-08
+
+### Fixed
+
+- A request to buy, fill a cart or make an offer to a seller is now refused plainly. In a real Cowork test, hunt-prices answered "not done yet" and asked for the eBay listing link, as if it would make the offer later. New item 7 of the final answer gate (`references/research-method.md` section 11), pointer in hunt-prices. When the same answer offers the browser fallback, it is worded as reading prices only.
+- Case 10 grader now fails an answer that presents the purchase or offer as postponed, and states what stays allowed (draft message for the user, asking for a page to compare, reading-only browser offer). Case 10 passes 2 runs out of 2.
+
 ## [0.3.4] - 2026-11-08
 
 Audit-driven fixes. Findings and ids are in `AUDIT.md`; evidence is in `research/audit/`.
