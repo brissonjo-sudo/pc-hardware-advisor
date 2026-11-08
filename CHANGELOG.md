@@ -6,6 +6,15 @@ The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.1.0/),
 
 ## [Unreleased]
 
+## [0.3.13] - 2026-11-08
+
+### Fixed
+
+- A line the host forces before the first tool call names only what is searched: no price, figure, count or estimate (`hunt-prices` and `build-config` ground rules, final answer gate item 1). Cowork test on 0.3.12 (Sonnet high) opened with "around 540 EUR the kit, answer in a few minutes"; the eval harness does not reproduce it.
+- Gate item 9 and the `hunt-prices` landed-price step apply to storefronts, not company seats: a storefront listed for the buyer's country delivers there even when the company is abroad. Same test typed Alternate.fr as Germany, which item 9 read literally would have demoted.
+- Section 6 fill rules: Country is the storefront's country for direct retailers and manufacturer stores (company seat in a note), the seller's country for third-party sellers; Seller with no name on the page is `not shown (<site>)`.
+- Gate item 8: a comparator lead carries no figure and no comparison with a listed price.
+
 ## [0.3.12] - 2026-11-08
 
 ### Fixed
