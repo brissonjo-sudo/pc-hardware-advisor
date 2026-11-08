@@ -6,6 +6,14 @@ The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.1.0/),
 
 ## [Unreleased]
 
+## [0.3.16] - 2026-11-09
+
+### Fixed
+
+- `build-config` step 5: before declaring an overrun, fit the budget with the playbook's cheaper levers (memory capacity, CPU or board on the same platform, GPU one tier down); "cannot be met" only when the cheapest config that meets the use is still over, shown with its total. Cowork test (Opus medium) concluded 1 986.81 EUR minimum for a 1 500 EUR budget, while a Sonnet run the same day built a full config at 1 441.50 EUR.
+- `build-config` step 4: GPU, memory, CPU and motherboard read at 3 direct retailers when that many sell them; cheapest in stock kept unless a reason is stated. Same Opus run took one retailer per part.
+- `build-config` template: main table gains Shown price, Stock and Source; every number in the compatibility summary cites its source; a page without a kept URL is not a source. Sonnet run had no Stock column, uncited dimensions and wattage, and a source "addresses not kept".
+
 ## [0.3.15] - 2026-11-08
 
 ### Fixed
