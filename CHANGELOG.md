@@ -6,6 +6,18 @@ The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.1.0/),
 
 ## [Unreleased]
 
+## [0.3.6] - 2026-11-08
+
+### Fixed
+
+- Price tables in answers now show cell values in the user's language (seller type, "excluding fees", stock, page read, confidence), not only the headers. The English values stay the data model for price-scout output, watch lists and CSV files. Rule in `references/research-method.md` sections 5 and 6. Found in two real Cowork tests in French.
+- hunt-prices said "seven" canonical seller types; there are nine since 0.3.4.
+
+### Added
+
+- Content check: any "N seller types" count in skills and agents must match research-method.md section 5.
+- Grader `labels-translated` on cases 03 and 09 (French answers). Case 03: 2/2. Case 09: 0/2 (one run asked a clarifying question with no table, now counted as PASS; one run kept the English header "Landed").
+
 ## [0.3.5] - 2026-11-08
 
 ### Fixed
