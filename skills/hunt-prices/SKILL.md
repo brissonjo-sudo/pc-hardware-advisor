@@ -59,7 +59,7 @@ Defaults when the user does not answer: new, all seller types shown separately, 
 ## 5. Normalise and compute landed price
 
 1. Deduplicate rows: same seller, same item, same page counts once (keep the freshest read).
-2. Type every seller with exactly one of the seven canonical seller types. Derive it from the "sold by" / "shipped by" lines of the product page. If the line is missing, apply the playbook rule (section 4): `direct retailer (seller line not shown)` only for sites the country reference lists as direct with no marketplace; otherwise the row is typed `seller type unconfirmed` and goes to a separate "Seller unconfirmed" group.
+2. Type every seller with exactly one of the nine canonical seller types (research-method.md section 5). Derive it from the "sold by" / "shipped by" lines of the product page. If the line is missing, apply the playbook rule (section 4): `direct retailer (seller line not shown)` only for sites the country reference lists as direct with no marketplace; otherwise the row is typed `seller type unconfirmed` and goes to a separate "Seller unconfirmed" group.
 3. Compute the landed price in the buyer's currency. Read `${CLAUDE_PLUGIN_ROOT}/references/international-buying.md` for the formula and the "Volatile items" table, then:
    1. Same customs zone as the buyer (for example intra-EU): shown price (check VAT status) + shipping. No customs. Convert currency if needed.
    2. Different customs zone: decide who collects tax (seller at checkout, or the border), then apply the formula: customs value, duty, handling fee, import VAT, carrier fee, card FX fee.

@@ -138,6 +138,12 @@ def check_seller_vocab() -> None:
     for path in prompt_files():
         for value in sorted(set(SELLER_START.findall(path.read_text(encoding="utf-8"))) - canonical):
             fail(f"{rel(path)}: seller type `{value}` is not in research-method.md section 5")
+    numbers = {"five": 5, "six": 6, "seven": 7, "eight": 8, "nine": 9, "ten": 10, "eleven": 11, "twelve": 12}
+    count_re = re.compile(r"\b(\d+|" + "|".join(numbers) + r") (?:canonical )?seller types\b", re.I)
+    for path in prompt_files():
+        for word in count_re.findall(path.read_text(encoding="utf-8")):
+            if int(numbers.get(word.lower(), word)) != len(canonical):
+                fail(f"{rel(path)}: says {word} seller types, section 5 has {len(canonical)}")
 
 
 def check_volatile_dates() -> None:
