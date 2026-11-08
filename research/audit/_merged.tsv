@@ -1,0 +1,183 @@
+A-1.md	section-301-exclusions-extended-file-says-no-extension	A	blocker	blocker	references/international-buying.md:13,51,62,173 vs https://ustr.gov/sites/default/files/fi
+A-1.md	used-market-section-301-date-stale-and-different-wording	A	major	major	references/used-market-checklist.md:15,144; https://ustr.gov/about/policy-offices/press-of
+A-1.md	union-handling-fee-omitted-from-example-1-and-vat-base	A	major	major	references/international-buying.md:34,146,151,177-178 vs https://taxation-customs.ec.europ
+A-1.md	dhl-france-fee-in-example-1-has-no-official-support	A	major	major	references/international-buying.md:86,149; https://portail.dhl.fr/dhl-express/pourquoi-doi
+A-1.md	us-de-minimis-postal-route-wording-contradicts-cbp-rule	A	major	major	references/international-buying.md:14,51 vs https://www.govinfo.gov/content/pkg/FR-2026-06
+A-1.md	forced-labor-301-has-primary-source-but-china-tier-unverified	A	major	major	references/international-buying.md:15,51,174 ; https://ustr.gov/about/policy-offices/press
+A-1.md	eu-handling-fee-per-item-versus-per-item-category-wording	A	minor	minor	references/international-buying.md:17,48,60,84 vs https://taxation-customs.ec.europa.eu/cu
+A-1.md	union-handling-fee-delegated-act-still-under-scrutiny	A	minor	minor	references/international-buying.md:18,84 ; Commission guidance (checked 2026-11-08), footn
+A-1.md	eu-vat-and-uk-gaps-now-closable-on-official-pages	A	minor	minor	references/international-buying.md:49,50,176 vs https://europa.eu/youreurope/business/fina
+A-1.md	uk-and-us-pc-part-duty-codes-now-verifiable	A	minor	minor	references/international-buying.md:50,172 vs UK Trade Tariff headings 8504, 8523, 8528, 85
+A-1.md	canada-clvs-3300-limit-not-on-cited-cbsa-page	A	minor	minor	references/international-buying.md:52 ; https://www.cbsa-asfc.gc.ca/import/courier/lvs-efv
+A-1.md	no-official-source-for-australia-rows	A	info	info	references/international-buying.md:21,53 ; ATO and ABF pages returned HTTP 403 on 2026-11-
+A-2.md	rtx5090-cable-450w-claim-not-on-page	A	major	major	references/power-supplies-connectors.md:23 vs https://www.nvidia.com/en-us/geforce/graphic
+A-2.md	b840-b850-conflict-now-resolvable-by-asus	A	minor	minor	references/sockets-chipsets.md:61-62 vs https://www.asus.com/microsite/motherboard/amd-am5
+A-2.md	amd-cpu-ppt-values-unverified-blocked	A	minor	minor	https://www.amd.com/en/products/processors/desktops/ryzen/9000-series/amd-ryzen-7-9800x3d.
+A-2.md	arrow-lake-q870-vs-quick-ref-q880	A	minor	minor	references/sockets-chipsets.md:19 vs the Intel 200S Plus quick reference guide (https://cd
+A-2.md	z890-launch-date-and-all-800-boards-claim	A	minor	minor	https://www.intel.com/content/www/us/en/products/sku/245692/intel-core-ultra-7-processor-2
+A-2.md	psu-reference-cpu-incomplete	A	minor	minor	references/power-supplies-connectors.md:81 vs https://www.nvidia.com/en-us/geforce/graphic
+A-2.md	pcie-slot-5-5a-3a-split-unverified	A	info	info	references/power-supplies-connectors.md:13; the PCI-SIG CEM text is paywalled; the Intel A
+A-2.md	hwcooling-b840-3-0-value-should-be-dropped	A	info	info	https://www.asus.com/motherboards-components/motherboards/prime/prime-b840-plus-wifi/techs
+A-3.md	apple-ultra-m4max-rows-labelled-gpt-oss	A	minor	minor	gpu-bandwidth-ai.md:96-97 vs https://github.com/ggml-org/llama.cpp/discussions/4167 (check
+A-3.md	bandwidth-derived-not-fetched-nvidia	A	minor	minor	gpu-bandwidth-ai.md:13-19 vs https://www.nvidia.com/en-us/geforce/graphics-cards/compare/ 
+A-3.md	dgx-spark-64gb-variant-omitted	A	minor	minor	gpu-bandwidth-ai.md:34 vs https://www.nvidia.com/en-us/products/workstations/dgx-spark/ (c
+A-3.md	mac-studio-m5-dates-and-prices-unofficial	A	minor	minor	gpu-bandwidth-ai.md:37,172 vs https://www.apple.com/mac-studio/specs/ (checked 2026-11-08)
+A-3.md	m4-max-bandwidth-410-546-not-on-apple-page	A	minor	minor	gpu-bandwidth-ai.md:36 vs https://www.apple.com/newsroom/2025/03/apple-unveils-new-mac-stu
+A-3.md	dual-3090-blog-details-unconfirmed	A	info	info	gpu-bandwidth-ai.md:91-94 vs https://computingforgeeks.com/build-dual-rtx-3090-llm/ (check
+A-3.md	benchmark-build-labels-differ-from-scoreboard	A	info	info	gpu-bandwidth-ai.md:82-83 vs https://github.com/ggml-org/llama.cpp/discussions/15013 (chec
+A-3.md	rocm-linux-radeon-list-overstated	A	info	info	gpu-bandwidth-ai.md:161 vs https://rocm.docs.amd.com/projects/install-on-linux/en/latest/r
+A-3.md	cuda13-library-removal-only-partly-sourced	A	info	info	gpu-bandwidth-ai.md:160 vs https://developer.nvidia.com/blog/navigating-gpu-architecture-s
+A-3.md	amd-spec-tables-unverified-this-pass	A	info	info	memory.md:46-52 and gpu-bandwidth-ai.md:25-33; https://www.amd.com/en/products/processors/
+A-4.md	stale-section-301-date-used-market	A	minor	minor	used-market-checklist.md:15 and :144 ("pushed to 10 Nov 2026", "Tariff status after 10 Nov
+A-4.md	nr200p-v2-v3-psu-not-stated-wrong	A	minor	minor	form-factors-cases.md:71-72 say PSU "not stated" for V2/MAX V2 and V3. https://www.coolerm
+A-4.md	nr200p-v2-v3-thickness-omitted	A	major	major	form-factors-cases.md:71-72. V2 page: thickness 73 mm (triple slot) with the bracket that 
+A-4.md	nr200p-original-cooler-vertical-gpu-ok-but-120-ambiguity	A	info	info	form-factors-cases.md:70 vs https://www.coolermaster.com/en-global/products/masterbox-nr20
+A-4.md	t1-ncased-page-reachable-confidence-low	A	info	info	form-factors-cases.md:75, :136, :137 say the FormD T1 source is unreachable. https://ncase
+A-4.md	z790-gen4-gen3-split-unverified	A	minor	minor	form-factors-cases.md:96 "max 20 Gen4, rest Gen3". https://www.intel.com/content/www/us/en
+A-4.md	memtest86-described-as-paid	A	minor	minor	used-market-checklist.md:83 "MemTest86 (paid/official)". https://www.memtest86.com/ (check
+A-4.md	warranty-transfer-no-official-brand-source	A	minor	minor	used-market-checklist.md:74 cites only an Engadget snippet for Corsair (RAM) and states "G
+A-5.md	retailer-criteria-art-11-directive-2019-771-misdescribed	A	minor	minor	references/retailer-criteria.md:18, :81; URL https://eur-lex.europa.eu/eli/dir/2019/771/oj
+A-5.md	withdrawal-art-9-2-not-verified	A	minor	minor	references/retailer-criteria.md:17; URL https://eur-lex.europa.eu/eli/dir/2011/83/oj/eng (
+A-5.md	dir-98-6-art-6a-paragraph-numbering-not-verified	A	minor	minor	references/retailer-criteria.md:15; URL https://eur-lex.europa.eu/eli/dir/2019/2161/oj/eng
+A-5.md	cjeu-c-330-23-holding-not-verified	A	minor	minor	references/retailer-criteria.md:15; Sources 4 (URL https://curia.europa.eu/jcms/upload/doc
+A-5.md	dsa-art-30-traceability-not-verified	A	minor	minor	references/retailer-criteria.md:20; URL https://eur-lex.europa.eu/eli/reg/2022/2065/oj/eng
+A-5.md	ftc-16-cfr-465-primary-not-verified	A	minor	minor	references/retailer-criteria.md:21; Sources 11 (federal-regs.com, not an official source)
+A-5.md	uk-dmcc-fake-review-ban-date-not-verified	A	minor	minor	references/retailer-criteria.md:21, :84; URL https://www.legislation.gov.uk/ukpga/2024/13/
+A-5.md	germany-fake-shop-resource-secondary-source	A	minor	minor	references/retailer-criteria.md:31, Sources 13 (techbook.de); URL https://www.verbraucherz
+A-5.md	fakeshop-finder-status-conflict	A	minor	minor	references/retailer-criteria.md:32; URL https://www.verbraucherzentrale.de/ (checked 2026-
+A-5.md	scamwatch-online-shopping-claim-overstated	A	minor	minor	references/retailer-criteria.md:36; URL https://www.scamwatch.gov.au/ (checked 2026-11-08)
+A-5.md	pharos-page-not-readable	A	minor	minor	references/retailer-criteria.md:34; URL https://www.internet-signalement.gouv.fr/ (checked
+A-5.md	official-resources-blocked-not-dead	A	minor	minor	references/retailer-criteria.md:30, :35; URLs https://www.watchlist-internet.at/ and https
+A-5.md	robots-techpowerup-conflicting-claude-groups	A	info	info	references/research-method.md:106; URL https://www.techpowerup.com/robots.txt (checked 202
+A-5.md	trader-flag-source-still-marked-secondary	A	info	info	references/research-method.md:64, :164, :172
+A-6a.md	shop24-lu-listed-direct-but-hosts-third-party-sellers	A	major	major	https://www.shop24.lu/ (checked 2026-11-08): homepage lists "Vendeurs" (e.g. "Musthave Glo
+A-6a.md	pccomponentes-es-url-redirects-to-com	A	minor	minor	https://www.pccomponentes.es/ (checked 2026-11-08): 301 to http://www.pccomponentes.com/. 
+A-6a.md	materiel-net-footer-marketplace-link-not-noted	A	info	info	https://www.materiel.net/ (checked 2026-11-08): footer "Marketplace" link; catalogue descr
+A-6a.md	back-market-typed-as-refurbisher-but-platform-calls-itself-marketplace	A	info	info	https://www.backmarket.fr/ (checked 2026-11-08): structured data says "marketplace interna
+A-6a.md	geizhals-de-readability-blocked-now-readable	A	info	info	https://geizhals.de/ (checked 2026-11-08): product names, prices and "371.565 aktive Händl
+A-6a.md	not-tested-rows-now-readable	A	info	info	Fetched 2026-11-08: https://www.alternate.be/ (yes, session-expired notice); https://www.v
+A-6a.md	not-tested-rows-now-blocked	A	info	info	Fetched 2026-11-08: https://www.coolblue.be/ (HTTP 403); https://www.hardware.info/ (fetch
+A-6a.md	amazon-de-503-on-homepage-too	A	info	info	https://www.amazon.de/ (checked 2026-11-08): HTTP 503 on the homepage, not only the search
+A-6a.md	rue-du-commerce-and-ldlc-error-banner	A	info	info	https://www.rueducommerce.fr/ (checked 2026-11-08): product names and prices visible, plus
+A-6a.md	auto-readable-column-date-still-2026-11-07	A	info	info	references/retailers-by-country.md:20 (column header "Auto-readable (2026-11-07)") and lin
+A-6b.md	royal-mail-fee-figure-from-excerpt-only	A	major	major	references/international-buying.md:87; references/international-buying.md:168; https://www
+A-6b.md	lian-li-a4h2o-fit-rule-unverified	A	major	major	references/form-factors-cases.md:73; https://lian-li.com/ (checked 2026-11-08, homepage re
+A-6b.md	ato-abf-low-value-gst-rules-unverified	A	minor	minor	references/international-buying.md:205; references/international-buying.md:206; https://ww
+A-6b.md	ups-fedex-uk-france-brokerage-no-figure	A	minor	minor	references/international-buying.md:89; references/international-buying.md:212; https://www
+A-6b.md	meshroom-s-spec-source-blocked	A	minor	minor	references/form-factors-cases.md:74; https://ssupd.co/products/cases-meshroom-s-v1 (checke
+A-6b.md	amd-9800x3d-ppt-unverified	A	minor	minor	references/power-supplies-connectors.md:136; https://www.amd.com/en/products/processors/te
+A-6b.md	amd-am5-2029-statement-unverified	A	minor	minor	references/sockets-chipsets.md:163; https://www.amd.com/en/newsroom.html (checked 2026-11-
+A-6b.md	dell-outlet-link-resolves-to-sitemap	A	minor	minor	references/retailers-by-country.md:154; https://www.dell.com/en-us/shop/outlet (checked 20
+A-6b.md	janpara-seller-type-mismatch	A	minor	minor	references/retailers-by-country.md:195; https://www.janpara.co.jp/ (checked 2026-11-08, si
+A-6b.md	mwave-direct-label-with-supplier-stock	A	minor	minor	references/retailers-by-country.md:174; https://www.mwave.com.au/ (checked 2026-11-08, "Sh
+A-6b.md	staticice-readability-downgraded	A	info	info	references/retailers-by-country.md:172; https://www.staticice.com.au/ (checked 2026-11-08)
+A-6b.md	kakaku-readability-downgraded	A	info	info	references/retailers-by-country.md:187; https://kakaku.com/ (checked 2026-11-08, title and
+A-6b.md	sofmap-readability-garbled	A	info	info	references/retailers-by-country.md:194; https://www.sofmap.com/ (checked 2026-11-08, Shift
+A-6b.md	aliexpress-pages-empty-body	A	info	info	references/retailers-by-country.md:209; references/retailers-by-country.md:210; https://ww
+A-6b.md	newegg-canada-blocked-403	A	info	info	references/retailers-by-country.md:164; https://www.newegg.ca/ (checked 2026-11-08, HTTP 4
+A-6b.md	scorptec-blocked-403	A	info	info	references/retailers-by-country.md:175; https://www.scorptec.com.au/ (checked 2026-11-08, 
+A-6b.md	centre-com-blocked-405	A	info	info	references/retailers-by-country.md:177; https://www.centrecom.com.au/ (checked 2026-11-08,
+A-6b.md	bestbuy-landing-page-only	A	info	info	references/retailers-by-country.md:148; https://www.bestbuy.com/ (checked 2026-11-08, coun
+A-6b.md	pc-koubou-third-party-brands	A	info	info	references/retailers-by-country.md:189; https://www.pc-koubou.jp/ (checked 2026-11-08, ope
+A-6b.md	canada-computers-template-placeholders	A	info	info	references/retailers-by-country.md:162; https://www.canadacomputers.com/ (checked 2026-11-
+B-1.md	stopping-rule-must-vs-any-of	B	major	major	skills/hunt-prices/SKILL.md:57 ("Stop only when the playbook's stopping rule is met (minim
+B-1.md	seller-type-exactly-one-vs-composites	B	major	major	references/research-method.md:49 ("Use exactly one of these values", seven values) and :78
+B-1.md	unknown-seller-type-three-spellings	B	minor	minor	references/research-method.md:65 (Seller = `seller not shown`, no Seller type value given)
+B-1.md	hunt-prices-no-unconfirmed-section	B	major	major	skills/hunt-prices/SKILL.md:62 and search-playbook.md:47 ("separate 'Seller unconfirmed' g
+B-1.md	blocked-screenshot-only-in-templates	B	major	major	references/research-method.md:109 ("Never offer only a screenshot when a browser can be lo
+B-1.md	browser-offer-ignores-robots-exclusion	B	major	major	references/research-method.md:112 ("Not for sites that disallow Claude or automated collec
+B-1.md	blocked-status-skip-vs-try-once	B	minor	minor	skills/hunt-prices/SKILL.md:47 ("Skip sites whose status in the reference is `blocked`") v
+B-1.md	unreadable-label-for-never-fetched-sites	B	minor	minor	skills/hunt-prices/SKILL.md:47 and search-playbook.md:24 ("Record them under 'unreadable'"
+B-1.md	readme-limits-screenshot-only	B	minor	minor	README.md:86 ("Those rows are marked blocked, and Claude asks you for a screenshot or past
+B-1.md	scheduled-template-browser-ban-weaker	B	major	major	skills/track-price/SKILL.md:15 ("Scheduled runs never use a browser") and references/resea
+B-1.md	best-valid-price-out-of-stock-passes	B	major	major	skills/track-price/SKILL.md:84 ("acceptable item, in stock or delay shown, seller type rec
+B-1.md	scheduled-run-language-missing	B	minor	minor	skills/track-price/references/tracking-setup.md:89 (notification "in the user's language")
+B-1.md	history-columns-summary-incomplete	B	minor	minor	skills/track-price/SKILL.md:70 (lists 13 items: no shipping, tax/duty, warranty) vs tracki
+B-1.md	frequency-cap-interplay	B	minor	minor	skills/track-price/SKILL.md:16 (minimum interval and 4-per-day cap, "whichever is the long
+B-1.md	readme-alert-only-on-threshold	B	minor	minor	README.md:20 ("alerts you only when it falls below your threshold") and track-price descri
+B-1.md	table-columns-exact-vs-compact	B	major	major	skills/hunt-prices/SKILL.md:91 (compact display allowed) vs :117 (self-check 5 "columns ma
+B-1.md	mandatory-columns-lists-differ	B	major	major	references/research-method.md:93 (mandatory: Date read, Item, Seller, Seller type, Country
+B-1.md	excluding-fees-sort-key	B	minor	minor	references/research-method.md:95 ("rows marked `excluding fees` ascending by shown price")
+B-1.md	scout-landed-wording	B	major	major	agents/price-scout.md:49 ("followed by `(excluding taxes and fees not shown)`", shown pric
+B-1.md	firstparty-marketplace-in-build-totals	B	major	major	skills/build-config/SKILL.md:58 and :63 ("Marketplace third-party rows never feed the main
+B-1.md	verdict-vocab-unknown-vs-not-verified-vs-to-confirm	B	major	major	skills/check-compatibility/SKILL.md:50 and references/pair-checklist.md:9-14 (four verdict
+B-1.md	confidence-low-includes-retailer	B	minor	minor	skills/check-compatibility/SKILL.md:101 and pair-checklist.md:16 (`low` = forum, retailer 
+B-1.md	confidence-high-today-vs-24h-and-screenshot-cap	B	minor	minor	references/research-method.md:41 (`high`: "read today") vs :27 and skills/hunt-prices/SKIL
+B-1.md	grab-it-threshold-at-vs-within	B	minor	minor	skills/review-used-listing/SKILL.md:57 ("Grab it: price at or below the recent sold range"
+B-1.md	size-local-ai-fits-without-margin	B	major	major	CHANGELOG.md:11 (to-do: say "fits without margin, risky") vs skills/size-local-ai/SKILL.md
+B-1.md	country-column-source-unspecified	B	minor	minor	CHANGELOG.md:14 (to-do: take Country from retailers-by-country when the page lacks it) vs 
+B-1.md	sources-dated-todo-partial	B	minor	minor	CHANGELOG.md:12 (to-do: every external source with read date and status) vs references/res
+B-1.md	out-of-scope-lists-differ	B	minor	minor	README.md:23 (consoles, smartphones, tablets, laptops as products) vs skills/build-config/
+B-1.md	scout-batch-size-3-6-vs-4-6	B	minor	minor	skills/hunt-prices/SKILL.md:52 and search-playbook.md:95 ("about 3 to 6 sources") vs agent
+B-1.md	build-variants-one-or-two-vs-two	B	minor	minor	skills/build-config/SKILL.md:8 and :76 ("one or two variants", "one cheaper, one stronger"
+B-1.md	seller-question-count	B	info	info	skills/review-used-listing/SKILL.md:50 ("keep the 4-6") vs skills/review-used-listing/refe
+B-1.md	default-condition-new-vs-new-plus-refurb	B	info	info	skills/hunt-prices/SKILL.md:29 (default: new) vs skills/build-config/SKILL.md:27 (default:
+C-1.md	prompt-injection-clause-missing-check-compatibility	C	blocker	blocker	skills/check-compatibility/SKILL.md (no occurrence of "data" or "instruction"; fetch steps
+C-1.md	prompt-injection-clause-missing-size-local-ai	C	blocker	blocker	skills/size-local-ai/SKILL.md:12-16 (rules list has "Never buy..." at L16 but no data-not-
+C-1.md	price-scout-no-buy-form-contact-rules	C	blocker	blocker (by the brief's rule; mitigated by read-only tool list WebSearch, WebFetch, Read)	agents/price-scout.md:23 (only "logins or account creation"), L36; tools line 5
+C-1.md	price-scout-read-tool-exfiltration-path	C	major	major	agents/price-scout.md:5 (tools include Read; the body never uses local files)
+C-1.md	price-scout-output-carries-unlabelled-page-text	C	major	major	agents/price-scout.md:27, 30, 38-52 (cells copy page wording: Item "as shown", seller line
+C-1.md	scout-no-robots-terms-rule	C	major	major	agents/price-scout.md:20-23 (fetches any given URL or search result page); search-playbook
+C-1.md	track-template-allows-browser-in-scheduled-run	C	major	major	skills/track-price/references/tracking-setup.md:28-30 ("browser automation used to get aro
+C-1.md	track-template-missing-robots-and-personal-data-guardrails	C	major	major	tracking-setup.md:26-33 (verbatim guardrail block has no robots/terms rule, no personal-da
+C-1.md	scheduled-run-notification-recipient-unpinned	C	major	major	tracking-setup.md:24, 89-98 (NOTIFY VIA "<channel>"; template includes seller and URL copi
+C-1.md	cart-estimator-contradicts-no-cart-rule	C	major	major	search-playbook.md:35 ("shipping cost ... if the page or cart estimator shows it without c
+C-1.md	browser-fallback-session-carve-out-click	C	major	major	research-method.md:section 7 step 4 ("click only what displays the content (for example 's
+C-1.md	track-history-private-seller-identity-and-csv-injection	C	major	major	tracking-setup.md:58 (`seller` column), L37-38 and L62-65 (fields from pages; only comma q
+C-1.md	scraper-risk-no-caps-on-parallel-and-sources	C	major	major	hunt-prices/SKILL.md:52 ("several batches at once if the source list is long"), L57 (min c
+C-1.md	a-b-clause-absent-in-playbook-and-scout-brief	C	minor	minor	search-playbook.md:109 ("Never bypass blocks; never log in; never create accounts") is the
+C-1.md	screenshots-not-named-as-untrusted	C	minor	minor	review-used-listing/SKILL.md:8 ("listing text"), L13 and L35 (screenshots accepted); check
+C-1.md	personal-data-rule-absent-hunt-prices-build-config	C	minor	minor	skills/hunt-prices/SKILL.md (no rule; L24 asks "delivery address country"); skills/build-c
+C-1.md	review-used-no-robots-rule-for-classifieds	C	minor	minor	skills/review-used-listing/SKILL.md:13, 29, 68 (fetches classifieds and offers the browser
+C-1.md	cart-total-next-action-wording	C	info	info	skills/hunt-prices/SKILL.md:98 and skills/build-config/SKILL.md:103 ("Open row 1 and check
+C-1.md	connectors-no-not-verified-and-a	C	info	info	CONNECTORS.md (no data-not-instructions or not-verified line)
+C-1.md	tools-by-category-gap-in-agent	C	info	info	agents/price-scout.md:5 (real tool names)
+D-1.md	marketplace-json-never-parsed	D	major	major	scripts/check_content.py:106-117 (no read of marketplace.json); scripts/build_plugin.py:15
+D-1.md	version-not-matched-across-files	D	major	major	.claude-plugin/plugin.json:4 (0.3.3); marketplace.json has no version field; CHANGELOG.md:
+D-1.md	section-n-citations-unchecked	D	major	major	skills/*/SKILL.md (about 40 hits of "research-method.md section N", "used-market-checklist
+D-1.md	volatile-table-dates-not-checked	D	major	major	references/international-buying.md:7-17 (table "Status on 2026-11-07", row 1 "In force unt
+D-1.md	no-readme-count-check	D	minor	minor	README.md, docs/README.*.md (counts of skills, references, cases, translations stated in p
+D-1.md	bare-md-mentions-unchecked	D	minor	minor	scripts/check_content.py:86-90 (regex requires `${CLAUDE_PLUGIN_ROOT}/`); bare mentions fo
+D-1.md	language-bar-and-seller-vocab-unchecked	D	minor	minor	scripts/check_content.py:93-103 only checks "PolyForm Noncommercial" in docs/README.*.md; 
+D-1.md	grader-frontmatter-not-validated	D	minor	minor	tests/cases/*/graders/*.md (46 files, frontmatter `type`, `weight`, `tool`, `input_match`,
+D-1.md	case-08-no-skill-used-grader	D	minor	minor	tests/cases/08-bypass-request/graders/ (language.md, no-bypass.md, still-helpful.md only);
+D-1.md	lenient-graders-pass-on-empty-answer	D	minor	minor	tests/cases/01-ai-mini-itx-14700kf/graders/prices.md, 03-.../prices.md, 06-.../prices.md (
+D-1.md	no-negative-or-refusal-regression-cases	D	minor	minor	tests/cases/ (8 cases: 2 negative, 07 and 08)
+D-1.md	single-run-llm-judge-no-variance	D	minor	minor	all 8 prompt.md: `runs: 1`; tests/results/run15.json (4 cases, overallPassRate 0.25, score
+D-1.md	eval-evidence-older-than-shipped-skills	D	minor	minor	tests/results/run15.json started 2026-11-07T22:29Z (file mtime 23:35); skills/check-compat
+D-1.md	ci-covers-checks-and-build-only	D	minor	minor	.github/workflows/checks.yml:1-24; CONTRIBUTING.md:41,52-58 (documents that eval is manual
+D-1.md	ci-hardening-small	D	info	info	.github/workflows/checks.yml:11-24
+D-1.md	build-exclusions-denylist-not-allowlist	D	minor	minor	scripts/build_plugin.py:8-11 (`included` only tests parts[0] and name); .gitignore:8 lists
+D-1.md	build-zip-not-reproducible-and-stale-dist	D	minor	minor	scripts/build_plugin.py:26-27 (`z.write(p, ...)` uses file mtime); dist/ entries show per-
+D-1.md	build-required-list-thin	D	minor	minor	scripts/build_plugin.py:10 (`REQUIRED` = 5 paths) and :30 (6 skills)
+D-1.md	make-icon-not-part-of-gate	D	info	info	scripts/make_icon.py:1-26 (imports PIL, which is not in requirements-dev.txt)
+D-1.md	check-content-lean-and-module-level-execution	D	info	info	scripts/check_content.py:106-118 (checks run at import, no `main()`), :12-16 (hand lists),
+E-1.md	no-update-path-documented	E	major	major	README.md:37-62 (install only, no update section); .claude-plugin/plugin.json:5 (`"version
+E-1.md	install-depends-on-unconfirmed-repo-visibility	E	major	major	README.md:44-48 (GitHub address `brissonjo-sudo/pc-hardware-advisor`), .claude-plugin/plug
+E-1.md	readme-no-runtime-disclaimer	E	minor	minor	README.md:90 is the only "Not financial or legal advice" line; grep of skills/, agents/, r
+E-1.md	readme-headline-overpromises-worldwide-and-only-reads	E	minor	minor	README.md:7 ("best delivered price ... anywhere in the world", "the plugin only reads"); C
+E-1.md	privacy-silent-on-browser-session-and-cloud-routines	E	minor	minor	README.md:94; references/research-method.md:115 (`browser (user session)`); skills/track-p
+E-1.md	license-notice-line-and-licensor-unnamed	E	minor	minor	LICENSE:1-73 (no `Required Notice:` or copyright line; only the PolyForm example at line 2
+E-1.md	no-affiliation-disclaimer	E	info	info	README.md:7,60-62 (uses "Claude", "Cowork", hardware brand names); grep for "affiliat", "t
+E-1.md	contributing-assignment-may-not-bind-by-pr-sentence	E	minor	minor	CONTRIBUTING.md:12-23 (assignment by typing one sentence in the PR description; caveat at 
+E-1.md	changelog-unreleased-heading-nonstandard	E	minor	minor	CHANGELOG.md:9 (`### To do (not released)`)
+E-1.md	changelog-planned-item-contradicts-readme-browser-promise	E	info	info	CHANGELOG.md:13 (never offer the browser for sites that refuse robots, e.g. Amazon, Cdisco
+E-1.md	translations-readme-section-order-and-note-links	E	minor	minor	README.md:98 (list order fr, es, zh-CN, hi, pt, ar, de, ja) vs language bar README.md:2 (f
+E-1.md	ja-commands-not-byte-identical	E	minor	minor	docs/README.ja.md install block and `--plugin-dir` block: placeholders translated (`<owner
+E-1.md	connectors-refers-to-absent-research-notes	E	info	info	CONNECTORS.md:129 ("details and dates in the research notes of the source repository")
+F-1.md	install-no-uninstall-step	F	minor	minor (AP), major (CB, PB, SR)	README.md:37-62 (no uninstall, remove or disable text anywhere; grep "uninstall" finds not
+F-1.md	install-no-verify-step	F	minor	minor (AP), major (CB, PB, SR)	README.md:50 (only `claude plugin marketplace list`, which lists marketplaces, not that th
+F-1.md	install-no-update-path-and-unexplained-failure	F	major	major (CB), major (PB, SR); minor (AP, author present)	README.md:37-62 (no update instruction); CHANGELOG.md shows 0.3.0 to 0.3.3 shipped in two 
+F-1.md	distribution-private-repo-install-undisclosed	F	major	major (CB), blocker (PB, SR)	README.md:44-48 gives `brissonjo-sudo/pc-hardware-advisor` as the install address; REPORT.
+F-1.md	distribution-no-release-asset	F	minor	minor (AP), major (CB), major (PB, SR)	README.md:62 ("attached to a release when one is published"); dist/ holds one local file (
+F-1.md	demo-missing-sample-output	F	minor	minor (AP, demonstrator present), major (CB, PB, SR)	README.md:64-77 lists 10 prompts only; no sample answer, table or screenshot in README or 
+F-1.md	promise-multi-claim-not-testable	F	minor	minor (AP), minor (CB), major (PB, SR)	README.md:7 (one sentence listing 6 capabilities, "dependable", plus a safety claim); READ
+F-1.md	audience-problem-not-stated	F	minor	minor (AP, CB), major (PB, SR)	README.md:7-23 (starts at the solution; no line saying who it is for or which pain it remo
+F-1.md	compatibility-platforms-unstated	F	minor	minor (AP), major (CB, PB, SR)	README.md:7, 60-62 name "Claude Code" and "Cowork in the Claude desktop app" only; grep fo
+F-1.md	evidence-real-tries-partly-earlier-version	F	minor	minor (AP), major (CB, PB, SR)	REPORT.md:53, 61, 65 (cases 2 and 3 conforme in 0.3.3, case 1 replayed in 0.3.3 on 2026-11
+F-1.md	evidence-self-judged-and-eval-below-threshold	F	minor	minor (AP), major (CB), major (PB, SR)	REPORT.md:36 (criterion not fully met: case 06 never at threshold), REPORT.md:53 ("5 cas s
+F-1.md	measurement-no-feedback-channel-no-signals	F	minor	minor (AP, author observes), major (CB, PB, SR)	README.md:92-94 (privacy: no telemetry, good); no issue link, contact or "tell me what bro
+F-1.md	discovery-github-metadata-unverified	F	info	info	.claude-plugin/plugin.json:5, 13-22 (description, 8 keywords, SPDX license, homepage, repo
+F-1.md	identity-homonym-and-placeholder-command	F	minor	minor	README.md:44 (`<owner/repo or local path>` placeholder before the real address at line 48)
+F-1.md	legal-contribution-terms-unreviewed-vs-private-repo	F	info	info (AP, CB), minor (PB, SR)	CONTRIBUTING.md:18 ("not reviewed by a lawyer"); REPORT.md:126-128 (cumul d'activités and 
+F-1.md	distribution-translations-unreviewed	F	info	info	README.md:96-98 and docs/README.fr.md:39-64 (install section translated, same commands; ma
