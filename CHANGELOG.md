@@ -6,6 +6,18 @@ The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.1.0/),
 
 ## [Unreleased]
 
+## [0.3.10] - 2026-11-08
+
+### Fixed
+
+- `hunt-prices` and `build-config` ground rules: write nothing to the user before the final answer, including after sub-agents return and during spot checks. A real Cowork run on Sonnet (high effort) in 0.3.9 still opened with "the three readers are back, I am checking the lowest prices myself"; the rule sat in the final gate and the dispatch step only.
+- Final answer gate item 1 broadened to the same span; new item 8: a comparator-only price never enters a table, headline or priced line, and shipping shown as "from" makes the landed total a minimum. Both seen in a real Cowork run on Opus (medium effort).
+
+### Added
+
+- `retailers-by-country.md`: Alternate.fr in the France table as a direct retailer (homepage, footer and product page read 2026-11-08: no marketplace wording, no seller line). The two models had typed it differently.
+- Case 03 grader `comparator-and-from`. Case 03 on Sonnet, 2 runs: `no-working-notes`, `comparator-and-from`, `labels-translated` 2/2; both runs found Alternate.fr at 544,00 EUR, typed direct, landed "from 553,90 EUR". `table` and `prices` still fail, a known issue from before 0.3.6.
+
 ## [0.3.9] - 2026-11-08
 
 ### Fixed
