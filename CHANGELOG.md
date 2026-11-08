@@ -6,6 +6,12 @@ The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.1.0/),
 
 ## [Unreleased]
 
+## [0.3.7] - 2026-11-08
+
+### Fixed
+
+- `retailers-by-country.md`: TopAchat and Materiel.net typed as French direct retailers with own stock (maintainer confirmation, 2026-11-08). TopAchat: an offer without a seller line is `direct retailer (seller line not shown)`. Materiel.net: its footer links to a `Marketplace` section not yet read, so an offer naming another seller is third-party and one without a seller line stays `seller type unconfirmed`. Ends the run-to-run inconsistency seen in the 0.3.6 tests.
+
 ## [0.3.6] - 2026-11-08
 
 ### Fixed
