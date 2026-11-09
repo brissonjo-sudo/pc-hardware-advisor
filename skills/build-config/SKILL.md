@@ -99,7 +99,7 @@ Start with the conclusion; use the user's language.
 
    End with the landed total (or `partial total`) and the currency and FX rate date. If you kept full canonical rows elsewhere, add a reference column and give the rows after the table.
 
-   Then one **Compared** line for each of GPU, memory, CPU and motherboard: the retailers read for that part with their shown price and `[n]`, cheapest first ("CPU: Alternate 118.90 EUR [2], TopAchat 184.99 EUR [14], LDLC not sold"). A retailer not read is named with the reason. Without these lines the comparison of step 4 is not done.
+   Then one sentence giving the common read date, seller type and country of the compared prices, and one **Compared** line for each of GPU, memory, CPU and motherboard: the retailers read for that part with their shown price and `[n]`, cheapest first ("CPU: Alternate 118.90 EUR [2], TopAchat 184.99 EUR [14], LDLC not sold"). A retailer not read is named with the reason. Without these lines the comparison of step 4 is not done.
 4. **Compatibility summary**: one line per critical pair with its verdict, linking to the per-pair verdicts from `check-compatibility`. Every number in it (length, height, wattage, connector count, slot generation) cites its `[n]`.
 5. **Variants**: cheaper and stronger, each with changed parts, delta, effect.
 6. **Watch-outs**.
