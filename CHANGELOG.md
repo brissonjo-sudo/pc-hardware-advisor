@@ -6,6 +6,12 @@ The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.1.0/),
 
 ## [Unreleased]
 
+## [0.3.22] - 2026-11-09
+
+### Fixed
+
+- `build-config` Compared lines: for the GPU and memory, each retailer's cheapest in-stock card or kit of the chip or spec, from its list sorted by price, any brand, with the exact model named. Cowork test on 0.3.21 (Opus high): the GPU line compared one board partner's model; the cheapest RX 9070 found was 907.00 EUR, against 794.95 EUR for another model at Cybertek in a test the same day, and the gap forced 16 GB of memory.
+
 ## [0.3.21] - 2026-11-09
 
 ### Fixed
