@@ -6,6 +6,17 @@ The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.1.0/),
 
 ## [Unreleased]
 
+## [0.3.19] - 2026-11-09
+
+### Fixed
+
+- `build-config` step 5: budget levers add up. After a platform change, memory goes back to the use's minimum and the cheapest CPU and board are searched on the new platform before the GPU is lowered; each further GPU tier is one more Budget fit step. Cowork test on 0.3.18 (Opus high): memory went from 16 GB back to 32 GB DDR4 on AM4 and the GPU dropped two tiers.
+- `build-config` self-check: memory and CPU checked before each GPU step down; owned parts take their specs from the manufacturer page or say why not.
+
+### Changed
+
+- `build-config`: three redundant phrases removed (a rationale sentence, "even a short summary table", the import route examples) to stay under the 3 000-word limit of `check_content.py`.
+
 ## [0.3.18] - 2026-11-09
 
 ### Fixed
