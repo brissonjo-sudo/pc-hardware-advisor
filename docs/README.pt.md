@@ -106,6 +106,7 @@ As skills se referem às ferramentas por categoria (busca na web, leitura de pá
 - **Regras de impostos e tarifas são voláteis.** IVA, direitos aduaneiros e limites de isenção (de minimis) mudaram repetidamente em 2025 e 2026. Confira a fonte oficial antes de uma importação grande.
 - **Estimativas são estimativas.** Os valores de tokens por segundo e projeções semelhantes são modelados, não medidos na sua máquina, e são rotulados como tal.
 - **A cobertura da pesquisa tem lacunas.** Alguns países, lojas e peças de nicho são cobertos de forma superficial. As referências indicam onde.
+- **Use o esforço alto.** Nos testes do mantenedor, `build-config` com esforço médio leu menos lojas e deixou passar opções mais baratas. Escolha o esforço alto no seu aplicativo antes de pedir uma configuração ou uma busca de preços.
 - **Não é aconselhamento financeiro nem jurídico.** O plugin informa uma decisão de compra. Ele não aconselha sobre questões fiscais, aduaneiras ou de direito do consumidor.
 
 ## Privacidade

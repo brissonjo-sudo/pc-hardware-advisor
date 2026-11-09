@@ -106,6 +106,7 @@ Die Skills verweisen auf Werkzeuge nach Kategorie (Websuche, Web-Abruf, Preisver
 - **Steuer- und Zollregeln sind volatil.** MwSt., Zölle und Freigrenzen (de minimis) haben sich 2025 und 2026 mehrfach geändert. Prüfe die offizielle Quelle, bevor du einen größeren Import tätigst.
 - **Schätzungen bleiben Schätzungen.** Angaben zu Tokens pro Sekunde und ähnliche Prognosen sind modelliert, nicht auf deinem Rechner gemessen, und entsprechend gekennzeichnet.
 - **Die Recherche hat Lücken.** Manche Länder, Händler und Nischenteile sind nur dünn abgedeckt. Die Referenzen sagen, wo.
+- **Hohen Aufwand verwenden.** In Tests des Maintainers las `build-config` bei mittlerem Aufwand weniger Händler und übersah günstigere Optionen. Wählen Sie in Ihrer App hohen Aufwand, bevor Sie eine Konfiguration oder eine Preissuche anfragen.
 - **Keine Finanz- oder Rechtsberatung.** Das Plugin unterstützt eine Kaufentscheidung. Es berät nicht zu Steuer-, Zoll- oder Verbraucherschutzfragen.
 
 ## Datenschutz

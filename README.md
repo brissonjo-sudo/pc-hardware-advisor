@@ -104,6 +104,7 @@ Skills refer to tools by category (web search, web fetch, price comparator, clas
 - **Tax and tariff rules are volatile.** VAT, customs duties and de minimis thresholds changed repeatedly in 2025 and 2026. Check the official source before a large import.
 - **Estimates are estimates.** Tokens-per-second figures and similar projections are modelled, not measured on your machine, and are labelled as such.
 - **Research coverage has gaps.** Some countries, retailers and niche parts are covered thinly. The references say where.
+- **Use high effort.** In maintainer tests, `build-config` at medium effort read fewer retailers and missed cheaper options. Choose high effort in your app before asking for a build or a price hunt.
 - **Not financial or legal advice.** The plugin informs a purchase decision. It does not advise on tax, customs or consumer-law matters.
 
 ## Privacy
