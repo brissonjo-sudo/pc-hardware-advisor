@@ -6,6 +6,14 @@ The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.1.0/),
 
 ## [Unreleased]
 
+## [0.3.20] - 2026-11-09
+
+### Changed
+
+- `build-config`: step 4.7 details (Compared and Budget fit exceptions) and step 4.8 (import routes) move to `skills/build-config/references/pricing-rules.md`, read at that step. The core price-row rule, the output template and the self-check stay in `SKILL.md`.
+- `build-config`: the import route examples and the empty-slot rationale cut in 0.3.19 are restored.
+- `check_content.py`: the 3 000-word cap on each `SKILL.md` becomes the official 500-line guidance plus a 4 000-word cap.
+
 ## [0.3.19] - 2026-11-09
 
 ### Fixed

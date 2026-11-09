@@ -76,9 +76,10 @@ def check_skill(skill: str) -> None:
         fail(f"{skill}: description {len(desc)} chars > 1024")
     if len(re.findall(r'"[^"]{6,}"', desc)) < 5:
         fail(f"{skill}: fewer than 5 quoted trigger phrases")
-    words = len(text.split())
-    if words >= 3000:
-        fail(f"{skill}: {words} words >= 3000")
+    # Official guidance: SKILL.md under 500 lines; the word cap guards context size.
+    lines, words = len(text.splitlines()), len(text.split())
+    if lines >= 500 or words >= 4000:
+        fail(f"{skill}: {lines} lines, {words} words (limits 500 lines, 4000 words)")
     for needle, label in [("blocked", "blocked-source procedure"), ("circumvent", "no-circumvention rule"),
                           ("language", "answer in user's language"), ("Not verified", "not-verified statement")]:
         if needle.lower() not in text.lower():
