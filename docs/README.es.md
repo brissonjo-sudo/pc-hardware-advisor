@@ -106,6 +106,7 @@ Las skills se refieren a las herramientas por categoría (búsqueda web, lectura
 - **Las normas fiscales y arancelarias son volátiles.** El IVA, los aranceles aduaneros y los umbrales de minimis cambiaron varias veces en 2025 y 2026. Consulta la fuente oficial antes de una importación grande.
 - **Las estimaciones son estimaciones.** Las cifras de tokens por segundo y las proyecciones similares son modeladas, no medidas en tu equipo, y se etiquetan como tales.
 - **La cobertura de la investigación tiene huecos.** Algunos países, tiendas y piezas de nicho están cubiertos de forma escasa. Las referencias indican dónde.
+- **Use el esfuerzo alto.** En las pruebas del mantenedor, `build-config` con esfuerzo medio leyó menos tiendas y pasó por alto opciones más baratas. Elija el esfuerzo alto en su aplicación antes de pedir una configuración o una búsqueda de precios.
 - **No es asesoramiento financiero ni jurídico.** El plugin informa una decisión de compra. No asesora sobre cuestiones fiscales, aduaneras ni de derecho de consumo.
 
 ## Privacidad

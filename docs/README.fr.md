@@ -106,6 +106,7 @@ Les skills désignent les outils par catégorie (recherche web, récupération d
 - **Les règles fiscales et douanières évoluent vite.** La TVA, les droits de douane et les seuils de minimis ont changé à plusieurs reprises en 2025 et 2026. Vérifiez la source officielle avant un import important.
 - **Les estimations restent des estimations.** Les chiffres de tokens par seconde et les projections similaires sont modélisés, non mesurés sur votre machine, et sont signalés comme tels.
 - **La couverture de recherche comporte des lacunes.** Certains pays, revendeurs et pièces de niche sont couverts de manière superficielle. Les références indiquent où.
+- **Utilisez l'effort élevé.** Dans les essais du mainteneur, `build-config` en effort moyen a lu moins de revendeurs et manqué des options moins chères. Choisissez l'effort élevé dans votre application avant de demander une configuration ou une recherche de prix.
 - **Ce n'est ni un conseil financier ni un conseil juridique.** Le plugin éclaire une décision d'achat. Il ne donne pas de conseil en matière fiscale, douanière ou de droit de la consommation.
 
 ## Confidentialité

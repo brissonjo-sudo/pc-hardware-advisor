@@ -6,6 +6,15 @@ The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.1.0/),
 
 ## [Unreleased]
 
+## [0.3.18] - 2026-11-09
+
+### Fixed
+
+- `build-config` step 5: budget levers in order with a new one, another platform that still meets the use (for example DDR4), and a cheaper model searched for rather than picked among pages already read. Stop at the first config that fits. Cowork tests on 0.3.17: Opus high kept 32 GB and ended 7.90 EUR over budget; Sonnet high said the CPU read was already the cheapest and never tried DDR4.
+- `build-config` template: one visible Budget fit line listing each lever tried with its total, or "not needed".
+- `build-config` step 4: a mixed site (LDLC, Materiel.net) counts as a direct retailer for an offer it sells itself. Sonnet high excluded both as marketplaces.
+- README and translations: high effort recommended for skills that research prices.
+
 ## [0.3.17] - 2026-11-09
 
 ### Fixed

@@ -57,13 +57,13 @@ Fix every conflict by changing a part, then re-run the affected pairs. Never shi
 ## Step 4: price every part
 
 1. Apply the `hunt-prices` method per part for the buyer's country: direct retailers and manufacturer stores first, professional refurbishers if allowed, then neighbouring countries that ship, marketplaces last and flagged. Follow its source list rules and its landed-price computation (`${CLAUDE_PLUGIN_ROOT}/references/international-buying.md` when importing).
-   For the GPU, memory, CPU and motherboard, read at least 3 direct retailers of the buyer's country when that many sell the part, and keep the cheapest in stock unless you state a reason (warranty, delivery, a spec). One retailer per part is not a comparison.
+   For the GPU, memory, CPU and motherboard, read at least 3 direct retailers of the buyer's country when that many sell the part, and keep the cheapest in stock unless you state a reason (warranty, delivery, a spec). One retailer per part is not a comparison. A site listed as "marketplace (mixed)" or "direct retailer (plus marketplace)" in `retailers-by-country.md` (for example LDLC or Materiel.net in France) counts as a direct retailer for an offer it sells itself: read the seller line and set aside only third-party offers.
 2. Batch lookups: when the `price-scout` sub-agent is available, dispatch several parts per round in parallel, then spot-check the cheapest rows yourself. Otherwise read pages with `~~web fetch`, one fetch per page.
 3. Keep canonical price rows (14 columns of `research-method.md`) in a separate rows table or appendix, or fold the key fields (date, seller, seller type, country, landed) into the main table. Either way every number traces to a row.
 4. Compute the landed total in the buyer's currency with the rate date. If any price could not be read, mark that part `price not read`, keep the total as **partial** and say which parts are missing. Never fill a gap with an estimate presented as a price.
 5. Never leave a component slot empty because its price could not be read: choose the best-documented candidate from manufacturer spec pages (dimensions, connectors, compatibility verified), put it in the table with `price not read`, and say where the user can check the price. A build with every slot chosen and some prices missing is useful; a build with empty slots is not.
 6. Marketplace third-party rows never feed the main total; mention them as a flagged saving.
-7. Every price shown anywhere in the answer (main table, routes compared, variants) carries on its own row: date read, seller, seller type, country, and landed price or `excluding fees` (compact display, `research-method.md` section 6). Never drop these columns to shorten a table, even a short summary table; write `not shown` when a value is unknown. A date in the table title does not replace the per-row date. In prose, cite prices only with their row. Only exception: the Compared lines of the output template, which list shown prices of direct retailers of the buyer's country with their `[n]`, under one sentence giving their common read date, seller type and country; any other seller type or country there gets its own row.
+7. Every price shown anywhere in the answer (main table, routes compared, variants) carries on its own row: date read, seller, seller type, country, and landed price or `excluding fees` (compact display, `research-method.md` section 6). Never drop these columns to shorten a table, even a short summary table; write `not shown` when a value is unknown. A date in the table title does not replace the per-row date. In prose, cite prices only with their row. Only exception: the Compared lines of the output template, which list shown prices of direct retailers of the buyer's country with their `[n]`, under one sentence giving their common read date, seller type and country; any other seller type or country there gets its own row. The Budget fit line gives totals of rows shown elsewhere in the answer; a price that appears only there needs its own row.
 8. Import: when the user accepts importing (or asks for "worldwide", "anywhere"), price at least one import route from OUTSIDE the buyer's customs zone (intra-EU purchases are not imports), for example a US retailer or a manufacturer store in China or Japan that ships to the buyer, for the most expensive component (sources in `retailers-by-country.md`), compute its landed price with `international-buying.md` (VAT, duty, handling fee, shipping, dated FX), and compare it with the domestic row. Whenever you have read a foreign price, compute its landed estimate (label it `estimate`, name each rate and its source); never leave it as "not comparable". Only a rate you cannot establish may stay open, and you name it. If no import page could be read, say so explicitly AND still state, with their sources from `international-buying.md`, the costs an import would add for this buyer (import VAT rate, duty or flat duty, handling fee, carrier fees), so the user can apply them to any foreign price they find.
 
 ## Step 5: budget allocation
@@ -71,7 +71,12 @@ Fix every conflict by changing a part, then re-run the affected pairs. Never shi
 1. Start from the plugin heuristic priorities for the use in the playbook. They are rules of thumb, labelled as such, not measured facts. Do not state percentages as facts.
 2. Replace the heuristic with real prices: the first draft is allocated by priority, the final one by what the priced parts cost. Re-balance when memory, SSD or GPU prices make a default split unrealistic.
 3. Keep a reserve line for things users forget (OS licence, fans, cables, thermal paste, a monitor if in scope). Price them or mark them `not priced`.
-4. Before declaring an overrun, fit the budget: apply the playbook's cheaper levers in order (memory capacity down to the use's minimum, stated in the assumptions, a cheaper CPU or board on the same platform, the GPU one tier down) and re-price. The main config is the best one that fits the budget when one exists. Say the budget cannot be met only if the cheapest config that still meets the use is over it, and show that config with its total.
+4. Before declaring an overrun, fit the budget. Apply these levers in order, re-price after each, and stop at the first config that fits:
+   1. memory capacity down to the use's minimum, stated in the assumptions;
+   2. a cheaper CPU or board on the same platform: search for a cheaper model that still meets the use (a lower SKU on the same socket, a cheaper chipset), not only the cheapest among the pages already read;
+   3. another platform that still meets the use, with compatibility re-run (for example a previous socket with DDR4 when DDR5 prices weigh on the total);
+   4. the GPU one tier down.
+   The main config is the best one that fits the budget when one exists. Say the budget cannot be met only if every lever was tried and the cheapest config that still meets the use is over it, and show that config with its total.
 5. If the main config exceeds the budget, say so in the conclusion line and by how much. Do not hide an overrun.
 
 ## Step 6: variants
@@ -100,6 +105,8 @@ Start with the conclusion; use the user's language.
    End with the landed total (or `partial total`) and the currency and FX rate date. If you kept full canonical rows elsewhere, add a reference column and give the rows after the table.
 
    Then one sentence giving the common read date, seller type and country of the compared prices, and one **Compared** line for each of GPU, memory, CPU and motherboard: the retailers read for that part with their shown price and `[n]`, cheapest first ("CPU: Alternate 118.90 EUR [2], TopAchat 184.99 EUR [14], LDLC not sold"). A retailer not read is named with the reason. Without these lines the comparison of step 4 is not done.
+
+   Then one **Budget fit** line in the user's language ("Ajustement au budget" in French): each lever of step 5.4 in order, with the total after it or the reason it was skipped ("Budget fit: memory 32 to 16 GB, 1 412 EUR, fits"). Write "Budget fit: not needed" when the first priced config fits. Without this line step 5.4 is not done.
 4. **Compatibility summary**: one line per critical pair with its verdict, linking to the per-pair verdicts from `check-compatibility`. Every number in it (length, height, wattage, connector count, slot generation) cites its `[n]`.
 5. **Variants**: cheaper and stronger, each with changed parts, delta, effect.
 6. **Watch-outs**.
@@ -114,7 +121,7 @@ Keep prose short; no narration of the search process.
 
 ## Self-check before answering
 
-1. Does the conclusion line state the landed total (or partial) against the budget?
+1. Does the conclusion line state the landed total (or partial) against the budget? If the first priced config was over, does the Budget fit line show each lever of step 5.4 tried in order?
 2. Is every part eligible (new or professional refurbished, invoice and warranty)? No private-party part in the totals?
 3. Was the compatibility method run on the whole list, with no unresolved conflict?
 4. For AI builds, was `size-local-ai` run first and its estimates labelled?
