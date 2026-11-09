@@ -45,7 +45,7 @@ Read `${CLAUDE_PLUGIN_ROOT}/skills/build-config/references/build-playbook.md` no
    - `${CLAUDE_PLUGIN_ROOT}/references/form-factors-cases.md` for board and PSU form factors, GPU dimensions, small-case limits, PCIe lanes.
    - `${CLAUDE_PLUGIN_ROOT}/references/gpu-bandwidth-ai.md` only through `size-local-ai`.
 3. Verify online that each shortlisted part is current and sold in the buyer's country, and read its exact specs on the manufacturer page (dimensions, connectors, supported memory speeds, BIOS notes). Skip a part you cannot verify and say why.
-4. Owned parts: keep them if compatible and useful; list them at zero price in the table, marked `owned`, and check them as part of the list.
+4. Owned parts: keep them if compatible and useful; list them at zero price in the table, marked `owned`, and check them as part of the list. Take their specs (dimensions, connectors, wattage) from the manufacturer page, a review or spec database only when that page cannot be read.
 5. Respect banned and wanted brands. Prefer parts with a manufacturer warranty valid in the buyer's country.
 
 ## Step 3: compatibility
@@ -63,7 +63,7 @@ Fix every conflict by changing a part, then re-run the affected pairs. Never shi
 4. Compute the landed total in the buyer's currency with the rate date. If any price could not be read, mark that part `price not read`, keep the total as **partial** and say which parts are missing. Never fill a gap with an estimate presented as a price.
 5. Never leave a component slot empty because its price could not be read: choose the best-documented candidate from manufacturer spec pages (dimensions, connectors, compatibility verified), put it in the table with `price not read`, and say where the user can check the price. A build with every slot chosen and some prices missing is useful; a build with empty slots is not.
 6. Marketplace third-party rows never feed the main total; mention them as a flagged saving.
-7. Every price shown anywhere in the answer (main table, routes compared, variants) carries on its own row: date read, seller, seller type, country, and landed price or `excluding fees` (compact display, `research-method.md` section 6). Never drop these columns to shorten a table, even a short summary table; write `not shown` when a value is unknown. A date in the table title does not replace the per-row date. In prose, cite prices only with their row.
+7. Every price shown anywhere in the answer (main table, routes compared, variants) carries on its own row: date read, seller, seller type, country, and landed price or `excluding fees` (compact display, `research-method.md` section 6). Never drop these columns to shorten a table, even a short summary table; write `not shown` when a value is unknown. A date in the table title does not replace the per-row date. In prose, cite prices only with their row. Only exception: the Compared lines of the output template, which list shown prices of direct retailers of the buyer's country with their `[n]`, under one sentence giving their common read date, seller type and country; any other seller type or country there gets its own row.
 8. Import: when the user accepts importing (or asks for "worldwide", "anywhere"), price at least one import route from OUTSIDE the buyer's customs zone (intra-EU purchases are not imports), for example a US retailer or a manufacturer store in China or Japan that ships to the buyer, for the most expensive component (sources in `retailers-by-country.md`), compute its landed price with `international-buying.md` (VAT, duty, handling fee, shipping, dated FX), and compare it with the domestic row. Whenever you have read a foreign price, compute its landed estimate (label it `estimate`, name each rate and its source); never leave it as "not comparable". Only a rate you cannot establish may stay open, and you name it. If no import page could be read, say so explicitly AND still state, with their sources from `international-buying.md`, the costs an import would add for this buyer (import VAT rate, duty or flat duty, handling fee, carrier fees), so the user can apply them to any foreign price they find.
 
 ## Step 5: budget allocation
@@ -95,7 +95,11 @@ Start with the conclusion; use the user's language.
 
    | Part | Choice (exact model/SKU) | Why | Date | Seller | Seller type | Country | Shown price | Landed | Stock | Confidence | Source |
 
+   Headers and values follow `research-method.md` section 6 in the user's language: Landed becomes "Total livré" in French, dates in ISO form (2026-11-09), seller types written in full ("revendeur direct (ligne vendeur absente)", never "direct"), read statuses from the list of section 11 item 4 ("complète", "partielle", "extrait de recherche").
+
    End with the landed total (or `partial total`) and the currency and FX rate date. If you kept full canonical rows elsewhere, add a reference column and give the rows after the table.
+
+   Then one sentence giving the common read date, seller type and country of the compared prices, and one **Compared** line for each of GPU, memory, CPU and motherboard: the retailers read for that part with their shown price and `[n]`, cheapest first ("CPU: Alternate 118.90 EUR [2], TopAchat 184.99 EUR [14], LDLC not sold"). A retailer not read is named with the reason. Without these lines the comparison of step 4 is not done.
 4. **Compatibility summary**: one line per critical pair with its verdict, linking to the per-pair verdicts from `check-compatibility`. Every number in it (length, height, wattage, connector count, slot generation) cites its `[n]`.
 5. **Variants**: cheaper and stronger, each with changed parts, delta, effect.
 6. **Watch-outs**.

@@ -6,6 +6,14 @@ The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.1.0/),
 
 ## [Unreleased]
 
+## [0.3.17] - 2026-11-09
+
+### Fixed
+
+- `build-config` template: one Compared line per GPU, memory, CPU and motherboard, with each retailer read, its shown price and source, under one sentence giving their common date, seller type and country (step 4 rule 7 names this as its only exception). Cowork tests on 0.3.16 (Opus medium, Sonnet high) both fitted the budget but showed no comparison; Opus paid 184.99 EUR for a CPU listed at 118.90 EUR the same day at another retailer.
+- `build-config` template: headers and values follow section 6 in the user's language ("Total livré", ISO dates, full seller types, listed read statuses). Sonnet run kept "Landed", wrote 09/11/2026 and abbreviated seller types.
+- `build-config` step 2: owned-part specs come from the manufacturer page first. Sonnet run took the PSU specs from a spec database.
+
 ## [0.3.16] - 2026-11-09
 
 ### Fixed
