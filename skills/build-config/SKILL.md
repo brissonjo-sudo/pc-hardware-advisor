@@ -105,9 +105,11 @@ Start with the conclusion; use the user's language.
 
    End with the landed total (or `partial total`) and the currency and FX rate date. If you kept full canonical rows elsewhere, add a reference column and give the rows after the table.
 
-   Then one sentence giving the common read date, seller type and country of the compared prices, and one **Compared** line for each of GPU, memory, CPU and motherboard: the retailers read for that part with their shown price and `[n]`, cheapest first ("CPU: Alternate 118.90 EUR [2], TopAchat 184.99 EUR [14], LDLC not sold"). A retailer not read is named with the reason. Without these lines the comparison of step 4 is not done.
+   Then one sentence giving the common read date, seller type and country of the compared prices, and one **Compared** line for each of GPU, memory, CPU and motherboard: the retailers read for that part with their shown price and `[n]`, cheapest first ("CPU: Alternate 118.90 EUR [2], TopAchat 184.99 EUR [14], LDLC not sold"). A retailer not read is named with the reason. Point to another table only for a row it contains. Without these lines the comparison of step 4 is not done.
 
-   Then one **Budget fit** line in the user's language ("Ajustement au budget" in French): each lever of step 5.4 in order, with the total after it or the reason it was skipped ("Budget fit: memory 32 to 16 GB, 1 412 EUR, fits"). Write "Budget fit: not needed" when the first priced config fits. Without this line step 5.4 is not done.
+   Then one **Budget fit** line in the user's language ("Ajustement au budget" in French): each lever of step 5.4 in order, with the total after it or the reason it was skipped ("Budget fit: memory 32 to 16 GB, 1 412 EUR, fits"). Write "Budget fit: not needed" when the first priced config fits. For lever 2, name the cheaper model searched with its price and `[n]`, or what was searched and found nothing ("lever 2: A620 boards and lower AM5 CPUs searched, none cheaper in stock"); "already the cheapest I read" is not a lever 2 result. Without this line step 5.4 is not done.
+
+   Prices shown only in Budget fit, variants or comparisons go in one table per seller group (`research-method.md` section 6), sorted by landed price. Never repeat a main-table row there.
 4. **Compatibility summary**: one line per critical pair with its verdict, linking to the per-pair verdicts from `check-compatibility`. Every number in it (length, height, wattage, connector count, slot generation) cites its `[n]`.
 5. **Variants**: cheaper and stronger, each with changed parts, delta, effect.
 6. **Watch-outs**.

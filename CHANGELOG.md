@@ -6,6 +6,14 @@ The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.1.0/),
 
 ## [Unreleased]
 
+## [0.3.21] - 2026-11-09
+
+### Fixed
+
+- `build-config` Budget fit line: lever 2 names the cheaper model searched, with price and source, or what was searched and found nothing. "Already the cheapest I read" no longer counts. Cowork test on 0.3.20 (Opus high): budget met with the RX 9070 kept, but lever 2 on AM5 stopped at the pages already read and no A620 board was tried.
+- `build-config` Compared lines point to another table only for a row it contains (the 0.3.20 test sent the reader to a table without that row).
+- `build-config`: prices outside the main table go in one table per seller group, sorted by landed price, without repeating main-table rows.
+
 ## [0.3.20] - 2026-11-09
 
 ### Changed
