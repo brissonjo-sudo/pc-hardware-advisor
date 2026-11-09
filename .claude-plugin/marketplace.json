@@ -9,7 +9,7 @@
     {
       "name": "pc-hardware-advisor",
       "source": "./",
-      "version": "0.3.19",
+      "version": "0.3.20",
       "description": "PC hardware expertise for Claude: worldwide landed-price hunting, compatibility checks, complete builds, local-AI sizing, used-listing review, scheduled price tracking."
     }
   ]
