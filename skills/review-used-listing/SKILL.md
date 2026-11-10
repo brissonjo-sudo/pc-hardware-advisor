@@ -71,8 +71,14 @@ For a negotiation margin, give a number or percentage only if the market compari
 
 1. **Verdict line first**: `Verdict: grab it | negotiate | avoid`, one sentence why, confidence (solid / plausible / to verify).
 2. **Reasons**: 3-6 bullets, each with its evidence and `[n]` citation.
-3. **Market comparison**: a table of canonical rows (listing plus market points), dated, basis labelled `sold` or `asking`, sample size in Item or a note below.
-4. **Seller questions**: numbered, copy-ready.
+3. **Market comparison**: a table of canonical rows (listing plus market points), dated, basis labelled `sold` or `asking`, sample size in Item or a note below (below 10 items: confidence `low`, said in the note). A price range alone does not replace the table. Shape (illustrative values, do not reuse):
+
+   | Date read | Item | Seller | Seller type | Country | Shown price | Landed or `excluding fees` | Basis | Confidence | Source |
+   |---|---|---|---|---|---|---|---|---|---|
+   | 2026-01-01 | Example GPU 10 GB (this listing) | not shown (example.invalid) | private party | FR | 250.00 EUR | `excluding fees` (hand delivery) | asking | medium | [1] |
+   | 2026-01-01 | Example GPU 10 GB, 6 listings | private parties | private party | FR | 320.00 to 499.00 EUR | `excluding fees` | asking | low | [2] |
+
+4. **Seller questions**: numbered, copy-ready, at least one per red flag present (for example "never mined": use and purchase date; no invoice: origin and proof of purchase).
 5. **Handover tests**: numbered, with pass/fail criteria.
 6. **Negotiation argument**: opening offer or margin, walk-away price, arguments tied to evidence. Omit the number if market data is unverified.
 7. **Not verified**: pages blocked or partial, missing sold data, unproven warranty, anything from memory.
