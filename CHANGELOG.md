@@ -6,6 +6,14 @@ The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.1.0/),
 
 ## [Unreleased]
 
+## [0.3.23] - 2026-11-10
+
+### Fixed
+
+- `check-compatibility`: the output template (verdict table and Sources) is required from the top of the skill, even for a quick question; a claim about a whole product line is labelled as an assumption. Cowork test (Sonnet high): right blocker (DDR4 on AM5) but no table, no sources and no official page read; the same prompt with Opus high followed the template.
+- `review-used-listing`: filled example of the market comparison table, low confidence said below 10 items, one seller question per red flag. Cowork test (Sonnet high): a price range instead of the table, one seller question for two red flags.
+- `size-local-ai`: the Recommended line says when no price row fits the budget; model config read from the publisher's repository. Cowork test (Sonnet high): RTX 3090 called the choice for a 1,000 EUR budget with a 1,150 EUR median, config read from third-party re-uploads.
+
 ## [0.3.22] - 2026-11-09
 
 ### Fixed

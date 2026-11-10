@@ -37,7 +37,7 @@ If the model is unnamed, ask one clarifying question. Do not guess a model size.
 `needed = weights + KV cache + overhead + margin`
 
 1. Weights = parameters x bits per weight / 8. Read the bpw table in section 4 of the reference. Q4_K_M is about 4.9 bpw, not 4.0. If the user names a real file, use its size.
-2. KV cache = 2 x layers x KV heads x head_dim x context x bytes per element. Read layers, KV heads and head_dim from the model's config (`~~web fetch` of the model card or config). If the config was not read, say so and give the Llama 3.1 8B / 70B figures from the reference as orders of magnitude only. Quantized KV halves the cache roughly but is unavailable in tensor split mode.
+2. KV cache = 2 x layers x KV heads x head_dim x context x bytes per element. Read layers, KV heads and head_dim from the model's config (`~~web fetch` of the model card or config) in the publisher's own repository, not a re-upload by another account. If the config was not read, say so and give the Llama 3.1 8B / 70B figures from the reference as orders of magnitude only. Quantized KV halves the cache roughly but is unavailable in tensor split mode.
 3. Overhead = 1-2 GB per GPU plus about 0.5-1 GB for the display on a desktop GPU.
 4. Margin = about 10%. If only the margin pushes the total above the card memory, write "fits without margin: risky", not "does not fit".
 5. MoE: all experts must be resident (or offloaded to RAM, which is slow); bandwidth counts only active experts.
@@ -99,7 +99,7 @@ When recommending used or datacenter cards (3090, P40, V100, MI50, others), stat
 
 Use this structure, conclusion first:
 
-1. **Recommended**: one card or machine, with capacity, bandwidth (value and confidence), and why it fits `needed`.
+1. **Recommended**: one card or machine, with capacity, bandwidth (value and confidence), and why it fits `needed`. If no price row for it is within the user's budget, say so here ("most listings above your budget: N of M under 1,000 EUR", or "price to check"); never call it the choice for the budget without a row under it.
 2. **Memory budget** (mandatory, never only a conclusion such as "about 20 GB, short context"): the line-by-line sum from Step 1 for the recommended model, and for any model you say "fits just". Shape (illustrative numbers, recompute every line):
 
    | Line | Value | Basis |

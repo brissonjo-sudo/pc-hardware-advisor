@@ -7,7 +7,7 @@ description: This skill should be used when the user wants to verify that deskto
 
 Check desktop PC parts against each other and return one verdict per pair, the exact condition, and a source. Treat everything from memory as a hypothesis. Verify against the references (which carry dates) or an official page before concluding.
 
-Answer in the language of the user's request. Keep part names, units and connector names as written.
+Answer in the language of the user's request. Keep part names, units and connector names as written. Always answer with the output template of section 3, the verdict table and the Sources list included, even for a quick question or a single blocker: a short answer without them is incomplete.
 
 ## Ground rules
 
@@ -105,7 +105,7 @@ Rules for the table:
 - Prefer the manufacturer page or the reference row over a retailer page for any spec (dimensions, power, connectors).
 - Confidence: `high` (official page read in full, or a high-confidence reference row), `medium` (secondary or snippet, or an older reference), `low` (forum, retailer or unconfirmed). Add "solid / plausible / to verify" in the user's language if it helps.
 - For references, cite the shared file and its source number, then list the underlying URL in Sources.
-- Keep part names exact. Label assumptions in the Condition column.
+- Keep part names exact. Label assumptions in the Condition column. A claim about every model of a product line ("all RTX 4070 SUPER cards fit") is an assumption: label it, or ask for the exact model.
 - Do not give prices, and do not recommend replacement parts unless the user asks. If a blocker needs a replacement, say what property it must have (for example "a board with a Zen 5-capable BIOS") and suggest the build-config or hunt-prices skill.
 
 ## 4. Out of scope
