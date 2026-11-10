@@ -208,7 +208,7 @@ Only official brand sites and brand-linked stores. Foreign-buyer warranty is not
 
 | Name | URL | Seller type | Role | Auto-readable (2026-11-07, sampled again 2026-11-08: see research/audit/A-6a.md and A-6b.md) | API/feed | Notes | Confidence | Source |
 |---|---|---|---|---|---|---|---|---|
-| AliExpress (platform) | https://www.aliexpress.com/ | marketplace (third-party seller) | Marketplace | partial (empty body) | Affiliate API: separate enrolment, signed calls, about 500 requests/day for new apps (third-party guides) | Not a brand store. Choice program and IOSS: see Not verified. | low | [102], [136], [153] |
+| AliExpress (platform) | https://www.aliexpress.com/ | marketplace (third-party seller) | Marketplace | no automated reading (robots.txt: `User-agent: ClaudeBot`, `Disallow: /`, read 2026-11-10): browser fallback only, on the user's yes; rules in `retailer-criteria.md` section 6 | Affiliate API: separate enrolment, signed calls, about 500 requests/day for new apps (third-party guides) | Not a brand store. Choice program and IOSS: see Not verified. | low | [102], [136], [153] |
 | AliExpress Lian Li store | https://www.aliexpress.com/store/1101594887 | manufacturer store (linked from brand site) | Official store | partial (empty body) | none found | Linked from the lian-li.com Support menu, so the brand declares it. Badge not seen. | medium (link), low (badge) | [103], [123] |
 | Thermalright | https://www.thermalright.com/ | manufacturer store | Brand site | yes | none found | 5-year warranty on some models; sales through "Find Distributors"; no AliExpress, Amazon or JD link. Newegg "Thermalright Authorized Store" seen in search only. | high (site), low (China store) | [119], [131] |
 | Peerless Assassin (Thermalright line) | — | manufacturer store | Product line | not tested (not applicable) | none found | Search found only third-party sellers. Official AliExpress store NOT confirmed. | low | [131] |
@@ -257,7 +257,7 @@ Zones in this table are the only ones research supports. For any other pair, rea
 2. Do not circumvent: no alternate user agents, no caches, mirrors or archive copies used to dodge a block. Do not use unofficial endpoints or third-party scrapers.
 3. Do not fetch sites whose robots.txt disallows Claude user agents (PCPartPicker, TechPowerUp) [145].
 4. Do not loop. One fetch attempt per page per answer; a browser read on the user's yes is a separate step. A rate-limited page is `not tested`: try it once, then record the result.
-5. Offer the browser fallback in one line, as defined in `research-method.md` section 7 (interactive answers only, read-only, stop at any bot check, never for sites whose robots rules or terms exclude automated collection, Amazon storefronts excepted). If the user says yes, read the page there and record `Page read: browser (user session)`.
+5. Offer the browser fallback in one line, as defined in `research-method.md` section 7 (interactive answers only, read-only, stop at any bot check, never for sites whose robots rules or terms exclude automated collection, Amazon and AliExpress excepted). If the user says yes, read the page there and record `Page read: browser (user session)`.
 6. Otherwise ask the user for a screenshot or pasted text of the page. Record `Page read: user screenshot`, `Confidence: medium` at best.
 7. Prefer another retailer in the same country that is `yes` or `partial`, and say which retailers could not be read.
 

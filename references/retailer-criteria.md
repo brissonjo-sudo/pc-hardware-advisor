@@ -73,6 +73,19 @@ Instruction: point the user to the relevant resource and have them check the sho
 
 Rules: never rely on one reputation source; cross-check at least two; treat star averages as weak evidence; verify identity (imprint, register entry) first.
 
+## 6. AliExpress offers (2026-11-10)
+
+Sources: an assembler's public video on buying hundreds of AMD processors there ([23], practice, medium confidence), viewer comments under it ([24], heuristics, low confidence, not sourced), AMD support pages ([25]-[28]).
+
+1. **Access**: browser fallback only, on the user's yes (`research-method.md` section 7). Never `~~web fetch`, sub-agents or scheduled runs.
+2. **Seller per offer**: `marketplace (third-party seller)`; a store counts as `manufacturer store` only if the brand's own site links to it. Record the store's age and positive-feedback rate when the page shows them.
+3. **Red flags** (plugin heuristic from viewer comments, not sourced [24]): store open for only a few months; positive feedback under 90 %; a seller asking for payment outside the AliExpress checkout (strong flag: avoid).
+4. **Low price**: a large gap on AMD processors is not proof of fraud from an established seller (the video describes them as subsidised loss leaders [23], testimony, not an official source). Apply the other checks anyway.
+5. **Warranty, said in the answer**: AMD warrants only processors sold new in a sealed retail box (3 years) [25]; for a tray or OEM processor, the point of purchase provides the warranty, not AMD [26]. An invoice is often missing [23]. Warranty cell: `seller only` for tray processors; `not shown` otherwise unless the page states it.
+6. **By category**: processors from a solid seller are an acceptable risk [23]; for graphics cards and motherboards the warranty weighs more. Always set the AliExpress offer against the best offer from the buyer's country, and state both gaps: price and risk (warranty, after-sales, delay).
+7. **Taxes and delivery**: `international-buying.md` applies (EU duty and VAT, IOSS not verified). An offer counts as delivered only if the page names the buyer's country with a cost (`research-method.md` section 11, item 9). Some items show "cannot be delivered to your address" [24]: record it.
+8. **Advice to the buyer** (the plugin never buys): pay only in the AliExpress checkout, PayPal there if offered [23]; film the unboxing from start to end as evidence for a dispute [23]; open any dispute through AliExpress; on receipt, check a processor with AMD's serial-number lookup [27] and boxed-processor authenticity guide [28].
+
 ## Not verified
 
 - Watchlist Internet list not read (HTTP 403). Verbraucherzentrale, SignalConso, Scamwatch, Action Fraud, Fakeshop-Finder not read (rate-limited); descriptions are from search snippets.
@@ -109,3 +122,9 @@ Rules: never rely on one reputation source; cross-check at least two; treat star
 20. Trustpilot press, court orders (search title only): https://press.trustpilot.com/trustpilot-secures-first-court-orders-banning-businesses-soliciting-fake-reviews
 21. Retail Systems, Which? on fake reviews (undated, search): https://www.retail-systems.com/rs/Facebook_Google_And_Trustpilot_Failing_To_Filter_Out_Fake_Reviews.php
 22. Trusted Shops Buyer Protection (search): https://help.etrusted.com/hc/en-gb/articles/23970803902354-What-is-the-Buyer-Protection
+23. Monsieur PC (@sieurpc), Instagram reel "AliExpress est-il fiable pour acheter ses composants PC ?", 2026-10-28, audio transcribed by speech recognition 2026-11-10 (some passages uncertain): https://www.instagram.com/reel/DfC8ilsCKvH/
+24. Comments under the same reel, read 2026-11-10 (user opinions, unverified)
+25. AMD, Processor in a box (PIB) 3 Year Limited Warranty (search result, 2026-11-10): https://www.amd.com/en/resources/support-articles/warranty/RMA-03.html
+26. AMD, Warranty Service: Tray and MPK Processors (search result, 2026-11-10): https://www.amd.com/en/resources/support-articles/warranty/OEM.html
+27. AMD, Processor Serial Number Lookup (search result, 2026-11-10): https://www.amd.com/en/resources/support-articles/faqs/SNV-LUT.html
+28. AMD, How to Determine the Authenticity of an AMD Boxed Processor (search result, 2026-11-10): https://www.amd.com/en/resources/support-articles/warranty/PIB-Authenticity.html
