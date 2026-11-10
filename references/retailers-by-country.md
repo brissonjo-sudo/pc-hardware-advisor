@@ -28,6 +28,7 @@ Last checked: 2026-11-07. Values change: verify online before concluding.
 
 | Name | URL | Seller type | Role | Auto-readable (2026-11-07, sampled again 2026-11-08: see research/audit/A-6a.md and A-6b.md) | API/feed | Notes | Confidence | Source |
 |---|---|---|---|---|---|---|---|---|
+| Amazon.fr | https://www.amazon.fr/ | marketplace (mixed) | Marketplace | no automated reading: browser fallback only, on the user's yes (`research-method.md` section 7) | See Amazon note | Read "Expédié par" and "Vendu par" per offer; delivery dates can run months out, record them. | low | [141] |
 | leDénicheur | https://www.ledenicheur.fr/ | price comparator | Comparator | yes | none found | Merchant name per offer (Amazon.fr, Cdiscount, Rue du Commerce, eBay, Carrefour). Mixes marketplace sellers. No price date. | medium (homepage only) | [1] |
 | idealo.fr | https://www.idealo.fr/ | price comparator | Comparator | blocked (fetch error, cause unknown) | Merchant feed/import (CSV/TXT/XML), third-party sources only; not a buyer-read API | Site unread. Verify feed on idealo's business pages. | low | [3], [4], [147] |
 | Materiel.net | https://www.materiel.net/ | marketplace (mixed) | Retail | yes | none found | Sells its own stock (maintainer, 2026-11-08) and hosts a Marketplace of professional third-party sellers (new, refurbished, used), per the Marketplace terms supplied by the maintainer (dated 2023-09-01, not fetched by research). Default offer on a product page: the site's own if it sells the item, else the cheapest marketplace offer, so a page read without a seller line can be a third-party offer; other offers are in a separate panel. Read the seller per offer: "vendu par" another seller is `marketplace (third-party seller)`, no seller line is `seller type unconfirmed`. DDR5 search showed EUR prices and "Occasion" (used) items. | medium | [5], [154] |
@@ -248,7 +249,7 @@ Zones in this table are the only ones research supports. For any other pair, rea
 
 **eBay note.** Browse API: free tier 5,000 calls/day, OAuth application token, one category ID per request; production Buy API access is gated; eBay content display rules apply; confidence medium [93], [138]-[140]. Marketplace Insights (sold data) is limited release, not self-serve [139].
 
-**Amazon note.** PA-API 5.0 is deprecated (calls return HTTP 403). Its successor, the Creators API, needs Amazon Associates enrolment and 10 or more qualifying sales in 30 days [141], [142]. A secondary source gives 3 sales instead of 10 [96]. Do not assume access. Keepa has a paid API with a token bucket; plan prices are unverified [143].
+**Amazon note.** Pages are read only through the browser fallback, on the user's yes (`research-method.md` section 7, maintainer exception). PA-API 5.0 is deprecated (calls return HTTP 403). Its successor, the Creators API, needs Amazon Associates enrolment and 10 or more qualifying sales in 30 days [141], [142]. A secondary source gives 3 sales instead of 10 [96]. Do not assume access. Keepa has a paid API with a token bucket; plan prices are unverified [143].
 
 ## When a site is blocked
 
@@ -256,7 +257,7 @@ Zones in this table are the only ones research supports. For any other pair, rea
 2. Do not circumvent: no alternate user agents, no caches, mirrors or archive copies used to dodge a block. Do not use unofficial endpoints or third-party scrapers.
 3. Do not fetch sites whose robots.txt disallows Claude user agents (PCPartPicker, TechPowerUp) [145].
 4. Do not loop. One fetch attempt per page per answer; a browser read on the user's yes is a separate step. A rate-limited page is `not tested`: try it once, then record the result.
-5. Offer the browser fallback in one line, as defined in `research-method.md` section 7 (interactive answers only, read-only, stop at any bot check, never for sites whose robots rules or terms exclude automated collection). If the user says yes, read the page there and record `Page read: browser (user session)`.
+5. Offer the browser fallback in one line, as defined in `research-method.md` section 7 (interactive answers only, read-only, stop at any bot check, never for sites whose robots rules or terms exclude automated collection, Amazon storefronts excepted). If the user says yes, read the page there and record `Page read: browser (user session)`.
 6. Otherwise ask the user for a screenshot or pasted text of the page. Record `Page read: user screenshot`, `Confidence: medium` at best.
 7. Prefer another retailer in the same country that is `yes` or `partial`, and say which retailers could not be read.
 
