@@ -5,7 +5,7 @@ description: "This skill should be used when the user wants a recurring price wa
 
 # Track a price on a schedule
 
-Create a scheduled task that re-runs a price hunt for one part at a chosen interval, compares the landed price to a threshold, notifies only on a trigger, and appends every run to a history file. Answer in the user's language. Keep part names and units as written.
+Create a scheduled task that re-runs a price hunt for one part at a chosen interval, compares the landed price to a threshold, notifies only on a trigger, and appends every run to a history file. Answer in the user's language. Keep part names and units as written. Paths written `${CLAUDE_PLUGIN_ROOT}/...` start at the plugin root, two folders above this file; if the host leaves the variable as is, read them from there.
 
 Shared rules apply: `${CLAUDE_PLUGIN_ROOT}/references/research-method.md` (canonical price row, dating, seller typing, confidence, blocked pages). Read it before the initial hunt.
 

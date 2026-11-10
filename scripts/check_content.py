@@ -171,6 +171,9 @@ def check_versions() -> None:
     for entry in market.get("plugins", []):
         if entry.get("name") == plugin["name"] and "version" in entry and entry["version"] != plugin["version"]:
             fail(f"version: marketplace.json {entry['version']} != plugin.json {plugin['version']}")
+    codex = json.loads((ROOT / ".codex-plugin/plugin.json").read_text(encoding="utf-8"))
+    if codex["version"] != plugin["version"]:
+        fail(f"version: .codex-plugin/plugin.json {codex['version']} != plugin.json {plugin['version']}")
 
 
 CITE = re.compile(r"([\w-]+)\.md`?\s+sections?\s+(\d+)(?:\s+(?:and|through|to|&)\s+(\d+))?")

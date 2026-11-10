@@ -6,6 +6,17 @@ The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.1.0/),
 
 ## [Unreleased]
 
+## [0.4.0] - 2026-11-10
+
+### Added
+
+- OpenAI Codex marketplace, experimental and not tested yet: `.codex-plugin/plugin.json` (Codex manifest with skills and display metadata) and `.agents/plugins/marketplace.json` (repository marketplace, plugin at the repository root). Install with `codex plugin marketplace add brissonjo-sudo/pc-hardware-advisor`. Format from developers.openai.com/codex/plugins/build, read 2026-11-10.
+
+### Changed
+
+- Each skill says that `${CLAUDE_PLUGIN_ROOT}` paths start at the plugin root, two folders above `SKILL.md`, for hosts that leave the variable unexpanded (Codex documents it for hooks only).
+- `build_plugin.py` leaves the Codex files out of the Claude package; `check_content.py` checks that the Codex manifest version matches.
+
 ## [0.3.23] - 2026-11-10
 
 ### Fixed

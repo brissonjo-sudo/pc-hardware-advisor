@@ -1,0 +1,20 @@
+{
+  "name": "pc-hardware-advisor",
+  "interface": {
+    "displayName": "PC Hardware Advisor"
+  },
+  "plugins": [
+    {
+      "name": "pc-hardware-advisor",
+      "source": {
+        "source": "local",
+        "path": "./"
+      },
+      "policy": {
+        "installation": "AVAILABLE",
+        "authentication": "ON_INSTALL"
+      },
+      "category": "Productivity"
+    }
+  ]
+}

@@ -5,7 +5,7 @@ description: "This skill should be used when the user wants the best LANDED pric
 
 # Hunt prices
 
-Find the lowest landed price for one exact item, delivered to the buyer's country, with every price dated, typed by seller and graded by confidence. Answer in the user's language; keep part names, SKUs and units unchanged.
+Find the lowest landed price for one exact item, delivered to the buyer's country, with every price dated, typed by seller and graded by confidence. Answer in the user's language; keep part names, SKUs and units unchanged. Paths written `${CLAUDE_PLUGIN_ROOT}/...` start at the plugin root, two folders above this file; if the host leaves the variable as is, read them from there.
 
 ## Ground rules
 

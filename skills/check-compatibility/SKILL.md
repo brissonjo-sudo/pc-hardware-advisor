@@ -7,7 +7,7 @@ description: This skill should be used when the user wants to verify that deskto
 
 Check desktop PC parts against each other and return one verdict per pair, the exact condition, and a source. Treat everything from memory as a hypothesis. Verify against the references (which carry dates) or an official page before concluding.
 
-Answer in the language of the user's request. Keep part names, units and connector names as written. Always answer with the output template of section 3, the verdict table and the Sources list included, even for a quick question or a single blocker: a short answer without them is incomplete.
+Answer in the language of the user's request. Keep part names, units and connector names as written. Paths written `${CLAUDE_PLUGIN_ROOT}/...` start at the plugin root, two folders above this file; if the host leaves the variable as is, read them from there. Always answer with the output template of section 3, the verdict table and the Sources list included, even for a quick question or a single blocker: a short answer without them is incomplete.
 
 ## Ground rules
 

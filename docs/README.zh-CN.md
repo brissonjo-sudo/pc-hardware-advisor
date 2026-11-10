@@ -63,6 +63,16 @@ claude --plugin-dir <path to this repository>
 
 获取 `pc-hardware-advisor.plugin` 文件（发布版本时会附在发行版中；也可以用工作副本通过 `python scripts/build_plugin.py` 构建，输出到 `dist/` 目录），将其拖入 Claude 桌面应用，然后接受安装提示。
 
+### OpenAI Codex(实验性)
+
+本仓库也是一个 Codex 插件市场(`.agents/plugins/marketplace.json`,清单 `.codex-plugin/plugin.json`)。添加后,从 ChatGPT 桌面应用或 Codex(`/plugins`)的插件目录安装插件:
+
+```
+codex plugin marketplace add brissonjo-sudo/pc-hardware-advisor
+```
+
+尚未测试。Codex 没有子代理:价格页面逐个读取,速度较慢。定时价格跟踪需要会话中有调度工具。仓库为私有:该命令需要对仓库的 git 访问权限。
+
 ## 更新、验证与卸载
 
 **更新（Claude Code）。** 先刷新 marketplace，再更新插件，然后重启 Claude Code：
