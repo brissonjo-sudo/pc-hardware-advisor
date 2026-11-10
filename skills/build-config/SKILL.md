@@ -5,7 +5,7 @@ description: This skill should be used when the user wants a complete desktop PC
 
 # Build a complete desktop configuration
 
-Propose one main build and one or two variants for a stated use, budget and country, with dated landed prices and honest trade-offs. Answer in the user's language; keep part names, SKUs and units unchanged.
+Propose one main build and one or two variants for a stated use, budget and country, with dated landed prices and honest trade-offs. Answer in the user's language; keep part names, SKUs and units unchanged. Paths written `${CLAUDE_PLUGIN_ROOT}/...` start at the plugin root, two folders above this file; if the host leaves the variable as is, read them from there.
 
 This skill orchestrates three other methods and does not duplicate them: compatibility rules (`check-compatibility`), prices (`hunt-prices`), local-AI sizing (`size-local-ai`). Call their methods, cite their outputs.
 

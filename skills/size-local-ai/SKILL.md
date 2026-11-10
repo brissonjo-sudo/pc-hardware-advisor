@@ -5,7 +5,7 @@ description: This skill should be used when the user wants to size a PC, GPU, AP
 
 # Size a machine for local AI inference
 
-Answer in the user's language. Keep model names, quant names and units as-is. Open with the verdict (recommended card or machine), then the numbers, then limits.
+Answer in the user's language. Keep model names, quant names and units as-is. Open with the verdict (recommended card or machine), then the numbers, then limits. Paths written `${CLAUDE_PLUGIN_ROOT}/...` start at the plugin root, two folders above this file; if the host leaves the variable as is, read them from there.
 
 ## Rules that always apply
 

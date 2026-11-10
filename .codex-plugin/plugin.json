@@ -1,0 +1,44 @@
+{
+  "name": "pc-hardware-advisor",
+  "version": "0.4.0",
+  "description": "PC hardware expertise: worldwide landed-price hunting, part compatibility checks, complete builds by need and budget, local-AI machine sizing, used-listing review, and price tracking.",
+  "author": {
+    "name": "Jo (brissonjo-sudo)",
+    "url": "https://github.com/brissonjo-sudo"
+  },
+  "homepage": "https://github.com/brissonjo-sudo/pc-hardware-advisor",
+  "repository": "https://github.com/brissonjo-sudo/pc-hardware-advisor",
+  "license": "PolyForm-Noncommercial-1.0.0",
+  "keywords": [
+    "pc-building",
+    "hardware",
+    "compatibility",
+    "price-comparison",
+    "local-ai",
+    "gpu",
+    "used-market",
+    "price-tracking"
+  ],
+  "skills": "./skills/",
+  "interface": {
+    "displayName": "PC Hardware Advisor",
+    "shortDescription": "Build, price and check PCs",
+    "longDescription": "Find the lowest landed price for a PC part with every price dated and sourced, check that parts work together, design a complete build for a need and a budget, size hardware for local AI models, and judge second-hand listings. Reads public retailer pages only; never buys, logs in or contacts a seller.",
+    "developerName": "Jo (brissonjo-sudo)",
+    "category": "Productivity",
+    "capabilities": [
+      "Find prices",
+      "Check compatibility",
+      "Plan builds",
+      "Review used listings"
+    ],
+    "websiteURL": "https://github.com/brissonjo-sudo/pc-hardware-advisor",
+    "defaultPrompt": [
+      "Build me a 1440p gaming PC for 1,500 EUR in France.",
+      "Are a Ryzen 7 7800X3D, a B650 board and DDR4 RAM compatible?",
+      "Which GPU do I need to run a 32B coding model locally?"
+    ],
+    "composerIcon": "./.claude-plugin/icon.png",
+    "logo": "./.claude-plugin/icon.png"
+  }
+}

@@ -63,6 +63,16 @@ claude --plugin-dir <path to this repository>
 
 `pc-hardware-advisor.plugin` फ़ाइल प्राप्त करें (जब कोई release प्रकाशित हो तो वह उससे जुड़ी होती है, या `python scripts/build_plugin.py` से working copy में बनाई जा सकती है, जो इसे `dist/` में लिखती है), उसे Claude डेस्कटॉप ऐप में खींचें, और इंस्टॉलेशन prompt स्वीकार करें।
 
+### OpenAI Codex (प्रायोगिक)
+
+यह रिपॉज़िटरी Codex मार्केटप्लेस भी है (`.agents/plugins/marketplace.json`, मैनिफ़ेस्ट `.codex-plugin/plugin.json`)। इसे जोड़ें, फिर ChatGPT डेस्कटॉप ऐप या Codex (`/plugins`) की प्लगइन डायरेक्टरी से प्लगइन इंस्टॉल करें:
+
+```
+codex plugin marketplace add brissonjo-sudo/pc-hardware-advisor
+```
+
+अभी तक परखा नहीं गया। Codex में सब-एजेंट नहीं हैं: कीमतों के पेज एक-एक करके पढ़े जाते हैं, इसलिए यह धीमा है। निर्धारित समय पर कीमत ट्रैकिंग के लिए सत्र में एक शेड्यूलर टूल चाहिए। रिपॉज़िटरी निजी है: कमांड को इसके लिए git एक्सेस चाहिए।
+
 ## अपडेट, सत्यापन और अनइंस्टॉल
 
 **अपडेट (Claude Code)।** पहले मार्केटप्लेस को रीफ़्रेश करें, फिर प्लगइन अपडेट करें, फिर Claude Code को रीस्टार्ट करें:

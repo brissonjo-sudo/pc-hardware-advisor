@@ -63,6 +63,16 @@ claude --plugin-dir <path to this repository>
 
 Récupérez le fichier `pc-hardware-advisor.plugin` (joint à une version publiée lorsqu'il en existe une, ou généré à partir d'une copie de travail avec `python scripts/build_plugin.py`, qui l'écrit dans `dist/`), glissez-le dans l'application de bureau Claude, puis acceptez l'invite d'installation.
 
+### OpenAI Codex (expérimental)
+
+Le dépôt est aussi une marketplace Codex (`.agents/plugins/marketplace.json`, manifeste `.codex-plugin/plugin.json`). Ajoutez-la, puis installez le plugin depuis le répertoire de plugins de l'application de bureau ChatGPT ou de Codex (`/plugins`) :
+
+```
+codex plugin marketplace add brissonjo-sudo/pc-hardware-advisor
+```
+
+Pas encore testé. Codex n'a pas de sous-agents : les pages de prix sont lues une par une, plus lentement. Le suivi de prix planifié demande un outil de planification dans la session. Le dépôt est privé : la commande demande un accès git au dépôt.
+
 ## Mettre à jour, vérifier et désinstaller
 
 **Mise à jour (Claude Code).** Actualisez la place de marché, puis mettez à jour le plugin, puis redémarrez Claude Code :
