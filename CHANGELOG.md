@@ -6,6 +6,12 @@ The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.1.0/),
 
 ## [Unreleased]
 
+## [0.4.1] - 2026-11-10
+
+### Changed
+
+- Amazon storefronts may be read through the browser fallback, on the user's yes, product and offer pages only, within the 5-page cap; never with web fetch, in sub-agents or in scheduled runs. Amazon.fr added to the France retailers. Same exception for AliExpress (its robots.txt blocks ClaudeBot), with a new `retailer-criteria.md` section 6: seller per offer, red flags, AMD tray warranty from the seller only, price-versus-risk comparison with the buyer's country, buyer protection advice. Maintainer decision after a test on a DDR5 kit: the plugin read 7 French retailers (best 553.90 EUR minimum landed), while another assistant read Amazon.fr in the browser and found 524.99 EUR delivered.
+
 ## [0.4.0] - 2026-11-10
 
 ### Added

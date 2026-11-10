@@ -74,7 +74,7 @@ Defaults when the user does not answer: new, all seller types shown separately, 
 
 ## 6. Judge sellers
 
-Read `${CLAUDE_PLUGIN_ROOT}/references/retailer-criteria.md` when any seller is unfamiliar, very cheap, or foreign. For each candidate row on the podium, check identity, total price before checkout, returns, payment, guarantee. Apply its red flags: no imprint, bank-transfer-only, price far below market, brand-name oddities, strike-through without history. Never call a site a scam without a cited official source. Two or more failures on identity, payment or returns: do not recommend; list the row as "not recommended" with the reason.
+Read `${CLAUDE_PLUGIN_ROOT}/references/retailer-criteria.md` when any seller is unfamiliar, very cheap, or foreign; for any AliExpress offer, its section 6. For each candidate row on the podium, check identity, total price before checkout, returns, payment, guarantee. Apply its red flags: no imprint, bank-transfer-only, price far below market, brand-name oddities, strike-through without history. Never call a site a scam without a cited official source. Two or more failures on identity, payment or returns: do not recommend; list the row as "not recommended" with the reason.
 
 ## 7. Close alternatives
 
@@ -95,7 +95,7 @@ Start with the conclusion. Use this structure, in the user's language.
 3. **Marketplace table**: same columns, for marketplace rows (first-party and third-party), never merged into the main table. Add one line on third-party risk (warranty with the seller, not the marketplace).
 4. **Close alternatives**: short table or list, clearly labelled.
 5. **Excluded and not recommended**: a table with the same columns plus Reason (Landed and Confidence included), one row per offer removed by delay, red flag, stock or specification (never a bullet list of prices).
-6. **Unreadable sources**: each blocked or partial page with the reason. For each, offer in one line to open the page in the user's browser (reply yes), except for sites that refuse robots or automated collection, for which only a screenshot or pasted text is requested; never imitate human behaviour ("Send me a screenshot or paste the page text for any of these and I will add it"). Rows from user screenshots get `Page read: user screenshot` and the capture date.
+6. **Unreadable sources**: each blocked or partial page with the reason. For each, offer in one line to open the page in the user's browser (reply yes), except for sites that refuse robots or automated collection, for which only a screenshot or pasted text is requested (Amazon and AliExpress excepted: `research-method.md` section 7); never imitate human behaviour ("Send me a screenshot or paste the page text for any of these and I will add it"). Rows from user screenshots get `Page read: user screenshot` and the capture date.
 7. **Not verified**: tax rates, thresholds, fees, FX fee, warranty terms, stock, anything not checked. Use the pattern "Not verified: <claim>. Reason: <...>. Next step: <...>".
 8. **Sources**: numbered list with URL, date read and read status on each entry (a global "partial unless noted" does not count); cite with `[n]` inline.
 9. **One next action** for the user (for example "Open row 1 and check the cart total before paying"). One action only.
@@ -108,7 +108,7 @@ Never circumvent with tricks: no alternate user agents, caches, mirrors or archi
 
 1. Record the page as `blocked (<reason>)` or `partial (<what was missing>)`.
 2. List it in "Unreadable sources" in the answer. Do not drop it silently.
-3. Offer in one line to open the page in the user's browser (reply yes), except for sites that refuse robots or automated collection, for which only a screenshot or pasted text is requested; never imitate human behaviour. Continue with other sources without waiting.
+3. Offer in one line to open the page in the user's browser (reply yes), except for sites that refuse robots or automated collection, for which only a screenshot or pasted text is requested (Amazon and AliExpress excepted: `research-method.md` section 7); never imitate human behaviour. Continue with other sources without waiting.
 4. Do not retry the same blocked page in a loop.
 
 ## 10. Self-check before answering

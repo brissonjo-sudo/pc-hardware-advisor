@@ -116,7 +116,7 @@ Start with the conclusion; use the user's language.
 7. **Sacrificed**.
 8. **Flagged used option** (only if the user asked): outside the totals, pointing to `review-used-listing`.
 9. **Not verified**: pattern "Not verified: <claim>. Reason: <...>. Next step: <...>". Include unread prices, unchecked BIOS notes, unchecked stock, plugin-heuristic priorities.
-10. **Blocked or unreadable sources**: offer in one line to open the page in the user's browser (reply yes), except for sites that refuse robots or automated collection, for which only a screenshot or pasted text is requested; never imitate human behaviour.
+10. **Blocked or unreadable sources**: offer in one line to open the page in the user's browser (reply yes), except for sites that refuse robots or automated collection, for which only a screenshot or pasted text is requested (Amazon and AliExpress excepted: `research-method.md` section 7); never imitate human behaviour.
 11. **One next action** for the user (for example "Open row 1 and confirm the cart total before paying").
 12. **Sources**: numbered, URL, date read, read status on each entry; cite with `[n]`. A page whose URL was not kept is not a source: re-read it or drop the figure it gave.
 
