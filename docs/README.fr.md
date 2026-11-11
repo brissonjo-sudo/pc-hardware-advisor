@@ -12,7 +12,7 @@ Claude répond dans la langue dans laquelle vous écrivez. Les noms de pièces, 
 
 ## Ce qu'il fait
 
-Six skills et un sous-agent.
+Sept skills et un sous-agent.
 
 - **`hunt-prices`** : trouve le meilleur prix livré (avec TVA, droits de douane et frais de port) pour un article précis, partout dans le monde. Les revendeurs directs apparaissent en premier, les places de marché sont listées à part, et chaque ligne contient une colonne de fiabilité. Il utilise l'agent `price-scout` pour lire plusieurs sites en parallèle.
 - **`check-compatibility`** : donne des verdicts deux à deux entre des pièces : compatible, compatible sous conditions, ou incompatible. Un verdict conditionnel énonce la condition exacte et sa source.
@@ -20,6 +20,7 @@ Six skills et un sous-agent.
 - **`size-local-ai`** : dimensionne le matériel pour faire tourner des modèles en local. Il couvre la VRAM, la bande passante mémoire, les estimations de tokens par seconde (signalées comme estimations), le multi-GPU, les APU, les eGPU et les environnements logiciels.
 - **`review-used-listing`** : examine une annonce d'occasion et renvoie un verdict : acheter, négocier ou éviter. Il ajoute des questions pour le vendeur, des tests à effectuer lors de la remise de l'objet, et une marge de négociation.
 - **`track-price`** : met en place des contrôles réguliers d'un prix, ne vous alerte que lorsque le prix passe sous votre seuil, et tient à jour un fichier d'historique. Il n'achète jamais.
+- **`find-deals`** : juge un bon plan que vous apportez sur une pièce neuve ou reconditionnée : est-il vraiment moins cher qu'ailleurs aujourd'hui, et l'achat est-il sûr ? Une offre risquée est écartée, quelle que soit la remise. Pour les cartes graphiques, il ajoute l'historique des prix en contexte.
 - **`price-scout`** (agent) : lit plusieurs pages de revendeurs ou de places de marché pour une pièce précise et renvoie des lignes de prix normalisées, sans analyse. `hunt-prices` le lance.
 
 Hors périmètre : consoles, smartphones, tablettes, ordinateurs portables en tant que produits, et tout ce qui achète ou contacte des vendeurs.

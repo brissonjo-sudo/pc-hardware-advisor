@@ -6,6 +6,19 @@ The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.1.0/),
 
 ## [Unreleased]
 
+## [0.5.0] - 2026-11-11
+
+### Added
+
+- `find-deals` skill: judges a deal the user brings on a new or professionally refurbished part. Same-day reference (cheapest direct retailer, landed versus landed, exact model or stated chip scope), struck-through prices treated as `30-day reference not verified` unless the page states the 30-day low, safety filter before any verdict (existing rules: `retailer-criteria.md` sections 1, 3, 6; `research-method.md` section 11, item 9), closed verdict (good price / market price / dearer than elsewhere, 5 % plugin heuristic), filled example table.
+- `skills/find-deals/references/price-history-sources.md`: GPUPrix history statistics for graphics cards as context; leDénicheur, Keepa, CamelCamelCamel, Dealabs, The Ramageddon and Idealo listed as not usable with the reason.
+- Test case 13: pasted deal with payment outside the checkout and a struck-through price.
+
+### Changed
+
+- `research-method.md` section 11, item 8 and section 1: price-history statistics may appear in one Context line, never in a price table, headline, verdict or gap.
+- `hunt-prices`, `review-used-listing` and `track-price` point to `find-deals` for deals; leDénicheur row notes its terms of use (art. 4.3 d).
+
 ## [0.4.1] - 2026-11-10
 
 ### Changed

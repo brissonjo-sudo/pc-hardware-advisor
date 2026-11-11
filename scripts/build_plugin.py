@@ -29,7 +29,7 @@ def build() -> Path:
     skills = [n for n in names if n.startswith("skills/") and n.endswith("/SKILL.md")]
     assert not missing, f"missing: {missing}"
     assert not leaked, f"dev-only files leaked: {leaked}"
-    assert len(skills) == 6, f"expected 6 skills, got {skills}"
+    assert len(skills) == 7, f"expected 7 skills, got {skills}"
     print(f"{out} : {len(names)} files, {out.stat().st_size} bytes")
     return out
 

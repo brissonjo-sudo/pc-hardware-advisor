@@ -10,7 +10,7 @@ Claude answers in the language you write in. Part names, SKUs and units stay as 
 
 ## What it does
 
-Six skills and one sub-agent.
+Seven skills and one sub-agent.
 
 - **`hunt-prices`**: finds the best landed price (delivered, with VAT, duties and shipping) for one exact item, worldwide. Direct retailers come first, marketplaces are listed separately, and each row carries a confidence column. It uses the `price-scout` agent to read several sites in parallel.
 - **`check-compatibility`**: gives pairwise verdicts between parts: compatible, compatible with conditions, or incompatible. A conditional verdict states the exact condition and the source.
@@ -18,6 +18,7 @@ Six skills and one sub-agent.
 - **`size-local-ai`**: sizes hardware for running models locally. It covers VRAM, memory bandwidth, tokens-per-second estimates (labelled as estimates), multi-GPU, APUs, eGPUs and software stacks.
 - **`review-used-listing`**: reviews one second-hand listing and returns a verdict: grab it, negotiate, or avoid. It adds questions for the seller, tests to run at handover, and a negotiation margin.
 - **`track-price`**: sets up scheduled re-checks of a price, alerts you only when it falls below your threshold, and keeps a history file. It never buys.
+- **`find-deals`**: judges a deal you bring on a new or refurbished part: is it really cheaper than other retailers today, and is the purchase safe? An unsafe offer is excluded whatever the discount. For graphics cards it adds the price history as context.
 - **`price-scout`** (agent): reads several retailer or marketplace pages for one exact part and returns normalized price rows, with no analysis. `hunt-prices` launches it.
 
 Out of scope: consoles, smartphones, tablets, laptops as products, and anything that buys or contacts sellers.
@@ -102,6 +103,7 @@ Claude picks the right skill from the request. A few examples:
 8. En français : "Trouve-moi le meilleur prix livré en France pour une alimentation 850 W ATX 3.1, vendeurs directs d'abord, places de marché à part."
 9. En español: "Quiero montar un PC para edición de vídeo con 1.800 EUR en España. ¿Qué configuración me recomiendas, y qué compatibilidad debo vigilar entre placa, RAM y GPU?"
 10. "Can an APU with 64 GB of unified memory run a 32B model, and what speed should I expect? Label what is an estimate."
+11. "Is this RTX 5070 at 720 EUR on Alternate.fr a real deal, and is it safe to buy?"
 
 ## Connectors
 
