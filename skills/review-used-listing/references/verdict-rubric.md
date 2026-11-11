@@ -17,7 +17,7 @@ Any one gives `avoid`, whatever the price:
 
 ## 2. Scoring grid
 
-Score each row: +1 favourable, 0 neutral or not shown, -1 unfavourable. Write "not shown" rather than guessing.
+Score each row: +1 favourable, 0 neutral or not shown, -1 unfavourable. Write "not shown" rather than guessing. Count one fact once: a missing receipt scores -1 in Proof only, and Warranty is then 0 unless the seller states there is no warranty or it is not transferable.
 
 | Row | +1 | 0 | -1 |
 |---|---|---|---|

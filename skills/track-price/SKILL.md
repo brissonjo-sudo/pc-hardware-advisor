@@ -27,7 +27,7 @@ If the request already gives the item, a threshold and a frequency (or "daily"),
 3. **Buyer country** and currency. Sources come from `${CLAUDE_PLUGIN_ROOT}/references/retailers-by-country.md` (read the legend and the buyer's country section; neighbouring countries only if the user accepts cross-border).
 4. **Threshold** in the buyer's currency, and whether it is a **landed** price (shown price + shipping + import VAT/duty/fees; recommended) or the **shown** price. Default: landed.
 5. **Frequency**: default once a day. Accept other intervals within the limits above. Explain that prices rarely move faster, and that hammering shops is impolite and gets requests blocked.
-6. **History location**: a file path the user chooses (default: a `price-history` folder in their working directory, one file per tracker). The history stays where the user chooses; nothing is sent elsewhere.
+6. **History location**: a file path the user chooses (default: a `price-history` folder in their working directory, one file per tracker). The history stays where the user chooses; nothing is sent elsewhere. If the session runs in a remote or sandboxed workspace (for example a `/home/claude` path), say that the file is not on the user's disk and may not persist, and ask where to keep it before creating the task; without an answer, write each run's history rows in that run's output.
 7. **Notification channel**: the scheduler's own completion notice, or a `~~notifications` channel if one is connected. If none exists, say the user will see alerts only in the task's run output.
 8. **Duration**: until stopped, or an end date (optional).
 

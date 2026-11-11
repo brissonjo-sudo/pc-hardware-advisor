@@ -6,6 +6,18 @@ The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.1.0/),
 
 ## [Unreleased]
 
+## [0.5.1] - 2026-11-11
+
+### Fixed
+
+Maintainer test series on 0.5.0, one request per skill, Cowork, Sonnet high.
+
+- `build-config`: for budget levers 2 and 3, "not read" or "not priced" is not a reason to skip; lever 3 names the other platform's parts with prices or what was searched. The test skipped both and dropped the GPU two tiers (RX 9070 XT to RX 9060 XT) without pricing AM4 and DDR4.
+- Privacy: a private seller is written "private party" only, never a name, pseudonym, rating or town (`research-method.md` section 6; `review-used-listing`). The used-listing and local-AI tests showed first names and towns of other sellers.
+- PcComponentes.fr added to France as `marketplace (mixed)`, seller read per offer. Two tests typed it differently (direct retailer, first-party marketplace) and a third found a third-party seller on it.
+- `track-price`: in a remote or sandboxed workspace, say the history file is not on the user's disk and ask where to keep it.
+- `review-used-listing` rubric: one fact counts once (a missing receipt is -1 in Proof only, not again in Warranty).
+
 ## [0.5.0] - 2026-11-11
 
 ### Added

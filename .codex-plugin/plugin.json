@@ -1,6 +1,6 @@
 {
   "name": "pc-hardware-advisor",
-  "version": "0.5.0",
+  "version": "0.5.1",
   "description": "PC hardware expertise: worldwide landed-price hunting, part compatibility checks, complete builds by need and budget, local-AI machine sizing, used-listing review, deal checks and price tracking.",
   "author": {
     "name": "Jo (brissonjo-sudo)",
