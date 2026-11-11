@@ -1,6 +1,6 @@
 ---
 name: hunt-prices
-description: "This skill should be used when the user wants the best LANDED price (delivered, with VAT, duties and shipping) for a specific PC component or desktop part, possibly worldwide. Trigger phrases include \"find the best price for\", \"where is this RTX card cheapest\", \"compare prices across countries\", \"is it cheaper to import\", \"cheapest place to buy\", \"best price for this DDR5 kit delivered to France\", \"price check this SKU\". The user may write in any language. Not for choosing parts (use build-config or check-compatibility), judging a single used listing (use review-used-listing), or buying anything: this skill never purchases, never creates accounts and never contacts sellers."
+description: "This skill should be used when the user wants the best LANDED price (delivered, with VAT, duties and shipping) for a specific PC component or desktop part, possibly worldwide. Trigger phrases include \"find the best price for\", \"where is this RTX card cheapest\", \"compare prices across countries\", \"is it cheaper to import\", \"cheapest place to buy\", \"best price for this DDR5 kit delivered to France\", \"price check this SKU\". The user may write in any language. Not for choosing parts (use build-config or check-compatibility), judging a single used listing (use review-used-listing), judging a deal the user already has (use find-deals), or buying anything: this skill never purchases, never creates accounts and never contacts sellers."
 ---
 
 # Hunt prices

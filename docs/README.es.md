@@ -12,7 +12,7 @@ Claude responde en el idioma en que escribes. Los nombres de las piezas, los SKU
 
 ## Qué hace
 
-Seis skills y un subagente.
+Siete skills y un subagente.
 
 - **`hunt-prices`**: encuentra el mejor precio entregado (con IVA, aranceles y envío incluidos) para un artículo exacto, en todo el mundo. Los distribuidores directos aparecen primero, los mercados se listan por separado y cada fila incluye una columna de confianza. Usa el agente `price-scout` para leer varias webs en paralelo.
 - **`check-compatibility`**: emite veredictos por pares entre piezas: compatible, compatible con condiciones o incompatible. Un veredicto condicional indica la condición exacta y la fuente.
@@ -20,6 +20,7 @@ Seis skills y un subagente.
 - **`size-local-ai`**: dimensiona hardware para ejecutar modelos en local. Cubre VRAM, ancho de banda de memoria, estimaciones de tokens por segundo (etiquetadas como estimaciones), multi-GPU, APU, eGPU y pilas de software.
 - **`review-used-listing`**: revisa un anuncio de segunda mano concreto y devuelve un veredicto: comprar, negociar o evitar. Añade preguntas para el vendedor, pruebas que hacer en la entrega y un margen de negociación.
 - **`track-price`**: programa nuevas comprobaciones de un precio, te avisa solo cuando baja de tu umbral y mantiene un archivo de historial. Nunca compra.
+- **`find-deals`**: juzga una oferta que traes sobre una pieza nueva o reacondicionada: ¿es de verdad más barata que en otras tiendas hoy, y es segura la compra? Una oferta insegura se descarta sea cual sea el descuento. Para tarjetas gráficas añade el historial de precios como contexto.
 - **`price-scout`** (agente): lee varias páginas de distribuidores o mercados para una pieza exacta y devuelve filas de precios normalizadas, sin análisis. `hunt-prices` lo lanza.
 
 Fuera del alcance: consolas, smartphones, tabletas, portátiles como productos, y cualquier cosa que compre o contacte con vendedores.
