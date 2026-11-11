@@ -24,8 +24,8 @@ Judge one deal the user brings on a new or professionally refurbished desktop PC
 
 ## 2. Same-day reference
 
-1. Find the cheapest **direct retailer** price for the same item in the buyer's country today, with the `hunt-prices` method: read `${CLAUDE_PLUGIN_ROOT}/skills/hunt-prices/SKILL.md` sections 3 to 5 and dispatch `price-scout` (at most 2 agents, 6 sources each). Read product pages, never comparator figures.
-2. Scope: the **exact model** first. If no direct retailer lists it, use the cheapest model of the same chip or spec, and say so in the row ("same chip, other brand").
+1. Find the cheapest offer from **another** direct retailer (never the deal's own seller or offer) for the same item in the buyer's country today, with the `hunt-prices` method: read `${CLAUDE_PLUGIN_ROOT}/skills/hunt-prices/SKILL.md` sections 3 to 5 and dispatch `price-scout` (at most 2 agents, 6 sources each). Read product pages, never comparator figures.
+2. Scope: the **exact model** first. If no other direct retailer lists it, use the cheapest model of the same chip or spec, and say so in the row ("same chip, other brand").
 3. Gap = deal landed price minus reference landed price, both landed, in currency and percent (section 11, item 3). If either side is `excluding fees`, compare shown prices and say so.
 
 ## 3. Struck-through prices
@@ -34,7 +34,7 @@ A "was" price is not the EU 30-day reference. Default: `30-day reference not ver
 
 ## 4. History context (graphics cards only)
 
-Read `${CLAUDE_PLUGIN_ROOT}/skills/find-deals/references/price-history-sources.md`. For a graphics card, read the chip's history statistics there and write them in one **Context** line under the table, labelled "context, not an offer", with source, date and scope (chip, retailers tracked). History never enters the table, the verdict or the gap. Other categories: write "no price-history source for this category".
+Read `${CLAUDE_PLUGIN_ROOT}/skills/find-deals/references/price-history-sources.md`. For a graphics card, read only the chip's 3-month and 12-month medians, 12-month low and update date (never the site's current lowest price or its offers) and write them in one **Context** line under the table, labelled "context, not an offer", with source, date and scope (chip, retailers tracked). History never enters the table, the verdict or the gap. Other categories: write "no price-history source for this category".
 
 ## 5. Safety filter (before any verdict)
 
@@ -58,14 +58,14 @@ Write the label "plugin heuristic" next to the verdict. An excluded deal gets no
 
 Start with the verdict line, then the table. Headers and labelled values in the user's language (research-method.md section 6). Shape (illustrative values, do not reuse):
 
-**Verdict: market price (plugin heuristic)**. The deal is 2 % below the cheapest direct retailer today, same model; 30-day reference not verified.
+**Verdict: good price (plugin heuristic)**. The deal is 11 % below the cheapest other direct retailer today, same model; 30-day reference not verified.
 
 | Date read | Item | Seller | Seller type | Country | Shown price | Landed or `excluding fees` | Stock | Same-day reference | Gap | Safety | Confidence | Source |
 |---|---|---|---|---|---|---|---|---|---|---|---|---|
-| 2026-01-01 | Example GPU 12 GB, SKU EX-1 (the deal) | Example Shop | direct retailer | FR | 720.00 EUR incl. VAT | 729.90 EUR | in stock (shown) | 744.90 EUR (row 2) | -15.00 EUR (-2 %) | passed | high | [1] |
-| 2026-01-01 | Example GPU 12 GB, SKU EX-1 | Other Shop | direct retailer | FR | 739.90 EUR incl. VAT | 744.90 EUR | in stock (shown) | reference | - | passed | high | [2] |
+| 2026-01-01 | Example SSD 2 TB, SKU EX-2 (the deal) | Example Shop | direct retailer | FR | 119.90 EUR incl. VAT | 119.90 EUR (free shipping) | in stock (shown) | 134.80 EUR (row 2) | -14.90 EUR (-11 %) | passed | high | [1] |
+| 2026-01-01 | Example SSD 2 TB, SKU EX-2 | Other Shop | direct retailer | FR | 129.90 EUR incl. VAT | 134.80 EUR | in stock (shown) | reference | - | passed | high | [2] |
 
-Context (not an offer): Example chip, 3-month median 650 EUR, 12-month low 487 EUR, tracked at two retailers, read 2026-01-01 [3].
+Context (not an offer): no price-history source for this category. For a graphics card, this line gives the chip's 3-month median, 12-month low, retailers tracked and update date, with its source.
 
 Then:
 1. **Excluded**: same columns plus Reason (for example "payment outside checkout"), never a bullet list of prices.
@@ -81,7 +81,7 @@ Never circumvent a block: no alternate user agents, caches, mirrors or archive c
 ## 9. Self-check before answering
 
 1. Did the safety filter run before the verdict, and is every excluded deal in the Excluded table with its reason?
-2. Is the gap landed versus landed, at equal scope, and is the scope written?
+2. Is the reference another retailer's offer, never the deal itself? Is the gap landed versus landed, at equal scope, and is the scope written?
 3. Is the struck-through price treated as `not verified` unless the page states the 30-day low?
 4. Is history only in the Context line, never in the table, verdict or gap?
 5. Does the table carry the mandatory columns of research-method.md section 6, plus Same-day reference, Gap and Safety?

@@ -6,9 +6,9 @@ Used by `find-deals` for the Context line only. History figures are context, nev
 
 | Site | Category | What it shows | Scope | Access | Limits | Confidence | Source |
 |---|---|---|---|---|---|---|---|
-| GPUPrix | Graphics cards | Current lowest price, 12-month low, 3-month and 12-month medians, update date | Per chip, not per exact model; history "aggregated from listings tracked at Alternate and LDLC" (page text, France) | Statistics in the page text; robots.txt allows product pages (disallows /api/, /admin/) | Affiliate site; its daily offers can come from Amazon, so read only the history statistics, never its offers (Amazon is read only through the browser fallback, D50). No terms of use found, which is not a permission. Do not repeat its editorial advice ("good time to buy"). | medium | [1], [2] |
+| GPUPrix | Graphics cards | Used: 3-month and 12-month medians, 12-month low, update date. Never used: its current lowest price and its offers (they can come from Amazon) | Per chip, not per exact model; history "aggregated from listings tracked at Alternate and LDLC" (page text, France) | Statistics in the page text; robots.txt allows product pages (disallows /api/, /admin/) | Affiliate site; its daily offers can come from Amazon, so read only the history statistics, never its offers (Amazon is read only through the browser fallback, D50). No terms of use found, which is not a permission. Do not repeat its editorial advice ("good time to buy"). | medium | [1], [2] |
 
-How to read it: open `https://gpuprix.com/fr/france/gpus/<chip-slug>` for France (for example `geforce-rtx-5070`). Record the 3-month median, the 12-month low, the update date and the retailers named. If the page is blocked or the figures are missing, write "history not available" and continue: the answer works without it.
+How to read it: open `https://gpuprix.com/fr/france/gpus/<chip-slug>` for France (for example `geforce-rtx-5070`). Record the 3-month median, the 12-month median, the 12-month low, the update date and the retailers named. Never record its current lowest price. If the page is blocked or the figures are missing, write "history not available" and continue: the answer works without it.
 
 ## Not usable
 
