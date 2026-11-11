@@ -9,6 +9,15 @@ Propose one main build and one or two variants for a stated use, budget and coun
 
 This skill orchestrates three other methods and does not duplicate them: compatibility rules (`check-compatibility`), prices (`hunt-prices`), local-AI sizing (`size-local-ai`). Call their methods, cite their outputs.
 
+## Run ledger (survives context compaction)
+
+Long runs can be compacted mid-way: tool results, sub-agent returns and URLs are then lost. Keep a ledger file:
+1. At the start, create `pc-advisor-ledger.md` in the working directory, overwriting any old one: request and date.
+2. Append at once each price row read (compact columns of `research-method.md` section 6, with URL and read status), each Budget fit step with its total, and each blocked page. Structured fields only, never page text.
+3. Keep it under about 15,000 characters: shorten notes, never drop a row's URL.
+4. After a compaction summary, re-read the ledger, this SKILL.md file in full (its end may have been cut) and `research-method.md` section 11 before continuing. Write the final answer from the ledger, not from memory.
+5. After the final answer, delete the ledger.
+
 ## Ground rules
 
 - Write nothing to the user before the final answer: no text before or between tool calls, including after sub-agents return and during spot checks ("the readers are back, I am checking"). Text written between tool calls stays on screen. The first words the user sees are the conclusion (research-method.md section 11, item 1). If the host makes you write a line before or between tool calls, that line only names what you are doing: no price, figure, count, progress tally or estimate ("around 540 EUR" is a price without a source; "one page read out of nine" is a tally).
@@ -84,7 +93,7 @@ Fix every conflict by changing a part, then re-run the affected pairs. Never shi
 
 Produce one or two variants (one cheaper, one stronger). Each variant lists only the parts that change, the price delta (landed, same date and currency basis), and what the change buys or costs. Typical levers are in the playbook. Re-run compatibility for every changed part and every pair it touches. A stronger variant may exceed the budget: label it and give the overrun.
 
-Offer an upgrade path when the user asks for it (for example "upgrade path for my build"): which parts to change first for the biggest gain on the stated use, what the platform allows later (socket and chipset support, memory slots, PSU headroom), and what would force a platform change. Source socket longevity claims from the reference or the vendor page, never from memory.
+Upgrade path on request: follow the "Upgrade path" section of `build-playbook.md`.
 
 ## Step 7: watch-outs and sacrifices
 

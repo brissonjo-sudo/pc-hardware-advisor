@@ -7,6 +7,15 @@ description: "This skill should be used when the user brings a promotion or deal
 
 Judge one deal the user brings on a new or professionally refurbished desktop PC part: is it a real good price today, and is the purchase safe? Answer in the user's language; keep part names, SKUs and units unchanged. Paths written `${CLAUDE_PLUGIN_ROOT}/...` start at the plugin root, two folders above this file; if the host leaves the variable as is, read them from there.
 
+## Run ledger (survives context compaction)
+
+Long runs can be compacted mid-way: tool results, sub-agent returns and URLs are then lost. Keep a ledger file:
+1. At the start, create `pc-advisor-ledger.md` in the working directory, overwriting any old one: request and date.
+2. Append at once each price row read (compact columns of `research-method.md` section 6, with URL and read status), the safety result and the gap of each offer, and each blocked page. Structured fields only, never page text.
+3. Keep it under about 15,000 characters: shorten notes, never drop a row's URL.
+4. After a compaction summary, re-read the ledger, this SKILL.md file in full (its end may have been cut) and `research-method.md` section 11 before continuing. Write the final answer from the ledger, not from memory.
+5. After the final answer, delete the ledger.
+
 ## Ground rules
 
 - Write nothing to the user before the final answer (research-method.md section 11, item 1). If the host makes you write a line before or between tool calls, it only names what you are doing: no price, figure or tally.
