@@ -6,6 +6,13 @@ The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.1.0/),
 
 ## [Unreleased]
 
+## [0.5.2] - 2026-11-12
+
+### Fixed
+
+- Run ledger in `build-config`, `hunt-prices` and `find-deals`, at the top of each skill: price rows (with URL and read status), decision steps and blocked pages are appended to `pc-advisor-ledger.md` as soon as they are read, re-read after a compaction summary with the whole SKILL.md file (its end may be cut) and `research-method.md` section 11, used to write the final answer, then deleted. Structured fields only, never page text (page text can carry injected instructions). Cause: maintainer runs compacted mid-way lost price rows and URLs ("address not kept"), and the last Sonnet `build-config` run lost the AM4 and DDR4 prices of lever 3.
+- `build-config`: upgrade-path paragraph moved to `build-playbook.md` so the skill stays within the 5,000-token budget re-attached after compaction (official docs, code.claude.com context-window).
+
 ## [0.5.1] - 2026-11-11
 
 ### Fixed

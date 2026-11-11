@@ -65,6 +65,10 @@ Shared references to open when a heuristic needs a fact: `${CLAUDE_PLUGIN_ROOT}/
 - Always give each variant as a delta: parts that change, landed price difference, effect on the use, and the compatibility re-check.
 - Memory and SSD: after the 2025-2026 price moves (used-market-checklist.md section 1), compare capacity options at current prices before fixing the default; the cheapest-per-GB assumption from older years may not hold.
 
+## Upgrade path (on request)
+
+When the user asks for an upgrade path (for example "upgrade path for my build"): which parts to change first for the biggest gain on the stated use, what the platform allows later (socket and chipset support, memory slots, PSU headroom), and what would force a platform change. Source socket longevity claims from the reference or the vendor page, never from memory.
+
 ## Not verified
 
 - No benchmark data is included in this playbook; all rankings are plugin heuristics.
