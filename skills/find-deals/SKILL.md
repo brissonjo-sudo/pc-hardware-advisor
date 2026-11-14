@@ -1,11 +1,11 @@
 ---
 name: find-deals
-description: "This skill should be used when the user brings a promotion or deal on a new or professionally refurbished PC part (link, pasted text or screenshot) and wants to know whether it is really a good price and a safe purchase. Trigger phrases - \"is this deal good\", \"is this promo worth it\", \"ce bon plan vaut-il le coup\", \"cette promo est-elle une bonne affaire\", \"is this Black Friday price real\", \"check this deal before I buy\", \"is this discount fake\". The user may write in any language. Not for finding the lowest price of an item with no deal in hand (use hunt-prices), second-hand listings from private sellers (use review-used-listing), watching a price over time (use track-price), or buying anything: this skill never purchases and never contacts sellers."
+description: "This skill should be used when the user brings a promotion or deal on a new or professionally refurbished PC part (link, pasted text or screenshot) and wants to know whether it is really a good price and a safe purchase. Trigger phrases - \"is this deal good\", \"is this promo worth it\", \"ce bon plan vaut-il le coup\", \"cette promo est-elle une bonne affaire\", \"is this Black Friday price real\", \"check this deal before I buy\", \"is this discount fake\", \"check these Black Friday deals\", \"vérifie ces bons plans\". The user may write in any language. Not for finding the lowest price of an item with no deal in hand (use hunt-prices), second-hand listings from private sellers (use review-used-listing), watching a price over time (use track-price), or buying anything: this skill never purchases and never contacts sellers."
 ---
 
 # Find deals
 
-Judge one deal the user brings on a new or professionally refurbished desktop PC part: is it a real good price today, and is the purchase safe? Answer in the user's language; keep part names, SKUs and units unchanged. Paths written `${CLAUDE_PLUGIN_ROOT}/...` start at the plugin root, two folders above this file; if the host leaves the variable as is, read them from there.
+Judge one deal, or a pasted list of deals, that the user brings on new or professionally refurbished desktop PC parts: is it a real good price today, and is the purchase safe? Answer in the user's language; keep part names, SKUs and units unchanged. Paths written `${CLAUDE_PLUGIN_ROOT}/...` start at the plugin root, two folders above this file; if the host leaves the variable as is, read them from there.
 
 ## Run ledger (survives context compaction)
 
@@ -30,6 +30,7 @@ Long runs can be compacted mid-way: tool results, sub-agent returns and URLs are
 2. Extract: exact model and SKU, condition (new or professional refurbished), seller and the "sold by" line, shown price and VAT status, shipping to the buyer, stock or delay, payment methods, any struck-through "was" price and its wording.
 3. Private-party used listing: stop and use `review-used-listing`. No deal in hand ("find me the cheapest X"): use `hunt-prices`.
 4. Amazon or AliExpress link: read it only through the browser fallback on the user's yes (`research-method.md` section 7). AliExpress offers also follow `${CLAUDE_PLUGIN_ROOT}/references/retailer-criteria.md` section 6.
+5. **A pasted list of deals** (for example a deal site's selection copied by the user): keep at most 5, those matching the user's category, budget or parts, otherwise the desktop-part deals with the largest claimed discount. Say which were kept and why; name the others under "Not checked" (item and retailer only, no figure). Read each kept deal on the retailer's own product page, with tracking and affiliate parameters removed from the link. The list's prices are claims: never a shown price in a table. Run sections 2 to 6 for each kept deal; the whole batch stays within 30 product pages. Deal sites that refuse Claude are read only as pasted text: see `${CLAUDE_PLUGIN_ROOT}/skills/find-deals/references/price-history-sources.md`, "Deal lists".
 
 ## 2. Same-day reference
 
@@ -76,12 +77,15 @@ Start with the verdict line, then the table. Headers and labelled values in the 
 
 Context (not an offer): no price-history source for this category. For a graphics card, this line gives the chip's 3-month median, 12-month low, retailers tracked and update date, with its source.
 
+For a list: one verdict line per kept deal, best gap first, then one table holding every kept deal with its reference row, sorted by gap.
+
 Then:
 1. **Excluded**: same columns plus Reason (for example "payment outside checkout"), never a bullet list of prices.
 2. **Unreadable sources**: blocked or partial pages with the reason; offer the browser in one line where section 7 allows it.
 3. **Not verified**: 30-day reference, stock, warranty, anything not checked ("Not verified: <claim>. Reason: <...>. Next step: <...>").
 4. **One next action** for the user (for example "open row 1 and check the cart total before paying").
 5. **Sources**: numbered, each with URL, date read and read status.
+6. **Not checked** (lists only): the deals not kept, item and retailer only.
 
 ## 8. Blocked sources
 
@@ -94,4 +98,5 @@ Never circumvent a block: no alternate user agents, caches, mirrors or archive c
 3. Is the struck-through price treated as `not verified` unless the page states the 30-day low?
 4. Is history only in the Context line, never in the table, verdict or gap?
 5. Does the table carry the mandatory columns of research-method.md section 6, plus Same-day reference, Gap and Safety?
-6. Run the final answer gate in `${CLAUDE_PLUGIN_ROOT}/references/research-method.md` section 11.
+6. For a list: at most 5 deals checked, each read on the retailer's page, and no price from the list used as a shown price?
+7. Run the final answer gate in `${CLAUDE_PLUGIN_ROOT}/references/research-method.md` section 11.
