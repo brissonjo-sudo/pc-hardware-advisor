@@ -31,11 +31,11 @@ Long runs can be compacted mid-way: tool results, sub-agent returns and URLs are
 3. Private-party used listing: stop and use `review-used-listing`. No deal in hand for a named item ("find me the cheapest X"): use `hunt-prices`. Current deals of a category ("SSD deals right now"): point 6.
 4. Amazon or AliExpress link: read it only through the browser fallback on the user's yes (`research-method.md` section 7). AliExpress offers also follow `${CLAUDE_PLUGIN_ROOT}/references/retailer-criteria.md` section 6.
 5. **A pasted list of deals** (for example a deal site's selection copied by the user): keep at most 5, those matching the user's category, budget or parts, otherwise the desktop-part deals with the largest claimed discount. Never choose by how easy a page is to read: a kept deal on a blocked site or one needing the browser stays kept and goes to "Unreadable sources" with the browser offer. Say which were kept and why; name the others under "Not checked" (item and retailer only, no figure). Read each kept deal on the retailer's own product page, with tracking and affiliate parameters removed from the link. The list's prices are claims: never a shown price in a table. Run sections 2 to 6 for each kept deal; the whole batch stays within 30 product pages. Deal sites that refuse Claude are read only as pasted text: see `${CLAUDE_PLUGIN_ROOT}/skills/find-deals/references/price-history-sources.md`, "Deal lists".
-6. **Current deals of a category** (no deal in hand): read the deal lists of "Deal lists" in `price-history-sources.md`, in their order, each by its stated access (a `browser` list only through the browser fallback on the user's yes, offered in one line; a pasted-text list never). Keep at most 5 deals of the category asked, dated within the last 7 days (the deal's date, or the list's update date when deals carry none; plugin heuristic: older deals have often ended). Find each kept deal's retailer and item (its article, or the retailer URL named in the link); never follow an affiliate or redirect link: find the item on the retailer's own site. Then run point 5 from "Read each kept deal". No matching deal: say so with the list read and its date, and offer `hunt-prices` for the cheapest current price.
+6. **Current deals of a category** (no deal in hand): read the deal lists of "Deal lists" in `price-history-sources.md`, in their order, each by its stated access (a `browser` list only through the browser fallback on the user's yes, offered in one line; a pasted-text list never). Keep at most 5 deals of the category asked, dated within the last 7 days (the deal's date, or the list's update date when deals carry none; plugin heuristic: older deals have often ended). A list's update date comes only from the list read in this answer, never from the plugin's references; an unread list gets no date. Find each kept deal's retailer and item (its article, or the retailer URL named in the link); never follow an affiliate or redirect link: find the item on the retailer's own site. Then run point 5 from "Read each kept deal". No matching deal: say so with the list read and its date, and offer `hunt-prices` for the cheapest current price.
 
 ## 2. Same-day reference
 
-1. Find the cheapest offer from **another** direct retailer (never the deal's own seller or offer) for the same item in the buyer's country today, with the `hunt-prices` method: read `${CLAUDE_PLUGIN_ROOT}/skills/hunt-prices/SKILL.md` sections 3 to 5 and dispatch `price-scout` (at most 2 agents, 6 sources each). Read product pages, never comparator figures.
+1. Find the cheapest offer from **another** direct retailer (never the deal's own seller or offer) for the same item in the buyer's country today, with the `hunt-prices` method: read `${CLAUDE_PLUGIN_ROOT}/skills/hunt-prices/SKILL.md` sections 3 to 5 and dispatch `price-scout` (at most 2 agents, 6 sources each). Read product pages, never comparator figures. Read at least 3 other direct retailers of the buyer's country when that many sell the item (`retailers-by-country.md`); one retailer is not a reference.
 2. Scope: the **exact model** first. If no other direct retailer lists it, use the cheapest model of the same chip or spec, and say so in the row ("same chip, other brand"). A tray (OEM) processor and a boxed one are different scopes: compare tray with tray, box with box. If the deal's packaging is not shown, give no price verdict: write `not verified (packaging not shown)`.
 3. Gap = deal landed price minus reference landed price, both landed, in currency and percent (section 11, item 3). If either side is `excluding fees`, compare shown prices and say so.
 
@@ -78,7 +78,9 @@ Start with the verdict line, then the table. Headers and labelled values in the 
 
 Context (not an offer): no price-history source for this category. For a graphics card, this line gives the chip's 3-month median, 12-month low, retailers tracked and update date, with its source.
 
-For a list: one verdict line per kept deal, best gap first, then one table holding every kept deal with its reference row, sorted by gap.
+Under each verdict line, one **Compared** line: the other retailers read for the reference with their shown price and `[n]`, cheapest first, and each retailer not read or not selling the item with the reason ("Compared: LDLC 379.95 EUR [4], GrosBill 404.99 EUR [6], TopAchat not sold"). Fewer than 3 retailers read: say so in the verdict line.
+
+For a list: one verdict line and its Compared line per kept deal, best gap first, then one table holding every kept deal with its reference row, sorted by gap.
 
 Then:
 1. **Excluded**: same columns plus Reason (for example "payment outside checkout"), never a bullet list of prices.
@@ -95,7 +97,7 @@ Never circumvent a block: no alternate user agents, caches, mirrors or archive c
 ## 9. Self-check before answering
 
 1. Did the safety filter run before the verdict, and is every excluded deal in the Excluded table with its reason?
-2. Is the reference another retailer's offer, never the deal itself? Is the gap landed versus landed, at equal scope, and is the scope written?
+2. Is the reference another retailer's offer, never the deal itself, chosen among at least 3 retailers read (or fewer stated), with a Compared line? Is the gap landed versus landed, at equal scope, and is the scope written?
 3. Is the struck-through price treated as `not verified` unless the page states the 30-day low?
 4. Is history only in the Context line, never in the table, verdict or gap?
 5. Does the table carry the mandatory columns of research-method.md section 6, plus Same-day reference, Gap and Safety?

@@ -6,6 +6,13 @@ The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.1.0/),
 
 ## [Unreleased]
 
+## [0.7.2] - 2026-11-14
+
+### Fixed
+
+- `find-deals`: the same-day reference is chosen among at least 3 other direct retailers when that many sell the item, shown in a Compared line per deal (retailers read with prices, others with the reason). A live test rested three verdicts on one retailer.
+- `find-deals`: a deal list's update date only from the list read in the answer; volatile Monsieur PC figures removed from its source note. A live test quoted them as current without opening the page.
+
 ## [0.7.1] - 2026-11-14
 
 ### Changed

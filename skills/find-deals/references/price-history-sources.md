@@ -48,5 +48,5 @@ Deal sites list candidate deals; every price must then be read on the retailer's
 9. Anthropic web search and fetch refusals for frandroid.com (2026-11-14); Anthropic help article on site owners blocking its crawler: https://support.anthropic.com/en/articles/8896518-does-anthropic-crawl-data-from-the-web-and-how-can-site-owners-block-the-crawler
 10. Hardware & Co, bons plans and robots.txt (read 2026-11-14): https://hardwareand.co/bons-plans ; https://hardwareand.co/robots.txt
 11. Hardware & Co, conditions d'utilisation with legal notice, CC BY-ND and affiliation clause (read 2026-11-14): https://hardwareand.co/cgu
-12. Monsieur PC, bons plans page and its embedded deal data, robots.txt (read 2026-11-14; 29 deals, updated 2026-11-14 08:38, period 1 to 18 November): https://www.monsieurpc.fr/bons-plans/ ; https://www.monsieurpc.fr/robots.txt
+12. Monsieur PC, bons plans page and its embedded deal data, robots.txt (read 2026-11-14): https://www.monsieurpc.fr/bons-plans/ ; https://www.monsieurpc.fr/robots.txt
 13. Monsieur PC, mentions légales (updated 2026-10-15, read 2026-11-14): https://www.monsieurpc.fr/mentions-legales/
