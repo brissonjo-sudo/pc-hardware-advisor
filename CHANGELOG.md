@@ -6,6 +6,14 @@ The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.1.0/),
 
 ## [Unreleased]
 
+## [0.6.2] - 2026-11-14
+
+### Changed
+
+- `memory.md`: the EXPO or XMP label is not a price criterion (compare speed, CL, capacity, ranks; XMP-only on AM5 with conditions; EXPO on Intel only if the kit lists an XMP profile). Sourced note on X3D memory-speed sensitivity (NoobFeed, AMD slides, PCGH), with no general percentage.
+- `build-config` budget lever 1: for GPU-bound gaming or an X3D processor, the cheapest kit at the platform's official speed before any GPU step down; price gap from prices read that day.
+- Origin: a creator's short on DDR5 prices, fact-checked on 2026-11-14 (the advice holds; the 50 to 100 EUR gap is about 200 EUR today, and the performance figures are only partly supported).
+
 ## [0.6.1] - 2026-11-14
 
 ### Fixed

@@ -81,6 +81,12 @@ Capacity conflict within one family: AMD shop pages for the 9950X3D and 9900X3D 
 - Press (medium/low) [18]: XMP-only kits usually work on AM5 but may need the profile enabled manually, may not reach rated speed, and default to JEDEC (for example DDR5-4800) until a profile is enabled. MSI and Gigabyte say their boards read both XMP and EXPO. Option names for MSI, Gigabyte and ASRock were not verified; do not quote them. No AMD statement on XMP-only kits was found (amd.com blocked).
 - Verdict rule for a high-speed XMP-only kit (for example DDR5-7200) on AM5: **compatible with conditions**. It works physically; it boots at default JEDEC speed; enable the profile (ASUS: DOCP) or set manual values, expect to run around 6000 for 1:1 controller operation; the rated speed is not guaranteed because above 6000 the controller runs 2:1 and is less efficient, and the QVL decides. Never give "compatible" without the speed condition. A kit with EXPO is the lower-risk match for AM5; an EXPO-only kit on Intel is the mirror case (check the board's profile support, not verified here).
 
+## Profile label and memory speed sensitivity (checked 2026-11-14)
+
+- **The profile label is not a price criterion** (plugin rule). Compare kits by speed, CL, capacity and ranks. On AM5, a cheaper XMP-only kit at equal specs is acceptable with the condition of the section above (enable the profile; rated speed not guaranteed): give the price gap. Many EXPO kits also carry XMP profiles: Kingston FURY Beast EXPO kits hold two XMP 3.0 profiles, not Intel-certified, no guarantee (search snippet) [26]; Corsair sells kits for both platforms [27]. On Intel, an EXPO kit counts only if its page lists an XMP profile; an EXPO-only kit stays not verified.
+- **X3D processors gain less from faster memory** (medium). NoobFeed, 13 games, 1080p, RTX 4090: faster DDR5 (mostly 6000) gave +4 % on average on a 7800X3D versus +12 % on a 7700X [28]. AMD slides for the 9850X3D, 6000 versus 4800: 0.2 to 1.6 % in 5 games (vendor data) [29]. PCGH, independent, 9850X3D, 16 games, 4800 versus 6000: up to about 14 % in single games and almost 20 % in 1 % lows [30]. Never quote one percentage as general; at 1440p and 4K the GPU usually limits more (not measured with RAM speed alone).
+- Use: the `build-config` budget lever 1 may pick the cheapest kit at the platform's official speed for GPU-bound gaming or an X3D processor. The price gap comes from prices read that day, never from a video or this file.
+
 ## Capacity limits and non-binary DIMMs
 
 - Capacity only as sourced above: LGA1700 192 GB (14900K ARK) [1]; LGA1851 256 GB (265 and 270K Plus ARK) [3] [4]; AM5 128, 192 or 256 GB depending on the SKU page [13] [14]; ASUS X870 board up to 256 GB [20].
@@ -143,3 +149,8 @@ All checked 2026-11-07.
 23. ASRock forum AM5 ECC thread; Level1Techs ECC AM5 threads: https://forum.asrock.com/am5-ecc-supportpound_topic24901.html ; https://forum.level1techs.com/t/ecc-capable-verified-motherboards-for-ryzen-7000/197891
 24. AMD EXPO page (blocked: timeout; search snippet only): https://www.amd.com/en/products/processors/technologies/expo.html
 25. AMD blog, Computex 2026 (blocked: timeout; search summary): https://amd.com/en/blogs/2026/amd-computex-2026-10-years-of-am4-am5-support-through.html
+26. Kingston FURY Beast DDR5 EXPO pages (search snippets, 2026-11-14): https://kingston.com/memory/gaming/kingston-fury-beast-ddr5-memory
+27. Corsair, XMP vs EXPO (read 2026-11-14): https://www.corsair.com/fr/en/explorer/diy-builder/memory/xmp-vs-expo-whats-the-difference/
+28. NoobFeed, DDR5 memory speeds on Zen 4 and Intel CPUs (2025-09-05, read 2026-11-14 via summary): https://www.noobfeed.com/hardware/ddr5-memory-speeds-amd-zen4-intel-cpus
+29. Club386, AMD slides on 9850X3D DDR5 speed (2026-01-26, read 2026-11-14): https://www.club386.com/amd-claims-ddr5-speed-has-practically-no-effect-on-ryzen-7-9850x3d-gaming-performance/
+30. PC Games Hardware, 9850X3D DDR5-4800 to 6000 scaling (2026-01-28, read 2026-11-14, partial: charts not read): https://www.pcgameshardware.de/Ryzen-7-9850X3D-CPU-281833/Specials/RAM-DDR5-4800-6000-Skalierung-Benchmark-Test-1492873/
