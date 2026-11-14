@@ -6,6 +6,13 @@ The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.1.0/),
 
 ## [Unreleased]
 
+## [0.7.4] - 2026-11-14
+
+### Fixed
+
+- `find-deals`: an affiliate link that points straight at the retailer (Amazon `tag=`) is never clicked from a deal list; the clean product URL is opened instead (Amazon `/dp/<ASIN>`). A live test opened Amazon through a deal site's link.
+- `find-deals`: the Compared label is written in the user's language.
+
 ## [0.7.3] - 2026-11-14
 
 ### Fixed
