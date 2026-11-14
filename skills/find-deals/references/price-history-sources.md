@@ -27,6 +27,7 @@ Deal sites list candidate deals; every price must then be read on the retailer's
 |---|---|---|---|
 | Frandroid (bons plans, Black Friday selections and live pages) | pasted text or screenshot only | robots.txt names no Claude agent, but Anthropic's search and fetch tools refuse the domain ("unable to fetch from www.frandroid.com", 2026-11-14), which points to a site-owner opt-out: never read it another way | [8], [9] |
 | Dealabs | pasted text or screenshot only | robots.txt: `User-agent: ClaudeBot`, `Disallow: /` | [6] |
+| Hardware & Co (`https://hardwareand.co/bons-plans`) | `web fetch` | PC-parts deals, newest first, each with a date; the retailer is named only in each deal's article. robots.txt disallows only technical folders; terms have no clause on automated collection; content under CC BY-ND (cite, do not modify); affiliate links declared. Read 2026-11-14 | [10], [11] |
 
 ## Not verified
 
@@ -44,3 +45,5 @@ Deal sites list candidate deals; every price must then be read on the retailer's
 7. The Ramageddon (read 2026-11-11): https://theramageddon.com/
 8. Frandroid robots.txt (read in the browser 2026-11-14): https://www.frandroid.com/robots.txt
 9. Anthropic web search and fetch refusals for frandroid.com (2026-11-14); Anthropic help article on site owners blocking its crawler: https://support.anthropic.com/en/articles/8896518-does-anthropic-crawl-data-from-the-web-and-how-can-site-owners-block-the-crawler
+10. Hardware & Co, bons plans and robots.txt (read 2026-11-14): https://hardwareand.co/bons-plans ; https://hardwareand.co/robots.txt
+11. Hardware & Co, conditions d'utilisation with legal notice, CC BY-ND and affiliation clause (read 2026-11-14): https://hardwareand.co/cgu

@@ -6,6 +6,13 @@ The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.1.0/),
 
 ## [Unreleased]
 
+## [0.7.0] - 2026-11-14
+
+### Added
+
+- `find-deals` finds the current deals of a category when the user has none in hand ("SSD deals right now"): reads only deal lists marked `web fetch`, keeps at most 5 dated within 7 days (plugin heuristic), finds each item on the retailer's own site without following affiliate links, then runs the usual reference, safety filter and verdict.
+- Hardware & Co bons plans added to "Deal lists" as `web fetch` (robots.txt and terms allow it, CC BY-ND, affiliate links declared).
+
 ## [0.6.2] - 2026-11-14
 
 ### Changed
