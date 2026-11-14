@@ -10,8 +10,8 @@ Find the lowest landed price for one exact item, delivered to the buyer's countr
 ## Run ledger (survives context compaction)
 
 Long runs can be compacted mid-way: tool results, sub-agent returns and URLs are then lost. Keep a ledger file:
-1. At the start, create `pc-advisor-ledger.md` in the working directory, overwriting any old one: request and date.
-2. Append at once each price row read (compact columns of `research-method.md` section 6, with URL and read status), each excluded offer with its reason, and each blocked page. Structured fields only, never page text.
+1. At the start, create `pc-advisor-ledger.md` in the working directory, overwriting any old one: request and date. Create it in the same message as the first batch of reads, not in a turn of its own.
+2. Append at once each price row read (compact columns of `research-method.md` section 6, with URL and read status), each excluded offer with its reason, and each blocked page. Structured fields only, never page text. Send each append in the same message as the next batch of reads, so the ledger costs no extra turn.
 3. Keep it under about 15,000 characters: shorten notes, never drop a row's URL.
 4. After a compaction summary, re-read the ledger, this SKILL.md file in full (its end may have been cut) and `research-method.md` section 11 before continuing. Write the final answer from the ledger, not from memory.
 5. After the final answer, delete the ledger.

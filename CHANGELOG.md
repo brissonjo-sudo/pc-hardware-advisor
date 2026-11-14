@@ -6,6 +6,13 @@ The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.1.0/),
 
 ## [Unreleased]
 
+## [0.7.3] - 2026-11-14
+
+### Fixed
+
+- Run ledger in `build-config`, `hunt-prices` and `find-deals`: the ledger is created with the first batch of reads, and each append goes in the same message as the next batch, so it costs no extra turn. In a test of case 12, one run ran out of turns before its answer with the ledger written in turns of its own.
+- Case 12 checks that the ledger is written (`ledger-written` grader).
+
 ## [0.7.2] - 2026-11-14
 
 ### Fixed
