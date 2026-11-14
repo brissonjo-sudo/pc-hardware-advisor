@@ -85,7 +85,14 @@ Capacity conflict within one family: AMD shop pages for the 9950X3D and 9900X3D 
 
 - **The profile label is not a price criterion** (plugin rule). Compare kits by speed, CL, capacity and ranks. On AM5, a cheaper XMP-only kit at equal specs is acceptable with the condition of the section above (enable the profile; rated speed not guaranteed): give the price gap. Many EXPO kits also carry XMP profiles: Kingston FURY Beast EXPO kits hold two XMP 3.0 profiles, not Intel-certified, no guarantee (search snippet) [26]; Corsair sells kits for both platforms [27]. On Intel, an EXPO kit counts only if its page lists an XMP profile; an EXPO-only kit stays not verified.
 - **X3D processors gain less from faster memory** (medium). NoobFeed, 13 games, 1080p, RTX 4090: faster DDR5 (mostly 6000) gave +4 % on average on a 7800X3D versus +12 % on a 7700X [28]. AMD slides for the 9850X3D, 6000 versus 4800: 0.2 to 1.6 % in 5 games (vendor data) [29]. PCGH, independent, 9850X3D, 16 games, 4800 versus 6000: up to about 14 % in single games and almost 20 % in 1 % lows [30]. Never quote one percentage as general; at 1440p and 4K the GPU usually limits more (not measured with RAM speed alone).
+- **Core Ultra (LGA1851) gains from faster memory** (medium-low, one reviewer). VC-Gaming, Core Ultra 7 270K Plus, RTX 5090, 1080p, 17 games, two modules: DDR5-5600 JEDEC versus 7800 CL36 -11 % average FPS and -13 % 1 % lows; 6000 CL28 versus 7800 -4 % (figures read on the video's charts; 7800 is above the official 7200, an overclock) [31]. With a Core Ultra limited by the CPU, the cheapest kit costs measurable performance.
 - Use: the `build-config` budget lever 1 may pick the cheapest kit at the platform's official speed for GPU-bound gaming or an X3D processor. The price gap comes from prices read that day, never from a video or this file.
+
+## One module runs in single channel (checked 2026-11-14)
+
+- The desktop platforms in this file have 2 memory channels (Intel ARK [1] [3] [4]; AMD lists 2-DIMM configurations [13] [14]). One module fills one channel only. A vendor page stating that two modules are needed for dual channel was not read (gap).
+- **Plugin rule:** recommend two matched modules (a 2-module kit), never one module to save money. When budget forces less capacity, take 2 x 8 GB rather than 1 x 16 GB, stated in the assumptions.
+- Evidence (medium, neither test keeps capacity equal): VC-Gaming, 270K Plus, RTX 5090, 1080p, 17 games, DDR5-5600 JEDEC, 1 versus 2 modules: -15 % average FPS and -20 % 1 % lows, from about 0 to -34 % per game; module capacity not stated [31]. NoobFeed, Ryzen 7 9700X, DDR5-6000 CL30, 1 x 16 GB versus 2 x 16 GB, GPU not named: Marvel Rivals 1080p 195 to 129 FPS; 1 % lows -33 % at 1080p and -26 % at 4K (2025-12-01) [32]. Never quote one percentage as general: the loss depends on the game, the CPU and how much the GPU limits.
 
 ## Capacity limits and non-binary DIMMs
 
@@ -107,6 +114,7 @@ AM5 takes UDIMM only. Ryzen CPU pages list ECC "supported with motherboard suppo
 6. Capacity above the CPU or board maximum, or non-binary DIMMs not listed by the vendor: **cannot conclude** until the QVL or BIOS notes confirm.
 7. ECC: **cannot conclude** unless the board page states ECC support.
 8. Never give a final verdict from this file alone; cite the board QVL or spec page when available.
+9. One module on a 2-channel platform: **compatible with conditions**. Condition: it runs in single channel; use two matched modules (section "One module runs in single channel").
 
 ## Not verified
 
@@ -154,3 +162,5 @@ All checked 2026-11-07.
 28. NoobFeed, DDR5 memory speeds on Zen 4 and Intel CPUs (2025-09-05, read 2026-11-14 via summary): https://www.noobfeed.com/hardware/ddr5-memory-speeds-amd-zen4-intel-cpus
 29. Club386, AMD slides on 9850X3D DDR5 speed (2026-01-26, read 2026-11-14): https://www.club386.com/amd-claims-ddr5-speed-has-practically-no-effect-on-ryzen-7-9850x3d-gaming-performance/
 30. PC Games Hardware, 9850X3D DDR5-4800 to 6000 scaling (2026-01-28, read 2026-11-14, partial: charts not read): https://www.pcgameshardware.de/Ryzen-7-9850X3D-CPU-281833/Specials/RAM-DDR5-4800-6000-Skalierung-Benchmark-Test-1492873/
+31. VC-Gaming, Core Ultra 5 250K Plus test and RAM scaling on the Core Ultra 7 270K Plus (video, 2026-03-24; figures read on 18 chart captures supplied by the maintainer, cross-checked 2026-11-14): https://www.youtube.com/watch?v=Jb8ZBLifbdc
+32. NoobFeed, single vs dual-channel DDR5 gaming performance (2025-12-01, read 2026-11-14): https://www.noobfeed.com/hardware/single-vs-dual-ddr5-gaming-performance
