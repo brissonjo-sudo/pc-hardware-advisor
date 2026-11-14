@@ -6,6 +6,16 @@ The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.1.0/),
 
 ## [Unreleased]
 
+## [0.6.1] - 2026-11-14
+
+### Fixed
+
+Maintainer test on a real deal-site page (Black Friday PC parts selection, saved locally), Cowork, Sonnet high.
+
+- Browser fallback: every page opened counts toward the 5-page cap, search-result pages included; beyond 5, the remaining offers are read in the next answer on the user's yes. The test opened 10 pages (5 product, 5 search).
+- `find-deals` lists: deals are chosen by the user's request or the claimed discount, never by how easy a page is to read. The test kept the 4 offers readable without the browser and set aside the largest discounts (Amazon, AliExpress).
+- `find-deals`: tray and boxed processors are different scopes; packaging not shown means no price verdict. The test called an AliExpress Ryzen 7 7800X3D of unknown packaging a good price against a boxed reference.
+
 ## [0.6.0] - 2026-11-14
 
 ### Added
