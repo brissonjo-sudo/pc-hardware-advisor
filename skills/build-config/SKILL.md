@@ -81,7 +81,7 @@ Fix every conflict by changing a part, then re-run the affected pairs. Never shi
 2. Replace the heuristic with real prices: the first draft is allocated by priority, the final one by what the priced parts cost. Re-balance when memory, SSD or GPU prices make a default split unrealistic.
 3. Keep a reserve line for things users forget (OS licence, fans, cables, thermal paste, a monitor if in scope). Price them or mark them `not priced`.
 4. Before declaring an overrun, fit the budget. Apply these levers in order, re-price after each, and stop at the first config that fits:
-   1. memory capacity down to the use's minimum, stated in the assumptions;
+   1. memory down: capacity to the use's minimum, and for gaming limited by the GPU (1440p or 4K at the user's settings) or with an X3D processor, the cheapest kit at the platform's official speed (for example DDR5-5600 instead of 6000 CL30, any EXPO or XMP label: `memory.md`), stated in the assumptions;
    2. a cheaper CPU or board on the same platform: search for a cheaper model that still meets the use (a lower SKU on the same socket, a cheaper chipset), not only the cheapest among the pages already read;
    3. another platform that still meets the use, with compatibility re-run (for example a previous socket with DDR4 when DDR5 prices weigh on the total);
    4. the GPU one tier down.
@@ -133,7 +133,7 @@ Keep prose short; no narration of the search process.
 
 ## Self-check before answering
 
-1. Does the conclusion line state the landed total (or partial) against the budget? If the first priced config was over, does the Budget fit line show each lever of step 5.4 tried in order? Before each GPU step down, were memory at the stated minimum and the CPU and board the cheapest that meet the use?
+1. Does the conclusion line state the landed total (or partial) against the budget? If the first priced config was over, does the Budget fit line show each lever of step 5.4 tried in order? Before each GPU step down, were memory capacity and kit (lever 1) at the stated minimum and the CPU and board the cheapest that meet the use?
 2. Is every part eligible (new or professional refurbished, invoice and warranty)? No private-party part in the totals?
 3. Was the compatibility method run on the whole list, with no unresolved conflict? Owned parts specced from the manufacturer page, or why not?
 4. For AI builds, was `size-local-ai` run first and its estimates labelled?
