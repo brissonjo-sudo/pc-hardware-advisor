@@ -6,6 +6,15 @@ The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.1.0/),
 
 ## [Unreleased]
 
+## [0.7.1] - 2026-11-14
+
+### Changed
+
+- `memory.md`: one module runs in single channel; plugin rule of two matched modules, with sourced figures (VC-Gaming 270K Plus, NoobFeed 9700X) and no general percentage. New verdict rule 9 (one module: compatible with conditions).
+- `memory.md`: sourced note on Core Ultra memory-speed sensitivity (5600 versus 7800: about -11 % at 1080p with an RTX 5090, one reviewer).
+- `sockets-chipsets.md`: LGA1851 future: no further CPU announced by Intel; new socket for the next generation reported by press, not by Intel.
+- `build-config` lever 1 keeps two modules; `check-compatibility` flags a single module.
+
 ## [0.7.0] - 2026-11-14
 
 ### Added

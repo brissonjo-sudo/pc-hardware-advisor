@@ -125,6 +125,12 @@ Source: Intel support article 000102331, last reviewed 2026-07-21 (high) [31].
 
 AMD blog "AMD Computex 2026: 10 Years of AM4, AM5 Support Through 2029 and Expanded RDNA 4 Gaming", English version dated 2026-05-31 per search summary. Wording as relayed: "With the launch of the Ryzen 7 7700X3D processor, we are extending support for the Socket AM5 platform through 2029." Previous commitment: "through 2027+". Confidence: medium, because the quotes come from search summary and Tom's Hardware (body truncated), and amd.com was blocked [9] [10]. The statement names no CPUs and does not confirm Zen 6 compatibility with any board. Phrase it as "AMD says it will support AM5 through 2029", not as a guarantee for a given board or CPU.
 
+## LGA1851 future (checked 2026-11-14)
+
+Intel has announced no CPU generation for LGA1851 after the 200S Plus refresh. Intel (VP John Pitzer, Goldman Sachs conference, 2025-09-10) named the Arrow Lake refresh and then Nova Lake, with no socket [41] (high for the quote). That Nova Lake uses a new socket, LGA1954, comes from press inference and leaks [41] [42] and from an Intel validation-tool listing named "LGA1954 NVL-Interposer" relayed by press [43] (medium). Phrase it as "no further CPU is announced for LGA1851; press reports a new socket for the next Intel generation", never as an Intel statement.
+
+Use: when the user plans to upgrade only the CPU later, compare this with the AM5 statement above; for a full replacement later, the socket's future matters little.
+
 ## How to verify for a specific board
 
 1. Read the board's exact model on the vendor product page (not the chipset name alone).
@@ -191,3 +197,6 @@ All checked 2026-11-07.
 37. AMD Ryzen AI 7 450GE page (timeout; search summary) and Tom's Hardware on Ryzen AI 400 desktop: https://www.amd.com/en/products/processors/desktops/ryzen/ai-400-series/amd-ryzen-ai-7-450ge.html
 39. Search results on Ryzen 7000 lane counts (TechPowerUp returned HTTP 403, not bypassed): https://techpowerup.com/295394/amd-zen-4-socket-am5-explained-pcie-lanes-chipsets-connectivity
 40. Wccftech, ASUS and Gigabyte Ryzen 5000 support for X370/B350/A320; ASRock beta BIOS (search summary): https://wccftech.com/asus-gigabyte-roll-out-amd-ryzen-5000-ryzen-7-5800x3d-cpu-support-for-x370-b350-a320-motherboards/ ; https://wccftech.com/asrock-amd-ryzen-5000-cpu-bios-support-on-x370-b350-a320-motherboards/
+41. Club386, Intel confirms Arrow Lake refresh and Nova Lake (2025-09-10, read 2026-11-14; Intel quote via Seeking Alpha, socket line is the writer's): https://www.club386.com/intel-confirms-arrow-lake-refresh-and-nova-lake-will-arrive-in-2026/
+42. PC Games Hardware, LGA1851 and Nova Lake-S socket leak (2025-06-02, read 2026-11-14; Intel did not confirm): https://www.pcgameshardware.de/Arrow-Lake-S-Codename-280890/News/LGA1851-Desktop-CPU-Intel-Bestaetigung-1474085/
+43. Pause Hardware, LGA1954 for Nova Lake-S from an Intel validation-tool listing (updated 2026-08-29, read 2026-11-14 via summary): https://pausehardware.com/lga1954-intel-nova-lake-s/
