@@ -119,6 +119,7 @@ Never circumvent with tricks: no alternate user agents, caches, mirrors, or arch
    - At most 5 pages per answer, one at a time, chosen for value: first the page the user gave, then the cheapest or most decisive candidates. Every page opened counts, search-result pages included. When more pages are needed (for example a list of deals), stop at 5, say which offers remain, and read them in the next answer on the user's yes.
    - Never in scheduled runs (`track-price`) or in sub-agents (`price-scout`): they record the page as blocked; the main conversation may then use the fallback for the few pages that matter.
    - Record `Page read: browser (user session)` with date and time, and say in the answer that the page was read through the browser.
+   - Never write the delivery address, postal code or town the user's session shows: write "delivery to your address".
 5. If no browser tool is available or the fallback stops: ask the user for a screenshot or pasted page text. Mark the result `user screenshot` and note the date they captured it.
 6. Report every blocked page in the answer. Do not silently drop it.
 
