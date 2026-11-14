@@ -21,10 +21,11 @@ How to read it: open `https://gpuprix.com/fr/france/gpus/<chip-slug>` for France
 
 ## Deal lists (discovery only)
 
-Deal sites list candidate deals; every price must then be read on the retailer's page. Their figures are claims, never a price in a table.
+Deal sites list candidate deals; every price must then be read on the retailer's page. Their figures are claims, never a price in a table. Read the lists in the order of this table (maintainer's preference).
 
 | Site | Access | Reason | Source |
 |---|---|---|---|
+| Monsieur PC (`https://www.monsieurpc.fr/bons-plans/`) | browser fallback on the user's yes, or pasted text | PC-parts deals picked by two PC builders (page text), grouped by shop (AliExpress, Amazon, other shops), one update date and promotion period for the page, no date per deal. The deals load from data inside the page, so a web fetch returns no deal: use the browser (`research-method.md` section 7). Links are affiliate links: for an Awin link, read the retailer URL given in its `ued` parameter; never open an AliExpress short link, find the item on AliExpress through the browser. Prices often assume the site's promo codes and PayPal thresholds: a price with a code is a claim until the retailer page shows the code applies. robots.txt disallows only `/wp-admin/`; legal notice (updated 2026-10-15) forbids reproducing its texts, photos and videos (read prices as leads only, never copy its texts); Amazon affiliate disclosure in the footer. Read 2026-11-14 | [12], [13] |
 | Frandroid (bons plans, Black Friday selections and live pages) | pasted text or screenshot only | robots.txt names no Claude agent, but Anthropic's search and fetch tools refuse the domain ("unable to fetch from www.frandroid.com", 2026-11-14), which points to a site-owner opt-out: never read it another way | [8], [9] |
 | Dealabs | pasted text or screenshot only | robots.txt: `User-agent: ClaudeBot`, `Disallow: /` | [6] |
 | Hardware & Co (`https://hardwareand.co/bons-plans`) | `web fetch` | PC-parts deals, newest first, each with a date; the retailer is named only in each deal's article. robots.txt disallows only technical folders; terms have no clause on automated collection; content under CC BY-ND (cite, do not modify); affiliate links declared. Read 2026-11-14 | [10], [11] |
@@ -47,3 +48,5 @@ Deal sites list candidate deals; every price must then be read on the retailer's
 9. Anthropic web search and fetch refusals for frandroid.com (2026-11-14); Anthropic help article on site owners blocking its crawler: https://support.anthropic.com/en/articles/8896518-does-anthropic-crawl-data-from-the-web-and-how-can-site-owners-block-the-crawler
 10. Hardware & Co, bons plans and robots.txt (read 2026-11-14): https://hardwareand.co/bons-plans ; https://hardwareand.co/robots.txt
 11. Hardware & Co, conditions d'utilisation with legal notice, CC BY-ND and affiliation clause (read 2026-11-14): https://hardwareand.co/cgu
+12. Monsieur PC, bons plans page and its embedded deal data, robots.txt (read 2026-11-14; 29 deals, updated 2026-11-14 08:38, period 1 to 18 November): https://www.monsieurpc.fr/bons-plans/ ; https://www.monsieurpc.fr/robots.txt
+13. Monsieur PC, mentions légales (updated 2026-10-15, read 2026-11-14): https://www.monsieurpc.fr/mentions-legales/
