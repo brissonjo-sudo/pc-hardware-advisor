@@ -30,12 +30,12 @@ Long runs can be compacted mid-way: tool results, sub-agent returns and URLs are
 2. Extract: exact model and SKU, condition (new or professional refurbished), seller and the "sold by" line, shown price and VAT status, shipping to the buyer, stock or delay, payment methods, any struck-through "was" price and its wording.
 3. Private-party used listing: stop and use `review-used-listing`. No deal in hand ("find me the cheapest X"): use `hunt-prices`.
 4. Amazon or AliExpress link: read it only through the browser fallback on the user's yes (`research-method.md` section 7). AliExpress offers also follow `${CLAUDE_PLUGIN_ROOT}/references/retailer-criteria.md` section 6.
-5. **A pasted list of deals** (for example a deal site's selection copied by the user): keep at most 5, those matching the user's category, budget or parts, otherwise the desktop-part deals with the largest claimed discount. Say which were kept and why; name the others under "Not checked" (item and retailer only, no figure). Read each kept deal on the retailer's own product page, with tracking and affiliate parameters removed from the link. The list's prices are claims: never a shown price in a table. Run sections 2 to 6 for each kept deal; the whole batch stays within 30 product pages. Deal sites that refuse Claude are read only as pasted text: see `${CLAUDE_PLUGIN_ROOT}/skills/find-deals/references/price-history-sources.md`, "Deal lists".
+5. **A pasted list of deals** (for example a deal site's selection copied by the user): keep at most 5, those matching the user's category, budget or parts, otherwise the desktop-part deals with the largest claimed discount. Never choose by how easy a page is to read: a kept deal on a blocked site or one needing the browser stays kept and goes to "Unreadable sources" with the browser offer. Say which were kept and why; name the others under "Not checked" (item and retailer only, no figure). Read each kept deal on the retailer's own product page, with tracking and affiliate parameters removed from the link. The list's prices are claims: never a shown price in a table. Run sections 2 to 6 for each kept deal; the whole batch stays within 30 product pages. Deal sites that refuse Claude are read only as pasted text: see `${CLAUDE_PLUGIN_ROOT}/skills/find-deals/references/price-history-sources.md`, "Deal lists".
 
 ## 2. Same-day reference
 
 1. Find the cheapest offer from **another** direct retailer (never the deal's own seller or offer) for the same item in the buyer's country today, with the `hunt-prices` method: read `${CLAUDE_PLUGIN_ROOT}/skills/hunt-prices/SKILL.md` sections 3 to 5 and dispatch `price-scout` (at most 2 agents, 6 sources each). Read product pages, never comparator figures.
-2. Scope: the **exact model** first. If no other direct retailer lists it, use the cheapest model of the same chip or spec, and say so in the row ("same chip, other brand").
+2. Scope: the **exact model** first. If no other direct retailer lists it, use the cheapest model of the same chip or spec, and say so in the row ("same chip, other brand"). A tray (OEM) processor and a boxed one are different scopes: compare tray with tray, box with box. If the deal's packaging is not shown, give no price verdict: write `not verified (packaging not shown)`.
 3. Gap = deal landed price minus reference landed price, both landed, in currency and percent (section 11, item 3). If either side is `excluding fees`, compare shown prices and say so.
 
 ## 3. Struck-through prices
@@ -62,7 +62,7 @@ Plugin heuristic, not sourced (inspired by PriceSpy's 5 % deal rule), on the gap
 - **Market price**: within 5 % of the reference, above or below.
 - **Dearer than elsewhere**: more than 5 % above the reference.
 
-Write the label "plugin heuristic" next to the verdict. An excluded deal gets no price verdict: say "excluded" and why.
+Write the label "plugin heuristic" next to the verdict. An excluded deal gets no price verdict: say "excluded" and why. Neither does a deal whose scope is uncertain (packaging, variant): say "not verified" and what is missing, and never call it a good price in the summary.
 
 ## 7. Output template
 
