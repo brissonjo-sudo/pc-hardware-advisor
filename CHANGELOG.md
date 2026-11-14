@@ -6,6 +6,13 @@ The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.1.0/),
 
 ## [Unreleased]
 
+## [0.6.0] - 2026-11-14
+
+### Added
+
+- `find-deals` checks a pasted list of deals (for example a deal site's Black Friday selection): keeps at most 5 matching the user's request, reads each on the retailer's own page (tracking and affiliate parameters removed), runs the same reference, safety filter and verdict, ranks them by gap, and names the deals not kept. The list's prices are claims, never a shown price.
+- `price-history-sources.md`, "Deal lists": Frandroid and Dealabs are read as pasted text only. Frandroid's robots.txt names no Claude agent, but Anthropic's search and fetch tools refuse the domain (2026-11-14).
+
 ## [0.5.2] - 2026-11-12
 
 ### Fixed

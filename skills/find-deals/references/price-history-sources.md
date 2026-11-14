@@ -19,6 +19,15 @@ How to read it: open `https://gpuprix.com/fr/france/gpus/<chip-slug>` for France
 | The Ramageddon (memory) | History starts 2026-10-13, under 3 months: not used before mid-January 2027 | [7] |
 | Idealo | Not verified: the fetch tool refused the site | n/a |
 
+## Deal lists (discovery only)
+
+Deal sites list candidate deals; every price must then be read on the retailer's page. Their figures are claims, never a price in a table.
+
+| Site | Access | Reason | Source |
+|---|---|---|---|
+| Frandroid (bons plans, Black Friday selections and live pages) | pasted text or screenshot only | robots.txt names no Claude agent, but Anthropic's search and fetch tools refuse the domain ("unable to fetch from www.frandroid.com", 2026-11-14), which points to a site-owner opt-out: never read it another way | [8], [9] |
+| Dealabs | pasted text or screenshot only | robots.txt: `User-agent: ClaudeBot`, `Disallow: /` | [6] |
+
 ## Not verified
 
 - GPUPrix terms of use: none found. Whether its 12-month statistics include Amazon offers is not stated on the France page (it names Alternate and LDLC).
@@ -33,3 +42,5 @@ How to read it: open `https://gpuprix.com/fr/france/gpus/<chip-slug>` for France
 5. CamelCamelCamel France robots.txt (read 2026-11-11): https://fr.camelcamelcamel.com/robots.txt
 6. Dealabs robots.txt (read 2026-11-11): https://www.dealabs.com/robots.txt
 7. The Ramageddon (read 2026-11-11): https://theramageddon.com/
+8. Frandroid robots.txt (read in the browser 2026-11-14): https://www.frandroid.com/robots.txt
+9. Anthropic web search and fetch refusals for frandroid.com (2026-11-14); Anthropic help article on site owners blocking its crawler: https://support.anthropic.com/en/articles/8896518-does-anthropic-crawl-data-from-the-web-and-how-can-site-owners-block-the-crawler
