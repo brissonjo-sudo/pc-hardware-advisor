@@ -6,6 +6,15 @@ The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.1.0/),
 
 ## [Unreleased]
 
+## [0.7.5] - 2026-11-15
+
+### Fixed
+
+- `find-deals`: when no other direct retailer has the exact model in stock, the reference is the cheapest in-stock model of the same chip; an out-of-stock offer is never the reference. A live test left three RTX 5080 deals without reference while the chip sold well below them.
+- `find-deals`: a `not verified` verdict ends with the missing check as next action, never a purchase.
+- `research-method.md`: the delivery address or postal code of the user's browser session is never written.
+- `retailers-by-country.md`: Joybuy.fr row (bot check and captcha, seller details not shown).
+
 ## [0.7.4] - 2026-11-14
 
 ### Fixed
