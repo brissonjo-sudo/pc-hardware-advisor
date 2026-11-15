@@ -36,7 +36,7 @@ Long runs can be compacted mid-way: tool results, sub-agent returns and URLs are
 ## 2. Same-day reference
 
 1. Find the cheapest offer from **another** direct retailer (never the deal's own seller or offer) for the same item in the buyer's country today, with the `hunt-prices` method: read `${CLAUDE_PLUGIN_ROOT}/skills/hunt-prices/SKILL.md` sections 3 to 5 and dispatch `price-scout` (at most 2 agents, 6 sources each). Read product pages, never comparator figures. Read at least 3 other direct retailers of the buyer's country when that many sell the item (`retailers-by-country.md`); one retailer is not a reference.
-2. Scope: the **exact model** first. If no other direct retailer has it in stock, use the cheapest in-stock model of the same chip or spec, and say so in the row ("same chip, other brand"). An out-of-stock offer is never the reference: name it in the Compared line with "out of stock". A tray (OEM) processor and a boxed one are different scopes: compare tray with tray, box with box. If the deal's packaging is not shown, give no price verdict: write `not verified (packaging not shown)`.
+2. Scope: the **exact model** first. If no other direct retailer has it in stock, use the cheapest in-stock model of the same chip or spec, and say so in the row ("same chip, other brand"). To find it, open each retailer's listing of the chip (category or search page, sorted by price when the site allows) for discovery only, then read the product page of its cheapest in-stock offer: one product page per retailer is not that retailer's cheapest. In stock means the page says so in words; a delivery date or an add-to-cart button alone is `stock not shown`, and an offer with stock not shown is never the reference while an in-stock offer of the same chip exists. An out-of-stock offer is never the reference: name it in the Compared line with "out of stock". A tray (OEM) processor and a boxed one are different scopes: compare tray with tray, box with box. If the deal's packaging is not shown, give no price verdict: write `not verified (packaging not shown)`.
 3. Gap = deal landed price minus reference landed price, both landed, in currency and percent (section 11, item 3). If either side is `excluding fees`, compare shown prices and say so.
 
 ## 3. Struck-through prices
@@ -97,7 +97,7 @@ Never circumvent a block: no alternate user agents, caches, mirrors or archive c
 ## 9. Self-check before answering
 
 1. Did the safety filter run before the verdict, and is every excluded deal in the Excluded table with its reason?
-2. Is the reference another retailer's offer, never the deal itself, chosen among at least 3 retailers read (or fewer stated), with a Compared line? Is the reference in stock (else the same chip in stock)? Is the gap landed versus landed, at equal scope, and is the scope written?
+2. Is the reference another retailer's offer, never the deal itself, chosen among at least 3 retailers read (or fewer stated), with a Compared line? Is the reference in stock (else the cheapest same chip in stock, found from each retailer's chip listing)? Is the gap landed versus landed, at equal scope, and is the scope written?
 3. Is the struck-through price treated as `not verified` unless the page states the 30-day low?
 4. Is history only in the Context line, never in the table, verdict or gap?
 5. Does the table carry the mandatory columns of research-method.md section 6, plus Same-day reference, Gap and Safety?
