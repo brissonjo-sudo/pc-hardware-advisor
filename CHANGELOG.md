@@ -6,6 +6,13 @@ The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.1.0/),
 
 ## [Unreleased]
 
+## [0.7.6] - 2026-11-15
+
+### Fixed
+
+- `find-deals`: the same-chip reference is found from each retailer's chip listing (sorted by price), then the product page of the cheapest in-stock offer. A live test took a 2,099 EUR reference while 1,898.99 EUR was in stock at another retailer read, turning a 5 % gap into 14 %.
+- `research-method.md`: Sources cite a plugin reference file only when a figure or rule in the answer rests on it, never as a list of files read.
+
 ## [0.7.5] - 2026-11-15
 
 ### Fixed
