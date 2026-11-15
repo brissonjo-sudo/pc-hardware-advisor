@@ -6,6 +6,22 @@ The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.1.0/),
 
 ## [Unreleased]
 
+## [0.8.0] - 2026-11-15
+
+### Added
+
+- `references/source-access-policy.md`: selection criteria, tiers (A read one product page at a time, B link only, C the user's own API key, `browser` for Amazon and AliExpress), usage rules (one host per agent, best-effort 2-second spacing, stop at the first block, `stale` after 24 hours, error-price and deal-alert sites never a reference), non-retail sources and APIs.
+- `retailers-by-country.md`: an `Access` column (tier, check date, finding) replaces `Auto-readable` on every row, from raw robots.txt files read on 2026-11-15 and the French retailers' terms of use.
+- `check_content.py`: fails when a retailer row or a non-retail source has no tier, date or https URL.
+
+### Changed
+
+- `hunt-prices`, `find-deals`, `review-used-listing`, `track-price` read the policy before any site access; the `price-scout` brief excludes tier B sites and gives each host to one brief.
+- `find-deals`: the chip listing is a plain category page allowed by robots.txt, never a search, sort or filter URL.
+- TopAchat, eBay, Back Market, Leboncoin and Kleinanzeigen move to tier B (terms of use or robots.txt); Materiel.net stays readable (its robots.txt rule `*/produits/` does not match its `/produit/` pages).
+- README and its translations: eleven shared references and a line on access tiers.
+- Maintainer decisions: a block on `ClaudeBot` alone does not refuse `Claude-User` (the `*` rules apply; browser fallback on the user's yes); filter pages are read where robots.txt allows them (never a site search or sort URL); manufacturer spec pages stay read as before; the Amazon and AliExpress browser exception stays.
+
 ## [0.7.7] - 2026-11-15
 
 ### Fixed

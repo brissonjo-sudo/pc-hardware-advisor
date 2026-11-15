@@ -33,9 +33,10 @@ Hors périmètre : consoles, smartphones, tablettes, ordinateurs portables en ta
 - **La fiabilité est affichée.** Chaque chiffre indique à quel point il est étayé.
 - **Rien n'est inventé.** Si une caractéristique, un prix ou une règle ne peut pas être sourcé, Claude le dit.
 - **Sites bloqués : repli sur le navigateur, jamais de contournement.** Si un site refuse la lecture automatisée et qu'un outil de navigateur est disponible, Claude vous propose en une ligne d'ouvrir la page dans votre navigateur ; répondez « oui » et il lit les quelques pages qui comptent, en lecture seule, et le signale. Il s'arrête à tout captcha ou contrôle anti-robot et n'imite jamais un humain pour le franchir. Sinon, il vous demande une capture d'écran ou un texte copié. Aucun user agent alternatif, cache ni miroir n'est utilisé.
+- **Chaque site a un niveau d'accès.** Avant de lire un site, Claude suit `references/source-access-policy.md` : les sites de niveau A sont lus une fiche produit à la fois, jamais via la recherche, le tri ou les pages d'offres ; les sites de niveau B, refusés par leur robots.txt ou leurs conditions d'utilisation, ne donnent droit qu'à un lien ; les API d'historique de prix (niveau C) demandent votre propre clé, que le plugin ne stocke jamais.
 - **Lecture seule.** Le plugin n'achète jamais, ne crée jamais de compte, ne soumet jamais de formulaire et ne contacte jamais de vendeur. C'est à vous de le faire.
 
-Dix références partagées (méthode de recherche, revendeurs par pays, critères de revendeur, achat à l'international, liste de contrôle du marché d'occasion, sockets et chipsets, mémoire, alimentations et connectiques, formats et boîtiers, bande passante des GPU pour l'IA) sont datées et sourcées. Elles ont été vérifiées pour la dernière fois le 2026-11-07.
+Onze références partagées (méthode de recherche, revendeurs par pays, critères de revendeur, achat à l'international, liste de contrôle du marché d'occasion, sockets et chipsets, mémoire, alimentations et connectiques, formats et boîtiers, bande passante des GPU pour l'IA, politique d'accès aux sources) sont datées et sourcées. Elles ont été vérifiées pour la dernière fois le 2026-11-07.
 
 ## Installation
 

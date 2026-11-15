@@ -33,9 +33,10 @@ Fuera del alcance: consolas, smartphones, tabletas, portátiles como productos, 
 - **La confianza se muestra.** Cada cifra indica cuán bien está respaldada.
 - **Nada se inventa.** Si una especificación, un precio o una norma no se puede justificar con una fuente, Claude lo dice.
 - **Sitios bloqueados: recurso al navegador, nunca trucos.** Si un sitio rechaza la lectura automatizada y hay una herramienta de navegador disponible, Claude te ofrece en una línea abrir la página en tu navegador; responde «sí» y lee las pocas páginas que importan, solo de lectura, y lo indica. Se detiene ante cualquier captcha o control de bots y nunca imita a una persona para superarlo. Si no, te pide una captura de pantalla o texto pegado. No se usan agentes de usuario alternativos, cachés ni espejos.
+- **Cada sitio tiene un nivel de acceso.** Antes de leer un sitio, Claude sigue `references/source-access-policy.md`: los sitios de nivel A se leen ficha de producto por ficha de producto, nunca mediante búsquedas, ordenaciones o páginas de ofertas; los sitios de nivel B, que lo rechazan en su robots.txt o en sus condiciones de uso, solo reciben un enlace; las API de historial de precios (nivel C) requieren tu propia clave, que el plugin nunca guarda.
 - **Solo lectura.** El plugin nunca compra, nunca crea cuentas, nunca envía formularios y nunca contacta con vendedores. Eso lo haces tú.
 
-Diez referencias compartidas (método de investigación, tiendas por país, criterios para tiendas, compra internacional, lista de verificación del mercado de segunda mano, zócalos y chipsets, memoria, fuentes de alimentación y conectores, factores de forma y cajas, ancho de banda de GPU para IA) están fechadas y tienen fuentes. Se revisaron por última vez el 2026-11-07.
+Once referencias compartidas (método de investigación, tiendas por país, criterios para tiendas, compra internacional, lista de verificación del mercado de segunda mano, zócalos y chipsets, memoria, fuentes de alimentación y conectores, factores de forma y cajas, ancho de banda de GPU para IA, política de acceso a las fuentes) están fechadas y tienen fuentes. Se revisaron por última vez el 2026-11-07.
 
 ## Instalación
 

@@ -14,6 +14,7 @@ ROOT = Path(__file__).resolve().parent.parent
 REFS = [
     "sockets-chipsets", "memory", "power-supplies-connectors", "form-factors-cases", "gpu-bandwidth-ai",
     "retailers-by-country", "retailer-criteria", "international-buying", "research-method", "used-market-checklist",
+    "source-access-policy",
 ]
 SKILLS = ["build-config", "check-compatibility", "hunt-prices", "size-local-ai", "review-used-listing", "track-price", "find-deals"]
 BANNED = re.compile(r"(?i:open[- ]source)|\bMIT\b")
@@ -265,6 +266,34 @@ def check_readmes() -> None:
                 fail(f"{rel(d)}: language bar does not link {target}")
 
 
+ACCESS_RE = re.compile(r"^`?(A|B|C|browser)`? \((\d{4}-\d{2}-\d{2})\)")
+
+
+def check_access_policy() -> None:
+    """Every retailer row and every non-retail source carries a tier, a check date and an https URL."""
+    for name in ("references/retailers-by-country", "references/source-access-policy",
+                 "skills/find-deals/references/price-history-sources"):
+        header = "Access"
+        text = (ROOT / f"{name}.md").read_text(encoding="utf-8")
+        col = None
+        for line in text.splitlines():
+            if not line.startswith("|"):
+                col = None
+                continue
+            cells = [c.strip() for c in line.strip().strip("|").split("|")]
+            if col is None:
+                col = next((i for i, c in enumerate(cells) if c.startswith(header)), -1)
+                url_col = next((i for i, c in enumerate(cells) if c in ("URL", "Source URL")), -1)
+                continue
+            if col < 0 or set(line) <= set("|-: "):
+                continue
+            label = cells[0][:40]
+            if not ACCESS_RE.match(cells[col] if col < len(cells) else ""):
+                fail(f"{name}.md: row '{label}' has no Access tier and date (A|B|C|browser (YYYY-MM-DD))")
+            if url_col >= 0 and not re.search(r"https://", cells[url_col]):
+                fail(f"{name}.md: row '{label}' has no https URL")
+
+
 for ref in REFS:
     p = ROOT / "references" / f"{ref}.md"
     check_reference(p) if p.exists() else fail(f"references/{ref}.md missing")
@@ -282,6 +311,7 @@ check_versions()
 check_section_citations()
 check_graders()
 check_readmes()
+check_access_policy()
 
 print("\n".join(errors) if errors else "all content checks passed")
 sys.exit(1 if errors else 0)

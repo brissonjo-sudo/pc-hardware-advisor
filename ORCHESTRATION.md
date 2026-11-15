@@ -95,3 +95,10 @@ Plan approuvé par Jo : `C:\Users\Krn\.claude\plans\orchestre-un-audit-complet-e
 ### P5. PR de correctifs 0.3.4
 - Parallélisable : oui, 3 rédacteurs Sonnet sur des groupes de fichiers disjoints : W1 `skills/` + `agents/` ; W2 `references/` + `CHANGELOG` + `plugin.json` + `marketplace.json` ; W3 `scripts/check_content.py` + `tests/` + `README` (section mise à jour) + traductions.
 - Isolation : chaque rédacteur ne touche que son groupe et ne corrige que les ids listés dans son brief. Opus vérifie ensuite le diff id par id, puis contrôle, construction, validation stricte, bancs ciblés.
+
+### 0.8.0. Politique d'accès aux sources (2026-11-15)
+- Plan approuvé par Jo : `C:\Users\Krn\.claude\plans\orchestre-un-audit-complet-enumerated-flute.md`. Branche `feat/0.8.0-source-access-policy`, commits locaux seulement.
+- Parallélisable : oui pour la recherche (B1 CGU françaises, B2 revendeurs DE/UK/US/ES/IT, B3 occasion, specs et benchmarks, C Keepa, Amazon et agent Claude, plus une seconde lecture des robots.txt illisibles), par vagues de 3 agents au plus. Non pour le cœur (politique, colonne Access, renvois).
+- Modèles : Haiku pour les lectures web (5 agents), Sonnet pour le README et ses 8 traductions, Opus pour les robots.txt bruts (`curl` et un script de classement), l'arbitrage et la rédaction de la politique (moins coûteux que de briefer un agent, avec tout le contexte en main).
+- Isolation : agents de recherche en lecture seule ; l'agent README n'a touché que les 9 README, disjoints des fichiers d'Opus ; pas de worktree.
+- Rendu : 125 lignes typées (67 A, 46 B, 11 browser, 1 C ; 5 lignes sans URL passées en « Not verified »), 9 sources non commerçantes, 2 API. Résumés corrigés : Materiel.net et TopAchat (robots). Ajout : CGU TopAchat anti-scraping (vérifiées sur le texte brut).

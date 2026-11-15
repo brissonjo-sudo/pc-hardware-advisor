@@ -33,9 +33,10 @@ Nicht im Umfang enthalten: Konsolen, Smartphones, Tablets, Laptops als Produkte 
 - **Die Verlässlichkeit wird angezeigt.** Jede Angabe zeigt, wie gut sie belegt ist.
 - **Nichts wird erfunden.** Lässt sich eine Spezifikation, ein Preis oder eine Regel nicht belegen, sagt Claude das.
 - **Gesperrte Seiten: Ausweichen auf den Browser, niemals Tricks.** Verweigert eine Seite das automatisierte Auslesen und steht ein Browser-Werkzeug zur Verfügung, bietet Claude dir in einer Zeile an, die Seite in deinem Browser zu öffnen; antwortest du mit „ja“, liest es die wenigen wichtigen Seiten, nur lesend, und sagt das. Bei Captchas oder Bot-Prüfungen hält es an und gibt sich nie als Mensch aus, um sie zu umgehen. Andernfalls bittet es dich um einen Screenshot oder eingefügten Text. Es werden keine alternativen User-Agents, Caches oder Spiegel verwendet.
+- **Jede Seite hat eine Zugriffsstufe.** Bevor Claude eine Seite liest, befolgt es `references/source-access-policy.md`: Seiten der Stufe A werden Produktseite für Produktseite gelesen, nie über Such-, Sortier- oder Angebotsseiten; Seiten der Stufe B, die per robots.txt oder Nutzungsbedingungen ablehnen, erhalten nur einen Link; Preisverlaufs-APIs (Stufe C) brauchen Ihren eigenen Schlüssel, den das Plugin nie speichert.
 - **Nur lesend.** Das Plugin kauft nie, legt keine Konten an, sendet keine Formulare ab und kontaktiert keine Verkäufer. Das machst du selbst.
 
-Zehn gemeinsame Referenzen (Rechercheverfahren, Händler nach Land, Kriterien für Händler, internationaler Einkauf, Checkliste für den Gebrauchtmarkt, Sockel und Chipsätze, Speicher, Netzteile und Anschlüsse, Formfaktoren und Gehäuse, GPU-Bandbreite für KI) sind datiert und mit Quellen belegt. Sie wurden zuletzt am 2026-11-07 geprüft.
+Elf gemeinsame Referenzen (Rechercheverfahren, Händler nach Land, Kriterien für Händler, internationaler Einkauf, Checkliste für den Gebrauchtmarkt, Sockel und Chipsätze, Speicher, Netzteile und Anschlüsse, Formfaktoren und Gehäuse, GPU-Bandbreite für KI, Richtlinie für den Zugriff auf Quellen) sind datiert und mit Quellen belegt. Sie wurden zuletzt am 2026-11-07 geprüft.
 
 ## Installation
 
