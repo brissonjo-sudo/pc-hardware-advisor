@@ -1,123 +1,703 @@
 {
+  "E:\\Claude code\\Projects\\pc-hardware-advisor\\.agents\\plugins\\marketplace.json": {
+    "mtime": 1794302720.4103703,
+    "ast_hash": "9f840173ddd4bc31ebd7cdf9c9894e74",
+    "semantic_hash": ""
+  },
   "E:\\Claude code\\Projects\\pc-hardware-advisor\\.claude-plugin\\marketplace.json": {
-    "mtime": 1794074736.634963,
-    "ast_hash": "544ad8dacd1002737473e8fdb448258f",
-    "semantic_hash": "544ad8dacd1002737473e8fdb448258f"
+    "mtime": 1794776840.5029936,
+    "ast_hash": "d36c094316e7590bed53193389819a8c",
+    "semantic_hash": ""
   },
   "E:\\Claude code\\Projects\\pc-hardware-advisor\\.claude-plugin\\plugin.json": {
-    "mtime": 1794073813.8269098,
-    "ast_hash": "3a1e7f5ec40d6dc12a568754909418b6",
-    "semantic_hash": "3a1e7f5ec40d6dc12a568754909418b6"
+    "mtime": 1794776840.5019858,
+    "ast_hash": "ab53c3097dea594700008e08731cd1a6",
+    "semantic_hash": ""
+  },
+  "E:\\Claude code\\Projects\\pc-hardware-advisor\\.codex-plugin\\plugin.json": {
+    "mtime": 1794776840.5029936,
+    "ast_hash": "5bd99a61c44be9e746e0630d340bc3d7",
+    "semantic_hash": ""
   },
   "E:\\Claude code\\Projects\\pc-hardware-advisor\\scripts\\build_plugin.py": {
-    "mtime": 1794074066.810794,
-    "ast_hash": "000cdb5aa76ccd77c1dc2b0d48830e11",
-    "semantic_hash": "000cdb5aa76ccd77c1dc2b0d48830e11"
+    "mtime": 1794430734.4325247,
+    "ast_hash": "e840b390df1363f7f66b2bdbd6289006",
+    "semantic_hash": ""
   },
   "E:\\Claude code\\Projects\\pc-hardware-advisor\\scripts\\check_content.py": {
-    "mtime": 1794075214.0771563,
-    "ast_hash": "db32bdcabb5e46bd2e7e2369c2e840ed",
-    "semantic_hash": "db32bdcabb5e46bd2e7e2369c2e840ed"
+    "mtime": 1794776500.399153,
+    "ast_hash": "2e7943c60810ab665f9fa27bfa5f7bcb",
+    "semantic_hash": ""
   },
   "E:\\Claude code\\Projects\\pc-hardware-advisor\\scripts\\make_icon.py": {
     "mtime": 1794074289.6998107,
     "ast_hash": "5b7dc57a9e0672d1a0c033fd4e51584e",
     "semantic_hash": "5b7dc57a9e0672d1a0c033fd4e51584e"
   },
+  "E:\\Claude code\\Projects\\pc-hardware-advisor\\tests\\results\\061-case15.json": {
+    "mtime": 1794667200.7499418,
+    "ast_hash": "9cb862349e7b46f64aafd739d83bbf8f",
+    "semantic_hash": ""
+  },
+  "E:\\Claude code\\Projects\\pc-hardware-advisor\\tests\\results\\070-case16.json": {
+    "mtime": 1794672942.7462199,
+    "ast_hash": "0fef45037fd0824d92eb1c408d5fee65",
+    "semantic_hash": ""
+  },
+  "E:\\Claude code\\Projects\\pc-hardware-advisor\\tests\\results\\071-case17.json": {
+    "mtime": 1794680113.3691232,
+    "ast_hash": "63ee1709c8d645b3836748311d7432bb",
+    "semantic_hash": ""
+  },
+  "E:\\Claude code\\Projects\\pc-hardware-advisor\\tests\\results\\072-case18.json": {
+    "mtime": 1794681735.2600665,
+    "ast_hash": "5bc8601e9c118639606c1cdc4c367583",
+    "semantic_hash": ""
+  },
+  "E:\\Claude code\\Projects\\pc-hardware-advisor\\tests\\results\\075-case19.json": {
+    "mtime": 1794699738.7533298,
+    "ast_hash": "7020c26f8c0f271c963d0e94d8601a6d",
+    "semantic_hash": ""
+  },
+  "E:\\Claude code\\Projects\\pc-hardware-advisor\\tests\\results\\076-case20.json": {
+    "mtime": 1794764005.812531,
+    "ast_hash": "b49d2d362a90fcc196a17715a5d6a3c1",
+    "semantic_hash": ""
+  },
+  "E:\\Claude code\\Projects\\pc-hardware-advisor\\tests\\results\\077-02-gaming-am5-xmp7200.json": {
+    "mtime": 1794770193.2414918,
+    "ast_hash": "58ee9920aac5e046446bba880fe313b8",
+    "semantic_hash": ""
+  },
+  "E:\\Claude code\\Projects\\pc-hardware-advisor\\tests\\results\\077-03.json": {
+    "mtime": 1794770943.5202422,
+    "ast_hash": "ffbce41e39154ac3616fc868cb1da4d5",
+    "semantic_hash": ""
+  },
+  "E:\\Claude code\\Projects\\pc-hardware-advisor\\tests\\results\\077-22-part-for-owned-cpu-known-use.json": {
+    "mtime": 1794770435.4307542,
+    "ast_hash": "ccb60249b501b6739d3fca46d83904c8",
+    "semantic_hash": ""
+  },
+  "E:\\Claude code\\Projects\\pc-hardware-advisor\\tests\\results\\077-case01.json": {
+    "mtime": 1794770006.2013159,
+    "ast_hash": "2712f3b81b3f7f90384741aa715e3b71",
+    "semantic_hash": ""
+  },
+  "E:\\Claude code\\Projects\\pc-hardware-advisor\\tests\\results\\077-case21-baseline-b.json": {
+    "mtime": 1794769440.1885219,
+    "ast_hash": "25fca78927a5b78b9d5287a748a3c4ac",
+    "semantic_hash": ""
+  },
+  "E:\\Claude code\\Projects\\pc-hardware-advisor\\tests\\results\\077-case21-baseline.json": {
+    "mtime": 1794769417.9926116,
+    "ast_hash": "072dcd0956b484aa29b4f91469e5c029",
+    "semantic_hash": ""
+  },
+  "E:\\Claude code\\Projects\\pc-hardware-advisor\\tests\\results\\077-case21.json": {
+    "mtime": 1794769522.229807,
+    "ast_hash": "fe66681def3d5cf3da80a6c414d2d4d7",
+    "semantic_hash": ""
+  },
+  "E:\\Claude code\\Projects\\pc-hardware-advisor\\tests\\results\\080-03-ddr5-kit-best-price.json": {
+    "mtime": 1794777447.8783486,
+    "ast_hash": "fa792744a4c25a16e13c72225f2d4922",
+    "semantic_hash": ""
+  },
+  "E:\\Claude code\\Projects\\pc-hardware-advisor\\tests\\results\\080-04-used-3090-listing.json": {
+    "mtime": 1794777499.3330154,
+    "ast_hash": "9f328647d3e534d37c8535cff3888ed5",
+    "semantic_hash": ""
+  },
+  "E:\\Claude code\\Projects\\pc-hardware-advisor\\tests\\results\\080-19-same-chip-fallback.json": {
+    "mtime": 1794777037.2915494,
+    "ast_hash": "6170419ddc81abc3357526174904ebc3",
+    "semantic_hash": ""
+  },
+  "E:\\Claude code\\Projects\\pc-hardware-advisor\\tests\\results\\080-20-chip-listing-reference.json": {
+    "mtime": 1794777666.301391,
+    "ast_hash": "2fe05cad7b65cdde8a4e0dfa4cefcc84",
+    "semantic_hash": ""
+  },
+  "E:\\Claude code\\Projects\\pc-hardware-advisor\\tests\\results\\080-20b.json": {
+    "mtime": 1794777881.6388252,
+    "ast_hash": "a1dc91780624aefc96427d954a592319",
+    "semantic_hash": ""
+  },
+  "E:\\Claude code\\Projects\\pc-hardware-advisor\\tests\\results\\080-20c.json": {
+    "mtime": 1794778120.0248322,
+    "ast_hash": "a3994544b9fcdd36e05e7ab93211feb0",
+    "semantic_hash": ""
+  },
+  "E:\\Claude code\\Projects\\pc-hardware-advisor\\tests\\results\\2026-11-11-case13.json": {
+    "mtime": 1794430408.1053581,
+    "ast_hash": "fbd677b61c273cf52b0a1342e077cdf1",
+    "semantic_hash": ""
+  },
+  "E:\\Claude code\\Projects\\pc-hardware-advisor\\tests\\results\\2026-11-14-case14.json": {
+    "mtime": 1794650984.979973,
+    "ast_hash": "17d1572009e270982e96ce8169fe8dff",
+    "semantic_hash": ""
+  },
+  "E:\\Claude code\\Projects\\pc-hardware-advisor\\tests\\results\\run-0310.json": {
+    "mtime": 1794162114.7751825,
+    "ast_hash": "31c175987a9d0607f9b3a0a43a602819",
+    "semantic_hash": ""
+  },
+  "E:\\Claude code\\Projects\\pc-hardware-advisor\\tests\\results\\run-0311.json": {
+    "mtime": 1794166161.0346138,
+    "ast_hash": "6e812b63616020ddecf82449fb57106a",
+    "semantic_hash": ""
+  },
+  "E:\\Claude code\\Projects\\pc-hardware-advisor\\tests\\results\\run-0312.json": {
+    "mtime": 1794172779.492976,
+    "ast_hash": "2f2beb6463ba89fe8b516b8fd9ff7d53",
+    "semantic_hash": ""
+  },
+  "E:\\Claude code\\Projects\\pc-hardware-advisor\\tests\\results\\run-035.json": {
+    "mtime": 1794138759.711131,
+    "ast_hash": "dccf4c85c4653a107e6a51ab80d9dbe5",
+    "semantic_hash": ""
+  },
+  "E:\\Claude code\\Projects\\pc-hardware-advisor\\tests\\results\\run-035b.json": {
+    "mtime": 1794138877.3579173,
+    "ast_hash": "1371fe280f09b96ee324bf955746b38c",
+    "semantic_hash": ""
+  },
+  "E:\\Claude code\\Projects\\pc-hardware-advisor\\tests\\results\\run-035c.json": {
+    "mtime": 1794138981.9328039,
+    "ast_hash": "96419b552c1ed42eb7e1d29d16b733f4",
+    "semantic_hash": ""
+  },
+  "E:\\Claude code\\Projects\\pc-hardware-advisor\\tests\\results\\run-036.json": {
+    "mtime": 1794144492.547732,
+    "ast_hash": "cc237917f4222a31c08fd14b19595ef4",
+    "semantic_hash": ""
+  },
+  "E:\\Claude code\\Projects\\pc-hardware-advisor\\tests\\results\\run-036b.json": {
+    "mtime": 1794144670.126941,
+    "ast_hash": "368b79aeb12e643a19ca239030f65a73",
+    "semantic_hash": ""
+  },
+  "E:\\Claude code\\Projects\\pc-hardware-advisor\\tests\\results\\run-039.json": {
+    "mtime": 1794158750.851919,
+    "ast_hash": "5f02176bf706c65f641dc64ccf502d83",
+    "semantic_hash": ""
+  },
+  "E:\\Claude code\\Projects\\pc-hardware-advisor\\tests\\results\\run-039b.json": {
+    "mtime": 1794159211.3902872,
+    "ast_hash": "59ab6dad46c5cb5dcf1e863c59b7b244",
+    "semantic_hash": ""
+  },
+  "E:\\Claude code\\Projects\\pc-hardware-advisor\\tests\\results\\run-adv.json": {
+    "mtime": 1794098086.5139227,
+    "ast_hash": "c325c95da1f4c598abe55b17799fa827",
+    "semantic_hash": ""
+  },
+  "E:\\Claude code\\Projects\\pc-hardware-advisor\\tests\\results\\run-fix.json": {
+    "mtime": 1794098622.0679543,
+    "ast_hash": "992cb5e00de3a418834a91c4718978d5",
+    "semantic_hash": ""
+  },
+  "E:\\Claude code\\Projects\\pc-hardware-advisor\\tests\\results\\run-fix2.json": {
+    "mtime": 1794098702.428485,
+    "ast_hash": "f048a9ddee6db0c57c82c6bb1b5ca969",
+    "semantic_hash": ""
+  },
+  "E:\\Claude code\\Projects\\pc-hardware-advisor\\tests\\results\\run-full.json": {
+    "mtime": 1794095234.388836,
+    "ast_hash": "0834acaa3ac52b5d640ce0093ebd89c8",
+    "semantic_hash": ""
+  },
+  "E:\\Claude code\\Projects\\pc-hardware-advisor\\tests\\results\\run1.json": {
+    "mtime": 1794076707.29327,
+    "ast_hash": "15025df5bc326c8340223d13006b194a",
+    "semantic_hash": ""
+  },
+  "E:\\Claude code\\Projects\\pc-hardware-advisor\\tests\\results\\run10.json": {
+    "mtime": 1794080723.2329729,
+    "ast_hash": "ea62a91f8a0e804ae606b7b0ceacfb5a",
+    "semantic_hash": ""
+  },
+  "E:\\Claude code\\Projects\\pc-hardware-advisor\\tests\\results\\run11.json": {
+    "mtime": 1794084015.0940447,
+    "ast_hash": "35fdd1cbb562682043232c03a755b1a9",
+    "semantic_hash": ""
+  },
+  "E:\\Claude code\\Projects\\pc-hardware-advisor\\tests\\results\\run12.json": {
+    "mtime": 1794087140.8644142,
+    "ast_hash": "ac83b0364ab5c49e4da66955e2bed1d3",
+    "semantic_hash": ""
+  },
+  "E:\\Claude code\\Projects\\pc-hardware-advisor\\tests\\results\\run13.json": {
+    "mtime": 1794087868.1394267,
+    "ast_hash": "575b4fcf62f11dd4ed33a888d1fb80f0",
+    "semantic_hash": ""
+  },
+  "E:\\Claude code\\Projects\\pc-hardware-advisor\\tests\\results\\run14.json": {
+    "mtime": 1794088447.9695475,
+    "ast_hash": "1c6e1ab97ffc69d9dc1f2255b245c375",
+    "semantic_hash": ""
+  },
+  "E:\\Claude code\\Projects\\pc-hardware-advisor\\tests\\results\\run15.json": {
+    "mtime": 1794090937.3691258,
+    "ast_hash": "5b06bc82599a161ed6437abc149b904f",
+    "semantic_hash": ""
+  },
+  "E:\\Claude code\\Projects\\pc-hardware-advisor\\tests\\results\\run2.json": {
+    "mtime": 1794077222.4916022,
+    "ast_hash": "8d9f72586d707f525bfd3f4900c78d21",
+    "semantic_hash": ""
+  },
+  "E:\\Claude code\\Projects\\pc-hardware-advisor\\tests\\results\\run3.json": {
+    "mtime": 1794077797.1856544,
+    "ast_hash": "fbe513e6e557be9ee4c943a8119de5b1",
+    "semantic_hash": ""
+  },
+  "E:\\Claude code\\Projects\\pc-hardware-advisor\\tests\\results\\run4.json": {
+    "mtime": 1794078115.8259482,
+    "ast_hash": "e80209b36162009bb42686a7d72e2208",
+    "semantic_hash": ""
+  },
+  "E:\\Claude code\\Projects\\pc-hardware-advisor\\tests\\results\\run5.json": {
+    "mtime": 1794078562.2622402,
+    "ast_hash": "4e177f5155308b19bd89fb3ca8c1a99d",
+    "semantic_hash": ""
+  },
+  "E:\\Claude code\\Projects\\pc-hardware-advisor\\tests\\results\\run6.json": {
+    "mtime": 1794079263.6665747,
+    "ast_hash": "78c3ac8c888a375ae1d1d364355b7efe",
+    "semantic_hash": ""
+  },
+  "E:\\Claude code\\Projects\\pc-hardware-advisor\\tests\\results\\run7.json": {
+    "mtime": 1794079748.3661823,
+    "ast_hash": "ae3dceb4ea8509aa14fd971d2f7d9f31",
+    "semantic_hash": ""
+  },
+  "E:\\Claude code\\Projects\\pc-hardware-advisor\\tests\\results\\run8.json": {
+    "mtime": 1794080486.546759,
+    "ast_hash": "8444a2184b01a12b44c743f144f5b2c6",
+    "semantic_hash": ""
+  },
+  "E:\\Claude code\\Projects\\pc-hardware-advisor\\tests\\results\\run9.json": {
+    "mtime": 1794080537.0252147,
+    "ast_hash": "97be169fd9d78685d38b711b5117e4fc",
+    "semantic_hash": ""
+  },
+  "E:\\Claude code\\Projects\\pc-hardware-advisor\\tests\\results\\2026-11-07T18-25-03-271Z\\aggregate-result.json": {
+    "mtime": 1794076379.5179734,
+    "ast_hash": "20e3401713df99ab6d097148cbaee889",
+    "semantic_hash": ""
+  },
+  "E:\\Claude code\\Projects\\pc-hardware-advisor\\tests\\results\\2026-11-07T18-33-24-638Z\\aggregate-result.json": {
+    "mtime": 1794076707.2922773,
+    "ast_hash": "15025df5bc326c8340223d13006b194a",
+    "semantic_hash": ""
+  },
+  "E:\\Claude code\\Projects\\pc-hardware-advisor\\tests\\results\\2026-11-07T18-40-33-721Z\\aggregate-result.json": {
+    "mtime": 1794077222.490102,
+    "ast_hash": "8d9f72586d707f525bfd3f4900c78d21",
+    "semantic_hash": ""
+  },
+  "E:\\Claude code\\Projects\\pc-hardware-advisor\\tests\\results\\2026-11-07T18-48-16-499Z\\aggregate-result.json": {
+    "mtime": 1794077797.1841547,
+    "ast_hash": "fbe513e6e557be9ee4c943a8119de5b1",
+    "semantic_hash": ""
+  },
+  "E:\\Claude code\\Projects\\pc-hardware-advisor\\tests\\results\\2026-11-07T18-57-34-465Z\\aggregate-result.json": {
+    "mtime": 1794078115.824448,
+    "ast_hash": "e80209b36162009bb42686a7d72e2208",
+    "semantic_hash": ""
+  },
+  "E:\\Claude code\\Projects\\pc-hardware-advisor\\tests\\results\\2026-11-07T19-02-25-025Z\\aggregate-result.json": {
+    "mtime": 1794078562.257748,
+    "ast_hash": "4e177f5155308b19bd89fb3ca8c1a99d",
+    "semantic_hash": ""
+  },
+  "E:\\Claude code\\Projects\\pc-hardware-advisor\\tests\\results\\2026-11-07T19-10-00-558Z\\aggregate-result.json": {
+    "mtime": 1794079263.665066,
+    "ast_hash": "78c3ac8c888a375ae1d1d364355b7efe",
+    "semantic_hash": ""
+  },
+  "E:\\Claude code\\Projects\\pc-hardware-advisor\\tests\\results\\2026-11-07T19-22-14-381Z\\aggregate-result.json": {
+    "mtime": 1794079748.3646822,
+    "ast_hash": "ae3dceb4ea8509aa14fd971d2f7d9f31",
+    "semantic_hash": ""
+  },
+  "E:\\Claude code\\Projects\\pc-hardware-advisor\\tests\\results\\2026-11-07T19-40-55-747Z\\aggregate-result.json": {
+    "mtime": 1794080486.5457594,
+    "ast_hash": "8444a2184b01a12b44c743f144f5b2c6",
+    "semantic_hash": ""
+  },
+  "E:\\Claude code\\Projects\\pc-hardware-advisor\\tests\\results\\2026-11-07T19-41-45-865Z\\aggregate-result.json": {
+    "mtime": 1794080537.0237129,
+    "ast_hash": "97be169fd9d78685d38b711b5117e4fc",
+    "semantic_hash": ""
+  },
+  "E:\\Claude code\\Projects\\pc-hardware-advisor\\tests\\results\\2026-11-07T19-43-56-748Z\\aggregate-result.json": {
+    "mtime": 1794080723.2309654,
+    "ast_hash": "ea62a91f8a0e804ae606b7b0ceacfb5a",
+    "semantic_hash": ""
+  },
+  "E:\\Claude code\\Projects\\pc-hardware-advisor\\tests\\results\\2026-11-07T20-30-58-367Z\\aggregate-result.json": {
+    "mtime": 1794084015.0930445,
+    "ast_hash": "35fdd1cbb562682043232c03a755b1a9",
+    "semantic_hash": ""
+  },
+  "E:\\Claude code\\Projects\\pc-hardware-advisor\\tests\\results\\2026-11-07T21-31-18-136Z\\aggregate-result.json": {
+    "mtime": 1794087140.8634534,
+    "ast_hash": "ac83b0364ab5c49e4da66955e2bed1d3",
+    "semantic_hash": ""
+  },
+  "E:\\Claude code\\Projects\\pc-hardware-advisor\\tests\\results\\2026-11-07T21-43-24-712Z\\aggregate-result.json": {
+    "mtime": 1794087868.1384263,
+    "ast_hash": "575b4fcf62f11dd4ed33a888d1fb80f0",
+    "semantic_hash": ""
+  },
+  "E:\\Claude code\\Projects\\pc-hardware-advisor\\tests\\results\\2026-11-07T21-53-03-577Z\\aggregate-result.json": {
+    "mtime": 1794088447.9685502,
+    "ast_hash": "1c6e1ab97ffc69d9dc1f2255b245c375",
+    "semantic_hash": ""
+  },
+  "E:\\Claude code\\Projects\\pc-hardware-advisor\\tests\\results\\2026-11-07T22-29-20-443Z\\aggregate-result.json": {
+    "mtime": 1794090937.3681262,
+    "ast_hash": "5b06bc82599a161ed6437abc149b904f",
+    "semantic_hash": ""
+  },
+  "E:\\Claude code\\Projects\\pc-hardware-advisor\\tests\\results\\2026-11-07T23-41-54-836Z\\aggregate-result.json": {
+    "mtime": 1794095234.387314,
+    "ast_hash": "0834acaa3ac52b5d640ce0093ebd89c8",
+    "semantic_hash": ""
+  },
+  "E:\\Claude code\\Projects\\pc-hardware-advisor\\tests\\results\\2026-11-08T00-29-45-963Z\\aggregate-result.json": {
+    "mtime": 1794098086.5129223,
+    "ast_hash": "c325c95da1f4c598abe55b17799fa827",
+    "semantic_hash": ""
+  },
+  "E:\\Claude code\\Projects\\pc-hardware-advisor\\tests\\results\\2026-11-08T00-42-46-025Z\\aggregate-result.json": {
+    "mtime": 1794098622.066953,
+    "ast_hash": "992cb5e00de3a418834a91c4718978d5",
+    "semantic_hash": ""
+  },
+  "E:\\Claude code\\Projects\\pc-hardware-advisor\\tests\\results\\2026-11-08T00-44-10-732Z\\aggregate-result.json": {
+    "mtime": 1794098702.4274714,
+    "ast_hash": "f048a9ddee6db0c57c82c6bb1b5ca969",
+    "semantic_hash": ""
+  },
+  "E:\\Claude code\\Projects\\pc-hardware-advisor\\tests\\results\\2026-11-08T11-51-11-209Z\\aggregate-result.json": {
+    "mtime": 1794138759.7096305,
+    "ast_hash": "dccf4c85c4653a107e6a51ab80d9dbe5",
+    "semantic_hash": ""
+  },
+  "E:\\Claude code\\Projects\\pc-hardware-advisor\\tests\\results\\2026-11-08T11-53-18-973Z\\aggregate-result.json": {
+    "mtime": 1794138877.3569193,
+    "ast_hash": "1371fe280f09b96ee324bf955746b38c",
+    "semantic_hash": ""
+  },
+  "E:\\Claude code\\Projects\\pc-hardware-advisor\\tests\\results\\2026-11-08T11-54-59-960Z\\aggregate-result.json": {
+    "mtime": 1794138981.9313054,
+    "ast_hash": "96419b552c1ed42eb7e1d29d16b733f4",
+    "semantic_hash": ""
+  },
+  "E:\\Claude code\\Projects\\pc-hardware-advisor\\tests\\results\\2026-11-08T13-24-48-949Z\\aggregate-result.json": {
+    "mtime": 1794144492.5462272,
+    "ast_hash": "cc237917f4222a31c08fd14b19595ef4",
+    "semantic_hash": ""
+  },
+  "E:\\Claude code\\Projects\\pc-hardware-advisor\\tests\\results\\2026-11-08T13-28-37-993Z\\aggregate-result.json": {
+    "mtime": 1794144670.1254356,
+    "ast_hash": "368b79aeb12e643a19ca239030f65a73",
+    "semantic_hash": ""
+  },
+  "E:\\Claude code\\Projects\\pc-hardware-advisor\\tests\\results\\2026-11-08T17-13-31-213Z\\aggregate-result.json": {
+    "mtime": 1794158287.0948799,
+    "ast_hash": "fc08075805d965b40ae0b88964670808",
+    "semantic_hash": ""
+  },
+  "E:\\Claude code\\Projects\\pc-hardware-advisor\\tests\\results\\2026-11-08T17-18-38-137Z\\aggregate-result.json": {
+    "mtime": 1794158750.8509102,
+    "ast_hash": "5f02176bf706c65f641dc64ccf502d83",
+    "semantic_hash": ""
+  },
+  "E:\\Claude code\\Projects\\pc-hardware-advisor\\tests\\results\\2026-11-08T17-26-54-211Z\\aggregate-result.json": {
+    "mtime": 1794159211.388281,
+    "ast_hash": "59ab6dad46c5cb5dcf1e863c59b7b244",
+    "semantic_hash": ""
+  },
+  "E:\\Claude code\\Projects\\pc-hardware-advisor\\tests\\results\\2026-11-08T18-14-25-234Z\\aggregate-result.json": {
+    "mtime": 1794162114.7741823,
+    "ast_hash": "31c175987a9d0607f9b3a0a43a602819",
+    "semantic_hash": ""
+  },
+  "E:\\Claude code\\Projects\\pc-hardware-advisor\\tests\\results\\2026-11-08T19-22-31-066Z\\aggregate-result.json": {
+    "mtime": 1794166161.0331144,
+    "ast_hash": "6e812b63616020ddecf82449fb57106a",
+    "semantic_hash": ""
+  },
+  "E:\\Claude code\\Projects\\pc-hardware-advisor\\tests\\results\\2026-11-08T21-11-21-524Z\\aggregate-result.json": {
+    "mtime": 1794172779.4919763,
+    "ast_hash": "2f2beb6463ba89fe8b516b8fd9ff7d53",
+    "semantic_hash": ""
+  },
+  "E:\\Claude code\\Projects\\pc-hardware-advisor\\tests\\results\\2026-11-11T20-52-47-714Z\\aggregate-result.json": {
+    "mtime": 1794430408.1033497,
+    "ast_hash": "fbd677b61c273cf52b0a1342e077cdf1",
+    "semantic_hash": ""
+  },
+  "E:\\Claude code\\Projects\\pc-hardware-advisor\\tests\\results\\2026-11-14T10-05-51-608Z\\aggregate-result.json": {
+    "mtime": 1794650984.9784787,
+    "ast_hash": "17d1572009e270982e96ce8169fe8dff",
+    "semantic_hash": ""
+  },
+  "E:\\Claude code\\Projects\\pc-hardware-advisor\\tests\\results\\2026-11-14T14-37-40-448Z\\aggregate-result.json": {
+    "mtime": 1794667200.7489412,
+    "ast_hash": "9cb862349e7b46f64aafd739d83bbf8f",
+    "semantic_hash": ""
+  },
+  "E:\\Claude code\\Projects\\pc-hardware-advisor\\tests\\results\\2026-11-14T16-12-51-883Z\\aggregate-result.json": {
+    "mtime": 1794672942.7452197,
+    "ast_hash": "0fef45037fd0824d92eb1c408d5fee65",
+    "semantic_hash": ""
+  },
+  "E:\\Claude code\\Projects\\pc-hardware-advisor\\tests\\results\\2026-11-14T18-14-27-033Z\\aggregate-result.json": {
+    "mtime": 1794680113.3681235,
+    "ast_hash": "63ee1709c8d645b3836748311d7432bb",
+    "semantic_hash": ""
+  },
+  "E:\\Claude code\\Projects\\pc-hardware-advisor\\tests\\results\\2026-11-14T18-40-07-338Z\\aggregate-result.json": {
+    "mtime": 1794681735.2585666,
+    "ast_hash": "5bc8601e9c118639606c1cdc4c367583",
+    "semantic_hash": ""
+  },
+  "E:\\Claude code\\Projects\\pc-hardware-advisor\\tests\\results\\2026-11-14T23-40-03-480Z\\aggregate-result.json": {
+    "mtime": 1794699738.7518296,
+    "ast_hash": "7020c26f8c0f271c963d0e94d8601a6d",
+    "semantic_hash": ""
+  },
+  "E:\\Claude code\\Projects\\pc-hardware-advisor\\tests\\results\\2026-11-15T17-28-28-550Z\\aggregate-result.json": {
+    "mtime": 1794764005.8110118,
+    "ast_hash": "b49d2d362a90fcc196a17715a5d6a3c1",
+    "semantic_hash": ""
+  },
+  "E:\\Claude code\\Projects\\pc-hardware-advisor\\tests\\results\\2026-11-15T19-03-19-426Z\\aggregate-result.json": {
+    "mtime": 1794769417.9911113,
+    "ast_hash": "072dcd0956b484aa29b4f91469e5c029",
+    "semantic_hash": ""
+  },
+  "E:\\Claude code\\Projects\\pc-hardware-advisor\\tests\\results\\2026-11-15T19-03-37-678Z\\aggregate-result.json": {
+    "mtime": 1794769440.1875122,
+    "ast_hash": "25fca78927a5b78b9d5287a748a3c4ac",
+    "semantic_hash": ""
+  },
+  "E:\\Claude code\\Projects\\pc-hardware-advisor\\tests\\results\\2026-11-15T19-05-05-123Z\\aggregate-result.json": {
+    "mtime": 1794770006.199815,
+    "ast_hash": "2712f3b81b3f7f90384741aa715e3b71",
+    "semantic_hash": ""
+  },
+  "E:\\Claude code\\Projects\\pc-hardware-advisor\\tests\\results\\2026-11-15T19-05-05-206Z\\aggregate-result.json": {
+    "mtime": 1794769522.228804,
+    "ast_hash": "fe66681def3d5cf3da80a6c414d2d4d7",
+    "semantic_hash": ""
+  },
+  "E:\\Claude code\\Projects\\pc-hardware-advisor\\tests\\results\\2026-11-15T19-15-48-465Z\\aggregate-result.json": {
+    "mtime": 1794770193.2404935,
+    "ast_hash": "58ee9920aac5e046446bba880fe313b8",
+    "semantic_hash": ""
+  },
+  "E:\\Claude code\\Projects\\pc-hardware-advisor\\tests\\results\\2026-11-15T19-15-48-548Z\\aggregate-result.json": {
+    "mtime": 1794770435.429254,
+    "ast_hash": "ccb60249b501b6739d3fca46d83904c8",
+    "semantic_hash": ""
+  },
+  "E:\\Claude code\\Projects\\pc-hardware-advisor\\tests\\results\\2026-11-15T19-20-36-241Z\\aggregate-result.json": {
+    "mtime": 1794770943.5182357,
+    "ast_hash": "ffbce41e39154ac3616fc868cb1da4d5",
+    "semantic_hash": ""
+  },
+  "E:\\Claude code\\Projects\\pc-hardware-advisor\\tests\\results\\2026-11-15T21-07-45-425Z\\aggregate-result.json": {
+    "mtime": 1794777037.2900398,
+    "ast_hash": "6170419ddc81abc3357526174904ebc3",
+    "semantic_hash": ""
+  },
+  "E:\\Claude code\\Projects\\pc-hardware-advisor\\tests\\results\\2026-11-15T21-07-45-504Z\\aggregate-result.json": {
+    "mtime": 1794777447.8743489,
+    "ast_hash": "fa792744a4c25a16e13c72225f2d4922",
+    "semantic_hash": ""
+  },
+  "E:\\Claude code\\Projects\\pc-hardware-advisor\\tests\\results\\2026-11-15T21-17-28-649Z\\aggregate-result.json": {
+    "mtime": 1794777666.2978873,
+    "ast_hash": "2fe05cad7b65cdde8a4e0dfa4cefcc84",
+    "semantic_hash": ""
+  },
+  "E:\\Claude code\\Projects\\pc-hardware-advisor\\tests\\results\\2026-11-15T21-17-28-656Z\\aggregate-result.json": {
+    "mtime": 1794777499.3314962,
+    "ast_hash": "9f328647d3e534d37c8535cff3888ed5",
+    "semantic_hash": ""
+  },
+  "E:\\Claude code\\Projects\\pc-hardware-advisor\\tests\\results\\2026-11-15T21-21-57-704Z\\aggregate-result.json": {
+    "mtime": 1794777881.6373234,
+    "ast_hash": "a1dc91780624aefc96427d954a592319",
+    "semantic_hash": ""
+  },
+  "E:\\Claude code\\Projects\\pc-hardware-advisor\\tests\\results\\2026-11-15T21-25-04-350Z\\aggregate-result.json": {
+    "mtime": 1794778120.0233295,
+    "ast_hash": "a3994544b9fcdd36e05e7ab93211feb0",
+    "semantic_hash": ""
+  },
+  "E:\\Claude code\\Projects\\pc-hardware-advisor\\AUDIT.md": {
+    "mtime": 1794100787.9268239,
+    "ast_hash": "35244cfc93e76e028b62334e866501f7",
+    "semantic_hash": ""
+  },
   "E:\\Claude code\\Projects\\pc-hardware-advisor\\CHANGELOG.md": {
-    "mtime": 1794074802.8405316,
-    "ast_hash": "e465110c700e54525f40c1352ac81dec",
-    "semantic_hash": "e465110c700e54525f40c1352ac81dec"
+    "mtime": 1794776840.5034971,
+    "ast_hash": "567b0bd2673985c9bd6257669c3372ea",
+    "semantic_hash": ""
   },
   "E:\\Claude code\\Projects\\pc-hardware-advisor\\CLAUDE.md": {
-    "mtime": 1794074265.290105,
-    "ast_hash": "4da23a47e797fe355782ed2f710f80a2",
-    "semantic_hash": "4da23a47e797fe355782ed2f710f80a2"
+    "mtime": 1794172216.5688834,
+    "ast_hash": "fdcd89ce60a6b4c4533b7e7a81ada774",
+    "semantic_hash": ""
   },
   "E:\\Claude code\\Projects\\pc-hardware-advisor\\CONNECTORS.md": {
-    "mtime": 1794074708.6517155,
-    "ast_hash": "dbeabd53f53ec0837784865885bdcb81",
-    "semantic_hash": "dbeabd53f53ec0837784865885bdcb81"
+    "mtime": 1794088759.0748837,
+    "ast_hash": "d3403c9ad34cba1f34cb32ec5904f9f9",
+    "semantic_hash": ""
   },
   "E:\\Claude code\\Projects\\pc-hardware-advisor\\CONTRIBUTING.md": {
-    "mtime": 1794075214.1342156,
-    "ast_hash": "1a3dd0fcacf5f61e9398f6e6a6594180",
-    "semantic_hash": "1a3dd0fcacf5f61e9398f6e6a6594180"
+    "mtime": 1794094106.1872888,
+    "ast_hash": "dc22ba5679cb3ae7b3a5a766a868e1d9",
+    "semantic_hash": ""
   },
   "E:\\Claude code\\Projects\\pc-hardware-advisor\\DECISIONS.md": {
-    "mtime": 1794079328.5528674,
-    "ast_hash": "70600accbb7d41f11c2436cc6edb2307",
-    "semantic_hash": "70600accbb7d41f11c2436cc6edb2307"
+    "mtime": 1794776840.5034971,
+    "ast_hash": "d34783f897be9c7551028b279bd16353",
+    "semantic_hash": ""
   },
   "E:\\Claude code\\Projects\\pc-hardware-advisor\\ORCHESTRATION.md": {
-    "mtime": 1794079812.2662678,
-    "ast_hash": "1c64d8a68279f6a99804097e1d5a46e6",
-    "semantic_hash": "1c64d8a68279f6a99804097e1d5a46e6"
+    "mtime": 1794776875.1189873,
+    "ast_hash": "146b7f962c52c255121a3d5a29f8d837",
+    "semantic_hash": ""
   },
   "E:\\Claude code\\Projects\\pc-hardware-advisor\\README.md": {
-    "mtime": 1794074816.180048,
-    "ast_hash": "5ba86d5d9f39f206a10ecdad2c95ca29",
-    "semantic_hash": "5ba86d5d9f39f206a10ecdad2c95ca29"
+    "mtime": 1794776758.4855838,
+    "ast_hash": "80461181bc54b23ceb7a550952b115eb",
+    "semantic_hash": ""
   },
   "E:\\Claude code\\Projects\\pc-hardware-advisor\\REPORT.md": {
-    "mtime": 1794079802.294671,
-    "ast_hash": "ff0d5dd77ed10338aad4c83a025e42b0",
-    "semantic_hash": "ff0d5dd77ed10338aad4c83a025e42b0"
+    "mtime": 1794100787.9278247,
+    "ast_hash": "e386cde1ea1bd5bd96c68926bc27fc21",
+    "semantic_hash": ""
+  },
+  "E:\\Claude code\\Projects\\pc-hardware-advisor\\requirements-dev.txt": {
+    "mtime": 1794094106.1877916,
+    "ast_hash": "a9d2bda05a14b168253e232c8067b226",
+    "semantic_hash": ""
+  },
+  "E:\\Claude code\\Projects\\pc-hardware-advisor\\.github\\workflows\\checks.yml": {
+    "mtime": 1794094106.1867888,
+    "ast_hash": "5d224fb069bd1db745349da82f01873c",
+    "semantic_hash": ""
   },
   "E:\\Claude code\\Projects\\pc-hardware-advisor\\agents\\price-scout.md": {
-    "mtime": 1794076786.6820421,
-    "ast_hash": "32b59c5389967fa1067e198fbb9285a4",
-    "semantic_hash": "32b59c5389967fa1067e198fbb9285a4"
+    "mtime": 1794179267.0611794,
+    "ast_hash": "cb3a5f880ea3fc557ce90de83ba241c8",
+    "semantic_hash": ""
+  },
+  "E:\\Claude code\\Projects\\pc-hardware-advisor\\docs\\README.ar.md": {
+    "mtime": 1794776765.107713,
+    "ast_hash": "6dfaedbf39d75103c06d0eb82c52288e",
+    "semantic_hash": ""
+  },
+  "E:\\Claude code\\Projects\\pc-hardware-advisor\\docs\\README.de.md": {
+    "mtime": 1794776758.4860852,
+    "ast_hash": "a5c1e0cbfdf39ab43ce482732d23920a",
+    "semantic_hash": ""
+  },
+  "E:\\Claude code\\Projects\\pc-hardware-advisor\\docs\\README.es.md": {
+    "mtime": 1794776758.4860852,
+    "ast_hash": "6fa8c1c1d01a779eaebcff4bfd7d4722",
+    "semantic_hash": ""
+  },
+  "E:\\Claude code\\Projects\\pc-hardware-advisor\\docs\\README.fr.md": {
+    "mtime": 1794776758.4855838,
+    "ast_hash": "620a7608691b451fd8460fcefe0a9e9c",
+    "semantic_hash": ""
+  },
+  "E:\\Claude code\\Projects\\pc-hardware-advisor\\docs\\README.hi.md": {
+    "mtime": 1794776765.107713,
+    "ast_hash": "ba8ea9cfc5bf14a2778438576419da85",
+    "semantic_hash": ""
+  },
+  "E:\\Claude code\\Projects\\pc-hardware-advisor\\docs\\README.ja.md": {
+    "mtime": 1794776765.107713,
+    "ast_hash": "9cab53925ece52f86a02b6b4b211f4f3",
+    "semantic_hash": ""
+  },
+  "E:\\Claude code\\Projects\\pc-hardware-advisor\\docs\\README.pt.md": {
+    "mtime": 1794776758.491597,
+    "ast_hash": "ad0b829aece5d56c7a34f5bfcd9d5586",
+    "semantic_hash": ""
+  },
+  "E:\\Claude code\\Projects\\pc-hardware-advisor\\docs\\README.zh-CN.md": {
+    "mtime": 1794776765.107713,
+    "ast_hash": "9588c9fee75e51aff5a94c6a4be249f6",
+    "semantic_hash": ""
   },
   "E:\\Claude code\\Projects\\pc-hardware-advisor\\references\\form-factors-cases.md": {
-    "mtime": 1794075061.258791,
-    "ast_hash": "0b99682ac2c888b9fb629e67acde18a3",
-    "semantic_hash": "0b99682ac2c888b9fb629e67acde18a3"
+    "mtime": 1794100787.9298246,
+    "ast_hash": "6119677decb195e48b73dc2e88b4fdbf",
+    "semantic_hash": ""
   },
   "E:\\Claude code\\Projects\\pc-hardware-advisor\\references\\gpu-bandwidth-ai.md": {
-    "mtime": 1794074971.4221168,
-    "ast_hash": "8d39b8227caf80c64390319274612890",
-    "semantic_hash": "8d39b8227caf80c64390319274612890"
+    "mtime": 1794100787.9303238,
+    "ast_hash": "e90ae788fb90ea3e96bef92b5bf9987f",
+    "semantic_hash": ""
   },
   "E:\\Claude code\\Projects\\pc-hardware-advisor\\references\\international-buying.md": {
-    "mtime": 1794074545.8570778,
-    "ast_hash": "3be999339e42e7da72535c9625d7b9d2",
-    "semantic_hash": "3be999339e42e7da72535c9625d7b9d2"
+    "mtime": 1794100787.9303238,
+    "ast_hash": "9e0c7fbcbfafb54279454172fc740e69",
+    "semantic_hash": ""
   },
   "E:\\Claude code\\Projects\\pc-hardware-advisor\\references\\memory.md": {
-    "mtime": 1794075848.9959807,
-    "ast_hash": "6d969defbae20f7d52a61a4ebf2ec0af",
-    "semantic_hash": "6d969defbae20f7d52a61a4ebf2ec0af"
+    "mtime": 1794680276.0193977,
+    "ast_hash": "38de9209e4c8d7373533d37b29c7ee4f",
+    "semantic_hash": ""
   },
   "E:\\Claude code\\Projects\\pc-hardware-advisor\\references\\power-supplies-connectors.md": {
-    "mtime": 1794075011.6460428,
-    "ast_hash": "0fb89767c35b21342d599584126ea563",
-    "semantic_hash": "0fb89767c35b21342d599584126ea563"
+    "mtime": 1794100787.9308238,
+    "ast_hash": "9b21554b67d7a6240202eab7606affea",
+    "semantic_hash": ""
   },
   "E:\\Claude code\\Projects\\pc-hardware-advisor\\references\\research-method.md": {
-    "mtime": 1794079328.1932878,
-    "ast_hash": "78a70d54550f5bc9540d1e60dbadab1c",
-    "semantic_hash": "78a70d54550f5bc9540d1e60dbadab1c"
+    "mtime": 1794776468.221205,
+    "ast_hash": "88ddbc0f680a4c03a2f44dda65953e19",
+    "semantic_hash": ""
   },
   "E:\\Claude code\\Projects\\pc-hardware-advisor\\references\\retailer-criteria.md": {
-    "mtime": 1794074366.7030463,
-    "ast_hash": "1c513f635885d54905088b89c49e323e",
-    "semantic_hash": "1c513f635885d54905088b89c49e323e"
+    "mtime": 1794313303.734255,
+    "ast_hash": "c3160aae70b219fc26f36342e5b85be1",
+    "semantic_hash": ""
   },
   "E:\\Claude code\\Projects\\pc-hardware-advisor\\references\\retailers-by-country.md": {
-    "mtime": 1794074503.7906854,
-    "ast_hash": "f61ae60aff7b6ddf77dbee2aec52c9f7",
-    "semantic_hash": "f61ae60aff7b6ddf77dbee2aec52c9f7"
+    "mtime": 1794776847.935613,
+    "ast_hash": "ba0495f31acef73cd26378bf1d29084a",
+    "semantic_hash": ""
   },
   "E:\\Claude code\\Projects\\pc-hardware-advisor\\references\\sockets-chipsets.md": {
-    "mtime": 1794075865.3527892,
-    "ast_hash": "c9e173e6d6c941188f34693bfa760a88",
-    "semantic_hash": "c9e173e6d6c941188f34693bfa760a88"
+    "mtime": 1794680276.0193977,
+    "ast_hash": "bd0abfae9b7862f37acbdcb76b5b2601",
+    "semantic_hash": ""
+  },
+  "E:\\Claude code\\Projects\\pc-hardware-advisor\\references\\source-access-policy.md": {
+    "mtime": 1794776820.6060376,
+    "ast_hash": "817fe933e6e49a018a04d47d02374489",
+    "semantic_hash": ""
   },
   "E:\\Claude code\\Projects\\pc-hardware-advisor\\references\\used-market-checklist.md": {
-    "mtime": 1794074366.7555947,
-    "ast_hash": "e50a816b05a4ac03e202618fc4f06e5f",
-    "semantic_hash": "e50a816b05a4ac03e202618fc4f06e5f"
+    "mtime": 1794100787.9318242,
+    "ast_hash": "15f568937ae074231817df19acdef801",
+    "semantic_hash": ""
   },
   "E:\\Claude code\\Projects\\pc-hardware-advisor\\research\\r1-retailers-anglophone.md": {
     "mtime": 1794074156.8910537,
@@ -194,50 +774,130 @@
     "ast_hash": "84a4a3a5e0ad2153956ca3cb33a86c79",
     "semantic_hash": "84a4a3a5e0ad2153956ca3cb33a86c79"
   },
+  "E:\\Claude code\\Projects\\pc-hardware-advisor\\research\\audit\\A-1.md": {
+    "mtime": 1794100787.9323354,
+    "ast_hash": "0f3bd40da3dea060a97ce1a0a08f5834",
+    "semantic_hash": ""
+  },
+  "E:\\Claude code\\Projects\\pc-hardware-advisor\\research\\audit\\A-2.md": {
+    "mtime": 1794100787.9328272,
+    "ast_hash": "5748b34ac47cbd5396094ebc4b6d19cb",
+    "semantic_hash": ""
+  },
+  "E:\\Claude code\\Projects\\pc-hardware-advisor\\research\\audit\\A-3.md": {
+    "mtime": 1794100787.9328272,
+    "ast_hash": "4a64acd70920e3dc13252a24247d02f6",
+    "semantic_hash": ""
+  },
+  "E:\\Claude code\\Projects\\pc-hardware-advisor\\research\\audit\\A-4.md": {
+    "mtime": 1794100787.9328272,
+    "ast_hash": "acc414fa401e09b68d4705d442ffd1f5",
+    "semantic_hash": ""
+  },
+  "E:\\Claude code\\Projects\\pc-hardware-advisor\\research\\audit\\A-5.md": {
+    "mtime": 1794100787.9333346,
+    "ast_hash": "7ed5873c03bc6f36292ab813f63dd083",
+    "semantic_hash": ""
+  },
+  "E:\\Claude code\\Projects\\pc-hardware-advisor\\research\\audit\\A-6a.md": {
+    "mtime": 1794100787.9333346,
+    "ast_hash": "581edb6162a8f1d939b5fabf9ece6340",
+    "semantic_hash": ""
+  },
+  "E:\\Claude code\\Projects\\pc-hardware-advisor\\research\\audit\\A-6b.md": {
+    "mtime": 1794100787.9333346,
+    "ast_hash": "568d517187ba08e72c0cf5fcf59042a0",
+    "semantic_hash": ""
+  },
+  "E:\\Claude code\\Projects\\pc-hardware-advisor\\research\\audit\\B-1.md": {
+    "mtime": 1794100787.9343345,
+    "ast_hash": "56e71ce0a0f1b487ad358ba3f8930404",
+    "semantic_hash": ""
+  },
+  "E:\\Claude code\\Projects\\pc-hardware-advisor\\research\\audit\\C-1.md": {
+    "mtime": 1794100787.934827,
+    "ast_hash": "4afc0fc5bdd71013c0f50b6d0ee44f80",
+    "semantic_hash": ""
+  },
+  "E:\\Claude code\\Projects\\pc-hardware-advisor\\research\\audit\\D-1.md": {
+    "mtime": 1794100787.934827,
+    "ast_hash": "236608afb299016980772d5bcc9e8117",
+    "semantic_hash": ""
+  },
+  "E:\\Claude code\\Projects\\pc-hardware-advisor\\research\\audit\\E-1.md": {
+    "mtime": 1794100787.934827,
+    "ast_hash": "eb15b47d3a07199104e249b50749dd44",
+    "semantic_hash": ""
+  },
+  "E:\\Claude code\\Projects\\pc-hardware-advisor\\research\\audit\\F-1.md": {
+    "mtime": 1794100787.9353344,
+    "ast_hash": "b1c69cc52ea2086b5d1ff7054af191a8",
+    "semantic_hash": ""
+  },
+  "E:\\Claude code\\Projects\\pc-hardware-advisor\\research\\audit\\_brief.md": {
+    "mtime": 1794100787.9353344,
+    "ast_hash": "ba59579c7c723344621aa9e4356bf72f",
+    "semantic_hash": ""
+  },
   "E:\\Claude code\\Projects\\pc-hardware-advisor\\skills\\build-config\\SKILL.md": {
-    "mtime": 1794079328.1227212,
-    "ast_hash": "57121a68bde72d59edf5b4b6e43499bb",
-    "semantic_hash": "57121a68bde72d59edf5b4b6e43499bb"
+    "mtime": 1794772716.406021,
+    "ast_hash": "e063aa3c7d0c9f09a0929a0f1a58abfe",
+    "semantic_hash": ""
   },
   "E:\\Claude code\\Projects\\pc-hardware-advisor\\skills\\build-config\\references\\build-playbook.md": {
-    "mtime": 1794075164.685134,
-    "ast_hash": "6bb9f984e63693506373479a101a72bf",
-    "semantic_hash": "6bb9f984e63693506373479a101a72bf"
+    "mtime": 1794435876.012765,
+    "ast_hash": "7b55d54daf121de38a85fd8f0cc43b2f",
+    "semantic_hash": ""
+  },
+  "E:\\Claude code\\Projects\\pc-hardware-advisor\\skills\\build-config\\references\\pricing-rules.md": {
+    "mtime": 1794236642.9283872,
+    "ast_hash": "97a6e7878151e6e289ef68c7b794c444",
+    "semantic_hash": ""
   },
   "E:\\Claude code\\Projects\\pc-hardware-advisor\\skills\\check-compatibility\\SKILL.md": {
-    "mtime": 1794075163.6017933,
-    "ast_hash": "e6ad02b974c28386f069c6a1590d7503",
-    "semantic_hash": "e6ad02b974c28386f069c6a1590d7503"
+    "mtime": 1794302720.4143732,
+    "ast_hash": "d1f6c001d82c8d73848cad29f30bd16e",
+    "semantic_hash": ""
   },
   "E:\\Claude code\\Projects\\pc-hardware-advisor\\skills\\check-compatibility\\references\\pair-checklist.md": {
-    "mtime": 1794075163.8986342,
-    "ast_hash": "de6518aef9d8360e4a70f6bb9ddbc3bb",
-    "semantic_hash": "de6518aef9d8360e4a70f6bb9ddbc3bb"
+    "mtime": 1794680276.0198975,
+    "ast_hash": "3b8becbbba2224f70ef912d2f35ea9f4",
+    "semantic_hash": ""
+  },
+  "E:\\Claude code\\Projects\\pc-hardware-advisor\\skills\\find-deals\\SKILL.md": {
+    "mtime": 1794777903.8071408,
+    "ast_hash": "fa98827d483ed76c41bce8275627c733",
+    "semantic_hash": ""
+  },
+  "E:\\Claude code\\Projects\\pc-hardware-advisor\\skills\\find-deals\\references\\price-history-sources.md": {
+    "mtime": 1794687984.8829107,
+    "ast_hash": "e69761c7360d436173ad479cbed8ef7c",
+    "semantic_hash": ""
   },
   "E:\\Claude code\\Projects\\pc-hardware-advisor\\skills\\hunt-prices\\SKILL.md": {
-    "mtime": 1794077853.7443123,
-    "ast_hash": "cf8724c31905c1ca0560e223b8f2e778",
-    "semantic_hash": "cf8724c31905c1ca0560e223b8f2e778"
+    "mtime": 1794776468.219686,
+    "ast_hash": "460de4f62ca4a9ba1ea3f2fbc29c8895",
+    "semantic_hash": ""
   },
   "E:\\Claude code\\Projects\\pc-hardware-advisor\\skills\\hunt-prices\\references\\search-playbook.md": {
-    "mtime": 1794076786.5852816,
-    "ast_hash": "0cc39f095aac9c024c26397940047d1f",
-    "semantic_hash": "0cc39f095aac9c024c26397940047d1f"
+    "mtime": 1794776468.2394059,
+    "ast_hash": "8c9be1268fe14ed495fef295d8072498",
+    "semantic_hash": ""
   },
   "E:\\Claude code\\Projects\\pc-hardware-advisor\\skills\\review-used-listing\\SKILL.md": {
-    "mtime": 1794074658.9020455,
-    "ast_hash": "fb0839cf724ff1af83547fc00ef887cb",
-    "semantic_hash": "fb0839cf724ff1af83547fc00ef887cb"
+    "mtime": 1794776468.2206962,
+    "ast_hash": "d40452de2740691008ec119aa6c0f5c7",
+    "semantic_hash": ""
   },
   "E:\\Claude code\\Projects\\pc-hardware-advisor\\skills\\review-used-listing\\references\\verdict-rubric.md": {
-    "mtime": 1794074670.9952023,
-    "ast_hash": "31f44e67f3da2362ebf3989c7890a92a",
-    "semantic_hash": "31f44e67f3da2362ebf3989c7890a92a"
+    "mtime": 1794432922.7172163,
+    "ast_hash": "98f1950acddb76420993993c22fcaab5",
+    "semantic_hash": ""
   },
   "E:\\Claude code\\Projects\\pc-hardware-advisor\\skills\\size-local-ai\\SKILL.md": {
-    "mtime": 1794077853.6203957,
-    "ast_hash": "4333e1dda83c325bb12660218cf1606a",
-    "semantic_hash": "4333e1dda83c325bb12660218cf1606a"
+    "mtime": 1794302720.414878,
+    "ast_hash": "c42f903a5cae7eebe38bc7f9bd4cea75",
+    "semantic_hash": ""
   },
   "E:\\Claude code\\Projects\\pc-hardware-advisor\\skills\\size-local-ai\\references\\sizing-worksheet.md": {
     "mtime": 1794074971.4221168,
@@ -245,54 +905,794 @@
     "semantic_hash": "4b96b5b674adca6e99674b3911c379af"
   },
   "E:\\Claude code\\Projects\\pc-hardware-advisor\\skills\\track-price\\SKILL.md": {
-    "mtime": 1794077864.5761654,
-    "ast_hash": "b5326f3984bd7bc74a1fd553c495cd80",
-    "semantic_hash": "b5326f3984bd7bc74a1fd553c495cd80"
+    "mtime": 1794776468.2206962,
+    "ast_hash": "42db74096bec9ef05faf7f6858dddd24",
+    "semantic_hash": ""
   },
   "E:\\Claude code\\Projects\\pc-hardware-advisor\\skills\\track-price\\references\\tracking-setup.md": {
-    "mtime": 1794074675.7834663,
-    "ast_hash": "1f363492c86e888c460ea0220f635ae7",
-    "semantic_hash": "1f363492c86e888c460ea0220f635ae7"
+    "mtime": 1794100787.937835,
+    "ast_hash": "1da9587bb8af18cae239409fbf5f3c73",
+    "semantic_hash": ""
   },
   "E:\\Claude code\\Projects\\pc-hardware-advisor\\tests\\cases\\01-ai-mini-itx-14700kf\\prompt.md": {
     "mtime": 1794076393.8196688,
     "ast_hash": "ccf584bb10fa08ce4f6c6e6dea1e06ce",
     "semantic_hash": "ccf584bb10fa08ce4f6c6e6dea1e06ce"
   },
+  "E:\\Claude code\\Projects\\pc-hardware-advisor\\tests\\cases\\01-ai-mini-itx-14700kf\\graders\\bios-warning.md": {
+    "mtime": 1794074194.013249,
+    "ast_hash": "189eff2fa68e35671837ebdd53f1badd",
+    "semantic_hash": ""
+  },
+  "E:\\Claude code\\Projects\\pc-hardware-advisor\\tests\\cases\\01-ai-mini-itx-14700kf\\graders\\itx-platform.md": {
+    "mtime": 1794074194.013249,
+    "ast_hash": "c934da8601b4c5ff52ba769c452dfdc4",
+    "semantic_hash": ""
+  },
+  "E:\\Claude code\\Projects\\pc-hardware-advisor\\tests\\cases\\01-ai-mini-itx-14700kf\\graders\\language.md": {
+    "mtime": 1794074194.0142546,
+    "ast_hash": "6ec17bb2400b41c7ae445e1d6c38160a",
+    "semantic_hash": ""
+  },
+  "E:\\Claude code\\Projects\\pc-hardware-advisor\\tests\\cases\\01-ai-mini-itx-14700kf\\graders\\power-fit.md": {
+    "mtime": 1794074194.013249,
+    "ast_hash": "9e27b3d54a03951ee41c2d2d159f8327",
+    "semantic_hash": ""
+  },
+  "E:\\Claude code\\Projects\\pc-hardware-advisor\\tests\\cases\\01-ai-mini-itx-14700kf\\graders\\prices.md": {
+    "mtime": 1794079328.528867,
+    "ast_hash": "c49e67ff757205c88b690fae6ec2b012",
+    "semantic_hash": ""
+  },
+  "E:\\Claude code\\Projects\\pc-hardware-advisor\\tests\\cases\\01-ai-mini-itx-14700kf\\graders\\skill-used.md": {
+    "mtime": 1794100787.937835,
+    "ast_hash": "85bc2b2cb6fab5dc4695976dea89fcdf",
+    "semantic_hash": ""
+  },
+  "E:\\Claude code\\Projects\\pc-hardware-advisor\\tests\\cases\\01-ai-mini-itx-14700kf\\graders\\toks-estimate.md": {
+    "mtime": 1794074194.013249,
+    "ast_hash": "1623539211978f48ef9fbb921ce87199",
+    "semantic_hash": ""
+  },
+  "E:\\Claude code\\Projects\\pc-hardware-advisor\\tests\\cases\\01-ai-mini-itx-14700kf\\graders\\uncertainty.md": {
+    "mtime": 1794074194.0142546,
+    "ast_hash": "28e942cd56c9fb2e1ba4ab7edff7a2c8",
+    "semantic_hash": ""
+  },
   "E:\\Claude code\\Projects\\pc-hardware-advisor\\tests\\cases\\02-gaming-am5-xmp7200\\prompt.md": {
     "mtime": 1794076393.8201687,
     "ast_hash": "7aaba62776fbfed120aa656fbf01589b",
     "semantic_hash": "7aaba62776fbfed120aa656fbf01589b"
   },
+  "E:\\Claude code\\Projects\\pc-hardware-advisor\\tests\\cases\\02-gaming-am5-xmp7200\\graders\\language.md": {
+    "mtime": 1794074194.0152593,
+    "ast_hash": "9b8af9def460421e0a48730b6c52b830",
+    "semantic_hash": ""
+  },
+  "E:\\Claude code\\Projects\\pc-hardware-advisor\\tests\\cases\\02-gaming-am5-xmp7200\\graders\\pairwise.md": {
+    "mtime": 1794074194.0147598,
+    "ast_hash": "e6c288400db04f2537a1caced2cc7449",
+    "semantic_hash": ""
+  },
+  "E:\\Claude code\\Projects\\pc-hardware-advisor\\tests\\cases\\02-gaming-am5-xmp7200\\graders\\psu.md": {
+    "mtime": 1794074194.0147598,
+    "ast_hash": "eb5029bdd8e4f5ccadf0687c8eb91e2f",
+    "semantic_hash": ""
+  },
+  "E:\\Claude code\\Projects\\pc-hardware-advisor\\tests\\cases\\02-gaming-am5-xmp7200\\graders\\ram-verdict.md": {
+    "mtime": 1794074194.0147598,
+    "ast_hash": "90b9ba87ba8e9a08af271f1418d11c5a",
+    "semantic_hash": ""
+  },
+  "E:\\Claude code\\Projects\\pc-hardware-advisor\\tests\\cases\\02-gaming-am5-xmp7200\\graders\\skill-used.md": {
+    "mtime": 1794074194.0147598,
+    "ast_hash": "2a9f987e6265cde674075c418a288f02",
+    "semantic_hash": ""
+  },
+  "E:\\Claude code\\Projects\\pc-hardware-advisor\\tests\\cases\\02-gaming-am5-xmp7200\\graders\\sources.md": {
+    "mtime": 1794074194.0147598,
+    "ast_hash": "4fd5c3638d03093c7b343337c04fc0b0",
+    "semantic_hash": ""
+  },
   "E:\\Claude code\\Projects\\pc-hardware-advisor\\tests\\cases\\03-ddr5-kit-best-price\\prompt.md": {
-    "mtime": 1794076393.8201687,
-    "ast_hash": "4bff7d7bcd53af59829e7254a8b81ae3",
-    "semantic_hash": "4bff7d7bcd53af59829e7254a8b81ae3"
+    "mtime": 1794100787.937835,
+    "ast_hash": "7990756bfeb99cdd75ac5502ccab0e8b",
+    "semantic_hash": ""
+  },
+  "E:\\Claude code\\Projects\\pc-hardware-advisor\\tests\\cases\\03-ddr5-kit-best-price\\graders\\comparator-and-from.md": {
+    "mtime": 1794165342.2559435,
+    "ast_hash": "e683d49fa4c959c25fb04eec3df55fc2",
+    "semantic_hash": ""
+  },
+  "E:\\Claude code\\Projects\\pc-hardware-advisor\\tests\\cases\\03-ddr5-kit-best-price\\graders\\direct-only.md": {
+    "mtime": 1794074194.0152593,
+    "ast_hash": "a8144ca6b4f05fa4e3ac8959b77fb69e",
+    "semantic_hash": ""
+  },
+  "E:\\Claude code\\Projects\\pc-hardware-advisor\\tests\\cases\\03-ddr5-kit-best-price\\graders\\headline-delivery.md": {
+    "mtime": 1794175267.078451,
+    "ast_hash": "2402044eaa0555518bd2b63dcece0f04",
+    "semantic_hash": ""
+  },
+  "E:\\Claude code\\Projects\\pc-hardware-advisor\\tests\\cases\\03-ddr5-kit-best-price\\graders\\labels-translated.md": {
+    "mtime": 1794152382.6289485,
+    "ast_hash": "eab2e8fc4994a90a0795cca1ecc6ddbe",
+    "semantic_hash": ""
+  },
+  "E:\\Claude code\\Projects\\pc-hardware-advisor\\tests\\cases\\03-ddr5-kit-best-price\\graders\\language.md": {
+    "mtime": 1794074194.0157588,
+    "ast_hash": "6ec17bb2400b41c7ae445e1d6c38160a",
+    "semantic_hash": ""
+  },
+  "E:\\Claude code\\Projects\\pc-hardware-advisor\\tests\\cases\\03-ddr5-kit-best-price\\graders\\no-working-notes.md": {
+    "mtime": 1794159854.0105906,
+    "ast_hash": "ece6bebcffd8767fbd7497a68ca2fbbc",
+    "semantic_hash": ""
+  },
+  "E:\\Claude code\\Projects\\pc-hardware-advisor\\tests\\cases\\03-ddr5-kit-best-price\\graders\\partial-flagged.md": {
+    "mtime": 1794074194.0152593,
+    "ast_hash": "05f29915260015f9527d3f295ba7f290",
+    "semantic_hash": ""
+  },
+  "E:\\Claude code\\Projects\\pc-hardware-advisor\\tests\\cases\\03-ddr5-kit-best-price\\graders\\prices.md": {
+    "mtime": 1794172216.5698833,
+    "ast_hash": "c25c96d11b134b8d5fb5ca96db4f1739",
+    "semantic_hash": ""
+  },
+  "E:\\Claude code\\Projects\\pc-hardware-advisor\\tests\\cases\\03-ddr5-kit-best-price\\graders\\skill-used.md": {
+    "mtime": 1794074194.0152593,
+    "ast_hash": "87abf325626ac6bd1f9db8dcb3eaf6e8",
+    "semantic_hash": ""
+  },
+  "E:\\Claude code\\Projects\\pc-hardware-advisor\\tests\\cases\\03-ddr5-kit-best-price\\graders\\table.md": {
+    "mtime": 1794172216.5698833,
+    "ast_hash": "8e6a88fd90fdd514ba26efbfe7cf78e1",
+    "semantic_hash": ""
   },
   "E:\\Claude code\\Projects\\pc-hardware-advisor\\tests\\cases\\04-used-3090-listing\\prompt.md": {
     "mtime": 1794076393.8201687,
     "ast_hash": "e6f58f876e5297ac775f84e8124fba95",
     "semantic_hash": "e6f58f876e5297ac775f84e8124fba95"
   },
+  "E:\\Claude code\\Projects\\pc-hardware-advisor\\tests\\cases\\04-used-3090-listing\\graders\\gpuz-skepticism.md": {
+    "mtime": 1794074194.0162587,
+    "ast_hash": "bfa6bb92356d22d95ba487acf8f14972",
+    "semantic_hash": ""
+  },
+  "E:\\Claude code\\Projects\\pc-hardware-advisor\\tests\\cases\\04-used-3090-listing\\graders\\language.md": {
+    "mtime": 1794074194.0162587,
+    "ast_hash": "a8d786595c83f42f78e4cc13a69be213",
+    "semantic_hash": ""
+  },
+  "E:\\Claude code\\Projects\\pc-hardware-advisor\\tests\\cases\\04-used-3090-listing\\graders\\market.md": {
+    "mtime": 1794074194.0162587,
+    "ast_hash": "1eb3158d4a1837ca0f1b480b7b8ba132",
+    "semantic_hash": ""
+  },
+  "E:\\Claude code\\Projects\\pc-hardware-advisor\\tests\\cases\\04-used-3090-listing\\graders\\skill-used.md": {
+    "mtime": 1794074194.0157588,
+    "ast_hash": "6afa7a49a0a50efe7494e72b389e70a7",
+    "semantic_hash": ""
+  },
+  "E:\\Claude code\\Projects\\pc-hardware-advisor\\tests\\cases\\04-used-3090-listing\\graders\\tests.md": {
+    "mtime": 1794074194.0162587,
+    "ast_hash": "5c4a93586ba692434f4b2f165e2e8caf",
+    "semantic_hash": ""
+  },
+  "E:\\Claude code\\Projects\\pc-hardware-advisor\\tests\\cases\\04-used-3090-listing\\graders\\verdict.md": {
+    "mtime": 1794074194.0157588,
+    "ast_hash": "d950b2474419de2373604561b3b986c7",
+    "semantic_hash": ""
+  },
   "E:\\Claude code\\Projects\\pc-hardware-advisor\\tests\\cases\\05-track-3090-under-800\\prompt.md": {
-    "mtime": 1794076393.820669,
-    "ast_hash": "832626e6036d30ab6e7ee58d526b4063",
-    "semantic_hash": "832626e6036d30ab6e7ee58d526b4063"
+    "mtime": 1794100787.9383273,
+    "ast_hash": "9a4c08b863775b89bf6fd3db8e04a2a1",
+    "semantic_hash": ""
+  },
+  "E:\\Claude code\\Projects\\pc-hardware-advisor\\tests\\cases\\05-track-3090-under-800\\graders\\guardrails.md": {
+    "mtime": 1794074194.0162587,
+    "ast_hash": "eb9cc58c597c33217637d8501ac7d6ce",
+    "semantic_hash": ""
+  },
+  "E:\\Claude code\\Projects\\pc-hardware-advisor\\tests\\cases\\05-track-3090-under-800\\graders\\history.md": {
+    "mtime": 1794074194.0162587,
+    "ast_hash": "85af0b9cb588d7d479ed4c34fbfdd910",
+    "semantic_hash": ""
+  },
+  "E:\\Claude code\\Projects\\pc-hardware-advisor\\tests\\cases\\05-track-3090-under-800\\graders\\language.md": {
+    "mtime": 1794074194.0162587,
+    "ast_hash": "6ec17bb2400b41c7ae445e1d6c38160a",
+    "semantic_hash": ""
+  },
+  "E:\\Claude code\\Projects\\pc-hardware-advisor\\tests\\cases\\05-track-3090-under-800\\graders\\schedule.md": {
+    "mtime": 1794080455.124595,
+    "ast_hash": "6cf7d7c09cf6771516a30380ad2707e6",
+    "semantic_hash": ""
+  },
+  "E:\\Claude code\\Projects\\pc-hardware-advisor\\tests\\cases\\05-track-3090-under-800\\graders\\skill-used.md": {
+    "mtime": 1794074194.0162587,
+    "ast_hash": "bb42a2789f0e16f1bdb5143fb78cc1e9",
+    "semantic_hash": ""
   },
   "E:\\Claude code\\Projects\\pc-hardware-advisor\\tests\\cases\\06-ai-32gb-vram-2000eur\\prompt.md": {
-    "mtime": 1794076393.820669,
-    "ast_hash": "aa3ad01406e5ef38d958442f1bebb5a3",
-    "semantic_hash": "aa3ad01406e5ef38d958442f1bebb5a3"
+    "mtime": 1794100787.9383273,
+    "ast_hash": "680885a088b52bbde336d33cf8c94b47",
+    "semantic_hash": ""
+  },
+  "E:\\Claude code\\Projects\\pc-hardware-advisor\\tests\\cases\\06-ai-32gb-vram-2000eur\\graders\\landed.md": {
+    "mtime": 1794074194.017779,
+    "ast_hash": "c0544ebd195856bfe280332918e24fa3",
+    "semantic_hash": ""
+  },
+  "E:\\Claude code\\Projects\\pc-hardware-advisor\\tests\\cases\\06-ai-32gb-vram-2000eur\\graders\\language.md": {
+    "mtime": 1794074194.017779,
+    "ast_hash": "9b8af9def460421e0a48730b6c52b830",
+    "semantic_hash": ""
+  },
+  "E:\\Claude code\\Projects\\pc-hardware-advisor\\tests\\cases\\06-ai-32gb-vram-2000eur\\graders\\options.md": {
+    "mtime": 1794074194.0172703,
+    "ast_hash": "9e316e08edf070a27c1305b3dcd139ca",
+    "semantic_hash": ""
+  },
+  "E:\\Claude code\\Projects\\pc-hardware-advisor\\tests\\cases\\06-ai-32gb-vram-2000eur\\graders\\prices.md": {
+    "mtime": 1794079328.5293672,
+    "ast_hash": "c49e67ff757205c88b690fae6ec2b012",
+    "semantic_hash": ""
+  },
+  "E:\\Claude code\\Projects\\pc-hardware-advisor\\tests\\cases\\06-ai-32gb-vram-2000eur\\graders\\skill-used.md": {
+    "mtime": 1794100787.9383273,
+    "ast_hash": "85bc2b2cb6fab5dc4695976dea89fcdf",
+    "semantic_hash": ""
+  },
+  "E:\\Claude code\\Projects\\pc-hardware-advisor\\tests\\cases\\06-ai-32gb-vram-2000eur\\graders\\uncertainty.md": {
+    "mtime": 1794074194.017779,
+    "ast_hash": "28e942cd56c9fb2e1ba4ab7edff7a2c8",
+    "semantic_hash": ""
+  },
+  "E:\\Claude code\\Projects\\pc-hardware-advisor\\tests\\cases\\06-ai-32gb-vram-2000eur\\graders\\used-policy.md": {
+    "mtime": 1794074194.017779,
+    "ast_hash": "f1c349ecc6163105e19c6c36f4b6fc60",
+    "semantic_hash": ""
   },
   "E:\\Claude code\\Projects\\pc-hardware-advisor\\tests\\cases\\07-out-of-scope\\prompt.md": {
     "mtime": 1794076393.820669,
     "ast_hash": "597c5b6ce1390af4a62612dc156211c1",
     "semantic_hash": "597c5b6ce1390af4a62612dc156211c1"
   },
+  "E:\\Claude code\\Projects\\pc-hardware-advisor\\tests\\cases\\07-out-of-scope\\graders\\language.md": {
+    "mtime": 1794074194.0187902,
+    "ast_hash": "6ec17bb2400b41c7ae445e1d6c38160a",
+    "semantic_hash": ""
+  },
+  "E:\\Claude code\\Projects\\pc-hardware-advisor\\tests\\cases\\07-out-of-scope\\graders\\no-invention.md": {
+    "mtime": 1794074194.0187902,
+    "ast_hash": "7ba476cf688d2a30becf1d9a077eb4c0",
+    "semantic_hash": ""
+  },
+  "E:\\Claude code\\Projects\\pc-hardware-advisor\\tests\\cases\\07-out-of-scope\\graders\\no-plugin-skill.md": {
+    "mtime": 1794074194.0187902,
+    "ast_hash": "449791728db6fd8d47b51e33f183bac0",
+    "semantic_hash": ""
+  },
+  "E:\\Claude code\\Projects\\pc-hardware-advisor\\tests\\cases\\08-bypass-request\\prompt.md": {
+    "mtime": 1794083452.530166,
+    "ast_hash": "0955ee0edc651bbd181c0728d6648f33",
+    "semantic_hash": ""
+  },
+  "E:\\Claude code\\Projects\\pc-hardware-advisor\\tests\\cases\\08-bypass-request\\graders\\language.md": {
+    "mtime": 1794083452.614036,
+    "ast_hash": "7e4a9e0579c6dcac4e33990a8c7d24ed",
+    "semantic_hash": ""
+  },
+  "E:\\Claude code\\Projects\\pc-hardware-advisor\\tests\\cases\\08-bypass-request\\graders\\no-bypass.md": {
+    "mtime": 1794087307.0326266,
+    "ast_hash": "750ad23d55f695dd7e01dd33b77d3fc1",
+    "semantic_hash": ""
+  },
+  "E:\\Claude code\\Projects\\pc-hardware-advisor\\tests\\cases\\08-bypass-request\\graders\\skill-used.md": {
+    "mtime": 1794100787.9383273,
+    "ast_hash": "6afa7a49a0a50efe7494e72b389e70a7",
+    "semantic_hash": ""
+  },
+  "E:\\Claude code\\Projects\\pc-hardware-advisor\\tests\\cases\\08-bypass-request\\graders\\still-helpful.md": {
+    "mtime": 1794083452.5710325,
+    "ast_hash": "fa3717a3b274e4466712bfb112e1833b",
+    "semantic_hash": ""
+  },
+  "E:\\Claude code\\Projects\\pc-hardware-advisor\\tests\\cases\\09-injection-in-pasted-page\\prompt.md": {
+    "mtime": 1794100787.9393272,
+    "ast_hash": "daddade4abedd7222ea85a945275bd18",
+    "semantic_hash": ""
+  },
+  "E:\\Claude code\\Projects\\pc-hardware-advisor\\tests\\cases\\09-injection-in-pasted-page\\graders\\labels-translated.md": {
+    "mtime": 1794152382.6289485,
+    "ast_hash": "eab2e8fc4994a90a0795cca1ecc6ddbe",
+    "semantic_hash": ""
+  },
+  "E:\\Claude code\\Projects\\pc-hardware-advisor\\tests\\cases\\09-injection-in-pasted-page\\graders\\language.md": {
+    "mtime": 1794100787.938835,
+    "ast_hash": "6ec17bb2400b41c7ae445e1d6c38160a",
+    "semantic_hash": ""
+  },
+  "E:\\Claude code\\Projects\\pc-hardware-advisor\\tests\\cases\\09-injection-in-pasted-page\\graders\\no-injection.md": {
+    "mtime": 1794100787.938835,
+    "ast_hash": "a49028470e91e6688694e2b43bfc452e",
+    "semantic_hash": ""
+  },
+  "E:\\Claude code\\Projects\\pc-hardware-advisor\\tests\\cases\\09-injection-in-pasted-page\\graders\\price-labelling.md": {
+    "mtime": 1794100787.938835,
+    "ast_hash": "6de88a541fcff1a4cdbc5f462e961c73",
+    "semantic_hash": ""
+  },
+  "E:\\Claude code\\Projects\\pc-hardware-advisor\\tests\\cases\\09-injection-in-pasted-page\\graders\\skill-used.md": {
+    "mtime": 1794100787.938835,
+    "ast_hash": "87abf325626ac6bd1f9db8dcb3eaf6e8",
+    "semantic_hash": ""
+  },
+  "E:\\Claude code\\Projects\\pc-hardware-advisor\\tests\\cases\\10-buy-and-contact-request\\prompt.md": {
+    "mtime": 1794100787.9398272,
+    "ast_hash": "46957f723bbce194cf2230a802e1931d",
+    "semantic_hash": ""
+  },
+  "E:\\Claude code\\Projects\\pc-hardware-advisor\\tests\\cases\\10-buy-and-contact-request\\graders\\language.md": {
+    "mtime": 1794100787.9393272,
+    "ast_hash": "442642820cc36d7c31eaeaa7f0e753a6",
+    "semantic_hash": ""
+  },
+  "E:\\Claude code\\Projects\\pc-hardware-advisor\\tests\\cases\\10-buy-and-contact-request\\graders\\no-action.md": {
+    "mtime": 1794143885.8062825,
+    "ast_hash": "d2ba4aa75c2c23368559260db4065ab6",
+    "semantic_hash": ""
+  },
+  "E:\\Claude code\\Projects\\pc-hardware-advisor\\tests\\cases\\10-buy-and-contact-request\\graders\\skill-used.md": {
+    "mtime": 1794100787.9393272,
+    "ast_hash": "87abf325626ac6bd1f9db8dcb3eaf6e8",
+    "semantic_hash": ""
+  },
+  "E:\\Claude code\\Projects\\pc-hardware-advisor\\tests\\cases\\10-buy-and-contact-request\\graders\\still-helpful.md": {
+    "mtime": 1794100787.9393272,
+    "ast_hash": "1f3ef0e2e05efee7e239dd13df3e6f40",
+    "semantic_hash": ""
+  },
+  "E:\\Claude code\\Projects\\pc-hardware-advisor\\tests\\cases\\11-disguised-bypass\\prompt.md": {
+    "mtime": 1794100787.9403353,
+    "ast_hash": "e049650e69998f3d9d0593ac907007e6",
+    "semantic_hash": ""
+  },
+  "E:\\Claude code\\Projects\\pc-hardware-advisor\\tests\\cases\\11-disguised-bypass\\graders\\language.md": {
+    "mtime": 1794100787.9398272,
+    "ast_hash": "6ec17bb2400b41c7ae445e1d6c38160a",
+    "semantic_hash": ""
+  },
+  "E:\\Claude code\\Projects\\pc-hardware-advisor\\tests\\cases\\11-disguised-bypass\\graders\\no-bypass.md": {
+    "mtime": 1794100787.9398272,
+    "ast_hash": "5853683e1aa72a6fe781d98b6104da0b",
+    "semantic_hash": ""
+  },
+  "E:\\Claude code\\Projects\\pc-hardware-advisor\\tests\\cases\\11-disguised-bypass\\graders\\skill-used.md": {
+    "mtime": 1794100787.9398272,
+    "ast_hash": "6afa7a49a0a50efe7494e72b389e70a7",
+    "semantic_hash": ""
+  },
+  "E:\\Claude code\\Projects\\pc-hardware-advisor\\tests\\cases\\11-disguised-bypass\\graders\\still-helpful.md": {
+    "mtime": 1794100787.9403353,
+    "ast_hash": "feb5790e8fe83dc673c8de7307545ca5",
+    "semantic_hash": ""
+  },
+  "E:\\Claude code\\Projects\\pc-hardware-advisor\\tests\\cases\\12-build-variants-final-gate\\prompt.md": {
+    "mtime": 1794100787.9408271,
+    "ast_hash": "748acc1d1eee83bd4aefe9fe238bbe34",
+    "semantic_hash": ""
+  },
+  "E:\\Claude code\\Projects\\pc-hardware-advisor\\tests\\cases\\12-build-variants-final-gate\\graders\\final-gate.md": {
+    "mtime": 1794100787.9403353,
+    "ast_hash": "c27d58457faa22e54c2ee38ab37ca10f",
+    "semantic_hash": ""
+  },
+  "E:\\Claude code\\Projects\\pc-hardware-advisor\\tests\\cases\\12-build-variants-final-gate\\graders\\ledger-written.md": {
+    "mtime": 1794686471.858472,
+    "ast_hash": "ec3dfb9cd48b385863bd95cd262da45e",
+    "semantic_hash": ""
+  },
+  "E:\\Claude code\\Projects\\pc-hardware-advisor\\tests\\cases\\12-build-variants-final-gate\\graders\\no-invention.md": {
+    "mtime": 1794100787.9403353,
+    "ast_hash": "3291f5f4d37e5f167095e7dc25fab53a",
+    "semantic_hash": ""
+  },
+  "E:\\Claude code\\Projects\\pc-hardware-advisor\\tests\\cases\\12-build-variants-final-gate\\graders\\skill-used.md": {
+    "mtime": 1794100787.9403353,
+    "ast_hash": "85bc2b2cb6fab5dc4695976dea89fcdf",
+    "semantic_hash": ""
+  },
+  "E:\\Claude code\\Projects\\pc-hardware-advisor\\tests\\cases\\12-build-variants-final-gate\\graders\\variants.md": {
+    "mtime": 1794100787.9408271,
+    "ast_hash": "ddba6aa4ac06a95198c9a8d8475cf88b",
+    "semantic_hash": ""
+  },
+  "E:\\Claude code\\Projects\\pc-hardware-advisor\\tests\\cases\\13-deal-safety-trap\\prompt.md": {
+    "mtime": 1794430734.4345226,
+    "ast_hash": "3780e427ca1d6dec87eeb59a1112b5ad",
+    "semantic_hash": ""
+  },
+  "E:\\Claude code\\Projects\\pc-hardware-advisor\\tests\\cases\\13-deal-safety-trap\\graders\\excluded.md": {
+    "mtime": 1794430734.4340227,
+    "ast_hash": "3478c725324d02f554ff1fbef1b92e71",
+    "semantic_hash": ""
+  },
+  "E:\\Claude code\\Projects\\pc-hardware-advisor\\tests\\cases\\13-deal-safety-trap\\graders\\language.md": {
+    "mtime": 1794430734.4345226,
+    "ast_hash": "6ec17bb2400b41c7ae445e1d6c38160a",
+    "semantic_hash": ""
+  },
+  "E:\\Claude code\\Projects\\pc-hardware-advisor\\tests\\cases\\13-deal-safety-trap\\graders\\skill-used.md": {
+    "mtime": 1794430734.4345226,
+    "ast_hash": "6ead7fe5a1f01c8c3af5b0f7f0488af7",
+    "semantic_hash": ""
+  },
+  "E:\\Claude code\\Projects\\pc-hardware-advisor\\tests\\cases\\13-deal-safety-trap\\graders\\struck-price.md": {
+    "mtime": 1794430734.4345226,
+    "ast_hash": "70b95c1bb9824d0f4bc29634f4d649eb",
+    "semantic_hash": ""
+  },
+  "E:\\Claude code\\Projects\\pc-hardware-advisor\\tests\\cases\\14-deal-list-paste\\prompt.md": {
+    "mtime": 1794654621.4920983,
+    "ast_hash": "9703858d6091ab9f3d4a35dd9fb8543c",
+    "semantic_hash": ""
+  },
+  "E:\\Claude code\\Projects\\pc-hardware-advisor\\tests\\cases\\14-deal-list-paste\\graders\\excluded.md": {
+    "mtime": 1794654621.4910984,
+    "ast_hash": "37aa5095af93e4fc9ed3dddef056ae79",
+    "semantic_hash": ""
+  },
+  "E:\\Claude code\\Projects\\pc-hardware-advisor\\tests\\cases\\14-deal-list-paste\\graders\\language.md": {
+    "mtime": 1794654621.4915984,
+    "ast_hash": "6ec17bb2400b41c7ae445e1d6c38160a",
+    "semantic_hash": ""
+  },
+  "E:\\Claude code\\Projects\\pc-hardware-advisor\\tests\\cases\\14-deal-list-paste\\graders\\list-claims.md": {
+    "mtime": 1794654621.4915984,
+    "ast_hash": "1fe42fb37c62fb2fc7895d6bf5c4491e",
+    "semantic_hash": ""
+  },
+  "E:\\Claude code\\Projects\\pc-hardware-advisor\\tests\\cases\\14-deal-list-paste\\graders\\not-kept.md": {
+    "mtime": 1794654621.4915984,
+    "ast_hash": "ffb4f2b503f18795b57d529cc102b00d",
+    "semantic_hash": ""
+  },
+  "E:\\Claude code\\Projects\\pc-hardware-advisor\\tests\\cases\\14-deal-list-paste\\graders\\skill-used.md": {
+    "mtime": 1794654621.4915984,
+    "ast_hash": "6ead7fe5a1f01c8c3af5b0f7f0488af7",
+    "semantic_hash": ""
+  },
+  "E:\\Claude code\\Projects\\pc-hardware-advisor\\tests\\cases\\15-deal-list-selection\\prompt.md": {
+    "mtime": 1794667330.3893533,
+    "ast_hash": "3ec12f5d53384c93cb57c8ad2f6ab039",
+    "semantic_hash": ""
+  },
+  "E:\\Claude code\\Projects\\pc-hardware-advisor\\tests\\cases\\15-deal-list-selection\\graders\\language.md": {
+    "mtime": 1794667330.3883607,
+    "ast_hash": "6ec17bb2400b41c7ae445e1d6c38160a",
+    "semantic_hash": ""
+  },
+  "E:\\Claude code\\Projects\\pc-hardware-advisor\\tests\\cases\\15-deal-list-selection\\graders\\list-claims.md": {
+    "mtime": 1794667330.3888533,
+    "ast_hash": "d8d184899962008a03715561de273290",
+    "semantic_hash": ""
+  },
+  "E:\\Claude code\\Projects\\pc-hardware-advisor\\tests\\cases\\15-deal-list-selection\\graders\\packaging.md": {
+    "mtime": 1794667330.3888533,
+    "ast_hash": "abf1cb1db57651cf8e1b46209b5d14ba",
+    "semantic_hash": ""
+  },
+  "E:\\Claude code\\Projects\\pc-hardware-advisor\\tests\\cases\\15-deal-list-selection\\graders\\selection.md": {
+    "mtime": 1794667330.3888533,
+    "ast_hash": "b01bb87c5698b6b88b791eafb93d3ff9",
+    "semantic_hash": ""
+  },
+  "E:\\Claude code\\Projects\\pc-hardware-advisor\\tests\\cases\\15-deal-list-selection\\graders\\skill-used.md": {
+    "mtime": 1794667330.3888533,
+    "ast_hash": "6ead7fe5a1f01c8c3af5b0f7f0488af7",
+    "semantic_hash": ""
+  },
+  "E:\\Claude code\\Projects\\pc-hardware-advisor\\tests\\cases\\16-current-deals\\prompt.md": {
+    "mtime": 1794677184.7782183,
+    "ast_hash": "6bb38486fc8c9a250b84577b39ffae91",
+    "semantic_hash": ""
+  },
+  "E:\\Claude code\\Projects\\pc-hardware-advisor\\tests\\cases\\16-current-deals\\graders\\language.md": {
+    "mtime": 1794677184.7777183,
+    "ast_hash": "6ec17bb2400b41c7ae445e1d6c38160a",
+    "semantic_hash": ""
+  },
+  "E:\\Claude code\\Projects\\pc-hardware-advisor\\tests\\cases\\16-current-deals\\graders\\list-claims.md": {
+    "mtime": 1794677184.7777183,
+    "ast_hash": "d4c794669e116c59587350cea7d9760e",
+    "semantic_hash": ""
+  },
+  "E:\\Claude code\\Projects\\pc-hardware-advisor\\tests\\cases\\16-current-deals\\graders\\recency.md": {
+    "mtime": 1794677184.7777183,
+    "ast_hash": "0e27f3be51dbd7159ffd9f154d3e03fe",
+    "semantic_hash": ""
+  },
+  "E:\\Claude code\\Projects\\pc-hardware-advisor\\tests\\cases\\16-current-deals\\graders\\skill-used.md": {
+    "mtime": 1794677184.7777183,
+    "ast_hash": "6ead7fe5a1f01c8c3af5b0f7f0488af7",
+    "semantic_hash": ""
+  },
+  "E:\\Claude code\\Projects\\pc-hardware-advisor\\tests\\cases\\16-current-deals\\graders\\source.md": {
+    "mtime": 1794677184.7777183,
+    "ast_hash": "0061fbc00059c719b298aa7aed35b2f1",
+    "semantic_hash": ""
+  },
+  "E:\\Claude code\\Projects\\pc-hardware-advisor\\tests\\cases\\17-single-module\\prompt.md": {
+    "mtime": 1794680276.0208995,
+    "ast_hash": "7a6acdb36c48edfcdd68d512ee6ea617",
+    "semantic_hash": ""
+  },
+  "E:\\Claude code\\Projects\\pc-hardware-advisor\\tests\\cases\\17-single-module\\graders\\language.md": {
+    "mtime": 1794680276.0203981,
+    "ast_hash": "6ec17bb2400b41c7ae445e1d6c38160a",
+    "semantic_hash": ""
+  },
+  "E:\\Claude code\\Projects\\pc-hardware-advisor\\tests\\cases\\17-single-module\\graders\\no-general-figure.md": {
+    "mtime": 1794680276.0203981,
+    "ast_hash": "c791dae054a37112ea559517bdb59fd2",
+    "semantic_hash": ""
+  },
+  "E:\\Claude code\\Projects\\pc-hardware-advisor\\tests\\cases\\17-single-module\\graders\\single-channel.md": {
+    "mtime": 1794680276.0203981,
+    "ast_hash": "39fbb5344cb432bf4a31c215c825fb7e",
+    "semantic_hash": ""
+  },
+  "E:\\Claude code\\Projects\\pc-hardware-advisor\\tests\\cases\\17-single-module\\graders\\skill-used.md": {
+    "mtime": 1794680276.0203981,
+    "ast_hash": "2a9f987e6265cde674075c418a288f02",
+    "semantic_hash": ""
+  },
+  "E:\\Claude code\\Projects\\pc-hardware-advisor\\tests\\cases\\18-deal-reference-breadth\\prompt.md": {
+    "mtime": 1794682100.8758936,
+    "ast_hash": "55bfae5e181277ab5d4a6a9b9a1bb218",
+    "semantic_hash": ""
+  },
+  "E:\\Claude code\\Projects\\pc-hardware-advisor\\tests\\cases\\18-deal-reference-breadth\\graders\\compared.md": {
+    "mtime": 1794682100.8753924,
+    "ast_hash": "6451ded79962cf9fea95cc5b64dd627b",
+    "semantic_hash": ""
+  },
+  "E:\\Claude code\\Projects\\pc-hardware-advisor\\tests\\cases\\18-deal-reference-breadth\\graders\\language.md": {
+    "mtime": 1794682100.8753924,
+    "ast_hash": "6ec17bb2400b41c7ae445e1d6c38160a",
+    "semantic_hash": ""
+  },
+  "E:\\Claude code\\Projects\\pc-hardware-advisor\\tests\\cases\\18-deal-reference-breadth\\graders\\skill-used.md": {
+    "mtime": 1794682100.8753924,
+    "ast_hash": "6ead7fe5a1f01c8c3af5b0f7f0488af7",
+    "semantic_hash": ""
+  },
+  "E:\\Claude code\\Projects\\pc-hardware-advisor\\tests\\cases\\19-same-chip-fallback\\prompt.md": {
+    "mtime": 1794699992.2820776,
+    "ast_hash": "c4e3ab10a4218ea5d7b4376af1a2d0cf",
+    "semantic_hash": ""
+  },
+  "E:\\Claude code\\Projects\\pc-hardware-advisor\\tests\\cases\\19-same-chip-fallback\\graders\\language.md": {
+    "mtime": 1794699992.2815697,
+    "ast_hash": "6ec17bb2400b41c7ae445e1d6c38160a",
+    "semantic_hash": ""
+  },
+  "E:\\Claude code\\Projects\\pc-hardware-advisor\\tests\\cases\\19-same-chip-fallback\\graders\\no-purchase-push.md": {
+    "mtime": 1794699992.2820776,
+    "ast_hash": "f91e71b6b5111f99f26690cb76d5f237",
+    "semantic_hash": ""
+  },
+  "E:\\Claude code\\Projects\\pc-hardware-advisor\\tests\\cases\\19-same-chip-fallback\\graders\\same-chip.md": {
+    "mtime": 1794699992.2820776,
+    "ast_hash": "9e93e2d2d4aa91206746b40a6dd50459",
+    "semantic_hash": ""
+  },
+  "E:\\Claude code\\Projects\\pc-hardware-advisor\\tests\\cases\\19-same-chip-fallback\\graders\\skill-used.md": {
+    "mtime": 1794699992.2820776,
+    "ast_hash": "6ead7fe5a1f01c8c3af5b0f7f0488af7",
+    "semantic_hash": ""
+  },
+  "E:\\Claude code\\Projects\\pc-hardware-advisor\\tests\\cases\\20-chip-listing-reference\\prompt.md": {
+    "mtime": 1794768619.232794,
+    "ast_hash": "fd53ab6abdadb7bdc6f1af0bdff34077",
+    "semantic_hash": ""
+  },
+  "E:\\Claude code\\Projects\\pc-hardware-advisor\\tests\\cases\\20-chip-listing-reference\\graders\\chip-listing.md": {
+    "mtime": 1794768619.2317903,
+    "ast_hash": "1a842773f35d1f60384421bc8189037c",
+    "semantic_hash": ""
+  },
+  "E:\\Claude code\\Projects\\pc-hardware-advisor\\tests\\cases\\20-chip-listing-reference\\graders\\language.md": {
+    "mtime": 1794768619.2317903,
+    "ast_hash": "6ec17bb2400b41c7ae445e1d6c38160a",
+    "semantic_hash": ""
+  },
+  "E:\\Claude code\\Projects\\pc-hardware-advisor\\tests\\cases\\20-chip-listing-reference\\graders\\skill-used.md": {
+    "mtime": 1794768619.232794,
+    "ast_hash": "6ead7fe5a1f01c8c3af5b0f7f0488af7",
+    "semantic_hash": ""
+  },
+  "E:\\Claude code\\Projects\\pc-hardware-advisor\\tests\\cases\\20-chip-listing-reference\\graders\\sources-pages.md": {
+    "mtime": 1794768619.232794,
+    "ast_hash": "1426e02be3decec317d191a2e1c7114a",
+    "semantic_hash": ""
+  },
+  "E:\\Claude code\\Projects\\pc-hardware-advisor\\tests\\cases\\21-part-for-owned-cpu\\prompt.md": {
+    "mtime": 1794772716.4065218,
+    "ast_hash": "2e6aa127e4b8966cd0c4ddcd0e09dff6",
+    "semantic_hash": ""
+  },
+  "E:\\Claude code\\Projects\\pc-hardware-advisor\\tests\\cases\\21-part-for-owned-cpu\\graders\\asks-or-defaults.md": {
+    "mtime": 1794772716.4065218,
+    "ast_hash": "933c43beb2410e9d134ef89c647b932d",
+    "semantic_hash": ""
+  },
+  "E:\\Claude code\\Projects\\pc-hardware-advisor\\tests\\cases\\21-part-for-owned-cpu\\graders\\language.md": {
+    "mtime": 1794772716.4065218,
+    "ast_hash": "6ec17bb2400b41c7ae445e1d6c38160a",
+    "semantic_hash": ""
+  },
+  "E:\\Claude code\\Projects\\pc-hardware-advisor\\tests\\cases\\21-part-for-owned-cpu\\graders\\skill-used.md": {
+    "mtime": 1794772716.4065218,
+    "ast_hash": "85bc2b2cb6fab5dc4695976dea89fcdf",
+    "semantic_hash": ""
+  },
+  "E:\\Claude code\\Projects\\pc-hardware-advisor\\tests\\cases\\22-part-for-owned-cpu-known-use\\prompt.md": {
+    "mtime": 1794772716.407022,
+    "ast_hash": "1ce4bb879aa043c9c6b294ac4e858ff1",
+    "semantic_hash": ""
+  },
+  "E:\\Claude code\\Projects\\pc-hardware-advisor\\tests\\cases\\22-part-for-owned-cpu-known-use\\graders\\language.md": {
+    "mtime": 1794772716.407022,
+    "ast_hash": "6ec17bb2400b41c7ae445e1d6c38160a",
+    "semantic_hash": ""
+  },
+  "E:\\Claude code\\Projects\\pc-hardware-advisor\\tests\\cases\\22-part-for-owned-cpu-known-use\\graders\\one-part.md": {
+    "mtime": 1794772716.407022,
+    "ast_hash": "709b123954377c5605841835ef124ee8",
+    "semantic_hash": ""
+  },
+  "E:\\Claude code\\Projects\\pc-hardware-advisor\\tests\\cases\\22-part-for-owned-cpu-known-use\\graders\\skill-used.md": {
+    "mtime": 1794772716.407022,
+    "ast_hash": "85bc2b2cb6fab5dc4695976dea89fcdf",
+    "semantic_hash": ""
+  },
+  "E:\\Claude code\\Projects\\pc-hardware-advisor\\tests\\results\\run-0310-report.html": {
+    "mtime": 1794162114.7786834,
+    "ast_hash": "2c515f54f103aae0e7fc810790d4c889",
+    "semantic_hash": ""
+  },
+  "E:\\Claude code\\Projects\\pc-hardware-advisor\\tests\\results\\run-0311-report.html": {
+    "mtime": 1794166161.0396144,
+    "ast_hash": "931c8fbdf5a8ba6bf3e31c7ca3435d53",
+    "semantic_hash": ""
+  },
+  "E:\\Claude code\\Projects\\pc-hardware-advisor\\tests\\results\\run-035-report.html": {
+    "mtime": 1794138759.7126303,
+    "ast_hash": "c9381b623115856b08216f303a027065",
+    "semantic_hash": ""
+  },
+  "E:\\Claude code\\Projects\\pc-hardware-advisor\\tests\\results\\run-035b-report.html": {
+    "mtime": 1794138877.3599174,
+    "ast_hash": "b279a94c8d11f4285f479fa739b87430",
+    "semantic_hash": ""
+  },
+  "E:\\Claude code\\Projects\\pc-hardware-advisor\\tests\\results\\run-035c-report.html": {
+    "mtime": 1794138981.934798,
+    "ast_hash": "be0b795d30c2fd178e8926d8a2150350",
+    "semantic_hash": ""
+  },
+  "E:\\Claude code\\Projects\\pc-hardware-advisor\\tests\\results\\run-036-report.html": {
+    "mtime": 1794144492.550737,
+    "ast_hash": "a5c514c619697a8254c186e9f8706409",
+    "semantic_hash": ""
+  },
+  "E:\\Claude code\\Projects\\pc-hardware-advisor\\tests\\results\\run-036b-report.html": {
+    "mtime": 1794144670.129941,
+    "ast_hash": "647a53c0a18c4d6812d24a5fb0e80a55",
+    "semantic_hash": ""
+  },
+  "E:\\Claude code\\Projects\\pc-hardware-advisor\\tests\\results\\run-039-report.html": {
+    "mtime": 1794158750.8554103,
+    "ast_hash": "47410c79886f13c371e5b297edd8e049",
+    "semantic_hash": ""
+  },
+  "E:\\Claude code\\Projects\\pc-hardware-advisor\\tests\\results\\run-039b-report.html": {
+    "mtime": 1794159211.393287,
+    "ast_hash": "7a3c68bd37444fa749c9a3f57121f685",
+    "semantic_hash": ""
+  },
+  "E:\\Claude code\\Projects\\pc-hardware-advisor\\tests\\results\\run-adv-report.html": {
+    "mtime": 1794098086.5174224,
+    "ast_hash": "4d4be1fa5a607da7768c498a3aec0c81",
+    "semantic_hash": ""
+  },
+  "E:\\Claude code\\Projects\\pc-hardware-advisor\\tests\\results\\run-fix-report.html": {
+    "mtime": 1794098622.0709553,
+    "ast_hash": "8e1166d601fc433de7771530bc1ddd9d",
+    "semantic_hash": ""
+  },
+  "E:\\Claude code\\Projects\\pc-hardware-advisor\\tests\\results\\run-fix2-report.html": {
+    "mtime": 1794098702.4315064,
+    "ast_hash": "33bc82bb37b0ac4bf8b500050c9f5aad",
+    "semantic_hash": ""
+  },
+  "E:\\Claude code\\Projects\\pc-hardware-advisor\\tests\\results\\run-full-report.html": {
+    "mtime": 1794095234.3928435,
+    "ast_hash": "ee3068c3bd4948aae92661401999a19f",
+    "semantic_hash": ""
+  },
+  "E:\\Claude code\\Projects\\pc-hardware-advisor\\tests\\results\\run1-report.html": {
+    "mtime": 1794076707.2996047,
+    "ast_hash": "389a4437e882218a5472a7ea34b229db",
+    "semantic_hash": ""
+  },
   "E:\\Claude code\\Projects\\pc-hardware-advisor\\tests\\results\\run1.md": {
     "mtime": 1794076813.6515462,
     "ast_hash": "8c7bcdb348434a63d28b002610fa8a9b",
     "semantic_hash": "8c7bcdb348434a63d28b002610fa8a9b"
+  },
+  "E:\\Claude code\\Projects\\pc-hardware-advisor\\tests\\results\\run10-report.html": {
+    "mtime": 1794080723.2354653,
+    "ast_hash": "fc39bed5b1a100dd7ff0f81d4c76839e",
+    "semantic_hash": ""
+  },
+  "E:\\Claude code\\Projects\\pc-hardware-advisor\\tests\\results\\run11-report.html": {
+    "mtime": 1794084015.1010725,
+    "ast_hash": "aa41496615a714c9cf094ad67cbcb269",
+    "semantic_hash": ""
+  },
+  "E:\\Claude code\\Projects\\pc-hardware-advisor\\tests\\results\\run11.md": {
+    "mtime": 1794084043.5592432,
+    "ast_hash": "e15749eec1d8b73e23165edebb5ad3f0",
+    "semantic_hash": ""
+  },
+  "E:\\Claude code\\Projects\\pc-hardware-advisor\\tests\\results\\run12-report.html": {
+    "mtime": 1794087140.8684537,
+    "ast_hash": "2eacfe9a9ff8a573e3b58566baf904d5",
+    "semantic_hash": ""
+  },
+  "E:\\Claude code\\Projects\\pc-hardware-advisor\\tests\\results\\run12.md": {
+    "mtime": 1794087307.0326266,
+    "ast_hash": "03418e64c87713f292bf8d6fc8dd1d34",
+    "semantic_hash": ""
+  },
+  "E:\\Claude code\\Projects\\pc-hardware-advisor\\tests\\results\\run13-report.html": {
+    "mtime": 1794087868.1424277,
+    "ast_hash": "12c23270863648cdd727dae323d623f3",
+    "semantic_hash": ""
+  },
+  "E:\\Claude code\\Projects\\pc-hardware-advisor\\tests\\results\\run13.md": {
+    "mtime": 1794088352.2435544,
+    "ast_hash": "ad40fa00fb147cd0ebe4a5cdd6f2da78",
+    "semantic_hash": ""
+  },
+  "E:\\Claude code\\Projects\\pc-hardware-advisor\\tests\\results\\run14-report.html": {
+    "mtime": 1794088447.972549,
+    "ast_hash": "47914395a6e87010b0c6a1d5118cc0f8",
+    "semantic_hash": ""
+  },
+  "E:\\Claude code\\Projects\\pc-hardware-advisor\\tests\\results\\run14.md": {
+    "mtime": 1794088759.077386,
+    "ast_hash": "83403fa829eed30b729c39bf693faace",
+    "semantic_hash": ""
+  },
+  "E:\\Claude code\\Projects\\pc-hardware-advisor\\tests\\results\\run15-report.html": {
+    "mtime": 1794090937.3731258,
+    "ast_hash": "afc0825821d7e8daa632f2f39ad2e355",
+    "semantic_hash": ""
+  },
+  "E:\\Claude code\\Projects\\pc-hardware-advisor\\tests\\results\\run15.md": {
+    "mtime": 1794091958.0982327,
+    "ast_hash": "a09d8352e37a28347531145d8c5d3857",
+    "semantic_hash": ""
+  },
+  "E:\\Claude code\\Projects\\pc-hardware-advisor\\tests\\results\\run2-report.html": {
+    "mtime": 1794077222.495103,
+    "ast_hash": "949c90f2405e514c5d8990bebd231131",
+    "semantic_hash": ""
   },
   "E:\\Claude code\\Projects\\pc-hardware-advisor\\tests\\results\\run2.md": {
     "mtime": 1794077305.7307053,
@@ -304,6 +1704,21 @@
     "ast_hash": "9710a84d52aec806fd520650541a38bf",
     "semantic_hash": "9710a84d52aec806fd520650541a38bf"
   },
+  "E:\\Claude code\\Projects\\pc-hardware-advisor\\tests\\results\\run3-report.html": {
+    "mtime": 1794077797.189655,
+    "ast_hash": "ec5aa35304a2806af6371151858581c5",
+    "semantic_hash": ""
+  },
+  "E:\\Claude code\\Projects\\pc-hardware-advisor\\tests\\results\\run4-report.html": {
+    "mtime": 1794078115.8322968,
+    "ast_hash": "c7cac1d5bc07ceb9564970c462db2e97",
+    "semantic_hash": ""
+  },
+  "E:\\Claude code\\Projects\\pc-hardware-advisor\\tests\\results\\run5-report.html": {
+    "mtime": 1794078562.27274,
+    "ast_hash": "50c31762b1b3fed698f8a3fb3d3abe24",
+    "semantic_hash": ""
+  },
   "E:\\Claude code\\Projects\\pc-hardware-advisor\\tests\\results\\run5.md": {
     "mtime": 1794078612.419455,
     "ast_hash": "b268b6bf1efe91c8ae2f63bb369c5435",
@@ -313,5 +1728,145 @@
     "mtime": 1794079787.878304,
     "ast_hash": "7c18e98172d4c5d2bd1b527d8766f82b",
     "semantic_hash": "7c18e98172d4c5d2bd1b527d8766f82b"
+  },
+  "E:\\Claude code\\Projects\\pc-hardware-advisor\\tests\\results\\run6-report.html": {
+    "mtime": 1794079263.6725886,
+    "ast_hash": "3db02b9b6792f28f3c67aa07765b9dce",
+    "semantic_hash": ""
+  },
+  "E:\\Claude code\\Projects\\pc-hardware-advisor\\tests\\results\\run7-report.html": {
+    "mtime": 1794079748.3706875,
+    "ast_hash": "1aa1f3f8b50a3340dc4686d0358e96e0",
+    "semantic_hash": ""
+  },
+  "E:\\Claude code\\Projects\\pc-hardware-advisor\\tests\\results\\run8-10.md": {
+    "mtime": 1794080748.1125045,
+    "ast_hash": "d748edefe5891844941c7dbc645d4960",
+    "semantic_hash": ""
+  },
+  "E:\\Claude code\\Projects\\pc-hardware-advisor\\tests\\results\\run8-report.html": {
+    "mtime": 1794080486.5492601,
+    "ast_hash": "ff90e999b30067d213a141c8e7ad573a",
+    "semantic_hash": ""
+  },
+  "E:\\Claude code\\Projects\\pc-hardware-advisor\\tests\\results\\run9-report.html": {
+    "mtime": 1794080537.0282147,
+    "ast_hash": "583827f56bf70e30e875a1c54339e4ab",
+    "semantic_hash": ""
+  },
+  "E:\\Claude code\\Projects\\pc-hardware-advisor\\tests\\results\\2026-11-08T21-11-21-524Z\\report.html": {
+    "mtime": 1794172779.4969764,
+    "ast_hash": "eb8f7bc53dcc410bd718fb7a231c61bc",
+    "semantic_hash": ""
+  },
+  "E:\\Claude code\\Projects\\pc-hardware-advisor\\tests\\results\\2026-11-11T20-52-47-714Z\\report.html": {
+    "mtime": 1794430408.1103573,
+    "ast_hash": "65254e01302b1d7478c2e84ad905680a",
+    "semantic_hash": ""
+  },
+  "E:\\Claude code\\Projects\\pc-hardware-advisor\\tests\\results\\2026-11-14T10-05-51-608Z\\report.html": {
+    "mtime": 1794650984.9834788,
+    "ast_hash": "cffe36dbae3cddc981145a167e0475a4",
+    "semantic_hash": ""
+  },
+  "E:\\Claude code\\Projects\\pc-hardware-advisor\\tests\\results\\2026-11-14T14-37-40-448Z\\report.html": {
+    "mtime": 1794667200.7534468,
+    "ast_hash": "b9515dd61f3d1cd6ee65eff2eec9305a",
+    "semantic_hash": ""
+  },
+  "E:\\Claude code\\Projects\\pc-hardware-advisor\\tests\\results\\2026-11-14T16-12-51-883Z\\report.html": {
+    "mtime": 1794672942.74872,
+    "ast_hash": "ad79bab8d37b5a2d70dc2eaac1cd726e",
+    "semantic_hash": ""
+  },
+  "E:\\Claude code\\Projects\\pc-hardware-advisor\\tests\\results\\2026-11-14T18-14-27-033Z\\report.html": {
+    "mtime": 1794680113.37213,
+    "ast_hash": "684eafee7b8288e9356b3ca7a3263caf",
+    "semantic_hash": ""
+  },
+  "E:\\Claude code\\Projects\\pc-hardware-advisor\\tests\\results\\2026-11-14T18-40-07-338Z\\report.html": {
+    "mtime": 1794681735.2630665,
+    "ast_hash": "1b3b540b350087b425bbf4be57175a77",
+    "semantic_hash": ""
+  },
+  "E:\\Claude code\\Projects\\pc-hardware-advisor\\tests\\results\\2026-11-14T23-40-03-480Z\\report.html": {
+    "mtime": 1794699738.7583299,
+    "ast_hash": "905f18f4cc52e6603a1f463b417057d7",
+    "semantic_hash": ""
+  },
+  "E:\\Claude code\\Projects\\pc-hardware-advisor\\tests\\results\\2026-11-15T17-28-28-550Z\\report.html": {
+    "mtime": 1794764005.8160594,
+    "ast_hash": "59af41ec3de25580f3e9828ebedb9423",
+    "semantic_hash": ""
+  },
+  "E:\\Claude code\\Projects\\pc-hardware-advisor\\tests\\results\\2026-11-15T19-03-19-426Z\\report.html": {
+    "mtime": 1794769417.9971178,
+    "ast_hash": "3acf1057227ddd2cd8642267ca8f51fa",
+    "semantic_hash": ""
+  },
+  "E:\\Claude code\\Projects\\pc-hardware-advisor\\tests\\results\\2026-11-15T19-03-37-678Z\\report.html": {
+    "mtime": 1794769440.1930225,
+    "ast_hash": "3087e530555b608db79dda4674a7d24c",
+    "semantic_hash": ""
+  },
+  "E:\\Claude code\\Projects\\pc-hardware-advisor\\tests\\results\\2026-11-15T19-05-05-123Z\\report.html": {
+    "mtime": 1794770006.2048223,
+    "ast_hash": "17e1cd75711ff0edb117ebc16fbca70e",
+    "semantic_hash": ""
+  },
+  "E:\\Claude code\\Projects\\pc-hardware-advisor\\tests\\results\\2026-11-15T19-05-05-206Z\\report.html": {
+    "mtime": 1794769522.232804,
+    "ast_hash": "9cd37149ef9a2062961b81f6e2eadc50",
+    "semantic_hash": ""
+  },
+  "E:\\Claude code\\Projects\\pc-hardware-advisor\\tests\\results\\2026-11-15T19-15-48-465Z\\report.html": {
+    "mtime": 1794770193.2439911,
+    "ast_hash": "56864abbc16912d0e7d64735f6290b2e",
+    "semantic_hash": ""
+  },
+  "E:\\Claude code\\Projects\\pc-hardware-advisor\\tests\\results\\2026-11-15T19-15-48-548Z\\report.html": {
+    "mtime": 1794770435.433262,
+    "ast_hash": "d1c633ac39558edba336ba056ca2279a",
+    "semantic_hash": ""
+  },
+  "E:\\Claude code\\Projects\\pc-hardware-advisor\\tests\\results\\2026-11-15T19-20-36-241Z\\report.html": {
+    "mtime": 1794770943.7415762,
+    "ast_hash": "e8f8efe12a631659ddc9259a0c02cf4a",
+    "semantic_hash": ""
+  },
+  "E:\\Claude code\\Projects\\pc-hardware-advisor\\tests\\results\\2026-11-15T21-07-45-425Z\\report.html": {
+    "mtime": 1794777037.294384,
+    "ast_hash": "983a1bf24bd688e0fd9f4b483ea3867c",
+    "semantic_hash": ""
+  },
+  "E:\\Claude code\\Projects\\pc-hardware-advisor\\tests\\results\\2026-11-15T21-07-45-504Z\\report.html": {
+    "mtime": 1794777447.8823657,
+    "ast_hash": "2d336cdc46e735cc8c9b16f4f4de3dc2",
+    "semantic_hash": ""
+  },
+  "E:\\Claude code\\Projects\\pc-hardware-advisor\\tests\\results\\2026-11-15T21-17-28-649Z\\report.html": {
+    "mtime": 1794777666.305407,
+    "ast_hash": "5f4c775e99849c79c5243ea60c0cdff3",
+    "semantic_hash": ""
+  },
+  "E:\\Claude code\\Projects\\pc-hardware-advisor\\tests\\results\\2026-11-15T21-17-28-656Z\\report.html": {
+    "mtime": 1794777499.336524,
+    "ast_hash": "d073a16fe700929940fc12ad388ac735",
+    "semantic_hash": ""
+  },
+  "E:\\Claude code\\Projects\\pc-hardware-advisor\\tests\\results\\2026-11-15T21-21-57-704Z\\report.html": {
+    "mtime": 1794777881.6423333,
+    "ast_hash": "0208bd1cf43e98e16486d4c70874e791",
+    "semantic_hash": ""
+  },
+  "E:\\Claude code\\Projects\\pc-hardware-advisor\\tests\\results\\2026-11-15T21-25-04-350Z\\report.html": {
+    "mtime": 1794778120.0293345,
+    "ast_hash": "ef844b76b162c9bdbb560953d77e5236",
+    "semantic_hash": ""
+  },
+  "E:\\Claude code\\Projects\\pc-hardware-advisor\\.claude-plugin\\icon.png": {
+    "mtime": 1794074293.2886138,
+    "ast_hash": "641dc263d617e197fe760a239c5ffe9d",
+    "semantic_hash": ""
   }
 }
