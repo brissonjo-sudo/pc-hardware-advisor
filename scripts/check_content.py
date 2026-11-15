@@ -271,8 +271,10 @@ ACCESS_RE = re.compile(r"^`?(A|B|C|browser)`? \((\d{4}-\d{2}-\d{2})\)")
 
 def check_access_policy() -> None:
     """Every retailer row and every non-retail source carries a tier, a check date and an https URL."""
-    for name, header in (("retailers-by-country", "Access"), ("source-access-policy", "Access")):
-        text = (ROOT / "references" / f"{name}.md").read_text(encoding="utf-8")
+    for name in ("references/retailers-by-country", "references/source-access-policy",
+                 "skills/find-deals/references/price-history-sources"):
+        header = "Access"
+        text = (ROOT / f"{name}.md").read_text(encoding="utf-8")
         col = None
         for line in text.splitlines():
             if not line.startswith("|"):

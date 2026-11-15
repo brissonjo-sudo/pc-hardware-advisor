@@ -30,11 +30,11 @@ A source failing 1, 2 or 5 is tier B. A source whose robots.txt or terms could n
 
 ## 4. Usage rules
 
-1. Access starts from a user request on a named part, a deal or a pasted list, never from a background crawl.
+1. Access starts from a user request on a named part, a deal or a pasted list, never from a background crawl. A `track-price` schedule the user set for named items counts as such a request.
 2. One page at a time per host. When `price-scout` agents run in parallel, each host goes to one agent only.
 3. Wait about 2 seconds between two requests to the same host. Best effort: the fetch tool has no delay setting, so this is a rule of conduct, not a guarantee.
 4. Stop reading a host at the first error or block (robots refusal, HTTP 403 or 429, captcha, bot page, login wall): record it, give the link, move on. Never a cache, mirror, archive copy, proxy, changed user agent or captcha workaround (`research-method.md` section 7).
-5. Every price shown carries its source URL and its read date. A price read more than 24 hours before the answer is labelled `stale` and is never a reference.
+5. Every price shown carries its source URL and its read date. A price read more than 24 hours before the answer is labelled `stale` and is never a same-day reference (`find-deals`, `hunt-prices`). Earlier readings kept by `track-price` and dated reference snapshots (`used-market-checklist.md`) stay usable as history, with their date.
 6. Error-price and deal-alert sites are never a reference price: they are delayed, often expired and often cancelled. A deal list may start a `find-deals` check; the reference always comes from retailer pages.
 7. Check the exact domain and the legal notice before trusting a price: look-alike domains exist.
 
@@ -58,10 +58,10 @@ Retailers, classifieds and refurbishers (eBay UK and US, Leboncoin, Kleinanzeige
 
 ## 6. APIs (tier C)
 
-| API | Status (2026-11-15) | Source |
-|---|---|---|
-| Keepa API (Amazon price history) | Unresolved: keepa.com shows its plans only through JavaScript, so no plan, price or token figure was read. Secondary sources claim no free tier and about 49 EUR a month for 20 tokens a minute; their tier ladders disagree. The user supplies their own key. | [3] |
-| Amazon Creators API | Replaces the Product Advertising API 5.0, which Amazon states "has been deprecated"; the official page read gives no retirement date (secondary sources say 15 May 2026). For Amazon Associates; the user plugs in their own credentials, never the author's. | [4] |
+| API | Access | Status (2026-11-15) | Source |
+|---|---|---|---|
+| Keepa API (Amazon price history) | C (2026-11-15) | Unresolved: keepa.com shows its plans only through JavaScript, so no plan, price or token figure was read. Secondary sources claim no free tier and about 49 EUR a month for 20 tokens a minute; their tier ladders disagree. The user supplies their own key. | [3] |
+| Amazon Creators API | C (2026-11-15) | Replaces the Product Advertising API 5.0, which Amazon states "has been deprecated"; the official page read gives no retirement date (secondary sources say 15 May 2026). For Amazon Associates; the user plugs in their own credentials, never the author's. | [4] |
 
 ## 7. How to update
 
