@@ -106,6 +106,8 @@ In prose (summary lines, bullets), cite a price only together with its table row
 
 ## 7. Blocked, JavaScript-only and partial pages
 
+Read `source-access-policy.md` first: it sets each site's tier (`Access` column of `retailers-by-country.md`) and the usage rules (one page at a time per host, no search, sort, filter or deals URL on a tier A host, a price older than 24 hours is `stale`).
+
 Never circumvent with tricks: no alternate user agents, caches, mirrors, or archive copies used to dodge a block [R2:3].
 
 1. Record the page as `blocked (<reason>)` (for example HTTP 403, captcha, login wall, rate limit) or `partial (<what was missing>)` (for example price rendered by JavaScript).

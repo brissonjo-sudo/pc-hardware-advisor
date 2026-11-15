@@ -95,7 +95,7 @@ Say in the answer which stopping rule applied, in plain words ("all French retai
 
 ## 9. Briefing price-scout
 
-Send one brief per batch of about 3 to 6 sources. Fill every field; do not add opinions or hints about expected prices. Template:
+Send one brief per batch of about 3 to 6 sources. Never put a tier B site in a brief (`source-access-policy.md`), and give each host to one brief only. Fill every field; do not add opinions or hints about expected prices. Template:
 
 ```
 Item: <brand, exact model, SKU/MPN, EAN if known, capacity, speed, box/OEM>
@@ -107,6 +107,7 @@ Sources (read each once):
 1. <site> | <URL or search query>
 2. <site> | <URL or search query>
 ...
+Read product pages only: no search, sort, filter or deals URL on the site.
 Return: only the canonical price rows table and an "Unreadable" list.
 Do not compute taxes. Leave Landed as `excluding fees` unless shipping to the buyer country is shown.
 Never bypass blocks; never log in; never create accounts.

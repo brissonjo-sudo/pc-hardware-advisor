@@ -33,9 +33,10 @@ Fora do escopo: consoles, smartphones, tablets, notebooks como produtos e qualqu
 - **A confiança é exibida.** Cada valor indica o quanto está bem sustentado.
 - **Nada é inventado.** Se uma especificação, um preço ou uma regra não puder ser comprovado, o Claude diz isso.
 - **Sites bloqueados: recurso ao navegador, nunca artifícios.** Se um site recusar a leitura automatizada e houver uma ferramenta de navegador disponível, o Claude oferece em uma linha abrir a página no seu navegador; responda "sim" e ele lê as poucas páginas que importam, somente leitura, e informa isso. Ele para diante de qualquer captcha ou verificação de bot e nunca imita um humano para superá-lo. Caso contrário, pede a você uma captura de tela ou texto colado. Não são usados user agents alternativos, caches nem espelhos.
+- **Cada site tem um nível de acesso.** Antes de ler um site, Claude segue `references/source-access-policy.md`: os sites de nível A são lidos uma página de produto por vez, nunca por busca, ordenação ou páginas de ofertas; os sites de nível B, que recusam em seu robots.txt ou nos termos de uso, recebem apenas um link; as APIs de histórico de preços (nível C) exigem sua própria chave, que o plugin nunca armazena.
 - **Somente leitura.** O plugin nunca compra, nunca cria contas, nunca envia formulários e nunca entra em contato com vendedores. Isso você faz por conta própria.
 
-Dez referências compartilhadas (método de pesquisa, lojas por país, critérios para lojas, compras internacionais, checklist do mercado de usados, soquetes e chipsets, memória, fontes de alimentação e conectores, formatos e gabinetes, largura de banda de GPU para IA) são datadas e têm fonte. Foram revisadas pela última vez em 2026-11-07.
+Onze referências compartilhadas (método de pesquisa, lojas por país, critérios para lojas, compras internacionais, checklist do mercado de usados, soquetes e chipsets, memória, fontes de alimentação e conectores, formatos e gabinetes, largura de banda de GPU para IA, política de acesso às fontes) são datadas e têm fonte. Foram revisadas pela última vez em 2026-11-07.
 
 ## Instalação
 

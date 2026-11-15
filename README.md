@@ -31,9 +31,10 @@ Out of scope: consoles, smartphones, tablets, laptops as products, and anything 
 - **Confidence is shown.** Each figure says how well it is supported.
 - **Nothing is invented.** If a spec, a price or a rule cannot be sourced, Claude says so.
 - **Blocked sites: browser fallback, never tricks.** If a site refuses automated reading and a browser tool is available, Claude offers in one line to open the page in your browser; reply "yes" and it reads the few pages that matter, read-only, and says so. It stops at any captcha or bot check and never imitates a human to pass one. Otherwise it asks you for a screenshot or pasted text. No alternate user agents, caches or mirrors are used.
+- **Each site has an access tier.** Before reading a site, Claude follows `references/source-access-policy.md`: tier A sites are read one product page at a time, never through search, sort or deals pages; tier B sites, refused by their robots.txt or their terms of use, get a link only; price-history APIs (tier C) need your own key, which the plugin never stores.
 - **Read-only.** The plugin never buys, never creates accounts, never submits forms and never contacts sellers. You do that yourself.
 
-Ten shared references (research method, retailers by country, retailer criteria, international buying, used-market checklist, sockets and chipsets, memory, power supplies and connectors, form factors and cases, GPU bandwidth for AI) are dated and sourced. They were last checked on 2026-11-07.
+Eleven shared references (research method, retailers by country, retailer criteria, international buying, used-market checklist, sockets and chipsets, memory, GPU bandwidth for AI, source access policy) are dated and sourced. They were last checked on 2026-11-07.
 
 ## Installation
 
