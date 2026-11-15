@@ -1,6 +1,6 @@
 ---
 name: build-config
-description: This skill should be used when the user wants a complete desktop PC build proposed for a use and a budget, with a part-by-part table, dated landed prices, a cheaper and a stronger variant, and watch-outs. Trigger phrases include "build me a PC for", "what PC should I build with a budget of", "suggest a gaming build", "spec out a local AI workstation", "complete parts list for", "upgrade path for my build", "NAS or homelab build". The user may write in any language. Not for checking one given parts list (use check-compatibility), pricing a single part (use hunt-prices), sizing a model for a GPU only (use size-local-ai), judging a used listing (use review-used-listing), laptops, consoles or phones. This skill never buys, never creates accounts and never contacts sellers.
+description: This skill should be used when the user wants a complete desktop PC build proposed for a use and a budget, with a part-by-part table, dated landed prices, a cheaper and a stronger variant, and watch-outs, or one part chosen to match parts the user already owns. Trigger phrases include "build me a PC for", "what PC should I build with a budget of", "suggest a gaming build", "spec out a local AI workstation", "complete parts list for", "upgrade path for my build", "NAS or homelab build", "which motherboard for my 9800X3D", "quelle carte mère pour mon processeur". The user may write in any language. Not for checking one given parts list (use check-compatibility), pricing a single named model (use hunt-prices), sizing a model for a GPU only (use size-local-ai), judging a used listing (use review-used-listing), laptops, consoles or phones. This skill never buys, never creates accounts and never contacts sellers.
 ---
 
 # Build a complete desktop configuration
@@ -31,6 +31,8 @@ Long runs can be compacted mid-way: tool results, sub-agent returns and URLs are
 ## Step 0: collect inputs
 
 Do not block on questions. If the use and the country are known, build now with stated defaults (no budget given: the cheapest configuration that fully meets the stated requirement and constraints), and put the open questions at the end of the answer, with what each answer would change. Ask before building only when the use or the country is unknown; then ask once, in one short message. Essentials: **use**, **budget** (and whether it includes monitor, peripherals, OS), **country** (delivery country and currency).
+
+**One part for owned parts** (for example "a motherboard for my 9800X3D"): same rule. Use unknown: ask once (use, budget for that part, form factor or case, parts already owned such as memory and graphics card) and stop, with no price table. Otherwise choose with the defaults written. The main table then holds the asked part only, with its compatibility with each owned part; the variants are a cheaper and a stronger model of that part; skip the full-build total and the budget allocation.
 
 Optional constraints to ask in the same message: case size or form factor, noise target, power draw or electricity limits, parts already owned (with exact models), new-only versus new plus refurbished, brands banned or wanted, OS, timeline, upgrade horizon.
 
@@ -102,7 +104,7 @@ Upgrade path on request: follow the "Upgrade path" section of `build-playbook.md
 
 ## Output template
 
-Start with the conclusion; use the user's language.
+Start with the conclusion; use the user's language. One-part request (Step 0): the conclusion line gives the chosen part's landed price against its budget, the main table lists that part only (with its compatibility with each owned part), the variants are a cheaper and a stronger model of it, and the full-build total and budget allocation are left out.
 
 1. **Conclusion line**: main config landed total versus budget (under, over, partial), price date, overall confidence. Example shape: "Main build: X CUR landed (partial: 1 price not read) versus Y CUR budget, prices read <date>."
 2. **Assumptions and defaults used**, one line each.
@@ -133,7 +135,7 @@ Keep prose short; no narration of the search process.
 
 ## Self-check before answering
 
-1. Does the conclusion line state the landed total (or partial) against the budget? If the first priced config was over, does the Budget fit line show each lever of step 5.4 tried in order? Before each GPU step down, were memory capacity and kit (lever 1, two modules) at the stated minimum and the CPU and board the cheapest that meet the use?
+1. Does the conclusion line state the landed total (or partial) against the budget (one-part request: that part's landed price against its budget, no full-build total)? If the first priced config was over, does the Budget fit line show each lever of step 5.4 tried in order? Before each GPU step down, were memory capacity and kit (lever 1, two modules) at the stated minimum and the CPU and board the cheapest that meet the use?
 2. Is every part eligible (new or professional refurbished, invoice and warranty)? No private-party part in the totals?
 3. Was the compatibility method run on the whole list, with no unresolved conflict? Owned parts specced from the manufacturer page, or why not?
 4. For AI builds, was `size-local-ai` run first and its estimates labelled?

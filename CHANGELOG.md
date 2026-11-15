@@ -6,6 +6,13 @@ The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.1.0/),
 
 ## [Unreleased]
 
+## [0.7.7] - 2026-11-15
+
+### Fixed
+
+- `build-config` now takes "one part to match parts the user already owns" (for example a motherboard for an owned CPU): one grouped question when the use is unknown, otherwise written defaults, and a table limited to that part. On 0.7.6 no skill fired for this request (2 runs of 2) and the answer gave prices from memory.
+- `hunt-prices` description sends a part named only by its category to `build-config`.
+
 ## [0.7.6] - 2026-11-15
 
 ### Fixed
