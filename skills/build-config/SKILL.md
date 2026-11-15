@@ -104,7 +104,7 @@ Upgrade path on request: follow the "Upgrade path" section of `build-playbook.md
 
 ## Output template
 
-Start with the conclusion; use the user's language.
+Start with the conclusion; use the user's language. One-part request (Step 0): the conclusion line gives the chosen part's landed price against its budget, the main table lists that part only (with its compatibility with each owned part), the variants are a cheaper and a stronger model of it, and the full-build total and budget allocation are left out.
 
 1. **Conclusion line**: main config landed total versus budget (under, over, partial), price date, overall confidence. Example shape: "Main build: X CUR landed (partial: 1 price not read) versus Y CUR budget, prices read <date>."
 2. **Assumptions and defaults used**, one line each.
@@ -135,7 +135,7 @@ Keep prose short; no narration of the search process.
 
 ## Self-check before answering
 
-1. Does the conclusion line state the landed total (or partial) against the budget? If the first priced config was over, does the Budget fit line show each lever of step 5.4 tried in order? Before each GPU step down, were memory capacity and kit (lever 1, two modules) at the stated minimum and the CPU and board the cheapest that meet the use?
+1. Does the conclusion line state the landed total (or partial) against the budget (one-part request: that part's landed price against its budget, no full-build total)? If the first priced config was over, does the Budget fit line show each lever of step 5.4 tried in order? Before each GPU step down, were memory capacity and kit (lever 1, two modules) at the stated minimum and the CPU and board the cheapest that meet the use?
 2. Is every part eligible (new or professional refurbished, invoice and warranty)? No private-party part in the totals?
 3. Was the compatibility method run on the whole list, with no unresolved conflict? Owned parts specced from the manufacturer page, or why not?
 4. For AI builds, was `size-local-ai` run first and its estimates labelled?
