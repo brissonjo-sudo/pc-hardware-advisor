@@ -6,6 +6,13 @@ The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.1.0/),
 
 ## [Unreleased]
 
+## [0.8.1] - 2026-11-16
+
+### Fixed
+
+- `find-deals`: a deal older than 7 days is named with its date only, never with its price, in prose or in a table. A live test listed four ended graphics-card deals with their claimed prices.
+- `find-deals` self-check: exactly one next action, the browser offer being that action when made. Three live tests ended with two or three next actions.
+
 ## [0.8.0] - 2026-11-15
 
 ### Added
