@@ -4,14 +4,14 @@ Last checked: 2026-11-15. Read this file before any access to a website. Each re
 
 ## 1. Which agent the rules apply to
 
-Pages a user asks Claude to read are fetched as `Claude-User`; `ClaudeBot` is Anthropic's training crawler and `Claude-SearchBot` its search indexer [1]. Apply the robots.txt group that names `Claude-User`; if none does, the `*` group. Project rule: also treat a `Disallow: /` for `ClaudeBot` or `anthropic-ai` as a refusal when `Claude-User` is not named, because the site has said no to Anthropic agents.
+Pages a user asks Claude to read are fetched as `Claude-User`; `ClaudeBot` is Anthropic's training crawler and `Claude-SearchBot` its search indexer [1]. Apply the robots.txt group that names `Claude-User`; if none does, the `*` group. A block on `ClaudeBot`, `anthropic-ai` or `Claude-Web` alone does not apply to `Claude-User` (maintainer decision, 2026-11-15); the browser fallback of `research-method.md` section 7 stays open there on the user's yes.
 
 ## 2. Selection criteria
 
 A source is read automatically (tier A) only if all of these hold:
 
 1. robots.txt does not disallow the product page path for the agent of section 1.
-2. robots.txt does not block Anthropic agents (section 1). A block naming other price or AI bots only is recorded in the row's notes, not counted as a refusal (project rule).
+2. robots.txt does not block `Claude-User` (section 1). A block naming other price or AI bots only is recorded in the row's notes, not counted as a refusal (project rule).
 3. Price (with VAT shown or stated), stock and shipping are readable in the fetched page; structured data preferred.
 4. The seller is identifiable (company name, registration number, legal notice) and the warranty is stated.
 5. The terms of use read do not forbid automated reading or reuse of prices.
@@ -23,7 +23,7 @@ A source failing 1, 2 or 5 is tier B. A source whose robots.txt or terms could n
 
 | Tier | Behaviour |
 |---|---|
-| `A` | Read product pages automatically, one page at a time. Never a search, sort, filter, promotion or deals URL; a plain category page only where robots.txt allows its path. |
+| `A` | Read product pages automatically, one page at a time. A category or filter page (for example the chip's filter) only where robots.txt allows its path. Never the site's own search, a sort URL or a promotion or deals section. |
 | `B` | Link only: give the URL and ask the user to open it, paste the text or send a screenshot (`research-method.md` section 7, step 5). The browser fallback of section 7 step 4 does not apply to a site refused by robots or terms. |
 | `C` | Official API with the user's own key (section 6). The plugin never ships, asks to paste into a file, or stores a key; it only documents where the user plugs one in. |
 | `browser` | Amazon and AliExpress only: never `~~web fetch`, product, offer and store pages through the user's browser on their yes, within the 5-page cap (`research-method.md` section 7, step 4; maintainer decision of 2026-11-10). |
@@ -46,13 +46,13 @@ Retailers, classifieds and refurbishers (eBay UK and US, Leboncoin, Kleinanzeige
 
 | Source | URL | Type | Access | Notes | Source |
 |---|---|---|---|---|---|
-| eBay France | https://www.ebay.fr/ | used | B (2026-11-15): ClaudeBot and anthropic-ai disallowed `/`, Claude-User not named; terms bar bots and scrapers | Sold listings (`/sch/`) disallowed for `*`. Ask the user for the listing text or a screenshot. | [2][5] |
-| eBay Germany | https://www.ebay.de/ | used | B (2026-11-15): ClaudeBot and anthropic-ai disallowed `/`, Claude-User not named | Terms read in part (first 100,000 of 135,000 characters): no clause found there. | [2][6] |
+| eBay France | https://www.ebay.fr/ | used | B (2026-11-15): terms bar bots and scrapers (ClaudeBot and anthropic-ai disallowed `/`, Claude-User under `*`) | Sold listings (`/sch/`) disallowed for `*`. Ask the user for the listing text or a screenshot. | [2][5] |
+| eBay Germany | https://www.ebay.de/ | used | B (2026-11-15): same eBay user agreement as eBay France (terms bar bots and scrapers); ClaudeBot and anthropic-ai disallowed `/`, Claude-User under `*` | Terms read in part (first 100,000 of 135,000 characters): no clause found there. | [2][6] |
 | TechPowerUp | https://www.techpowerup.com/ | specs | B (2026-11-15): robots.txt disallows `/` for Claude-User and anthropic-ai | Do not fetch or cite, as `research-method.md` section 7 says. | [2] |
-| NVIDIA | https://www.nvidia.com/ | specs | B (2026-11-15): robots.txt allows product pages for `*`, but the legal terms (section 3.2(f)) bar robots, spiders, scrapers and data-mining tools | Spec pages readable in a test (RTX 5090 page). Maintainer decision needed: manufacturer pages are rank 1 for specs. | [2][7] |
-| ASUS | https://www.asus.com/ | specs | B (2026-11-15): robots.txt allows `*`, but the terms (clause 1.8.4) bar "data mining, robots, or similar data gathering and/ or extraction tools" | The clause sits in the "Website Events" part of the terms: its scope over spec pages is not established. Maintainer decision needed. | [2][8] |
-| Intel ARK | https://ark.intel.com/ | specs | B (2026-11-15): terms (section 4.1.14 to 4.1.17) bar automated searches, bots, scraping and data mining | robots.txt redirected to an HTML page, not read. | [9] |
-| AMD | https://www.amd.com/ | specs | B (2026-11-15): robots.txt and terms unreadable (timeout) | Not retried. | [2] |
+| NVIDIA | https://www.nvidia.com/ | specs | A (2026-11-15): robots.txt allows product pages for `*`; the legal terms (section 3.2(f)) bar robots, spiders, scrapers and data-mining tools | Maintainer decision (2026-11-15): manufacturer pages stay read as before, one page at a time on a user's request, as rank 1 for specs. Spec pages readable in a test (RTX 5090 page). | [2][7] |
+| ASUS | https://www.asus.com/ | specs | A (2026-11-15): robots.txt allows `*`; the terms (clause 1.8.4, in the "Website Events" part) bar "data mining, robots, or similar data gathering and/ or extraction tools" | Maintainer decision (2026-11-15): read as before, one page at a time on a user's request. | [2][8] |
+| Intel ARK | https://ark.intel.com/ | specs | A (2026-11-15): terms (section 4.1.14 to 4.1.17) bar automated searches, bots, scraping and data mining; robots.txt redirected to an HTML page | Maintainer decision (2026-11-15): read as before, one page at a time on a user's request. | [9] |
+| AMD | https://www.amd.com/ | specs | A (2026-11-15): robots.txt and terms unreadable (timeout) | Maintainer decision (2026-11-15): read as before when reachable, one page at a time; record a block as `blocked`. | [2] |
 | GitHub (llama.cpp benchmarks) | https://github.com/ggml-org/llama.cpp/discussions | benchmark | A (2026-11-15): Claude-User named with path rules only, Crawl-delay 1; terms read have no robots clause | Benchmark numbers readable in the discussion pages. | [2][10] |
 | LocalScore | https://www.localscore.ai/ | benchmark | A (2026-11-15): no robots.txt (HTTP 404); no terms found | Leaderboard readable. | [11] |
 

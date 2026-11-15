@@ -23,7 +23,7 @@ Do not trust a search snippet for a price. A snippet supports `medium` confidenc
 - Check that the comparator's product match really is your SKU: compare MPN/EAN, capacity, speed, box vs OEM.
 - Skip comparators that disallow automated access. Record them as unreadable.
 - A retailer's own search or category page is also discovery only: it rarely shows the seller line, shipping or exact stock. Open the PRODUCT page of each candidate and fill the row from it. Use a listing price only when the product page is unreadable, with `Page read: partial (listing only)` and confidence `medium` at most.
-- When the request is a spec that several products match (any DDR5 2x16 GB 6000 CL30 kit), read the retailer's plain category page, found with a site-limited web search (`site:<domain> <spec>`) and only where robots.txt allows its path (never the site's own search, sort or filter URL on a tier A host: `source-access-policy.md`), and open the product pages of the cheapest matching items first, up to 3 per retailer, never only the first match found.
+- When the request is a spec that several products match (any DDR5 2x16 GB 6000 CL30 kit), read the retailer's category or filter page, found with a site-limited web search (`site:<domain> <spec>`) and only where robots.txt allows its path (never the site's own search or a sort URL on a tier A host: `source-access-policy.md`), and open the product pages of the cheapest matching items first, up to 3 per retailer, never only the first match found.
 
 ## 3. Reading a retailer page
 
@@ -107,7 +107,7 @@ Sources (read each once):
 1. <site> | <URL or search query>
 2. <site> | <URL or search query>
 ...
-Read product pages only: no search, sort, filter or deals URL on the site.
+Read product pages; a category or filter page only where robots.txt allows it; never the site's own search, a sort URL or a deals section.
 Return: only the canonical price rows table and an "Unreadable" list.
 Do not compute taxes. Leave Landed as `excluding fees` unless shipping to the buyer country is shown.
 Never bypass blocks; never log in; never create accounts.

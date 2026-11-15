@@ -20,6 +20,7 @@ The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.1.0/),
 - `find-deals`: the chip listing is a plain category page allowed by robots.txt, never a search, sort or filter URL.
 - TopAchat, eBay, Back Market, Leboncoin and Kleinanzeigen move to tier B (terms of use or robots.txt); Materiel.net stays readable (its robots.txt rule `*/produits/` does not match its `/produit/` pages).
 - README and its translations: eleven shared references and a line on access tiers.
+- Maintainer decisions: a block on `ClaudeBot` alone does not refuse `Claude-User` (the `*` rules apply; browser fallback on the user's yes); filter pages are read where robots.txt allows them (never a site search or sort URL); manufacturer spec pages stay read as before; the Amazon and AliExpress browser exception stays.
 
 ## [0.7.7] - 2026-11-15
 

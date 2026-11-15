@@ -106,13 +106,13 @@ In prose (summary lines, bullets), cite a price only together with its table row
 
 ## 7. Blocked, JavaScript-only and partial pages
 
-Read `source-access-policy.md` first: it sets each site's tier (`Access` column of `retailers-by-country.md`) and the usage rules (one page at a time per host, no search, sort, filter or deals URL on a tier A host, a price older than 24 hours is `stale`).
+Read `source-access-policy.md` first: it sets each site's tier (`Access` column of `retailers-by-country.md`) and the usage rules (one page at a time per host, no site search, sort URL or deals section on a tier A host, filter pages only where robots.txt allows them, a price older than 24 hours is `stale`).
 
 Never circumvent with tricks: no alternate user agents, caches, mirrors, or archive copies used to dodge a block [R2:3].
 
 1. Record the page as `blocked (<reason>)` (for example HTTP 403, captcha, login wall, rate limit) or `partial (<what was missing>)` (for example price rendered by JavaScript).
 2. Respect robots.txt as data about permitted bots. In research, PCPartPicker and TechPowerUp disallowed Claude user agents: do not fetch or cite them, their forums included [R2:3].
-3. Do not scrape sites whose terms exclude it. Terms observed: PCPartPicker excludes collecting listings and prices; Best Buy forbids cross-retailer price analysis [R2:3].
+3. Do not scrape sites whose terms exclude it. Terms observed: PCPartPicker excludes collecting listings and prices; Best Buy forbids cross-retailer price analysis [R2:3]. Exception decided by the maintainer on 2026-11-15: manufacturer spec pages stay read one page at a time on a user's request, even where their terms bar robots (`source-access-policy.md` section 5).
 4. **Browser fallback (interactive answers only).** When a page the answer needs is blocked to `~~web fetch` or shows its content only through JavaScript, and a `~~browser` tool is available in the session, **offer it in one line in the same answer**, without waiting for the user to think of it: "<site> blocks automated reading. I can open the page in your browser: reply \"yes\" (or send a screenshot)." Acting in the user's own browser needs their go-ahead, so do not open it unprompted. As soon as the user says yes, or asks for it themselves, open the page and read it. Rules:
    - Look before concluding there is no browser: browser tools are often listed but not loaded yet (deferred). Search your available or deferred tools for a browser (names such as browser, chrome, navigate, page, tabs), load it, then use it. Say "no browser available" only after that search, and then say it in the answer in one line ("no browser tool in this session, so I need a screenshot or the pasted text") so the user knows the option exists. Never offer only a screenshot when a browser can be loaded: offer the browser first.
    - Read-only: no login, no account, no form, no cart; click only "show more" on the description or the photo gallery; never click anything that reveals a phone number, an e-mail, an address, a login or that adds to a cart or sends a message.
