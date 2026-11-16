@@ -6,6 +6,19 @@ The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.1.0/),
 
 ## [Unreleased]
 
+## [0.8.11] - 2026-11-16
+
+### Fixed
+
+- `research-method.md` section 2: a price with no date shown, on the page or in the snippet, is never a market point, a range or an alternative's price; a listing marked sold, reserved or "purchase in progress" is not a current asking price. A real-use answer quoted 740 to 955 EUR for a used RTX 3090 from undated Leboncoin snippets, some marked sold, and 1,400 to 1,900 USD for a Radeon AI PRO R9700 from an undated blog; the user found 1,200 EUR minimum and the LDLC page showed 2,799.95 EUR.
+- `review-used-listing`: a tier B listing (eBay, Leboncoin, Kleinanzeigen, Back Market) is never fetched nor opened in the browser; the first step asks for its text or a screenshot. The same answer fetched an eBay listing and offered the browser.
+- `research-method.md` section 11, item 4: no read date later than today.
+- `review-used-listing` and `used-market-checklist.md`: a snapshot row is never a market point; market prices and an alternative card's price are read in the same answer. A test run quoted the March 2026 "800-950 EUR" RTX 3090 row as its reference.
+
+### Added
+
+- Test case 25 (`used-ebay-listing`).
+
 ## [0.8.10] - 2026-11-16
 
 ### Fixed
