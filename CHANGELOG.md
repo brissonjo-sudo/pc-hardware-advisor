@@ -6,6 +6,13 @@ The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.1.0/),
 
 ## [Unreleased]
 
+## [0.8.3] - 2026-11-16
+
+### Fixed
+
+- `find-deals`: a cheaper in-stock offer seen on a listing is opened on its product page before the reference is chosen. A live test dropped a 1,898.99 EUR in-stock card seen on a listing and called a deal a good price at 13 % below a 2,074.99 EUR reference, instead of about 5 %.
+- `find-deals`: a deal's price comes from its own product page; a "recommended" block on another page counts as a listing.
+
 ## [0.8.2] - 2026-11-16
 
 ### Fixed
