@@ -107,7 +107,8 @@ Sources (read each once):
 1. <site> | <URL or search query>
 2. <site> | <URL or search query>
 ...
-Read product pages; a category or filter page only where robots.txt allows it; never the site's own search, a sort URL or a deals section.
+Chip listing (same-chip reference only): <site> | <allowed category or filter URL from retailers-by-country.md>
+Read product pages; a category or filter page only where robots.txt allows it; never the site's own search, a sort URL or a deals section. When a chip listing is given, read it and open the product pages of its 3 cheapest in-stock offers.
 Return: only the canonical price rows table and an "Unreadable" list.
 Do not compute taxes. Leave Landed as `excluding fees` unless shipping to the buyer country is shown.
 Never bypass blocks; never log in; never create accounts.
