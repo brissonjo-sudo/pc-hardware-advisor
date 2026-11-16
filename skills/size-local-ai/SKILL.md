@@ -1,6 +1,6 @@
 ---
 name: size-local-ai
-description: This skill should be used when the user wants to size a PC, GPU, APU, mini-PC or Mac for running local LLMs, and asks things like "how much VRAM do I need to run", "what GPU for local LLM", "how many tokens per second will I get", "can I run a 70B model on", "is an eGPU good for local AI", "will two 3090s run a 70B model", or "which quantization fits in 24 GB". Covers model size, quantization, KV cache, memory bandwidth, tok/s estimates, multi-GPU, eGPU, unified memory and software stacks (CUDA, ROCm, Vulkan, SYCL, Metal). The user may write in any language. Not for gaming GPU choice, price hunting (use hunt-prices), part compatibility, or cloud/API inference.
+description: This skill should be used when the user wants to size a PC, GPU, APU, mini-PC or Mac for running local LLMs, and asks things like "how much VRAM do I need to run", "what GPU for local LLM", "how many tokens per second will I get", "can I run a 70B model on", "is an eGPU good for local AI", "will two 3090s run a 70B model", or "which quantization fits in 24 GB". Covers model size, quantization, KV cache, memory bandwidth, tok/s estimates, multi-GPU, eGPU, unified memory and software stacks (CUDA, ROCm, Vulkan, SYCL, Metal). The user may write in any language. Not for judging a second-hand listing or its link (use review-used-listing), gaming GPU choice, price hunting (use hunt-prices), part compatibility, or cloud/API inference.
 ---
 
 # Size a machine for local AI inference

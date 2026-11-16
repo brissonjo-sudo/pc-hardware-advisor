@@ -6,6 +6,16 @@ The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.1.0/),
 
 ## [Unreleased]
 
+## [0.8.12] - 2026-11-16
+
+### Fixed
+
+- `review-used-listing` description: also triggers on a classifieds listing link (eBay, Leboncoin, Kleinanzeigen) with a fitness-for-use question ("que penses-tu de cette carte pour un projet IA"); for local AI it reads `size-local-ai` for the sizing and keeps its own template. `size-local-ai` description: not for a second-hand listing. A real-use answer to "que penses-tu de cette carte pour un projet IA" with an eBay link followed none of the used-listing rules (eBay read, undated Leboncoin prices, no verdict template).
+
+### Added
+
+- Test case 26 (`used-listing-ai-question`).
+
 ## [0.8.11] - 2026-11-16
 
 ### Fixed
