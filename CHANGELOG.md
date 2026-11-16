@@ -6,6 +6,17 @@ The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.1.0/),
 
 ## [Unreleased]
 
+## [0.8.5] - 2026-11-16
+
+### Fixed
+
+- `find-deals`: the same-day reference is never another deal of the same list, nor a site whose seller type is `not shown` (Joybuy, Galaxus). A live test called an RTX 5080 deal dearer than elsewhere (+5.3 %) against another deal with an unconfirmed seller.
+- `find-deals`: a same-chip reference not drawn from at least 3 chip listings gives `not verified (chip listings not read)`. The same test gave good-price verdicts while stating the chip listings were not read.
+
+### Added
+
+- Test case 24: graders `reference-not-a-deal` and `chip-listings-gate`.
+
 ## [0.8.4] - 2026-11-16
 
 ### Fixed
