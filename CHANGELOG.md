@@ -6,6 +6,18 @@ The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.1.0/),
 
 ## [Unreleased]
 
+## [0.8.4] - 2026-11-16
+
+### Fixed
+
+- `find-deals`: a same-chip reference is the cheapest in-stock offer of the chip found on the retailers' chip listings, never another deal's exact-model reference reused; deals sharing a chip share one read of each listing. A live test reused a 2,269.95 EUR exact-model reference for two other RTX 5080 deals and showed a 20.7 % gap.
+- `find-deals`: a `not verified` deal is never called a good price, "on paper" or otherwise, in its verdict line; a deal price not read on its own product page gets no gap and no comparison wording. A live test computed a 16.3 % gap from the price the user typed.
+
+### Added
+
+- `retailers-by-country.md`: Galaxus.fr row, tier B (home page HTTP 403 to automated reading, terms unread; browser fallback on the user's yes).
+- Test case 24 (`deal-list-shared-chip`).
+
 ## [0.8.3] - 2026-11-16
 
 ### Fixed
