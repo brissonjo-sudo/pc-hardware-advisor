@@ -6,6 +6,12 @@ The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.1.0/),
 
 ## [Unreleased]
 
+## [0.8.2] - 2026-11-16
+
+### Fixed
+
+- `find-deals`: a reference price read only on a listing gives `not verified (reference read on a listing)`, never a price verdict; the self-check asks whether the reference was read on its product page. A live test called a deal a good price at 5.2 % below a reference read on the retailer's listing.
+
 ## [0.8.1] - 2026-11-16
 
 ### Fixed

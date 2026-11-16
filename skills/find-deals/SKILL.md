@@ -63,7 +63,7 @@ Plugin heuristic, not sourced (inspired by PriceSpy's 5 % deal rule), on the gap
 - **Market price**: within 5 % of the reference, above or below.
 - **Dearer than elsewhere**: more than 5 % above the reference.
 
-Write the label "plugin heuristic" next to the verdict. An excluded deal gets no price verdict: say "excluded" and why. Neither does a deal whose scope is uncertain (packaging, variant): say "not verified" and what is missing, and never call it a good price in the summary.
+Write the label "plugin heuristic" next to the verdict. An excluded deal gets no price verdict: say "excluded" and why. Neither does a deal whose scope is uncertain (packaging, variant): say "not verified" and what is missing, and never call it a good price in the summary. Nor a deal whose reference price was read only on a listing: write `not verified (reference read on a listing)` and make reading that product page the next action.
 
 ## 7. Output template
 
@@ -97,7 +97,7 @@ Never circumvent a block: no alternate user agents, caches, mirrors or archive c
 ## 9. Self-check before answering
 
 1. Did the safety filter run before the verdict, and is every excluded deal in the Excluded table with its reason?
-2. Is the reference another retailer's offer, never the deal itself, chosen among at least 3 retailers read (or fewer stated), with a Compared line? Is the reference in stock (else the cheapest same chip in stock, found from each retailer's chip listing)? Is the gap landed versus landed, at equal scope, and is the scope written?
+2. Is the reference another retailer's offer, never the deal itself, chosen among at least 3 retailers read (or fewer stated), with a Compared line? Is the reference in stock (else the cheapest same chip in stock, found from each retailer's chip listing), and was its price read on its product page, not on the listing? Is the gap landed versus landed, at equal scope, and is the scope written?
 3. Is the struck-through price treated as `not verified` unless the page states the 30-day low?
 4. Is history only in the Context line, never in the table, verdict or gap?
 5. Does the table carry the mandatory columns of research-method.md section 6, plus Same-day reference, Gap and Safety?
