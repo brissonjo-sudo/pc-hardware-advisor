@@ -36,7 +36,7 @@ Basis column states what the source says. No row meets the 10-sold-items rule. C
 |---|---|---|---|---|---|---|---|
 | RTX 3090 24GB | US | Avg 1,596; median 1,599; fair 1,542-1,656; observed 1,300-1,900 | USD | Tracker, 328 eBay US listings; basis unclear (says both asking and sold) | [1] | 2026-11-07 | medium |
 | RTX 3090 24GB | US | Lowest-3 daily avg Sep 2026: 1,355 (day range 1,242-1,395); prior 3 months 1,158 | USD | Lowest-3 daily avg; sample and basis not stated | [2] | Sep 2026 | low |
-| RTX 3090 24GB | DE/EU | 800-950 "currently trade" | EUR | Cited from eBay; no count; basis not stated; 8 months old | [3] | 2026-03-14 | low |
+| RTX 3090 24GB | DE/EU | 800-950 "currently trade" | EUR | Cited from eBay; no count; basis not stated; stale (over 60 days): never quoted as a price, not even as "my reference" | [3] | 2026-03-14 | low |
 | RTX 3090 Ti 24GB | US | Avg 1,752; median 1,717; fair 1,642-1,793; observed 1,450-2,200 | USD | Tracker, 54 listings, mostly asking | [4] | 2026-11-07 | medium |
 | RTX 4090 24GB | US | Avg 3,490; median 3,424; fair 3,247-3,602; observed 2,850-4,500 | USD | Tracker, 44 listings, mostly asking; 90-day low 2,500 | [5] | 2026-11-07 | medium |
 | RTX 3080 10GB | US | Avg 438; median 430; fair 406-454; observed 325-585 | USD | Tracker, 171 listings; 10GB only | [6] | 2026-11-07 | medium |
