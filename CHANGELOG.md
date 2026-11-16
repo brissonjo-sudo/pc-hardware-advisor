@@ -6,6 +6,17 @@ The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.1.0/),
 
 ## [Unreleased]
 
+## [0.8.6] - 2026-11-16
+
+### Fixed
+
+- `research-method.md` section 11, item 4: each `[n]` points to entry n of the Sources list; citations are renumbered when a source is added or removed. A live test shipped citations shifted by one and a note saying so.
+- `find-deals`: a `not verified (chip listings not read)` deal shows no gap, not even an "indicative" one (maintainer's choice of the strict gate).
+
+### Added
+
+- Test case 20: grader `citation-numbers`.
+
 ## [0.8.5] - 2026-11-16
 
 ### Fixed
