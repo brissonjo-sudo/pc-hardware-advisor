@@ -78,7 +78,7 @@ Start with the verdict line, then the table. Headers and labelled values in the 
 
 Context (not an offer): no price-history source for this category. For a graphics card, this line gives the chip's 3-month median, 12-month low, retailers tracked and update date, with its source.
 
-Under each verdict line, one **Compared** line (label in the user's language, "Comparé" in French): the other retailers read for the reference with their shown price and `[n]`, cheapest first, and each retailer not read or not selling the item with the reason ("Compared: LDLC 379.95 EUR [4], GrosBill 404.99 EUR [6], TopAchat not sold"). Fewer than 3 retailers read: say so in the verdict line.
+Under each verdict line, one **Compared** line (label in the user's language, "Comparé" in French): the other retailers read for the reference with their shown price and `[n]`, cheapest first, and each retailer not read or not selling the item with the reason ("Compared: LDLC 379.95 EUR [4], GrosBill 404.99 EUR [6], TopAchat not sold"). Fewer than 3 retailers read: say so in the verdict line. Every price in a Compared line carries its own `[n]`, sub-agent readings included. With a same-chip reference, the Compared line also names the retailers whose chip listing was read ("chip listings read: GrosBill, Cybertek, Alternate").
 
 For a list: one verdict line and its Compared line per kept deal, best gap first, then one table holding every kept deal with its reference row, sorted by gap.
 

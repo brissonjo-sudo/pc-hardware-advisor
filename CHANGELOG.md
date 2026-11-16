@@ -6,6 +6,17 @@ The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.1.0/),
 
 ## [Unreleased]
 
+## [0.8.8] - 2026-11-16
+
+### Fixed
+
+- `research-method.md` section 11, item 4: each page a price is taken from is its own Sources entry, `price-scout` pages included; never a grouped entry "for example". A live test grouped the sub-agents' pages in one entry and left Compared prices without `[n]`.
+- `find-deals`: every price in a Compared line carries its `[n]`; a same-chip reference names the chip listings read, so the listing gate can be checked.
+
+### Added
+
+- Test case 24: grader `compared-cited`.
+
 ## [0.8.7] - 2026-11-16
 
 ### Fixed
