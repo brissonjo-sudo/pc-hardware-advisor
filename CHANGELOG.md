@@ -6,6 +6,14 @@ The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.1.0/),
 
 ## [Unreleased]
 
+## [0.8.9] - 2026-11-16
+
+### Fixed
+
+- `retailers-by-country.md`: the allowed chip-listing paths of LDLC, Cybertek, GrosBill and Materiel.net, from their raw robots.txt (2026-11-16); LDLC is read on its French pages, never the `/en/` storefront. A test run called these listings disallowed by robots.txt, which the raw files do not say, and fired the listing gate.
+- `find-deals`: a listing is called refused only with the raw robots.txt rule quoted; a listing that loads nothing is unreadable, not refused.
+- `research-method.md` section 11, item 4: listings read are one Sources entry each too. A test run grouped five chip listings in one entry.
+
 ## [0.8.8] - 2026-11-16
 
 ### Fixed
