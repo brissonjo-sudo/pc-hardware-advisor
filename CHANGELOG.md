@@ -6,6 +6,18 @@ The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.1.0/),
 
 ## [Unreleased]
 
+## [0.8.10] - 2026-11-16
+
+### Fixed
+
+- `find-deals`: before writing `not verified (chip listings not read)`, the missing tier A chip listings are read in the same answer, within the 30-page cap; never a user yes for a tier A read. A live test asked the user's yes to read LDLC, Cybertek and GrosBill listings and gave no verdict after three round trips.
+- `search-playbook.md`: the `price-scout` brief can carry a chip listing; the agent reads it and opens its 3 cheapest in-stock offers.
+- `research-method.md` section 7: a tab, an anchor or a "show more" on a page already open is not a new page toward the 5-page browser cap, and is one Sources entry. The same test spent 3 of its 5 browser pages on tabs of one page.
+
+### Added
+
+- Test case 24: grader `no-yes-for-tier-a`.
+
 ## [0.8.9] - 2026-11-16
 
 ### Fixed
