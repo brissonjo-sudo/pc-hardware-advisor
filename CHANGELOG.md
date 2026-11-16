@@ -12,6 +12,10 @@ The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.1.0/),
 
 - `research-method.md` section 11, item 1, `hunt-prices` and `find-deals`: `price-scout` agents run in the foreground and the answer waits for all of them in the same turn; no turn end, reminder or wake-up while they run; the final answer is one message. A live test ended its turn while two price readers ran, then a scheduled reminder sent a second message with a second next action.
 
+### Changed
+
+- Test case 24: grader `chip-listings-gate` counts chip listings read (category or filter pages), not single product pages; it failed two answers that had read 3 and 5 listings.
+
 ## [0.8.6] - 2026-11-16
 
 ### Fixed
