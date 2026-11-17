@@ -19,7 +19,7 @@ Answer in the language of the user's request. Keep part names, units and connect
 Collect the exact model of each part involved: CPU, motherboard, RAM kit (part number or type, speed, module count, capacity), GPU (exact partner model), cooler, case (exact version: V1/V2/MAX), PSU (exact model and form factor), M.2/SATA drives.
 
 - A vague part ("a 5090", "an ITX case", "a 850 W PSU") gives a vague verdict. Ask for the exact model, or state the assumption you use and label every verdict that depends on it "assumption".
-- Ask for the case and PSU models whenever the question touches GPU, cooler or power. Ask which GPU orientation (horizontal or vertical) when the case has both.
+- Ask for the case and PSU models whenever the question touches GPU, cooler or power (through `~~question tool` when one exists, `${CLAUDE_PLUGIN_ROOT}/references/research-method.md` section 12). Ask which GPU orientation (horizontal or vertical) when the case has both.
 - Check only the pairs the question needs, unless the user asks for a full build check.
 - If a part is a rumour or unreleased (for example an announced socket), say it has no official spec and stop on that part.
 

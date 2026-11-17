@@ -28,7 +28,7 @@ Long runs can be compacted mid-way: tool results, sub-agent returns and URLs are
 
 ## 1. Collect the inputs
 
-Ask only for what is missing, in one short message. Do not start searching without items 1 and 2.
+Ask only for what is missing, in one short message (through `~~question tool` when one exists, `${CLAUDE_PLUGIN_ROOT}/references/research-method.md` section 12). Do not start searching without items 1 and 2.
 
 1. **Item**: exact model and SKU or manufacturer part number, or a list of acceptable equivalents (for example "any DDR5-6000 CL30 2x16 GB kit from a major brand"). If the request is vague, propose the closest exact model and ask to confirm.
 2. **Buyer country and delivery address country**, and the buyer currency. These can differ (parcel forwarded to a relative).
