@@ -6,6 +6,13 @@ The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.1.0/),
 
 ## [Unreleased]
 
+## [0.8.13] - 2026-11-16
+
+### Fixed
+
+- `review-used-listing`: the user's VRAM need and model sizes are never invented (no threshold or model size written as the user's goal; ask, or mark figures as an assumption), and a link is never described beyond what it shows. A real claude.ai answer (0.8.12) wrote "over 16 GB" and "larger than 12B" without the user saying so.
+- `research-method`: access rules such as `source-access-policy.md` are never a Sources entry; an access decision (link-only, refused, not read) is stated as the plugin's own rule, with no `[n]`.
+
 ## [0.8.12] - 2026-11-16
 
 ### Fixed
