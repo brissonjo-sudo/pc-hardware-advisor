@@ -14,7 +14,7 @@ Judge one second-hand listing for a desktop PC part and answer with a verdict. A
 - Buyer location (country, currency, region): needed to pick the right market. Ask if missing.
 - Intended use (gaming, AI/local inference, workstation, upgrade of an existing PC): ask only if it changes the verdict (for example VRAM need). For local AI, read `${CLAUDE_PLUGIN_ROOT}/skills/size-local-ai/SKILL.md` for the sizing (VRAM, bandwidth, model fit) and give it as reasons inside this skill's template; this skill keeps the verdict, the access rules and the market prices. Ask for the target PC when compatibility matters. The VRAM need and the model sizes the user wants to run are the user's facts: when not stated, ask for them, and never write a threshold (such as "over 16 GB") or a model size as if the user had given it; sizing figures are examples marked `assumption`. Never describe what a link contains beyond what it shows: a listing link carries no model unless its text names one.
 
-Ask in one message, once. If the user supplied enough, do not ask.
+Ask in one message, once, through `~~question tool` when one exists (`${CLAUDE_PLUGIN_ROOT}/references/research-method.md` section 12; the listing text or screenshot is free text, asked in the answer). If the user supplied enough, do not ask.
 
 ## 2. Method
 
@@ -83,7 +83,7 @@ For a negotiation margin, give a number or percentage only if the market compari
 6. **Negotiation argument**: opening offer or margin, walk-away price, arguments tied to evidence. Omit the number if market data is unverified.
 7. **Not verified**: pages blocked or partial, missing sold data, unproven warranty, anything from memory.
 8. **Next action**: one concrete step for the user.
-9. `## Sources`: numbered, each with URL or "user screenshot", date read, read status. Never list a plugin file used for a rule or an access decision (such as `source-access-policy.md`): state that rule in the text as the plugin's own, without `[n]`. A listing link not read is listed once as "not read" with the reason.
+9. `## Sources`: numbered, each with URL or "user screenshot", date read, read status. Never list a plugin file used for a rule or an access decision (such as `source-access-policy.md`): state that rule in the text as the plugin's own, without `[n]`. A listing link not read is listed once as "not read" with the reason. `## Not verified` and `## Sources` are in every answer, also when the listing was not read and the verdict waits: the unread link is then the first Sources entry.
 
 Every answer that gives a verdict includes the handover tests (section 5), including follow-up turns after reading the listing in a browser or a screenshot, even when you also send seller questions: the user may meet the seller before writing back. A market range ("similar listings 855 to 1,400") carries its source, date, basis (sold or asking) and sample size.
 

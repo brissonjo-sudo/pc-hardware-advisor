@@ -15,6 +15,7 @@ Nothing in this plugin requires an account, an API key or a paid service. Option
 | Price comparator | `~~price comparator` | Discover which merchants list an item; never quoted as a final price | Country comparators listed in `references/retailers-by-country.md`, or a comparator connector |
 | Classifieds site | `~~classifieds site` | Recent sold or asking prices for used parts | Country classifieds listed in `references/retailers-by-country.md` |
 | Browser | `~~browser` | Fallback to read a few pages that refuse automated reading, read-only, in interactive answers only | Built-in browser pane, a browser extension connected to the user's browser |
+| Question tool | `~~question tool` | Ask the user structured multiple-choice questions: missing inputs and the browser offer (`references/research-method.md` section 12) | AskUserQuestion (Claude Code, Cowork) or the chat app's equivalent; without one, the same questions in one text message |
 | Scheduler | `~~scheduler` | Run `track-price` checks on a schedule | Session scheduler, desktop-app scheduled tasks, cloud scheduled routines |
 | Notifications | `~~notifications` | Deliver a price alert | The scheduler's own run notice, a chat or e-mail connector |
 

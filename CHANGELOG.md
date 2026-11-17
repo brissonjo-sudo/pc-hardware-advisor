@@ -6,6 +6,16 @@ The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.1.0/),
 
 ## [Unreleased]
 
+## [0.8.14] - 2026-11-17
+
+### Added
+
+- `~~question tool` category (`CONNECTORS.md`) and `research-method.md` section 12: when a structured multiple-choice question tool exists (AskUserQuestion or the chat app's equivalent), the skills use it instead of a text question: missing inputs and the browser offer (one multi-select question listing the pages, within the 5-page cap). It replaces existing questions, never adds any, and falls back to one text message with numbered options. Used in the main conversation only.
+
+### Fixed
+
+- `review-used-listing`: `## Not verified` and `## Sources` are in every answer, also when the listing was not read (the unread link is the first Sources entry). Two real claude.ai answers (0.8.13) had neither.
+
 ## [0.8.13] - 2026-11-16
 
 ### Fixed

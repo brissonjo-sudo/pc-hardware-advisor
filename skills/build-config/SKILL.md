@@ -30,7 +30,7 @@ Long runs can be compacted mid-way: tool results, sub-agent returns and URLs are
 
 ## Step 0: collect inputs
 
-Do not block on questions. If the use and the country are known, build now with stated defaults (no budget given: the cheapest configuration that fully meets the stated requirement and constraints), and put the open questions at the end of the answer, with what each answer would change. Ask before building only when the use or the country is unknown; then ask once, in one short message. Essentials: **use**, **budget** (and whether it includes monitor, peripherals, OS), **country** (delivery country and currency).
+Do not block on questions. If the use and the country are known, build now with stated defaults (no budget given: the cheapest configuration that fully meets the stated requirement and constraints), and put the open questions at the end of the answer, with what each answer would change. Ask before building only when the use or the country is unknown; then ask once, in one short message (through `~~question tool` when one exists, `${CLAUDE_PLUGIN_ROOT}/references/research-method.md` section 12). Essentials: **use**, **budget** (and whether it includes monitor, peripherals, OS), **country** (delivery country and currency).
 
 **One part for owned parts** (for example "a motherboard for my 9800X3D"): same rule. Use unknown: ask once (use, budget for that part, form factor or case, parts already owned such as memory and graphics card) and stop, with no price table. Otherwise choose with the defaults written. The main table then holds the asked part only, with its compatibility with each owned part; the variants are a cheaper and a stronger model of that part; skip the full-build total and the budget allocation.
 

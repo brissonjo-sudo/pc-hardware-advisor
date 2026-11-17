@@ -19,7 +19,7 @@ Answer in the user's language. Keep model names, quant names and units as-is. Op
 
 ## Step 0: collect inputs
 
-Ask only for what is missing, in one short message. Needed:
+Ask only for what is missing, in one short message (through `~~question tool` when one exists, `${CLAUDE_PLUGIN_ROOT}/references/research-method.md` section 12; model size and context are the user's, offered as ranges, never recommended). Needed:
 
 1. Models wanted, with parameter count and architecture type (dense or MoE).
 2. Quantization tolerance (Q8, Q4_K_M, lower) and quality expectations.
