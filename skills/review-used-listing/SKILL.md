@@ -69,7 +69,7 @@ For a negotiation margin, give a number or percentage only if the market compari
 
 ## 3. Output template
 
-1. **Verdict line first**: `Verdict: grab it | negotiate | avoid`, one sentence why, confidence (solid / plausible / to verify).
+1. **Verdict line first**: `Verdict: grab it | negotiate | avoid`, one sentence why, confidence (solid / plausible / to verify). Nothing precedes it: no opening sentence such as "I read the listing" or "I look at the listing". An answer never says the listing was read, opened or looked at when it was not.
 2. **Reasons**: 3-6 bullets, each with its evidence and `[n]` citation.
 3. **Market comparison**: a table of canonical rows (listing plus market points), dated, basis labelled `sold` or `asking`, sample size in Item or a note below (below 10 items: confidence `low`, said in the note). A price range alone does not replace the table. Shape (illustrative values, do not reuse):
 
@@ -83,7 +83,7 @@ For a negotiation margin, give a number or percentage only if the market compari
 6. **Negotiation argument**: opening offer or margin, walk-away price, arguments tied to evidence. Omit the number if market data is unverified.
 7. **Not verified**: pages blocked or partial, missing sold data, unproven warranty, anything from memory.
 8. **Next action**: one concrete step for the user.
-9. `## Sources`: numbered, each with URL or "user screenshot", date read, read status. Never list a plugin file used for a rule or an access decision (such as `source-access-policy.md`): state that rule in the text as the plugin's own, without `[n]`. A listing link not read is listed once as "not read" with the reason. `## Not verified` and `## Sources` are in every answer, also when the listing was not read and the verdict waits: the unread link is then the first Sources entry.
+9. `## Sources`: numbered, each with URL or "user screenshot", date read, read status. Never list a plugin file used for a rule or an access decision (such as `source-access-policy.md`): state that rule in the text as the plugin's own, without `[n]`. A listing link not read is listed once as "not read" with the reason and the date of the attempt ("not read, tried on <date>"); "read on <date>" is only for a page actually read. `## Not verified` and `## Sources` are in every answer, also when the listing was not read and the verdict waits: the unread link is then the first Sources entry.
 
 Every answer that gives a verdict includes the handover tests (section 5), including follow-up turns after reading the listing in a browser or a screenshot, even when you also send seller questions: the user may meet the seller before writing back. A market range ("similar listings 855 to 1,400") carries its source, date, basis (sold or asking) and sample size.
 
