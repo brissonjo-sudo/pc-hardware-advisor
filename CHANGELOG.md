@@ -6,6 +6,12 @@ The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.1.0/),
 
 ## [Unreleased]
 
+## [0.8.15] - 2026-11-17
+
+### Fixed
+
+- `review-used-listing`: no opening sentence before the verdict line, and the answer never says a listing was read or looked at when it was not; an unread link is written "not read, tried on <date>", never "read on <date>". Seen in real Cowork and claude.ai answers (0.8.14).
+
 ## [0.8.14] - 2026-11-17
 
 ### Added
