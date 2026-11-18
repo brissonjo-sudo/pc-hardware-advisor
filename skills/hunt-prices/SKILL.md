@@ -109,13 +109,13 @@ Start with the conclusion. Use this structure, in the user's language.
 8. **Sources**: numbered list with URL, date read and read status on each entry (a global "partial unless noted" does not count); cite with `[n]` inline.
 9. **One next action** for the user (for example "Open row 1 and check the cart total before paying"). One action only, and it is the last thing in the answer: the Sources list comes before it, nothing follows it.
 
-Keep prose short. No narration of the search process.
+Keep prose short. No narration of the search process. Say nothing about what a site that was not read holds (its sellers, prices, stock): write only that it was not read and why. No trend ("prices are rising") from fewer than three dated points: give the dated points and stop.
 
 ## 9. Blocked or unreadable sources
 
 Never circumvent with tricks: no alternate user agents, caches, mirrors or archive copies used to dodge a block; no login attempts. For at most 5 decisive pages (the cheapest candidates first), apply the browser fallback of `${CLAUDE_PLUGIN_ROOT}/references/research-method.md` section 7; `price-scout` itself never uses a browser.
 
-1. Record the page as `blocked (<reason>)` or `partial (<what was missing>)`.
+1. Record the page as `blocked (<reason>)` or `partial (<what was missing>)`. A page that loads but shows no product (a category page, a redirect to the home page, an empty product block) is `partial (no product shown)`: it goes in "Unreadable sources" with the browser offer (or the "no browser tool in this session" line), never in "Excluded", and it is never called removed, withdrawn or sold out. "Removed" is written only for an HTTP 404 or 410, or a page that says the product is gone.
 2. List it in "Unreadable sources" in the answer. Do not drop it silently.
 3. Offer in one line to open the page in the user's browser (reply yes), except for sites that refuse robots or automated collection, for which only a screenshot or pasted text is requested (Amazon and AliExpress excepted: `research-method.md` section 7); never imitate human behaviour. Continue with other sources without waiting.
 4. Do not retry the same blocked page in a loop.
