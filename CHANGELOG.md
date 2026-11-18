@@ -6,6 +6,17 @@ The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.1.0/),
 
 ## [Unreleased]
 
+## [0.8.16] - 2026-11-18
+
+### Fixed
+
+- `hunt-prices`: a price seen only in a search snippet never opens the summary line nor is called the cheapest lead (row marked `snippet only, to confirm`, left out when undated); the summary leads with the lowest price read on a page. A real answer had led with a snippet price whose page was a 404.
+- `hunt-prices`: a chip sold in several memory sizes or form factors (V100 16 or 32 GB, PCIe or SXM2) is asked before searching.
+
+### Added
+
+- Case 27 (variant asked) and grader `no-snippet-lead` in case 03.
+
 ## [0.8.15] - 2026-11-17
 
 ### Fixed
