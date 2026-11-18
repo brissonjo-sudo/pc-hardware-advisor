@@ -6,6 +6,12 @@ The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.1.0/),
 
 ## [Unreleased]
 
+## [0.8.18] - 2026-11-18
+
+### Fixed
+
+- `hunt-prices`: a page that loads without a product (category page, redirect, empty block) is `partial (no product shown)`, listed under Unreadable sources with the browser offer, and never called removed (only HTTP 404 or 410, or a page saying so). Nothing is said about what a site that was not read holds, and no trend is drawn from fewer than three dated points. Seen in a real Cowork answer (V100, 0.8.17).
+
 ## [0.8.17] - 2026-11-18
 
 ### Fixed
