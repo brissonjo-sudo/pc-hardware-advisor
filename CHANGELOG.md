@@ -6,6 +6,16 @@ The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.1.0/),
 
 ## [Unreleased]
 
+## [0.8.17] - 2026-11-18
+
+### Fixed
+
+- `hunt-prices`: prices are compared on the same tax basis (a price excluding VAT is never called cheaper than a VAT-included one without saying import VAT and duties are missing); a seller is "in stock" only when the page shows it; the Sources list comes before the next action, which ends the answer. Seen in a real claude.ai answer (V100, 0.8.16).
+
+### Added
+
+- Grader `action-last` in case 03.
+
 ## [0.8.16] - 2026-11-18
 
 ### Fixed
