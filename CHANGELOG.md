@@ -10,7 +10,7 @@ The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.1.0/),
 
 ### Changed
 
-- `retailers-by-country.md`: Joybuy.fr returns verified from a user screenshot of the site (30 days, full refund, prepaid labels in most cases, refund in 3 to 5 working days); product exclusions not read.
+- `retailers-by-country.md`: Joybuy.fr returns read on its help pages (in the browser) and a user screenshot: 30-day free return for most products (period on the product page), prepaid label in most cases, deduction for a sealed item opened beyond inspection or activated, heavy or bulky items free to return only when defective, refund within 14 days of the withdrawal notice.
 
 ## [0.8.19] - 2026-11-21
 
