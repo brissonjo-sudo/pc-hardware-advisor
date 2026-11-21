@@ -26,7 +26,7 @@ A source failing 1, 2 or 5 is tier B. A source whose robots.txt or terms could n
 | `A` | Read product pages automatically, one page at a time. A category or filter page (for example the chip's filter) only where robots.txt allows its path. Never the site's own search, a sort URL or a promotion or deals section. |
 | `B` | Link only: give the URL and ask the user to open it, paste the text or send a screenshot (`research-method.md` section 7, step 5). The browser fallback of section 7 step 4 does not apply to a site refused by robots or terms. |
 | `C` | Official API with the user's own key (section 6). The plugin never ships, asks to paste into a file, or stores a key; it only documents where the user plugs one in. |
-| `browser` | Amazon and AliExpress only: never `~~web fetch`, product, offer and store pages through the user's browser on their yes, within the 5-page cap (`research-method.md` section 7, step 4; maintainer decision of 2026-11-10). |
+| `browser` | Amazon and AliExpress only: never `~~web fetch`, product, offer and store pages through the user's browser on their yes (given once for the conversation), within the page cap (`research-method.md` section 7, step 4; maintainer decision of 2026-11-10). |
 
 ## 4. Usage rules
 
