@@ -6,6 +6,17 @@ The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.1.0/),
 
 ## [Unreleased]
 
+## [0.8.21] - 2026-11-21
+
+### Changed
+
+- `hunt-prices`: page cap of 5 product pages per item, at least 30 per answer (was 30 per answer).
+
+### Added
+
+- `hunt-prices`: a list of several items gets a "Best offer per item" table (summary-line rules, the variant the user named, one seller per row) and a total only on a stated basis (shown prices plus shipping read, excluding-VAT prices left out and named, rows with VAT not stated named, "delivered" only if every row's shipping is read). Links, screenshots or files the user supplies define the item, colour and edition included.
+- Case 28 (a list of three items with a white kit).
+
 ## [0.8.20] - 2026-11-21
 
 ### Changed
