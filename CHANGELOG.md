@@ -6,6 +6,13 @@ The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.1.0/),
 
 ## [Unreleased]
 
+## [0.8.19] - 2026-11-21
+
+### Changed
+
+- `retailers-by-country.md`: Joybuy.fr typed `direct retailer` (was `not shown`) from its terms of sale (seller Jingdong Retail (France) SAS, JD.com group, no third-party seller clause, prices TTC, legal warranties); 30-day returns not verified; confidence medium. Access unchanged (Risk Control page to automated reading, captcha in the browser).
+- `find-deals`: Joybuy removed from the example of sites with seller type `not shown` (Galaxus stays).
+
 ## [0.8.18] - 2026-11-18
 
 ### Fixed
