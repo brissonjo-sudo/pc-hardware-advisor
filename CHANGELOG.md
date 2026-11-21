@@ -6,6 +6,24 @@ The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.1.0/),
 
 ## [Unreleased]
 
+## [0.8.22] - 2026-11-21
+
+### Fixed
+
+- `hunt-prices`: the "Best offer per item" table no longer ranks a direct retailer before an offer sold by the marketplace itself (Amazon, PcComponentes); a third-party or unconfirmed seller is chosen only when no such offer is in stock. An offer with a "from" shipping competes by its minimum, with the tie point; a list total is called delivered only when every row's exact shipping is read, and its basis line names the rows whose VAT is not stated.
+
+### Changed
+
+- Confidence `high` for a price now needs seller, stock, VAT basis and shipping known (exact landed total); a site typed `direct retailer` with no marketplace counts as a known seller.
+- Browser: a yes or a request to use it holds for the whole conversation; in a list, browser pages count in the 5 product pages per item; Amazon and AliExpress search pages are never opened.
+- Price tables: the Seller cell links to the offer page; the Source [n] column may then be dropped.
+
+### Added
+
+- `hunt-prices`: pickup-only offers named under the tables (never excluded as out of stock); shipping tie point when an offer's shipping is not shown; a part replaced in a list is checked for compatibility before the new total.
+- Membership (for example Amazon Prime): member price and shipping used only where the page shows them; never claim the browser is or is not signed in.
+- Case 28: graders first-party and links-in-table.
+
 ## [0.8.21] - 2026-11-21
 
 ### Changed
