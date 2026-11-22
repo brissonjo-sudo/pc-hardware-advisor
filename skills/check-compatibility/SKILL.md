@@ -27,7 +27,7 @@ Collect the exact model of each part involved: CPU, motherboard, RAM kit (part n
 
 ### Step 1. Normalise the part list
 
-Rewrite the parts as exact models with the fields you need (socket, memory type, form factor, length/thickness, power). For each value, look in the shared references first. If a value is missing there, or may be outdated (check the "Last checked" date and how fast the topic changes), fetch the official page with `~~web fetch` (manufacturer spec page, QVL, board manual, CPU support list). Use `~~web search` only to locate the official page. Rank sources as in `${CLAUDE_PLUGIN_ROOT}/references/research-method.md` (read its source hierarchy and blocked-page sections when unsure). Date every page read.
+Rewrite the parts as exact models with the fields you need (socket, memory type, form factor, length/thickness, power). For each value, look in the shared references first. If a value is missing there, or may be outdated (check the "Last checked" date and how fast the topic changes), fetch the official page with `~~web fetch` (manufacturer spec page, QVL, board manual, CPU support list). Where each maker publishes its manuals, and what to do when the page is blocked: `${CLAUDE_PLUGIN_ROOT}/references/source-access-policy.md` section 5, Manuals. Use `~~web search` only to locate the official page. Rank sources as in `${CLAUDE_PLUGIN_ROOT}/references/research-method.md` (read its source hierarchy and blocked-page sections when unsure). Date every page read.
 
 ### Step 2. Run the pair checks in this order
 
