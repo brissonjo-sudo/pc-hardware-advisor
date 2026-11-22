@@ -6,6 +6,19 @@ The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.1.0/),
 
 ## [Unreleased]
 
+## [0.8.24] - 2026-11-23
+
+### Added
+
+- `retailers-by-country.md`: shipping to mainland France read on the retailers' own pages (LDLC, Materiel.net, Cybertek, GrosBill, Alternate, PcComponentes, Rue du Commerce; Galaxus unreadable, TopAchat not read). A stored fee gives a dated estimate next to the tie point, never a landed total, never `high`.
+- Case 30: offer text pasted by the user (graders pasted-confidence, no-cart).
+
+### Changed
+
+- `research-method.md`: a price, stock or shipping value the user supplied (screenshot, pasted text or their word) is `medium` confidence at best, in the scale itself; a URL is never built by guessing its slug, ID or colour, nor given to the user.
+- `hunt-prices`, `find-deals`, `track-price`: never add to a cart, even to read the shipping.
+- `source-access-policy.md`, Manuals: Lian Li row with the localised product page, its Google Drive manual links, robots.txt read raw, and the Drive viewer readable in the browser only.
+
 ## [0.8.23] - 2026-11-22
 
 ### Added

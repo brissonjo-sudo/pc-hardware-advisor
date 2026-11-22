@@ -1,6 +1,6 @@
 # Retailers by country
 
-Last checked: 2026-11-07 (access tiers: 2026-11-15). Values change: verify online before concluding.
+Last checked: 2026-11-07 (access tiers: 2026-11-15; French shipping: 2026-11-23). Values change: verify online before concluding.
 
 ## How to use this file
 
@@ -43,6 +43,22 @@ Last checked: 2026-11-07 (access tiers: 2026-11-15). Values change: verify onlin
 | Rue du Commerce | https://www.rueducommerce.fr/ | direct retailer (plus marketplace) | Retail | A (2026-11-15): root allowed for `*`, no Anthropic agent named; product path not checked. Fetch test 2026-11-07: yes | none found | Footer links "Vendez sur RDC" and marketplace terms. Free shipping applies to items "vendus et expédiés par Rue du Commerce". Check seller per offer. | high (marketplace role), medium (split) | [10] |
 | Back Market (FR) | https://www.backmarket.fr/ | professional refurbisher (marketplace of refurbishers) | Refurbisher | B (2026-11-15): terms of use (art. 4.5) bar scripts, robots and data extraction (read on backmarket.fr 2026-11-15). Fetch test 2026-11-07: not tested (not fetched) | none found | Sellers are professional refurbishers. Public seller ratings. Warranty and returns claims are marketing: check on page. Same platform in BE, NL, IT, US. | medium (search only) | [11] |
 | Leboncoin (components) | https://www.leboncoin.fr/ck/ordinateurs/composant-informatique/p-2 | private party | Classifieds | B (2026-11-15): robots.txt disallows ad pages `/ad/` for Claude-User and states that automated access is forbidden without permission. Fetch test 2026-11-07: not tested (not fetched) | none found | 717 used listings at indexing. State condition and fraud risk. Used review only. | medium | [12] |
+
+### Shipping to mainland France (retailers' own pages, read 2026-11-23)
+
+Use these figures only when the offer's own page shows no shipping. They give an estimate, never a landed total: the Landed cell stays `excluding fees`, and the estimate goes next to the tie point, labelled with its date ("Cybertek: about 25.98 EUR with its standard home fee of 6.99 EUR, grid read 2026-11-23"). Never call it "delivered", never give it `high` confidence. A free-shipping threshold counts only when the basket and the seller meet the page's conditions. The exact fee is the one in the user's own cart: every retailer below says so.
+
+| Retailer | Standard home delivery | Other modes | Free shipping | Source |
+|---|---|---|---|---|
+| LDLC | No amount published: set by weight, size and delivery area, shown only in an order simulation | Carriers listed without prices | not shown | [161] |
+| Materiel.net | No amount published ("Livraison standard" is the cheapest option, by price, type, volume and weight) | Store delivery free over 200 EUR, else 4.95 EUR; Chronopost options without prices, for items sold and shipped by Materiel.net | not shown | [162] |
+| Cybertek | 6.99 EUR (48 to 72 h) | Relay 4.99 EUR or express relay 6.99 EUR (orders up to 1,000 EUR incl. VAT); express next day 13.99 EUR; Click & Collect free | not shown | [163] |
+| GrosBill | 6.99 EUR (2 to 4 working days) | Relay 4.99 EUR or express relay 6.99 EUR (orders up to 1,000 EUR); express 24 h 13.99 EUR; store pickup free | not shown | [164] |
+| Alternate.fr | 10.98 EUR per standard parcel (product pages show "à partir de 9,90 €": use the product page when it shows a fee) | Bulky items 29.99 or 39.99 EUR per item | not shown | [165] |
+| PcComponentes.fr | No amount in the terms: a flat fee shown in the order summary; third-party sellers excluded | none shown | 50 EUR in the page footer, conditions not read | [166] |
+| Rue du Commerce | Fee below the threshold not shown | Chrono Relais free from 19 EUR | Home from 39 EUR, items sold and shipped by Rue du Commerce | [167] |
+| Galaxus.fr | not read (help and terms pages timed out) | not read | not read | [168] |
+| TopAchat | not read: its terms forbid data extraction | | | |
 
 ## Belgium
 
@@ -452,3 +468,11 @@ APIs and constraints (research note r2)
 158. galaxus.fr raw robots.txt and home page (HTTP 403), fetched 2026-11-16; product page 53969808 (Gigabyte RTX 5080 Gaming OC) read in the browser in the maintainer's Cowork test, 2026-11-16
 159. joybuy.fr terms of sale, https://www.joybuy.fr/help/terms-conditions, "Date de mise à jour : 4 juin 2026", read 2026-11-21: partial (articles 1 to 10 read verbatim, articles 11 to 18 summarised; returns page help.joybuy.com HTTP 403). Lead from the maintainer: a FrenchHardware YouTube Short on Joybuy (first-party seller, 30-day returns), checked against the terms
 160. joybuy.fr help pages "Retours & remboursements" (our-return-policy, return-exceptions, return-wrong, refunds-overview), read in the browser 2026-11-21: full (text rendered by JavaScript, empty to automated fetch); with the maintainer's screenshot of the returns section, 2026-11-21
+161. https://www.ldlc.com/aide/21-frais-de-port/, read 2026-11-23: full (rule only, no amount)
+162. https://materiel.net/faq-informations/q243-livraison-en-france-metropolitaine and https://www.materiel.net/faq-informations/q126-livraison-en-magasin-materiel-net/, read 2026-11-23: full; terms PDF unreadable
+163. https://www.cybertek.fr/livraison, read 2026-11-23: full
+164. https://www.grosbill.com/conditions-de-livraison, read 2026-11-23: full
+165. https://www.alternate.fr/AIDE/Envoi-livraison, read 2026-11-23 in the browser: full ("Coûts de transport" section)
+166. https://www.pccomponentes.fr/conditions-de-vente ("Dernière mise à jour: 19/10/2026"), read 2026-11-23: full; https://www.pccomponentes.fr/pages/engagements: HTTP 404
+167. https://www.rueducommerce.fr/aide/999-frais-de-port/, read 2026-11-23: full
+168. galaxus.fr help pages /fr/guide/28 and /fr/guide/5, 2026-11-23: blocked (timeout)
