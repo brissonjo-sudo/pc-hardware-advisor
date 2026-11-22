@@ -62,7 +62,7 @@ Official manual pages, tested on 2026-11-22 with the fetch tool (and the browser
 
 1. The maker's page below, for the exact model and revision.
 2. If it is blocked, JavaScript-only, or the PDF is over the fetch tool's 10 MB limit: the browser fallback of `research-method.md` section 7 step 4 for that manual page, on the user's yes.
-3. Otherwise ask the user for the PDF, or a screenshot of the page needed (for example the fan header table), and cite it as "user file" with its date.
+3. Otherwise give the user the link to the manual page of the exact model, every time (the pattern of the table filled in, or the URL found; the maker's support page when no model page was found, said so), and ask for the PDF, or a screenshot of the page needed (for example the fan header table); cite it as "user file" with its date.
 
 Check the title page of every PDF: a file name can lead to another model's manual. ManualsLib and ManualOwl are copies, not the maker's text: never cite them as the manual and never use them in place of a blocked maker page (project rule). Their robots.txt for `*`: ManualsLib disallows `/download/`, ManualOwl `/manualpdf.php/`; both disallow `/` for ClaudeBot only, which section 1 does not apply to `Claude-User` [13].
 
