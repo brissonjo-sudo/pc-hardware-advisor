@@ -1,6 +1,6 @@
 ---
 name: check-compatibility
-description: This skill should be used when the user wants to verify that desktop PC parts work together, in any language. Trigger phrases - "are these parts compatible", "will this RAM work with my motherboard", "does this GPU fit in my case", "is my PSU enough for", "do I need a BIOS update for", "check my build for compatibility", "will this cooler fit", "which connector does this card need". Covers socket, chipset, BIOS, RAM, PCIe lanes, M.2/SATA sharing, form factors, GPU and cooler clearance, PSU connectors, wattage and total power draw, with a verdict per pair of parts. Do not use for prices (hunt-prices), designing a full configuration (build-config) or sizing hardware for AI models (size-local-ai).
+description: This skill should be used when the user wants to verify that desktop PC parts work together, in any language. Trigger phrases - "are these parts compatible", "will this RAM work with my motherboard", "does this GPU fit in my case", "is my PSU enough for", "do I need a BIOS update for", "check my build for compatibility", "will this cooler fit", "which connector does this card need", "can my motherboard power these fans". Covers socket, chipset, BIOS, RAM, PCIe lanes, M.2/SATA sharing, form factors, GPU and cooler clearance, PSU connectors, wattage and total power draw, fan and lighting headers (count, current per header, voltage), with a verdict per pair of parts. Do not use for prices (hunt-prices), designing a full configuration (build-config) or sizing hardware for AI models (size-local-ai).
 ---
 
 # Check compatibility
@@ -16,7 +16,7 @@ Answer in the language of the user's request. Keep part names, units and connect
 
 ## 1. Inputs
 
-Collect the exact model of each part involved: CPU, motherboard, RAM kit (part number or type, speed, module count, capacity), GPU (exact partner model), cooler, case (exact version: V1/V2/MAX), PSU (exact model and form factor), M.2/SATA drives.
+Collect the exact model of each part involved: CPU, motherboard, RAM kit (part number or type, speed, module count, capacity), GPU (exact partner model), cooler, case (exact version: V1/V2/MAX), PSU (exact model and form factor), M.2/SATA drives, fans, fan hubs and lighting controllers (exact model and count).
 
 - A vague part ("a 5090", "an ITX case", "a 850 W PSU") gives a vague verdict. Ask for the exact model, or state the assumption you use and label every verdict that depends on it "assumption".
 - Ask for the case and PSU models whenever the question touches GPU, cooler or power (through `~~question tool` when one exists, `${CLAUDE_PLUGIN_ROOT}/references/research-method.md` section 12). Ask which GPU orientation (horizontal or vertical) when the case has both.
@@ -27,7 +27,7 @@ Collect the exact model of each part involved: CPU, motherboard, RAM kit (part n
 
 ### Step 1. Normalise the part list
 
-Rewrite the parts as exact models with the fields you need (socket, memory type, form factor, length/thickness, power). For each value, look in the shared references first. If a value is missing there, or may be outdated (check the "Last checked" date and how fast the topic changes), fetch the official page with `~~web fetch` (manufacturer spec page, QVL, board manual, CPU support list). Use `~~web search` only to locate the official page. Rank sources as in `${CLAUDE_PLUGIN_ROOT}/references/research-method.md` (read its source hierarchy and blocked-page sections when unsure). Date every page read.
+Rewrite the parts as exact models with the fields you need (socket, memory type, form factor, length/thickness, power). For each value, look in the shared references first. If a value is missing there, or may be outdated (check the "Last checked" date and how fast the topic changes), fetch the official page with `~~web fetch` (manufacturer spec page, QVL, board manual, CPU support list). Where each maker publishes its manuals, and what to do when the page is blocked: `${CLAUDE_PLUGIN_ROOT}/references/source-access-policy.md` section 5, Manuals. Use `~~web search` only to locate the official page. Rank sources as in `${CLAUDE_PLUGIN_ROOT}/references/research-method.md` (read its source hierarchy and blocked-page sections when unsure). Date every page read.
 
 ### Step 2. Run the pair checks in this order
 
@@ -44,6 +44,7 @@ Read only the reference sections relevant to the pairs in question. The full mat
 9. **PSU - case**: PSU form factor and length. Read `form-factors-cases.md`.
 10. **PSU - GPU**: connector type and count, adapter, wattage, ATX 3.1 for 300 W+ cards. Read `power-supplies-connectors.md`.
 11. **Total power**: GPU board power + CPU max turbo or PPT + rest of system, against the PSU, using the sizing method in `power-supplies-connectors.md`.
+12. **Fans and lighting - board**: count the fan headers the build needs (CPU, CPU_OPT, chassis, pump) and the lighting headers (5 V 3-pin addressable, 12 V 4-pin RGB) against the board. For each header, add the rated current or power of every fan, hub or controller plugged on it (maker's page) and compare the sum with the per-header limit printed in the exact board's manual (spec pages often omit it). A group over the limit goes on a hub or controller powered from the PSU (SATA or Molex), written as a condition; a lighting plug must match the header's voltage and pin count. A limit read in another board's manual is an assumption: the row stays `Not verified`. Run this check whenever the question names fans, a fan hub or lighting, without waiting for the user to ask about power.
 
 Skip a check only when no part of the pair was given, and list it under "not verified".
 

@@ -61,7 +61,7 @@ Read `${CLAUDE_PLUGIN_ROOT}/skills/build-config/references/build-playbook.md` no
 
 ## Step 3: compatibility
 
-Run the `check-compatibility` method on the full list, not on subsets: socket and chipset, BIOS version and whether a flash is needed to boot, memory type and speed, PSU wattage and connectors, GPU length, thickness and case clearance, cooler height and socket mount, radiator support, drive interfaces and slots, PCIe lane sharing. Keep its per-pair verdicts (compatible, compatible with conditions, incompatible, unknown) and their sources.
+Run the `check-compatibility` method on the full list, not on subsets: socket and chipset, BIOS version and whether a flash is needed to boot, memory type and speed, PSU wattage and connectors, GPU length, thickness and case clearance, cooler height and socket mount, radiator support, drive interfaces and slots, PCIe lane sharing, fan and lighting headers (count and current per header). Keep its per-pair verdicts (compatible, compatible with conditions, incompatible, unknown) and their sources.
 
 Fix every conflict by changing a part, then re-run the affected pairs. Never ship a build with an `incompatible` or unexplained `unknown` pair; a remaining `unknown` goes in "Not verified" with the manual or page to check.
 

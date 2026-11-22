@@ -6,6 +6,19 @@ The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.1.0/),
 
 ## [Unreleased]
 
+## [0.8.23] - 2026-11-22
+
+### Added
+
+- `check-compatibility`: pair check 12, fans and lighting against the board: header count, rated current or power summed per header against the limit in the exact board's manual, PSU-powered hub or controller for a group over the limit, lighting voltage and pins; a limit read on another board stays `Not verified`.
+- `source-access-policy.md`: Manuals table (official manual page per brand for ASUS ROG, MSI, Gigabyte, ASRock, Lian Li, Thermalright, Noctua, be quiet!, Corsair, Fractal Design, DeepCool, Arctic, Seasonic, tested 2026-11-22), order of use (maker page, browser on a yes, user's file, with the link to the manual page given every time); ManualsLib and ManualOwl never replace the maker's manual.
+- Case 29: fans on a named board (graders current-per-header, no-borrowed-limit, psu-powered-option).
+
+### Changed
+
+- `hunt-prices`: a list total never counts an item with no offer as 0; it says how many items it covers, names the others, and says why a later total rises when they are added. The swap check covers fan and lighting headers.
+- `build-config`: the full-list compatibility run covers fan and lighting headers.
+
 ## [0.8.22] - 2026-11-21
 
 ### Fixed

@@ -113,7 +113,7 @@ A generic rule that "third and fourth M.2 share lanes with SATA ports 4-6" is un
 
 ### How to check lane sharing
 
-1. Open the board manual's spec sheet: read the "Expansion slots" and "Storage" tables and the footnotes under each M.2 socket.
+1. Open the board manual (where to find it: `source-access-policy.md` section 5, Manuals) at its spec sheet: read the "Expansion slots" and "Storage" tables and the footnotes under each M.2 socket.
 2. Find the manual's "PCIe / M.2 / SATA configuration" or "lane sharing" table (rows by slot, columns by combination).
 3. Check whether the x16 slot falls to x8 (bifurcation) when a CPU-linked M.2 socket is populated.
 4. Check which SATA ports are disabled when an NVMe SSD (not a SATA SSD) populates a socket.

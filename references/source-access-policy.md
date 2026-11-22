@@ -1,6 +1,6 @@
 # Source access policy
 
-Last checked: 2026-11-15. Read this file before any access to a website. Each retailer's tier and check date are in the `Access` column of `retailers-by-country.md`; non-retail sources and APIs are in sections 5 and 6 below. Rules marked "project rule" are plugin policy, not external facts. The notes on terms of use are a record of what the texts read say, not legal advice.
+Last checked: 2026-11-15 (manuals: 2026-11-22). Read this file before any access to a website. Each retailer's tier and check date are in the `Access` column of `retailers-by-country.md`; non-retail sources and APIs are in sections 5 and 6 below. Rules marked "project rule" are plugin policy, not external facts. The notes on terms of use are a record of what the texts read say, not legal advice.
 
 ## 1. Which agent the rules apply to
 
@@ -56,6 +56,32 @@ Retailers, classifieds and refurbishers (eBay UK and US, Leboncoin, Kleinanzeige
 | GitHub (llama.cpp benchmarks) | https://github.com/ggml-org/llama.cpp/discussions | benchmark | A (2026-11-15): Claude-User named with path rules only, Crawl-delay 1; terms read have no robots clause | Benchmark numbers readable in the discussion pages. | [2][10] |
 | LocalScore | https://www.localscore.ai/ | benchmark | A (2026-11-15): no robots.txt (HTTP 404); no terms found | Leaderboard readable. | [11] |
 
+### Manuals
+
+Official manual pages, tested on 2026-11-22 with the fetch tool (and the browser for ROG) [12]. The maker's manual for the exact model is rank 1 for header limits, lane sharing, slot order and clearances. Order of use:
+
+1. The maker's page below, for the exact model and revision.
+2. If it is blocked, JavaScript-only, or the PDF is over the fetch tool's 10 MB limit: the browser fallback of `research-method.md` section 7 step 4 for that manual page, on the user's yes.
+3. Otherwise give the user the link to the manual page of the exact model, every time (the pattern of the table filled in, or the URL found; the maker's support page when no model page was found, said so), and ask for the PDF, or a screenshot of the page needed (for example the fan header table); cite it as "user file" with its date.
+
+Check the title page of every PDF: a file name can lead to another model's manual. ManualsLib and ManualOwl are copies, not the maker's text: never cite them as the manual and never use them in place of a blocked maker page (project rule). Their robots.txt for `*`: ManualsLib disallows `/download/`, ManualOwl `/manualpdf.php/`; both disallow `/` for ClaudeBot only, which section 1 does not apply to `Claude-User` [13].
+
+| Brand | Manual page | Test (2026-11-22) | robots.txt (`*` group) |
+|---|---|---|---|
+| ASUS ROG | `https://rog.asus.com/<region>/motherboards/<line>/<model>/helpdesk_manual/` | ROG Strix B850-G Gaming WiFi: the browser shows the manuals (user's manual by language, BIOS manual, each dated); the fetch tool got the page without them | only `/*?searchkeyword=` and `/*&searchkeyword=` disallowed |
+| MSI | `https://www.msi.com/Motherboard/<MODEL>/support` | MAG B850 Tomahawk WiFi: HTTP 403 | unreadable (HTTP 403) |
+| Gigabyte | `https://www.gigabyte.com/Motherboard/<model>/support` | B850 AORUS Elite WiFi7: HTTP 403; a search result gives the PDF under `https://download.gigabyte.com/FileList/Manual/`, over 10 MB | unreadable (HTTP 403) |
+| ASRock | `https://www.asrock.com/mb/AMD/<model>/index.asp` | B850 Steel Legend WiFi: empty page (JavaScript) | only `/asrockrack/` disallowed |
+| Lian Li | `https://lian-li.com/product/<slug>/` | UNI FAN TL Wireless: page read; manuals are Google Drive links | no rule on product pages |
+| Thermalright | `https://www.thermalright.com/product/<slug>/`, PDFs under `https://download.thermalright.com/manuals/` | Phantom Spirit 120 SE: page read; the linked PDF is titled for the PA120 SE, another cooler | no rule on product pages; download host unreadable (HTTP 429) |
+| Noctua | PDFs under `https://noctua.at/pub/media/blfa_files/manual/` (from a search result) | NH-D15 G2: HTTP 429 | unreadable (HTTP 429) |
+| be quiet! | `https://www.bequiet.com/<lang>/cpucooler/<id>` | Dark Rock Pro 5: HTTP 403 | `Allow: /` only |
+| Corsair | `https://www.corsair.com/explorer/diy-builder/fans/<model>/` (online guide, no PDF) | RS120-R ARGB: page read | no rule on these pages |
+| Fractal Design | `https://www.fractal-design.com/products/cases/<family>/<model>/<colour>/` | North: page read; manual link to a PDF on `assets.fractal-design.com`, over 10 MB | `/studio/` and `/api/`; `/` disallowed for ClaudeBot and other AI crawlers, not `Claude-User` |
+| DeepCool | product page on `https://global.deepcool.com/products/`, PDFs under `https://www.deepcool.com/download/pdf/` | AK620: page and PDF read | none (HTTP 404) |
+| Arctic | `https://support.arctic.de/<model-slug>` | P12 PWM PST: technical documents (drawing, airflow curve), no user manual | no Disallow |
+| Seasonic | `https://seasonic.com/<series-slug>/` | Focus GX: HTTP 403 | `/*?` (any query string) and admin paths disallowed |
+
 ## 6. APIs (tier C)
 
 | API | Access | Status (2026-11-15) | Source |
@@ -88,3 +114,5 @@ For each new or changed source: read the raw robots.txt, read the terms of use, 
 9. Intel, terms of use, https://www.intel.com/content/www/us/en/legal/terms-of-use.html, read 2026-11-15, summary through the fetch tool
 10. GitHub, terms of service, https://docs.github.com/en/site-policy/github-terms/github-terms-of-service, read 2026-11-15, summary through the fetch tool
 11. LocalScore, https://www.localscore.ai/ and https://www.localscore.ai/robots.txt (HTTP 404), read 2026-11-15
+12. Maker support and product pages and their robots.txt, URLs in the Manuals table of section 5, read 2026-11-22 (fetch tool summaries; ROG page and robots.txt read in the browser)
+13. https://www.manualslib.com/robots.txt and https://www.manualowl.com/robots.txt, read 2026-11-22
