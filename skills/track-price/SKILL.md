@@ -11,7 +11,7 @@ Shared rules apply: `${CLAUDE_PLUGIN_ROOT}/references/research-method.md` (canon
 
 ## Guardrails (non-negotiable)
 
-- Never buy, never create accounts, never contact sellers, never submit forms. A tracker only reads public pages.
+- Never buy, never create accounts, never contact sellers, never submit forms, never add to a cart (not even to read the shipping). A tracker only reads public pages.
 - Never circumvent a block: no alternate user agents, caches, mirrors, archive copies. Scheduled runs never use a browser, for any purpose: record the page as `blocked (<reason>)` and move on. Only the baseline hunt in this conversation may apply the browser fallback of `${CLAUDE_PLUGIN_ROOT}/references/research-method.md` section 7.
 - Be polite to sites: default once a day; never more than 4 runs per day, even if the scheduler allows more. Respect the scheduler's minimum interval; if the user asks for less, explain and use the minimum allowed or the 4-per-day cap, whichever is the longer interval.
 - Notify sparingly (see triggers below). No marketing tone.

@@ -34,13 +34,14 @@ Rank sources in this order. Prefer the highest rank that answers the question.
 - Inline: `[n]` after each factual claim, with a numbered `## Sources` list in the answer.
 - Each source entry: title or site, URL, date read, read status (`full`, `partial`, `snippet only`, `blocked`, `browser (user session)`, `user screenshot`).
 - Distinguish "fetched" (page read) from "snippet" (seen in search results only). A snippet supports at most `medium` confidence.
+- Every URL opened, cited or given to the user was found in a search result, on a page read, in a plugin reference file or in the user's message. Never build a product URL by guessing its slug, ID or colour variant, and never give one to the user, even marked unverified: when no URL was found, name the site and the product to search there.
 
 ## 4. Confidence scale
 
 | Level | Meaning |
 |---|---|
 | `high` | Prices: full page read today, with price, stock, seller, VAT basis and shipping known, so the landed total is exact (not "from" and not `excluding fees`); the seller is known when the page shows it or when the site is typed `direct retailer` with no marketplace in `retailers-by-country.md`. Specs and law: official text read and consistent |
-| `medium` | Partial page or snippet, or older than 24 h; or secondary source |
+| `medium` | Partial page or snippet, or older than 24 h; or secondary source; or a price, stock or shipping value the user supplied (screenshot, pasted text or their word, such as "the price is OK"): `medium` at best, even when it shows the full delivered total |
 | `low` | Single unconfirmed mention, forum claim, or unread source |
 
 Say the level in short form next to each claim: "solid", "plausible", "to verify" map to high, medium, low.
@@ -123,7 +124,7 @@ Never circumvent with tricks: no alternate user agents, caches, mirrors, or arch
    - Never in scheduled runs (`track-price`) or in sub-agents (`price-scout`): they record the page as blocked; the main conversation may then use the fallback for the few pages that matter.
    - Record `Page read: browser (user session)` with date and time, and say in the answer that the page was read through the browser. This status says where the page was read, not that the user is signed in: never say the browser is or is not signed in to the user's account unless the page shows it. When the user says they hold a membership (for example Amazon Prime), use the member price and the free or faster shipping only where the page shows them for that offer (a Prime badge, a member-price line), and say so.
    - Never write the delivery address, postal code or town the user's session shows: write "delivery to your address".
-5. If no browser tool is available or the fallback stops: ask the user for a screenshot or pasted page text. Mark the result `user screenshot` and note the date they captured it.
+5. If no browser tool is available or the fallback stops: ask the user for a screenshot or pasted page text. Mark the result `user screenshot` and note the date they captured it; its confidence is `medium` at best (section 4).
 6. Report every blocked page in the answer. Do not silently drop it.
 
 ## 8. Currency conversion
