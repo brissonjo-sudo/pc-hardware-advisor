@@ -6,6 +6,12 @@ The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.1.0/),
 
 ## [Unreleased]
 
+## [0.8.25] - 2026-11-24
+
+### Added
+
+- `form-factors-cases.md`, lane check step 6: PCIe Simulator board sheets as a secondary cross-check (`medium` at best, below the maker's manual, URL from its index or sitemap, never copied). The Crosshair X870E Hero row now flags its conflict with the simulator sheet.
+
 ## [0.8.24] - 2026-11-23
 
 ### Added
