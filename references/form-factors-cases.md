@@ -107,7 +107,7 @@ Case specs differ between versions (V1, V2, V3, MAX): ask for the exact version.
 | MSI MAG X870E Tomahawk WiFi | M2_2 shares with rear USB4 | [45] | low-medium |
 | Gigabyte X870E boards | CPU-linked M.2 sockets (M2B_CPU / M2C_CPU) share bandwidth with the main x16 slot, up to x8 when populated | [45] | low-medium |
 | ASUS ProArt X870E-Creator | Reportedly drops the top x16 to x8 when M.2_2 is used | [45] | low |
-| ASUS ROG Crosshair X870E Hero | Reportedly keeps x16 | [45] | low |
+| ASUS ROG Crosshair X870E Hero | Reportedly keeps x16. CONFLICT: the PCIe Simulator sheet (read 2026-11-24) says M.2_2 or M.2_3 populated drops PCIEX16_1 to x8: check the manual | [45], [46] | low |
 
 A generic rule that "third and fourth M.2 share lanes with SATA ports 4-6" is unverified and board dependent: do not state it as fact.
 
@@ -118,6 +118,7 @@ A generic rule that "third and fourth M.2 share lanes with SATA ports 4-6" is un
 3. Check whether the x16 slot falls to x8 (bifurcation) when a CPU-linked M.2 socket is populated.
 4. Check which SATA ports are disabled when an NVMe SSD (not a SATA SSD) populates a socket.
 5. Report the result as: slot or socket populated, effect (x16 to x8, SATA n disabled), manual page, confidence. If the manual is unreachable, say "from search summary" and lower the confidence.
+6. Secondary cross-check: PCIe Simulator [46] publishes one static sheet per board (slots, lanes, bandwidth sharing, limits by CPU), at `https://www.pcie-simulator.fr/carte/<board>.html`. Take the sheet URL from its board index (`/carte/`), its sitemap (`/sitemap.xml`) or a search result, never by guessing the slug. robots.txt allows everything except `/annotate.html` (read 2026-11-24). Its rules are written by the site from the makers' manuals and labelled indicative ("donnés à titre indicatif"): confidence `medium` at best, always below the manual. Use it to find which sockets and slots to check in the manual, or when the manual is unreachable, cited as "PCIe Simulator sheet, read <date>, not the maker's manual". When it disagrees with the manual, the manual wins and the conflict is reported. Its data is marked "Tous droits réservés": cite and link it, never copy its tables into this plugin. The sheet's "Ouvrir dans le simulateur" link opens the interactive simulator, which runs in JavaScript: give the user that link to try their own combination, and never present its result as verified.
 
 ## 7. Verdict rules for physical fit
 
@@ -140,6 +141,7 @@ Margin: the research gives no sourced clearance margin between card and case lim
 - Partner GPU dimensions: only the ASUS Astral 5090 and the Sapphire pages were read first-hand; MSI and others are retailer-level. Other Radeon partners were not checked.
 - AM5 CPU lane total and the AMD "44 lanes" figure: amd.com blocked.
 - Lane sharing examples come from search summaries (manualowl, MSI, Gigabyte pages returned 403), not first-hand manual reads.
+- PCIe Simulator [46]: no licence or terms of use found; its data file and footer say "Tous droits réservés", which the home page wording contradicts. No API or MCP server (`/api`, `/mcp`, `/llms.txt` on pcie-simulator.vercel.app: HTTP 404, 2026-11-24).
 - 12V-2x6 bend radius: not published by NVIDIA or PCI-SIG in anything found; the 36 mm NVIDIA figure is space for cables, not a bend radius.
 - RTX 5080 / 5090 FE thickness: the NVIDIA pages disagree internally (2-slot vs 61 mm).
 
@@ -177,6 +179,7 @@ Numbers follow `research/r4-power-form-factors.md`; S-numbers follow `research/r
 - 43. https://www.guru3d.com/review/colorful-igame-x870e-vulcan-w-oc-v14-review/page-2/ and https://www.digitalcitizen.life/x670e-x670-b650e-b650-chipsets/ (search summaries, low-medium)
 - 44. https://www.manualowl.com/m/MSI/MAG-Z790-TOMAHAWK-MAX-WIFI/Manual/723726?page=30 ; .../Gigabyte/Z790-AORUS-ELITE-AX/Manual/683762?page=28 ; .../Asus/ROG-MAXIMUS-Z790-EXTREME/Manual/683478?page=25 (search summaries, direct fetch 403, medium)
 - 45. https://www.msi.com/blog/pcie-lane-bifurcation-and-bandwidth-sharing-on-msi-x870e-x870-motherboards (403; search summary), ASUS ROG forum threads, elevenforum (low-medium)
+- 46. PCIe Simulator v2.1, https://www.pcie-simulator.fr/carte/ (board sheets; example https://www.pcie-simulator.fr/carte/asus-rog-crosshair-x870e-hero.html), https://www.pcie-simulator.fr/robots.txt and https://pcie-simulator.vercel.app/aide.html, read 2026-11-24: full; secondary, indicative (medium at best)
 - S3. https://www.sapphiretech.com/en/consumer/pulse-radeon-rx-9070-xt-16g-gddr6 (high)
 - S4. https://www.sapphiretech.com/en/consumer/nitro-radeon-rx-9070-xt-16g-gddr6 (high)
 - S5. https://www.sapphiretech.com/en/consumer/pulse-radeon-rx-9070-16g-gddr6 (high)
