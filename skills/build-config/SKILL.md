@@ -58,6 +58,7 @@ Read `${CLAUDE_PLUGIN_ROOT}/skills/build-config/references/build-playbook.md` no
 3. Verify online that each shortlisted part is current and sold in the buyer's country, and read its exact specs on the manufacturer page (dimensions, connectors, supported memory speeds, BIOS notes). Skip a part you cannot verify and say why.
 4. Owned parts: keep them if compatible and useful; list them at zero price in the table, marked `owned`, and check them as part of the list. Take their specs (dimensions, connectors, wattage) from the manufacturer page, a review or spec database only when that page cannot be read.
 5. Respect banned and wanted brands. Prefer parts with a manufacturer warranty valid in the buyer's country.
+6. When the need has two or more NVMe drives, an add-in card or a second GPU, choose the board with the "Board lanes" criteria in `build-playbook.md`.
 
 ## Step 3: compatibility
 

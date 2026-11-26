@@ -27,7 +27,7 @@ Shared references to open when a heuristic needs a fact: `${CLAUDE_PLUGIN_ROOT}/
 
 - Questions: software used (each has its own CPU/GPU/RAM scaling), resolution and codecs, project size, render time tolerance, number of drives, colour-critical monitor.
 - Matters most (plugin heuristic): software dependent. Typically CPU cores and RAM capacity for rendering and compiling; GPU for effects, encode and GPU renderers; fast scratch SSD and a separate larger storage drive. Check the software vendor's current requirements online.
-- Constraints: ECC or high capacity memory needs board and CPU support (memory.md); multiple NVMe drives can share lanes (form-factors-cases.md section 6); quiet cooling for audio work.
+- Constraints: ECC or high capacity memory needs board and CPU support (memory.md); multiple NVMe drives can share lanes (form-factors-cases.md section 6; choose the board with "Board lanes" below); quiet cooling for audio work.
 - Variant logic: cheaper = reduce core count or GPU tier on the stage the user's software uses least; stronger = more RAM capacity, then cores, then GPU, following the user's bottleneck.
 
 ## Office and everyday
@@ -64,6 +64,17 @@ Shared references to open when a heuristic needs a fact: `${CLAUDE_PLUGIN_ROOT}/
 - Stronger: improve the limiting part first (as ranked above), then the part next in line; do not upgrade a part that cannot be used (monitor, case, PSU limits).
 - Always give each variant as a delta: parts that change, landed price difference, effect on the use, and the compatibility re-check.
 - Memory and SSD: after the 2025-2026 price moves (used-market-checklist.md section 1), compare capacity options at current prices before fixing the default; the cheapest-per-GB assumption from older years may not hold.
+
+## Board lanes (two or more NVMe drives, an add-in card or a second GPU)
+
+Use this to choose the board whenever the need has two or more NVMe drives, an add-in card (network, capture, HBA) or a second GPU. The criteria come from the shared references; their order is a plugin heuristic.
+
+1. Write the need as a count: NVMe drives (and which one holds the system), add-in cards with their slot width, a second GPU.
+2. For each candidate board, read its manual spec sheet (`source-access-policy.md` section 5, Manuals) and count: CPU-linked M.2 sockets that leave the GPU slot at full width; M.2 sockets in total; chipset-linked slots of x4 or more; SATA ports each populated socket disables. Method and wording: `form-factors-cases.md` section 6, "How to check lane sharing" and "How to place parts".
+3. Chipset link: its width per chipset is in `sockets-chipsets.md` (Intel DMI x8 or x4; AM5 x4, secondary). When several chipset devices may run at once (two chipset SSDs, a fast network card), prefer a chipset with the wider link (plugin heuristic) and say why.
+4. AMD's own table gives the processor's direct NVMe lanes per chipset (for example "1x4 PCIe 5.0 plus 4x PCIe GPP" on X870E, "1x4 PCIe 5.0" on B850): quote it from `sockets-chipsets.md`; how a board uses them is in its manual.
+5. Leads only: PCIe Simulator board sheets (`form-factors-cases.md` section 6, step 6) and its board search `https://www.pcie-simulator.fr/reverse.html`, which runs in JavaScript: give that link to the user to filter boards, never cite its result as a source. Confirm every shortlisted board in its manual before recommending it.
+6. In the configuration, add one line per board: CPU-linked M.2 without GPU loss, M.2 total, chipset link, source and confidence. A board whose manual was not read stays `Not verified` on these counts.
 
 ## Upgrade path (on request)
 
