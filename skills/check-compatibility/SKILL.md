@@ -1,6 +1,6 @@
 ---
 name: check-compatibility
-description: This skill should be used when the user wants to verify that desktop PC parts work together, in any language. Trigger phrases - "are these parts compatible", "will this RAM work with my motherboard", "does this GPU fit in my case", "is my PSU enough for", "do I need a BIOS update for", "check my build for compatibility", "will this cooler fit", "which connector does this card need", "can my motherboard power these fans". Covers socket, chipset, BIOS, RAM, PCIe lanes, M.2/SATA sharing, form factors, GPU and cooler clearance, PSU connectors, wattage and total power draw, fan and lighting headers (count, current per header, voltage), with a verdict per pair of parts. Do not use for prices (hunt-prices), designing a full configuration (build-config) or sizing hardware for AI models (size-local-ai).
+description: This skill should be used when the user wants to verify that desktop PC parts work together, in any language. Trigger phrases - "are these parts compatible", "will this RAM work with my motherboard", "does this GPU fit in my case", "is my PSU enough for", "do I need a BIOS update for", "check my build for compatibility", "will this cooler fit", "which M.2 slot should I use", "sur quel slot mettre mon SSD", "which connector does this card need", "can my motherboard power these fans". Covers socket, chipset, BIOS, RAM, PCIe lanes, M.2/SATA sharing, form factors, GPU and cooler clearance, PSU connectors, wattage and total power draw, fan and lighting headers (count, current per header, voltage), with a verdict per pair of parts. Do not use for prices (hunt-prices), designing a full configuration (build-config) or sizing hardware for AI models (size-local-ai).
 ---
 
 # Check compatibility
@@ -36,7 +36,7 @@ Read only the reference sections relevant to the pairs in question. The full mat
 1. **CPU - board**: socket, chipset, CPU generation support, minimum BIOS. Read `${CLAUDE_PLUGIN_ROOT}/references/sockets-chipsets.md`.
 2. **RAM - board - CPU**: memory type (DDR4/DDR5), speed against the CPU's official limit, module count (1 vs 2 vs 4 modules and the speed drop), capacity, XMP/EXPO profile and memory controller ratio. Read `${CLAUDE_PLUGIN_ROOT}/references/memory.md`.
 3. **GPU - board**: slot, PCIe generation, lanes. Read the lanes section of `${CLAUDE_PLUGIN_ROOT}/references/form-factors-cases.md`.
-4. **M.2 and SATA lane sharing**: which sockets or ports are disabled or slow down the x16 slot. This is board-specific: read the exact board manual (see the lane-check procedure in `form-factors-cases.md`).
+4. **M.2 and SATA lane sharing**: which sockets or ports are disabled or slow down the x16 slot. This is board-specific: read the exact board manual (see the lane-check procedure in `form-factors-cases.md`). When the user asks where to plug a part, or the build has two or more SSDs or an add-in card, add the slot plan from "How to place parts" in that file.
 5. **Board - case**: form factor listed by the case. Read `form-factors-cases.md`.
 6. **GPU - case**: length (with plug if the case counts it), thickness, height, cable bend space. Read `form-factors-cases.md`.
 7. **Cooler - case and cooler - RAM**: cooler height against the case limit (check the GPU thickness trade-off in small cases), radiator/fan space, clearance over the first RAM slot.
