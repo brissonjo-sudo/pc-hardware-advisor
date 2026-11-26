@@ -6,6 +6,14 @@ The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.1.0/),
 
 ## [Unreleased]
 
+## [0.8.30] - 2026-11-26
+
+### Added
+
+- `used-market-checklist.md` section 8, resale estimate: sold prices of the user's region, tier B sites read only from the user's screenshots (`medium` at best), no new price as a used value, factors without percentages, fees only from the user or a fee page read today.
+- `plan-upgrade`: resale of a replaced part on request; new trigger phrases.
+- Case 35: resale of an RTX 3070 in France (French).
+
 ## [0.8.29] - 2026-11-26
 
 ### Added

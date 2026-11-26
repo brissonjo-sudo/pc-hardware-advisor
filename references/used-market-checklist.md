@@ -1,6 +1,6 @@
 # Used-market checklist
 
-Last checked: 2026-11-07. Values change: verify online before concluding.
+Last checked: 2026-11-07 (resale method: 2026-11-26). Values change: verify online before concluding.
 
 Use this file to price and vet used parts. All figures below are a dated snapshot from research on 2026-11-07: re-check before quoting. Never quote a range older than about 60 days as current; re-read the source or flag it as stale.
 
@@ -132,6 +132,17 @@ Conflict note: the RTX 3090 US figure differs by date (about 1,343 USD in a Sep 
 - Shipping and fees included, buying several parts together, pickup and in-person test.
 - Seller's listing age and number of watchers (stale listings favour the buyer; inference).
 
+## 8. Resale estimate (selling your own parts)
+
+Use this when the user wants to sell a part they own (often the one an upgrade replaces). The method is section 2, applied to the user's region; nothing here is a sourced price.
+
+1. Basis: sold prices of the same model (section 2), at least 10 sold in the last 60 days, outliers dropped, shipped compared with shipped, the user's region only. Never convert a US range into euros.
+2. Access: eBay France and Germany and Leboncoin are tier B (`source-access-policy.md`, `retailers-by-country.md`): never read them automatically. Ask the user for a screenshot or pasted text of sold results (or of current listings, labelled "asking"). A value the user supplies is `medium` confidence at best (`research-method.md` section 4).
+3. The dated ranges of section 3 are mostly US and some are stale: never quote them as a resale price in another region; give one only as context, with its date and region.
+4. A new price is never a used value: GPUPrix figures and retailer prices are new-retail prices (`skills/find-deals/references/price-history-sources.md`). The cheapest new price of the same model, read today, is only an upper bound a buyer would compare against (plugin heuristic: say so).
+5. Factors to state without a percentage (no source): original box and invoice, remaining maker warranty and whether the maker lets it transfer (read the maker's warranty page), visible wear, mining or heavy use declared.
+6. Answer: a range labelled "sold" or "asking", the count of items, the period, the region, the date read, the source, the confidence. Selling fees and shipping are deducted only when the user gives them or the platform's own fee page was read today. With no data, say so and ask for the screenshot rather than giving a figure.
+
 ## Not verified
 
 - eBay sold listings: eBay US returned HTTP 403 to automated fetch; recorded as blocked, not bypassed; no sold data included.
@@ -143,6 +154,7 @@ Conflict note: the RTX 3090 US figure differs by date (about 1,343 USD in a Sep 
 - Sample sizes are tracker listing counts, not sold counts; none meet the 10-sold rule.
 - Motherboard BIOS/socket checks and PSU tier list: no source. Tariff status after 2027-01-09: not found (exclusions extended to that date by USTR notice 2026-11-06).
 - Asking-vs-sold gap (20-40%) and 60-day / 10-sample rules are unsourced inference.
+- Resale (section 8): no French sold-price source is readable automatically (eBay and Leboncoin are tier B); estimates rest on the user's screenshots. No source for the effect of box, invoice or warranty on a resale price.
 
 ## Sources
 
