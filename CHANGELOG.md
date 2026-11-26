@@ -6,6 +6,14 @@ The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.1.0/),
 
 ## [Unreleased]
 
+## [0.8.27] - 2026-11-26
+
+### Added
+
+- `build-playbook.md`, "Board lanes": choose the board by CPU-linked M.2 without GPU loss, M.2 total, x4+ chipset slots, SATA lost and chipset link width, confirmed in the manual; PCIe Simulator sheets and board search as leads only.
+- `build-config` step 2: applies it with two or more NVMe drives, an add-in card or a second GPU.
+- Case 32: AM5 board for a GPU and three NVMe drives (French).
+
 ## [0.8.26] - 2026-11-26
 
 ### Added
