@@ -66,7 +66,7 @@ Item 6 de la porte (cas de test), état final : check-compatibility et review-us
 
 ## Audit complet 0.3.3 (2026-11-08)
 
-Plan approuvé par Jo : `C:\Users\Krn\.claude\plans\orchestre-un-audit-complet-enumerated-flute.md`. Six axes (A exactitude en ligne, B cohérence, C sécurité, D dépôt, E documentation, F mise en produit), bancs réels, rapport `AUDIT.md`, PR 0.3.4 pour bloquants et majeurs.
+Plan approuvé par Jo : `orchestre-un-audit-complet-enumerated-flute.md` (dossier local des plans, hors dépôt). Six axes (A exactitude en ligne, B cohérence, C sécurité, D dépôt, E documentation, F mise en produit), bancs réels, rapport `AUDIT.md`, PR 0.3.4 pour bloquants et majeurs.
 
 ### P0. Préparation
 - Parallélisable : non. Modèle : Opus. Isolation : branche `audit/0.3.4`, sorties des auditeurs dans `research/audit/` (hors paquet).
@@ -97,7 +97,7 @@ Plan approuvé par Jo : `C:\Users\Krn\.claude\plans\orchestre-un-audit-complet-e
 - Isolation : chaque rédacteur ne touche que son groupe et ne corrige que les ids listés dans son brief. Opus vérifie ensuite le diff id par id, puis contrôle, construction, validation stricte, bancs ciblés.
 
 ### 0.8.0. Politique d'accès aux sources (2026-11-15)
-- Plan approuvé par Jo : `C:\Users\Krn\.claude\plans\orchestre-un-audit-complet-enumerated-flute.md`. Branche `feat/0.8.0-source-access-policy`, commits locaux seulement.
+- Plan approuvé par Jo : `orchestre-un-audit-complet-enumerated-flute.md` (dossier local des plans, hors dépôt). Branche `feat/0.8.0-source-access-policy`, commits locaux seulement.
 - Parallélisable : oui pour la recherche (B1 CGU françaises, B2 revendeurs DE/UK/US/ES/IT, B3 occasion, specs et benchmarks, C Keepa, Amazon et agent Claude, plus une seconde lecture des robots.txt illisibles), par vagues de 3 agents au plus. Non pour le cœur (politique, colonne Access, renvois).
 - Modèles : Haiku pour les lectures web (5 agents), Sonnet pour le README et ses 8 traductions, Opus pour les robots.txt bruts (`curl` et un script de classement), l'arbitrage et la rédaction de la politique (moins coûteux que de briefer un agent, avec tout le contexte en main).
 - Isolation : agents de recherche en lecture seule ; l'agent README n'a touché que les 9 README, disjoints des fichiers d'Opus ; pas de worktree.
