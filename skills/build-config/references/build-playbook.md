@@ -53,7 +53,7 @@ Shared references to open when a heuristic needs a fact: `${CLAUDE_PLUGIN_ROOT}/
 
 - Small cases: GPU length, cooler height, PSU form factor, number of drives; read form-factors-cases.md section 4 and the case maker's page.
 - Noise: larger fans at lower speed, adequate case airflow, PSU fan behaviour; reported noise levels come from manufacturer or tested sources, never guessed.
-- Power draw and heat: GPU and CPU power limits from vendor pages; PSU headroom per power-supplies-connectors.md; electricity cost is the user's input, not an assumption.
+- Power draw and heat: GPU and CPU power limits from vendor pages; PSU headroom per power-supplies-connectors.md; electricity cost is the user's input, not an assumption (method: `power-supplies-connectors.md` section 7).
 - Owned parts: check them first; they can force the platform (socket, memory generation, PSU connectors).
 - Banned or wanted brands: apply before shortlisting; say if the constraint removes the best option.
 - Refurbished: only professional refurbishers with invoice and warranty; show warranty length and the seller type in the price row.

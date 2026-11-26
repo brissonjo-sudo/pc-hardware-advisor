@@ -19,7 +19,7 @@ Eight skills and one sub-agent.
 - **`review-used-listing`**: reviews one second-hand listing and returns a verdict: grab it, negotiate, or avoid. It adds questions for the seller, tests to run at handover, and a negotiation margin.
 - **`track-price`**: sets up scheduled re-checks of a price, alerts you only when it falls below your threshold, and keeps a history file. It never buys.
 - **`find-deals`**: judges a deal you bring, a pasted list of up to five deals, or the current deals of a category from a deal site it may read, on a new or refurbished part: is it really cheaper than other retailers today, and is the purchase safe? An unsafe offer is excluded whatever the discount. For graphics cards it adds the price history as context.
-- **`plan-upgrade`**: for a PC you already own, names the part that limits your use, ranks the upgrades, checks each one against the parts you keep, says what the platform allows later, and estimates what a replaced part could sell for. It never invents a performance gain or a price.
+- **`plan-upgrade`**: for a PC you already own, names the part that limits your use, ranks the upgrades, checks each one against the parts you keep, says what the platform allows later, estimates what a replaced part could sell for, and what the PC costs in electricity per year. It never invents a performance gain or a price.
 - **`price-scout`** (agent): reads several retailer or marketplace pages for one exact part and returns normalized price rows, with no analysis. `hunt-prices` launches it.
 
 Out of scope: consoles, smartphones, tablets, laptops as products, and anything that buys or contacts sellers.

@@ -1,6 +1,6 @@
 # Power supplies and connectors
 
-Last checked: 2026-11-07. Values change: verify online before concluding.
+Last checked: 2026-11-07 (running cost: 2026-11-26). Values change: verify online before concluding.
 
 Use this file to check PSU wattage, PSU connectors and CPU/GPU power for `check-compatibility`. Every table row carries a source `[n]` and a confidence. Confidence scale: high = vendor or standard primary page read directly; medium = secondary, vendor explainer, Wikipedia or search summary of a vendor page; low = aggregator, forum, retailer, snippet. Report the confidence with the verdict. When a value is missing here, say so and ask for the exact model page; never infer it.
 
@@ -157,6 +157,16 @@ Instructions: use max turbo (Intel) or PPT (AMD) as the CPU term in the sizing s
 
 Always state the exact condition, the source `[n]` and the confidence. If an input is missing (Radeon reference data, a partner model not checked), return "cannot conclude" for that item and name the page to check.
 
+## 7. Running cost
+
+1. Formula: energy (kWh) = average power at the wall (W) x hours / 1000; cost = energy x price per kWh. Show each step and label the result `estimate`.
+2. Hours: ask the user for hours under load (gaming, rendering) and hours at idle or on the desktop per day, and the days per year. Never assume them.
+3. Price per kWh: the user's own contract price comes first. If they have none, EDF's regulated Tarif Bleu can be quoted as a dated reference: option Base 0.2001 EUR incl. tax per kWh, "Prix applicable à compter du 1er août 2026 pour toute nouvelle souscription" [31]. Re-read the page before quoting it. CRE's page showed the 1 February 2026 grid (Base 6 kVA: 19.40 c EUR/kWh) and is older [32]. The monthly subscription is a fixed fee: leave it out of the PC's cost.
+4. Power: a plug-in meter reading at the wall by the user is best. Otherwise, dated measurements of the same parts in a review (secondary, with conditions). GPU board power and CPU TDP or PPT (sections 3 and 4) are rated maximums, never an average: when they are the only figure, label the result "upper bound".
+5. PSU losses: power at the wall = power drawn by the parts / efficiency. 80 PLUS minimum efficiency, 230 V EU internal, at 20 / 50 / 100 % load [33]: Bronze 85 / 88 / 85 %; Silver 87 / 90 / 87 %; Gold 90 / 92 / 89 %; Platinum 92 / 94 / 90 %; Titanium 93 / 95 / 91 % (and 90 % at 10 %). These are certification floors, not the unit's curve. A wall reading already includes the losses: never apply them twice.
+6. Cybenetics publishes efficiency levels, but its notice says that automated data collection, "including by AI agents, requires prior written permission" [34]: never read it automatically; use a figure only from the user's screenshot.
+7. Upgrade: compare the old and the new part on the same hours and the same price, and give the yearly difference.
+
 ## Not verified
 
 - AMD reference TBP and AMD recommended PSU for RX 7800 XT, 7900 XTX, 9060 XT, 9070, 9070 XT: amd.com timed out and TechPowerUp returned 403. Only Sapphire partner values and secondary sources exist.
@@ -166,6 +176,7 @@ Always state the exact condition, the source `[n]` and the confidence. If an inp
 - Origin of the 35 mm bend rule: cable makers only. No PCI-SIG or NVIDIA bend radius found. The PCI-SIG CEM 5.1 spec is paywalled and unread; the Intel ATX 3.1 guide was read in full text for sideband, excursion and hold-up.
 - Exact 12V-2x6 pin lengths: secondary sources disagree.
 - Margin percentage: no reputable source.
+- Running cost (section 7): the EDF price of 1 August 2026 was not cross-checked on a CRE deliberation or the tariff order; idle and gaming power per part not stored (no measurement source read).
 - Radeon AI PRO R9700 power, PSU, connector: snippets only. R9700 partner dimensions not checked.
 - Other Radeon partners (XFX, PowerColor, ASRock, ASUS, Gigabyte): not checked. The Sapphire spec pages carry no publication date; the live page may differ from the indexed copy.
 - RTX 50 Super status: only NVIDIA's current page, which lists none.
@@ -216,3 +227,7 @@ Radeon addendum:
 - S8. https://www.sapphiretech.com/en/consumer/pulse-radeon-rx-7800-xt-16g-gddr6 (high, vendor)
 - S10. https://www.tomshardware.com/pc-components/gpus/amd-launches-radeon-ai-pro-r9700-to-challenge-nvidias-ai-market-dominance (snippet only, low)
 - S11. https://powercolor.com/product-detail255.htm (TLS error, snippet only, low)
+31. EDF, Tarif Bleu, "Prix de l'offre d'électricité Tarif Bleu (TTC)", option Base: https://particulier.edf.fr/fr/accueil/electricite-gaz/offres-electricite/tarif-bleu.html (redirects to /fr/accueil/electricite-gaz/tarif-bleu.html), read 2026-11-26 in the browser: full
+32. CRE, "Comprendre les tarifs réglementés de vente d'électricité" (page updated 20/01/2026): https://www.cre.fr/consommateurs/comprendre-les-tarifs-reglementes-de-vente-delectricite-trve.html, read 2026-11-26: full
+33. CLEAResult 80 PLUS, "What do the different PSU ratings mean?", 230V EU Internal Non-Redundant table: https://www.clearesult.com/80plus/80plus-psu-ratings-explained, read 2026-11-26 in the browser: full (no date shown)
+34. Cybenetics, ETA levels page (notice on automated collection): https://www.cybenetics.com/index.php?option=eta_9-51-40, read once 2026-11-26: full; values not stored (terms)
