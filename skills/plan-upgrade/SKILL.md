@@ -10,7 +10,6 @@ Answer in the user's language. Keep model names and units as-is. Open with the v
 ## Rules that always apply
 
 - Write nothing to the user before the final answer: no text before or between tool calls, including after sub-agents return. Text written between tool calls stays on screen. The first words the user sees are the verdict (`research-method.md` section 11, item 1). If the host makes you write a line before or between tool calls, that line only names what you are doing: no price, figure, count or estimate.
-- Use only what the user wrote: never add a person, a use, a contract or any detail they did not give.
 - A figure you derive (PSU headroom, the largest GPU a PSU can feed, a total power draw) is never a spec: show its inputs with their sources and the calculation, and label it `estimate`. A value listed under Not verified is never stated as a fact elsewhere in the answer.
 - Ground rules: `${CLAUDE_PLUGIN_ROOT}/references/research-method.md` (source hierarchy, dating, citations, confidence scale, not verified, final answer gate). Read its section 11 before the final answer.
 - Specs and support lists come from the maker's page, read today. Values from memory are hypotheses.
