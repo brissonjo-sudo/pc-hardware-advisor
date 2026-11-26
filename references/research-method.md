@@ -33,6 +33,7 @@ Rank sources in this order. Prefer the highest rank that answers the question.
 
 - Inline: `[n]` after each factual claim, with a numbered `## Sources` list in the answer.
 - Each source entry: title or site, URL, date read, read status (`full`, `partial`, `snippet only`, `blocked`, `browser (user session)`, `user screenshot`).
+- Citation markers that the host adds on its own (for example the citation chips a host shows next to web results) never replace `[n]`: the answer is copied, shared and checked as plain text, where those markers are lost. Every figure still carries its `[n]` and its Sources entry with URL, whatever the host displays.
 - Distinguish "fetched" (page read) from "snippet" (seen in search results only). A snippet supports at most `medium` confidence.
 - Every URL opened, cited or given to the user was found in a search result, on a page read, in a plugin reference file or in the user's message. Never build a product URL by guessing its slug, ID or colour variant, and never give one to the user, even marked unverified: when no URL was found, name the site and the product to search there.
 
@@ -105,6 +106,8 @@ Fill rules for the compact display: Date read in full ISO form (2026-11-07, neve
 Put every price row of a seller group in ONE table with the mandatory columns, all countries together (Country column), rather than one full table plus lighter secondary tables or bullet lists of prices. Seller groups: direct retailers, manufacturer stores and refurbishers / marketplaces / seller unconfirmed / excluded.
 
 In prose (summary lines, bullets), cite a price only together with its table row ("row 3: 529.99 EUR, Cybertek, direct retailer, FR, out of stock") or with the same mandatory fields. Never give a bare price in text. A price range quoted from a reference snapshot (for example used-market ranges) carries the snapshot date, region, currency and basis (sold or asking, sample) and the words "reference snapshot, verify". Out-of-stock rows never appear in a ranked table: list them under "Excluded".
+
+Shared catalogue: when two sites show the same item at product URLs with the same path and the same product ID, the offers may come from one catalogue. Count them as one price observation, never as two confirmations of a price, and say so in a note under the table, unless the pages show different legal sellers. Never state that the two sites belong to one company unless a page read (legal notice, imprint) says so.
 
 ## 7. Blocked, JavaScript-only and partial pages
 

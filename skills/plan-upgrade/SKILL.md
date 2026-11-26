@@ -67,6 +67,6 @@ From `${CLAUDE_PLUGIN_ROOT}/references/sockets-chipsets.md` ("AM5 longevity stat
    Running cost (when asked): hours, watts (source), kWh, price per kWh (source and date), yearly cost, labelled `estimate`.
    Resale (when asked): range, "sold" or "asking", count, period, region, date, source, confidence.
 4. Not verified: each value not sourced, and the test or page that would settle it.
-5. Sources, with the date each was read. Every figure taken from a review, a maker's page or a retailer (frame rate, percentage, wattage, length, price) carries an `[n]` citation, and every `[n]` is listed here with its URL, date read and read status. A figure with no source read today goes under Not verified, never in the text as a fact.
+5. Sources, with the date each was read. Every figure taken from a review, a maker's page or a retailer (frame rate, percentage, wattage, length, price) carries an `[n]` citation, and every `[n]` is listed here with its URL, date read and read status; the host's own citation chips never replace them (`research-method.md` section 3). A figure or fact with no source read today (a frame rate, a BIOS version or date, a connector count, a card length) goes under Not verified, never in the text as a fact.
 
 Run the self-check of `research-method.md` section 10 and the gate of section 11 before sending.
