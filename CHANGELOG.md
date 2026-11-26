@@ -6,6 +6,14 @@ The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.1.0/),
 
 ## [Unreleased]
 
+## [0.8.34] - 2026-11-26
+
+### Fixed
+
+- `plan-upgrade`: the seller type is one of the section 5 values, and a struck-through price carries "30-day reference not verified".
+- `plan-upgrade`: each `[n]` points to the page the figure was read on; a plugin file is cited only for what it contains; a source with no URL does not count; the EDF price is cited through `power-supplies-connectors.md` section 7 and its source [31].
+- `plan-upgrade`: a running-cost difference keeps the full range of its inputs.
+
 ## [0.8.33] - 2026-11-26
 
 ### Fixed
