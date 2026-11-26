@@ -6,6 +6,14 @@ The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.1.0/),
 
 ## [Unreleased]
 
+## [0.8.33] - 2026-11-26
+
+### Fixed
+
+- `research-method.md` section 3: host citation chips never replace `[n]` and the Sources entry with URL.
+- `research-method.md` section 6: two sites with the same product path and ID count as one price observation, never as two confirmations.
+- `plan-upgrade`: a fact with no source read today (BIOS version or date, connector count, card length) goes under Not verified, like a figure.
+
 ## [0.8.32] - 2026-11-26
 
 ### Fixed
