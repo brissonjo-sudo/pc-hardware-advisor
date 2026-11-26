@@ -6,6 +6,14 @@ The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.1.0/),
 
 ## [Unreleased]
 
+## [0.8.32] - 2026-11-26
+
+### Fixed
+
+- `plan-upgrade`: nothing written before the final answer; a figure measured on another model is only a clue; a derived figure shows its inputs and is labelled estimate; price rows use the mandatory columns; every review, maker or retailer figure carries an `[n]` listed in Sources with its URL.
+- `used-market-checklist.md` section 8: sold prices and the new-price upper bound must be the same model and variant.
+- Case 37: upgrade advice with resale and running cost (French), checks citations, working notes and the resale variant.
+
 ## [0.8.31] - 2026-11-26
 
 ### Added
