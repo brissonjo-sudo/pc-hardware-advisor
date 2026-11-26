@@ -6,6 +6,17 @@ The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.1.0/),
 
 ## [Unreleased]
 
+## [0.8.35] - 2026-11-26
+
+### Fixed
+
+- `build-config` now triggers on a replacement or competitor question for a named part ("can this replace my planned fans", "est-ce que ce modèle peut remplacer", "quel concurrent est aussi performant"); in a real conversation these questions ran with no skill.
+- `build-config` Step 0: a replacement or competitor is compared with the exact variant of the planned or owned part, with cited figures of the same kind; a part is called as good or better only on figures read for it; a saving uses the reference price read in the same answer.
+
+### Added
+
+- Test case `38-part-replacement` (French).
+
 ## [0.8.34] - 2026-11-26
 
 ### Fixed
