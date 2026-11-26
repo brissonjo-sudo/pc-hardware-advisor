@@ -6,6 +6,17 @@ The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.1.0/),
 
 ## [Unreleased]
 
+## [0.8.37] - 2026-11-27
+
+### Fixed
+
+- `plan-upgrade`: a resale estimate never yields a net cost or a budget fit unless it rests on sold data; no resale figure from search snippets of listings.
+- `used-market-checklist.md` section 8: search-result snippets of eBay or Leboncoin listings are not resale data (no range, count or net cost).
+
+### Added
+
+- Case 37 grader `resale-not-netted`.
+
 ## [0.8.36] - 2026-11-26
 
 ### Fixed
