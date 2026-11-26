@@ -6,6 +6,14 @@ The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.1.0/),
 
 ## [Unreleased]
 
+## [0.8.31] - 2026-11-26
+
+### Added
+
+- `power-supplies-connectors.md` section 7, running cost: formula, hours from the user, price per kWh from the user or EDF's regulated Base price as a dated reference, rated power as an upper bound only, 80 PLUS 230 V EU floors, Cybenetics never read automatically (its terms).
+- `plan-upgrade`: yearly electricity cost and the old-versus-new difference on request; description shortened to fit the new trigger.
+- Case 36: yearly electricity cost of a gaming PC (French).
+
 ## [0.8.30] - 2026-11-26
 
 ### Added
