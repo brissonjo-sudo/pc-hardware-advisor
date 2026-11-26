@@ -2,7 +2,7 @@
 
 ## Mémoire externe
 
-Vault : `C:\Users\Krn\Documents\ClaudeMemory\02-Projects\pc-hardware-advisor\`
+Vault : dossier `02-Projects/pc-hardware-advisor/` du vault de mémoire local de Jo (chemin dans son CLAUDE.md global, hors dépôt)
 (overview, architecture, decisions, conventions, journal). Plan source : `plan-source.md` dans ce dossier du vault (hors dépôt).
 
 ## Spécifique au projet
