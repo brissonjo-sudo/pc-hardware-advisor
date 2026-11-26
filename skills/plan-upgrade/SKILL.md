@@ -1,6 +1,6 @@
 ---
 name: plan-upgrade
-description: This skill should be used when the user owns a desktop PC and asks what to upgrade first, in any language. Trigger phrases include "what should I upgrade first", "is my CPU bottlenecking my GPU", "upgrade path for my build", "can I upgrade my GPU without changing the motherboard", "quelle pièce changer en premier", "mon processeur bride ma carte graphique", "améliorer mon PC pour jouer en 1440p". It names the part that limits the stated use, ranks the upgrades, checks each one against the parts kept, and says what the platform allows later. The user may write in any language. Not for a new build from scratch (use build-config), checking a given parts list (use check-compatibility), pricing one model (use hunt-prices), sizing for local AI (use size-local-ai) or judging a used listing (use review-used-listing). This skill never buys, never creates accounts and never contacts sellers.
+description: This skill should be used when the user owns a desktop PC and asks what to upgrade first, in any language. Trigger phrases include "what should I upgrade first", "is my CPU bottlenecking my GPU", "upgrade path for my build", "can I upgrade my GPU without changing the motherboard", "quelle pièce changer en premier", "mon processeur bride ma carte graphique", "améliorer mon PC pour jouer en 1440p", "how much can I sell my old GPU for", "combien vaut ma carte graphique d'occasion". It names the part that limits the stated use, ranks the upgrades, checks each one against the parts kept, says what the platform allows later, and estimates the resale of a replaced part. The user may write in any language. Not for a new build from scratch (use build-config), checking a given parts list (use check-compatibility), pricing one model (use hunt-prices), sizing for local AI (use size-local-ai) or judging a used listing (use review-used-listing). This skill never buys, never creates accounts and never contacts sellers.
 ---
 
 # Plan an upgrade for an existing PC
@@ -49,6 +49,7 @@ Name the limiting part with its evidence and confidence. With no evidence, write
 2. For each candidate, write what changes, its effect on the stated use (sourced, or "direction only"), and what it needs from the parts kept.
 3. Check every candidate against the parts kept with the `check-compatibility` method: read `${CLAUDE_PLUGIN_ROOT}/skills/check-compatibility/references/pair-checklist.md` and run the pairs it touches (CPU - board with the minimum BIOS, GPU - board, GPU - case, PSU - GPU, total power).
 4. Never propose a part that the rest of the PC cannot use (monitor, PSU, case or slot limits); say which limit blocks it.
+5. When the user will sell a replaced part, or asks what a part they own is worth, estimate its resale with `${CLAUDE_PLUGIN_ROOT}/references/used-market-checklist.md` section 8, apart from the upgrade cost. Without sold data from the user's region, say so and ask for a screenshot of sold results; never give a figure from a new price.
 
 ## Step 3: what the platform allows later
 
@@ -59,6 +60,7 @@ From `${CLAUDE_PLUGIN_ROOT}/references/sockets-chipsets.md` ("AM5 longevity stat
 1. Verdict: the limiting part and the first upgrade, in one or two sentences.
 2. Table: rank | upgrade | effect on the use (source, or "direction only") | needs (BIOS, PSU, case, slot) | compatibility verdict | price (row or "price to check").
 3. Platform: what it allows later, what forces a change.
+   Resale (when asked): range, "sold" or "asking", count, period, region, date, source, confidence.
 4. Not verified: each value not sourced, and the test or page that would settle it.
 5. Sources, with the date each was read.
 
