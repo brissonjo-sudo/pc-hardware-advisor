@@ -140,6 +140,20 @@ Use this when the user asks where to plug a part, or when the build has two or m
 
 Margin: the research gives no sourced clearance margin between card and case limit. If you recommend one, label it "plugin heuristic, not sourced". Without a margin, say how many millimetres remain and let the user judge.
 
+## 8. Airflow layout (on request)
+
+Read 2026-11-26: Noctua's two-part airflow guide and its fan-direction FAQ [48], NZXT's radiator mounting guide [49] and Corsair's AIO orientation guide [50]. These are maker guides (each maker sells fans, coolers or cases): cite them as such. For a given case, its manual and spec page win.
+
+1. Start from the case: its manual or spec page lists the fan sizes and the radiator size per position. NZXT: "Radiator support is listed per mounting position" [49]. A position the case does not list is not offered.
+2. One airflow path, with intake and exhaust on opposite sides. Noctua, front-to-back: front fans intake, rear fans exhaust; bottom fans generally intake, top fans exhaust; side intake slots (cases such as the Lian Li O11 Dynamic) count as front intake. Noctua recommends front-to-back over bottom-to-top "unless you are an experienced user with a specialised setup", and says to avoid two fans' air streams meeting head-on [48].
+3. Fan count (Noctua's baseline): 3 fans = 2 front intake and 1 rear exhaust; 5 fans = 3 front intake, 1 rear and 1 top exhaust (top position closest to the back); Noctua's table goes up to 9 [48]. With a tower air cooler, a top fan close to the front may be an intake [48].
+4. Fan direction: for Noctua fans, with the logo sticker facing you the air flows towards you, so the sticker faces the inside for intake and the outside for exhaust [48]. For other makers, take the direction from their manual; the meaning of frame arrows was not read on a maker page.
+5. AIO pump rule: the pump is never the highest point of the loop. NZXT: "the highest point of the radiator should always sit above the pump cap"; air in the pump brings noise, lower cooling and a shorter pump life; never mount the radiator at the bottom [49]. Corsair: mount "with the pump below the radiator"; air through the pump "can potentially weaken the pump over time" [50].
+6. Radiator position: top with exhaust fans is the first choice (NZXT, Corsair); front is the next option, with the radiator's top end above the pump (NZXT, Corsair) and, for Corsair, the tubes at the bottom [49] [50]. Tube direction: NZXT says it is preference with no noticeable temperature change, Corsair calls tubes down the best orientation: report both [49] [50].
+7. Radiator as intake or exhaust (Noctua): a front or side radiator with intake fans gives the lowest CPU temperatures, a top radiator with exhaust fans the lowest GPU temperatures; pair a front intake radiator with top and rear exhaust, and a top exhaust radiator with front or side intake [48]. NZXT: radiator size and fan setup matter more than top versus front [49].
+8. Case pressure (Noctua): positive pressure lets in less dust but warm air may build up; negative pressure expels warm air quickly but pulls dust through gaps and unfiltered panels; neutral is a compromise [48]. Present the trade-off; recommend one only after the user ranks dust against temperature, and give no pressure figure.
+9. Answer with one row per position: position | fan or radiator | intake or exhaust | reason (source) | condition. Check the radiator and fan thickness (pair check 7) and the headers and their current (pair check 12) in the same answer.
+
 ## Not verified
 
 - Official form-factor dimensions (formfactors.org, Intel SFX guide): board and SFX/SFX-L sizes are Wikipedia/Corsair only.
@@ -150,6 +164,7 @@ Margin: the research gives no sourced clearance margin between card and case lim
 - Mini-ITX board constraints (single M.2, VRM height, DIMM layout) and ITX PCIe layouts: nothing collected.
 - Partner GPU dimensions: only the ASUS Astral 5090 and the Sapphire pages were read first-hand; MSI and others are retailer-level. Other Radeon partners were not checked.
 - AM5 CPU lane split (16 + 4 + 4): not on AMD's chipset page; the 44 total is AMD's [47].
+- Airflow (section 8): only Noctua, NZXT and Corsair guides were read; Arctic, be quiet! and Lian Li airflow guidance not read. No maker-neutral measurement of case pressure. Noctua pages answered HTTP 429 to the fetch tool and were read in the browser (robots.txt allows `/`).
 - Lane sharing examples come from search summaries (manualowl, MSI, Gigabyte pages returned 403), not first-hand manual reads.
 - PCIe Simulator [46]: no licence or terms of use found; its data file and footer say "Tous droits réservés", which the home page wording contradicts. No API or MCP server (`/api`, `/mcp`, `/llms.txt` on pcie-simulator.vercel.app: HTTP 404, 2026-11-24).
 - 12V-2x6 bend radius: not published by NVIDIA or PCI-SIG in anything found; the 36 mm NVIDIA figure is space for cables, not a bend radius.
@@ -191,6 +206,9 @@ Numbers follow `research/r4-power-form-factors.md`; S-numbers follow `research/r
 - 45. https://www.msi.com/blog/pcie-lane-bifurcation-and-bandwidth-sharing-on-msi-x870e-x870-motherboards (403; search summary), ASUS ROG forum threads, elevenforum (low-medium)
 - 46. PCIe Simulator v2.1, https://www.pcie-simulator.fr/carte/ (board sheets; example https://www.pcie-simulator.fr/carte/asus-rog-crosshair-x870e-hero.html), https://www.pcie-simulator.fr/robots.txt and https://pcie-simulator.vercel.app/aide.html, read 2026-11-24: full; secondary, indicative (medium at best)
 - 47. AMD Socket AM5 Chipsets, specifications table, https://www.amd.com/en/products/processors/chipsets/am5.html, read 2026-11-26 in the browser: full (high)
+- 48. Noctua, "Airflow guide part 1 - the fundamentals" https://www.noctua.at/en/support/faqs/airflow-guide-fundamentals , "Airflow guide part 2 - setup ideas" https://www.noctua.at/en/support/faqs/airflow-guide-setup-ideas and "How do I determine my fan's airflow direction?" https://noctua.at/en/support/faqs/how-do-i-determine-my-fans-airflow-direction , read 2026-11-26 in the browser: full (maker guide)
+- 49. NZXT, "Where Should You Mount an AIO Radiator? Top, Front, or Bottom" (2026-08-17), https://nzxt.com/en-intl/blogs/news/aio-radiator-mounting-guide , read 2026-11-26 in the browser: full (maker guide)
+- 50. Corsair, "How should you mount your AIO?", https://www.corsair.com/eu/en/explorer/diy-builder/cpu-coolers/how-should-you-mount-your-aio/ , read 2026-11-26: full, no date shown (maker guide)
 - S3. https://www.sapphiretech.com/en/consumer/pulse-radeon-rx-9070-xt-16g-gddr6 (high)
 - S4. https://www.sapphiretech.com/en/consumer/nitro-radeon-rx-9070-xt-16g-gddr6 (high)
 - S5. https://www.sapphiretech.com/en/consumer/pulse-radeon-rx-9070-16g-gddr6 (high)

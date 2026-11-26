@@ -6,6 +6,14 @@ The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.1.0/),
 
 ## [Unreleased]
 
+## [0.8.28] - 2026-11-26
+
+### Added
+
+- `form-factors-cases.md` section 8, airflow layout: case manual first, one airflow path, Noctua's fan-count baseline, fan direction, AIO pump never the highest point, radiator position and intake or exhaust, case pressure as a trade-off (Noctua, NZXT and Corsair guides read 2026-11-26).
+- `check-compatibility` step 13 and pair check 13: airflow layout on request; new trigger phrases.
+- Case 33: airflow layout with a 360 mm AIO and six fans (French).
+
 ## [0.8.27] - 2026-11-26
 
 ### Added
