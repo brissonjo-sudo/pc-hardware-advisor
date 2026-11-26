@@ -28,6 +28,7 @@ Rank sources in this order. Prefer the highest rank that answers the question.
 - Use the "last updated" or publication date shown by a source when judging spec and review freshness. If none is shown, write "undated".
 - Never present an old figure as current. Re-read the page or flag it.
 - A price whose date is not shown, on the page or in the search snippet, is never a market point, a price range or an alternative's price: name it "undated, not used" or leave it out. A listing marked sold, reserved or "purchase in progress" is not a current asking price.
+- A page whose own content predates the read (a delivery date, a sale end or a stock date already past) is an old copy: date its prices "copy older than <that date>", confidence `low`, and never use them for a verdict, a headline, a budget gap or a saving. Re-read the product page; if it still shows the old copy, say the current price is not known.
 
 ## 3. Citation format
 

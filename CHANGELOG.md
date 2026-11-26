@@ -6,6 +6,13 @@ The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.1.0/),
 
 ## [Unreleased]
 
+## [0.8.36] - 2026-11-26
+
+### Fixed
+
+- `research-method.md` section 2: a page whose content predates the read (a delivery date already past) is an old copy; its prices are `low` confidence and never feed a verdict, a headline, a budget gap or a saving.
+- `plan-upgrade`: the price a budget verdict rests on comes from product pages of at least 3 direct retailers of the buyer's country when that many sell the part, not from listings alone; with fewer, the answer says how many were read.
+
 ## [0.8.35] - 2026-11-26
 
 ### Fixed
