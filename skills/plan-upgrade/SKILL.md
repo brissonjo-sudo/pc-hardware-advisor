@@ -9,9 +9,12 @@ Answer in the user's language. Keep model names and units as-is. Open with the v
 
 ## Rules that always apply
 
+- Write nothing to the user before the final answer: no text before or between tool calls, including after sub-agents return. Text written between tool calls stays on screen. The first words the user sees are the verdict (`research-method.md` section 11, item 1). If the host makes you write a line before or between tool calls, that line only names what you are doing: no price, figure, count or estimate.
+- Use only what the user wrote: never add a person, a use, a contract or any detail they did not give.
+- A figure you derive (PSU headroom, the largest GPU a PSU can feed, a total power draw) is never a spec: show its inputs with their sources and the calculation, and label it `estimate`. A value listed under Not verified is never stated as a fact elsewhere in the answer.
 - Ground rules: `${CLAUDE_PLUGIN_ROOT}/references/research-method.md` (source hierarchy, dating, citations, confidence scale, not verified, final answer gate). Read its section 11 before the final answer.
 - Specs and support lists come from the maker's page, read today. Values from memory are hypotheses.
-- Never invent a performance gain. A gain in frames per second or render time is given only from a dated review that tested the same parts (or the closest, named), cited as secondary with its conditions. Without one, give the direction only ("the GPU limits at 1440p") and the test that would confirm it.
+- Never invent a performance gain. A gain in frames per second or render time is given only from a dated review that tested the same parts (or the closest, named), cited as secondary with its conditions. Without one, give the direction only ("the GPU limits at 1440p") and the test that would confirm it. A figure measured on another model, even a close one (B570 for B580, an 8 GB card for its 16 GB version), is not that model's figure: give it only as a clue, naming the model tested.
 - Every priority below is a plugin heuristic unless a shared reference is named: label it so in the answer.
 - Prices: never invent one. Use the `hunt-prices` method for price rows; otherwise write "price to check".
 - Unread, blocked or JavaScript-only pages: record `blocked (<reason>)`. Never circumvent (no alternate user agents, caches, mirrors or archive copies); use the browser fallback of `research-method.md` section 7 for a page that matters, or ask the user for a screenshot or pasted text.
@@ -60,10 +63,11 @@ From `${CLAUDE_PLUGIN_ROOT}/references/sockets-chipsets.md` ("AM5 longevity stat
 
 1. Verdict: the limiting part and the first upgrade, in one or two sentences.
 2. Table: rank | upgrade | effect on the use (source, or "direction only") | needs (BIOS, PSU, case, slot) | compatibility verdict | price (row or "price to check").
+   Price rows use the mandatory columns of `research-method.md` section 6 (date read, item, seller as a link to the offer read, seller type, country, shown price and VAT status, landed or `excluding fees`, stock, confidence).
 3. Platform: what it allows later, what forces a change.
    Running cost (when asked): hours, watts (source), kWh, price per kWh (source and date), yearly cost, labelled `estimate`.
    Resale (when asked): range, "sold" or "asking", count, period, region, date, source, confidence.
 4. Not verified: each value not sourced, and the test or page that would settle it.
-5. Sources, with the date each was read.
+5. Sources, with the date each was read. Every figure taken from a review, a maker's page or a retailer (frame rate, percentage, wattage, length, price) carries an `[n]` citation, and every `[n]` is listed here with its URL, date read and read status. A figure with no source read today goes under Not verified, never in the text as a fact.
 
 Run the self-check of `research-method.md` section 10 and the gate of section 11 before sending.
