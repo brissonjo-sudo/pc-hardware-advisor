@@ -12,7 +12,7 @@ O Claude responde no idioma em que você escreve. Nomes de peças, SKUs e unidad
 
 ## O que ele faz
 
-Sete skills e um subagente.
+Oito skills e um subagente.
 
 - **`hunt-prices`**: encontra o melhor preço entregue (com IVA, impostos de importação e frete) para um item exato, em todo o mundo. Lojas diretas aparecem primeiro, os marketplaces são listados separadamente, e cada linha traz uma coluna de confiança. Ele usa o agente `price-scout` para ler vários sites em paralelo.
 - **`check-compatibility`**: dá vereditos em pares entre peças: compatível, compatível com condições ou incompatível. Um veredito condicional informa a condição exata e a fonte.
@@ -21,6 +21,7 @@ Sete skills e um subagente.
 - **`review-used-listing`**: analisa um anúncio de segunda mão e retorna um veredito: comprar, negociar ou evitar. Acrescenta perguntas para o vendedor, testes a fazer na entrega e uma margem de negociação.
 - **`track-price`**: configura reverificações agendadas de um preço, alerta você apenas quando ele cai abaixo do seu limite e mantém um arquivo de histórico. Nunca compra.
 - **`find-deals`**: avalia uma oferta que você traz para uma peça nova ou recondicionada: é mesmo mais barata do que nas outras lojas hoje, e a compra é segura? Uma oferta insegura é descartada, seja qual for o desconto. Para placas de vídeo, acrescenta o histórico de preços como contexto.
+- **`plan-upgrade`**: para um PC que você já tem, aponta a peça que limita o seu uso, ordena os upgrades, verifica cada um com as peças mantidas e diz o que a plataforma permite depois. Nunca inventa um ganho de desempenho.
 - **`price-scout`** (agente): lê várias páginas de lojas ou marketplaces para uma peça exata e retorna linhas de preço normalizadas, sem análise. O `hunt-prices` o inicia.
 
 Fora do escopo: consoles, smartphones, tablets, notebooks como produtos e qualquer coisa que compre ou entre em contato com vendedores.

@@ -16,7 +16,7 @@ REFS = [
     "retailers-by-country", "retailer-criteria", "international-buying", "research-method", "used-market-checklist",
     "source-access-policy",
 ]
-SKILLS = ["build-config", "check-compatibility", "hunt-prices", "size-local-ai", "review-used-listing", "track-price", "find-deals"]
+SKILLS = ["build-config", "check-compatibility", "hunt-prices", "size-local-ai", "review-used-listing", "track-price", "find-deals", "plan-upgrade"]
 BANNED = re.compile(r"(?i:open[- ]source)|\bMIT\b")
 errors: list[str] = []
 
