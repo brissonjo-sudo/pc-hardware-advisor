@@ -1,6 +1,6 @@
 {
   "name": "pc-hardware-advisor",
-  "version": "0.8.28",
+  "version": "0.8.29",
   "description": "PC hardware expertise: worldwide landed-price hunting, part compatibility checks, complete builds by need and budget, local-AI machine sizing, used-listing review, deal checks and price tracking.",
   "author": {
     "name": "Jo (brissonjo-sudo)",
@@ -23,14 +23,15 @@
   "interface": {
     "displayName": "PC Hardware Advisor",
     "shortDescription": "Build, price and check PCs",
-    "longDescription": "Find the lowest landed price for a PC part with every price dated and sourced, check that parts work together, design a complete build for a need and a budget, size hardware for local AI models, and judge second-hand listings. Reads public retailer pages only; never buys, logs in or contacts a seller.",
+    "longDescription": "Find the lowest landed price for a PC part with every price dated and sourced, check that parts work together, design a complete build for a need and a budget, size hardware for local AI models, judge second-hand listings, and plan upgrades of a PC you own. Reads public retailer pages only; never buys, logs in or contacts a seller.",
     "developerName": "Jo (brissonjo-sudo)",
     "category": "Productivity",
     "capabilities": [
       "Find prices",
       "Check compatibility",
       "Plan builds",
-      "Review used listings"
+      "Review used listings",
+      "Plan upgrades"
     ],
     "websiteURL": "https://github.com/brissonjo-sudo/pc-hardware-advisor",
     "defaultPrompt": [

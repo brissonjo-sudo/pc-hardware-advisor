@@ -12,7 +12,7 @@ Claude antwortet in der Sprache, in der du schreibst. Teilenamen, SKUs und Einhe
 
 ## Was es leistet
 
-Sieben Skills und ein Sub-Agent.
+Acht Skills und ein Sub-Agent.
 
 - **`hunt-prices`**: findet den besten Endpreis (geliefert, inklusive MwSt., Zöllen und Versand) für ein exakt bestimmtes Produkt, weltweit. Direkte Händler stehen an erster Stelle, Marktplätze werden separat aufgeführt, und jede Zeile hat eine Spalte für die Verlässlichkeit. Der Skill nutzt den Agenten `price-scout`, um mehrere Shops parallel auszulesen.
 - **`check-compatibility`**: gibt paarweise Urteile zwischen Teilen ab: kompatibel, kompatibel mit Bedingungen oder inkompatibel. Ein bedingtes Urteil nennt die genaue Bedingung und die Quelle.
@@ -21,6 +21,7 @@ Sieben Skills und ein Sub-Agent.
 - **`review-used-listing`**: prüft ein einzelnes Gebrauchtangebot und gibt ein Urteil ab: zugreifen, verhandeln oder meiden. Er liefert Fragen an den Verkäufer, Tests bei der Übergabe und eine Verhandlungsspanne.
 - **`track-price`**: richtet geplante Preisprüfungen ein, benachrichtigt dich nur, wenn der Preis unter deine Schwelle fällt, und führt eine Verlaufsdatei. Er kauft nie.
 - **`find-deals`**: prüft ein Angebot, das du mitbringst, für ein neues oder generalüberholtes Teil: Ist es heute wirklich günstiger als bei anderen Händlern, und ist der Kauf sicher? Ein unsicheres Angebot wird unabhängig vom Rabatt ausgeschlossen. Bei Grafikkarten zeigt es den Preisverlauf als Kontext.
+- **`plan-upgrade`**: nennt für einen PC, den du schon besitzt, das Teil, das deine Nutzung begrenzt, ordnet die Aufrüstungen, prüft jede gegen die behaltenen Teile und sagt, was die Plattform später erlaubt. Es erfindet nie einen Leistungsgewinn.
 - **`price-scout`** (Agent): liest mehrere Händler- oder Marktplatzseiten für ein exakt bestimmtes Teil aus und liefert normalisierte Preiszeilen ohne Analyse. `hunt-prices` startet ihn.
 
 Nicht im Umfang enthalten: Konsolen, Smartphones, Tablets, Laptops als Produkte sowie alles, was kauft oder Verkäufer kontaktiert.

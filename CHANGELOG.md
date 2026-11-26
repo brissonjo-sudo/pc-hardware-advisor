@@ -6,6 +6,17 @@ The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.1.0/),
 
 ## [Unreleased]
 
+## [0.8.29] - 2026-11-26
+
+### Added
+
+- Skill `plan-upgrade`: for a PC the user owns, the limiting part with its evidence (user measurement, dated review, platform facts), upgrades ranked and checked against the parts kept, platform limits later. No performance gain without a dated review.
+- Case 34: upgrade advice for an i5-10400F and a GTX 1660 at 1440p (French).
+
+### Changed
+
+- `build-config` hands an upgrade of an owned PC to `plan-upgrade`; README and translations list eight skills; build and content checks expect eight.
+
 ## [0.8.28] - 2026-11-26
 
 ### Added

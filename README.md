@@ -10,7 +10,7 @@ Claude answers in the language you write in. Part names, SKUs and units stay as 
 
 ## What it does
 
-Seven skills and one sub-agent.
+Eight skills and one sub-agent.
 
 - **`hunt-prices`**: finds the best landed price (delivered, with VAT, duties and shipping) for one exact item, worldwide. Direct retailers come first, marketplaces are listed separately, and each row carries a confidence column. It uses the `price-scout` agent to read several sites in parallel.
 - **`check-compatibility`**: gives pairwise verdicts between parts: compatible, compatible with conditions, or incompatible. A conditional verdict states the exact condition and the source.
@@ -19,6 +19,7 @@ Seven skills and one sub-agent.
 - **`review-used-listing`**: reviews one second-hand listing and returns a verdict: grab it, negotiate, or avoid. It adds questions for the seller, tests to run at handover, and a negotiation margin.
 - **`track-price`**: sets up scheduled re-checks of a price, alerts you only when it falls below your threshold, and keeps a history file. It never buys.
 - **`find-deals`**: judges a deal you bring, a pasted list of up to five deals, or the current deals of a category from a deal site it may read, on a new or refurbished part: is it really cheaper than other retailers today, and is the purchase safe? An unsafe offer is excluded whatever the discount. For graphics cards it adds the price history as context.
+- **`plan-upgrade`**: for a PC you already own, names the part that limits your use, ranks the upgrades, checks each one against the parts you keep, and says what the platform allows later. It never invents a performance gain.
 - **`price-scout`** (agent): reads several retailer or marketplace pages for one exact part and returns normalized price rows, with no analysis. `hunt-prices` launches it.
 
 Out of scope: consoles, smartphones, tablets, laptops as products, and anything that buys or contacts sellers.

@@ -1,6 +1,6 @@
 ---
 name: build-config
-description: This skill should be used when the user wants a complete desktop PC build proposed for a use and a budget, with a part-by-part table, dated landed prices, a cheaper and a stronger variant, and watch-outs, or one part chosen to match parts the user already owns. Trigger phrases include "build me a PC for", "what PC should I build with a budget of", "suggest a gaming build", "spec out a local AI workstation", "complete parts list for", "upgrade path for my build", "NAS or homelab build", "which motherboard for my 9800X3D", "quelle carte mère pour mon processeur". The user may write in any language. Not for checking one given parts list (use check-compatibility), pricing a single named model (use hunt-prices), sizing a model for a GPU only (use size-local-ai), judging a used listing (use review-used-listing), laptops, consoles or phones. This skill never buys, never creates accounts and never contacts sellers.
+description: This skill should be used when the user wants a complete desktop PC build proposed for a use and a budget, with a part-by-part table, dated landed prices, a cheaper and a stronger variant, and watch-outs, or one part chosen to match parts the user already owns. Trigger phrases include "build me a PC for", "what PC should I build with a budget of", "suggest a gaming build", "spec out a local AI workstation", "complete parts list for", "NAS or homelab build", "which motherboard for my 9800X3D", "quelle carte mère pour mon processeur". The user may write in any language. Not for checking one given parts list (use check-compatibility), pricing a single named model (use hunt-prices), sizing a model for a GPU only (use size-local-ai), judging a used listing (use review-used-listing), upgrading a PC the user already owns (use plan-upgrade), laptops, consoles or phones. This skill never buys, never creates accounts and never contacts sellers.
 ---
 
 # Build a complete desktop configuration
@@ -96,7 +96,7 @@ Fix every conflict by changing a part, then re-run the affected pairs. Never shi
 
 Produce one or two variants (one cheaper, one stronger). Each variant lists only the parts that change, the price delta (landed, same date and currency basis), and what the change buys or costs. Typical levers are in the playbook. Re-run compatibility for every changed part and every pair it touches. A stronger variant may exceed the budget: label it and give the overrun.
 
-Upgrade path on request: follow the "Upgrade path" section of `build-playbook.md`.
+Upgrade path for a PC the user already owns: hand over to the `plan-upgrade` skill; for a build proposed here, follow the "Upgrade path" section of `build-playbook.md`.
 
 ## Step 7: watch-outs and sacrifices
 
