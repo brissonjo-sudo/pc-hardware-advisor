@@ -6,6 +6,17 @@ The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.1.0/),
 
 ## [Unreleased]
 
+## [0.8.38] - 2026-11-27
+
+### Fixed
+
+- `plan-upgrade`: a price on an old page copy (a delivery, sale or stock date already past) is never the budget verdict nor the cheapest part that fits; the rule of `research-method.md` section 2 is now restated in the skill.
+- `used-market-checklist.md` section 8: eBay and Leboncoin are never read through the browser either, even on the user's yes, and the answer never offers to; it asks for a screenshot.
+
+### Added
+
+- Case 37 grader `resale-no-site-reading`.
+
 ## [0.8.37] - 2026-11-27
 
 ### Fixed
