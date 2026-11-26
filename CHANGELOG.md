@@ -6,6 +6,19 @@ The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.1.0/),
 
 ## [Unreleased]
 
+## [0.8.26] - 2026-11-26
+
+### Added
+
+- `form-factors-cases.md`, "How to place parts": a slot plan per part (CPU or chipset), the shared chipset link, the GPU x8 trade stated without any unsourced loss figure.
+- `sockets-chipsets.md`: DMI width and chipset lanes for H770, Z690, H670, B660 and H610 (Intel ARK); AMD's own AM5 chipset table (read in the browser); AM5 chipset link x4 from PCIe Simulator (secondary).
+- Case 31: slot placement on a named board (French).
+
+### Changed
+
+- `check-compatibility`: step 4 adds the slot plan on request or with two or more SSDs; new trigger phrases.
+- AMD's "44 lanes" figure is now sourced (X870E and X670E, platform total).
+
 ## [0.8.25] - 2026-11-24
 
 ### Added

@@ -94,7 +94,7 @@ Case specs differ between versions (V1, V2, V3, MAX): ask for the exact version.
 | Intel LGA1700 (Core i7-14700K, i9-14900K) | 20 lanes, PCIe 5.0 and 4.0 | 1x16+4 or 2x8+4: 16 Gen5 for the GPU + 4 Gen4 (M.2) | [27], [28] | high |
 | Intel LGA1851 (Core Ultra 9 285K) | 24 lanes (PCIe 5.0 and 4.0) | Up to 1x16+2x4, 2x8+2x4, 1x8+4x4 | [29] | high |
 | Intel Z790 chipset | Up to 28 PCIe lanes (max 20 Gen4, rest Gen3), 8 SATA ports, DMI 4.0 x8 | CPU lanes are separate | [41], [42] | high-medium |
-| AMD AM5 (X870E) | 24 PCIe 5.0 lanes from the CPU (16 GPU + 4 M.2 + 4 general); chipset adds downstream PCIe 4.0 / 3.0 | The AMD "44 lanes" total is unverified | [43] | medium (secondary only) |
+| AMD AM5 (X870E) | 24 PCIe 5.0 lanes from the CPU (16 GPU + 4 M.2 + 4 general); chipset adds downstream PCIe 4.0 / 3.0 | AMD lists "44/24" usable PCIe lanes in total / PCIe 5.0 for X870E and X670E (platform total, CPU plus chipset) | [43], [47] | medium (CPU split secondary); total high |
 
 ### Sharing examples (board-specific: read the exact manual)
 
@@ -120,6 +120,16 @@ A generic rule that "third and fourth M.2 share lanes with SATA ports 4-6" is un
 5. Report the result as: slot or socket populated, effect (x16 to x8, SATA n disabled), manual page, confidence. If the manual is unreachable, say "from search summary" and lower the confidence.
 6. Secondary cross-check: PCIe Simulator [46] publishes one static sheet per board (slots, lanes, bandwidth sharing, limits by CPU), at `https://www.pcie-simulator.fr/carte/<board>.html`. Take the sheet URL from its board index (`/carte/`), its sitemap (`/sitemap.xml`) or a search result, never by guessing the slug. robots.txt allows everything except `/annotate.html` (read 2026-11-24). Its rules are written by the site from the makers' manuals and labelled indicative ("donnés à titre indicatif"): confidence `medium` at best, always below the manual. Use it to find which sockets and slots to check in the manual, or when the manual is unreachable, cited as "PCIe Simulator sheet, read <date>, not the maker's manual". When it disagrees with the manual, the manual wins and the conflict is reported. Its data is marked "Tous droits réservés": cite and link it, never copy its tables into this plugin. The sheet's "Ouvrir dans le simulateur" link opens the interactive simulator, which runs in JavaScript: give the user that link to try their own combination, and never present its result as verified.
 
+### How to place parts
+
+Use this when the user asks where to plug a part, or when the build has two or more SSDs, an add-in card or a second GPU.
+
+1. Map every x16 slot and M.2 socket to the CPU or the chipset, from the manual's spec sheet or block diagram (step 1 above). The PCIe Simulator sheet's "Relié au" column is a secondary lead (step 6).
+2. Everything on the chipset shares one link to the CPU. Its width is in `sockets-chipsets.md`: DMI 4.0 x8 on Z690, H670, Z790, H770 and Z890; DMI 4.0 x4 on B660, H610, B760, B860 and H810; x4 on AM5 (PCIe Simulator, secondary). A chipset-linked device never gets more than that link, and two chipset devices busy at the same time (a copy between two chipset SSDs, a fast network card, USB) share it.
+3. Order of placement (plugin heuristic, not sourced; say so): the GPU on the CPU-linked x16 slot at its full width; the system and game SSD on a CPU-linked M.2 socket that shares nothing with the GPU slot; the other SSDs on chipset sockets, after checking which SATA ports each one disables; add-in cards on chipset slots unless the manual gives them CPU lanes.
+4. When the only free CPU-linked M.2 socket drops the GPU slot to x8, state the trade: the card would run at x8 and at which PCIe generation, and the SSD would avoid the shared chipset link. Leave the choice to the user. Never give a gaming or bandwidth loss figure unless a dated review measured that card at x8: cite it as secondary.
+5. Answer with one row per part: part | slot or socket | linked to (CPU or chipset) | effect on other ports | source (manual page, or PCIe Simulator sheet and date) | confidence.
+
 ## 7. Verdict rules for physical fit
 
 | Verdict | Condition |
@@ -139,7 +149,7 @@ Margin: the research gives no sourced clearance margin between card and case lim
 - NR200P MAX page shows conflicting heights (160 vs 140 mm).
 - Mini-ITX board constraints (single M.2, VRM height, DIMM layout) and ITX PCIe layouts: nothing collected.
 - Partner GPU dimensions: only the ASUS Astral 5090 and the Sapphire pages were read first-hand; MSI and others are retailer-level. Other Radeon partners were not checked.
-- AM5 CPU lane total and the AMD "44 lanes" figure: amd.com blocked.
+- AM5 CPU lane split (16 + 4 + 4): not on AMD's chipset page; the 44 total is AMD's [47].
 - Lane sharing examples come from search summaries (manualowl, MSI, Gigabyte pages returned 403), not first-hand manual reads.
 - PCIe Simulator [46]: no licence or terms of use found; its data file and footer say "Tous droits réservés", which the home page wording contradicts. No API or MCP server (`/api`, `/mcp`, `/llms.txt` on pcie-simulator.vercel.app: HTTP 404, 2026-11-24).
 - 12V-2x6 bend radius: not published by NVIDIA or PCI-SIG in anything found; the 36 mm NVIDIA figure is space for cables, not a bend radius.
@@ -180,6 +190,7 @@ Numbers follow `research/r4-power-form-factors.md`; S-numbers follow `research/r
 - 44. https://www.manualowl.com/m/MSI/MAG-Z790-TOMAHAWK-MAX-WIFI/Manual/723726?page=30 ; .../Gigabyte/Z790-AORUS-ELITE-AX/Manual/683762?page=28 ; .../Asus/ROG-MAXIMUS-Z790-EXTREME/Manual/683478?page=25 (search summaries, direct fetch 403, medium)
 - 45. https://www.msi.com/blog/pcie-lane-bifurcation-and-bandwidth-sharing-on-msi-x870e-x870-motherboards (403; search summary), ASUS ROG forum threads, elevenforum (low-medium)
 - 46. PCIe Simulator v2.1, https://www.pcie-simulator.fr/carte/ (board sheets; example https://www.pcie-simulator.fr/carte/asus-rog-crosshair-x870e-hero.html), https://www.pcie-simulator.fr/robots.txt and https://pcie-simulator.vercel.app/aide.html, read 2026-11-24: full; secondary, indicative (medium at best)
+- 47. AMD Socket AM5 Chipsets, specifications table, https://www.amd.com/en/products/processors/chipsets/am5.html, read 2026-11-26 in the browser: full (high)
 - S3. https://www.sapphiretech.com/en/consumer/pulse-radeon-rx-9070-xt-16g-gddr6 (high)
 - S4. https://www.sapphiretech.com/en/consumer/nitro-radeon-rx-9070-xt-16g-gddr6 (high)
 - S5. https://www.sapphiretech.com/en/consumer/pulse-radeon-rx-9070-16g-gddr6 (high)

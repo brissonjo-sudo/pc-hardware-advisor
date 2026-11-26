@@ -1,6 +1,6 @@
 # Sockets, chipsets and BIOS
 
-Last checked: 2026-11-07. Values change: verify online before concluding.
+Last checked: 2026-11-07 (chipset links and AMD chipset table: 2026-11-26). Values change: verify online before concluding.
 
 Use this file to judge CPU-board compatibility (socket, chipset, BIOS) for the `check-compatibility` and `build-config` skills. Every table below is dated 2026-11-07. Confidence levels come from research: high = primary page (Intel ARK, Intel support article, ASUS page) read; medium = reputable press, vendor page for one board, or a primary page seen only through a search summary; low = leak, forum, recall.
 
@@ -26,25 +26,44 @@ LGA1700 memory note: Intel's compatibility page gives DDR5 and DDR4 limits per g
 
 ## Intel chipset capabilities (checked 2026-11-07)
 
-CPU OC and memory OC from Intel ARK desktop chipsets table [14]. Lane counts are chipset lanes unless stated.
+CPU OC and memory OC from Intel ARK desktop chipsets table [14]. Lane counts are chipset lanes unless stated. DMI is the chipset's link to the CPU: every chipset-linked device shares it. DMI values for H770, Z690, H670, B660, H610 and H810 were read on their ARK pages on 2026-11-26 [44].
 
 | Chipset | CPU OC | Memory OC | PCIe (CPU / chipset) | Notes | Source |
 |---|---|---|---|---|---|
 | Z790 | Yes | Yes | CPU: PCIe 5.0 1x16 or 2x8, plus PCIe 4.0 1x4. Chipset: up to 28 lanes, PCIe 3.0/4.0, DMI 4.0 x8 | 2 DIMMs per channel, no ECC. Launch Q4 2022 | [14] [15] |
-| H770 | No | Yes | PCIe 3.0/4.0; lane count not verified | | [14] |
+| H770 | No | Yes | Chipset: up to 24 lanes, PCIe 3.0/4.0, DMI 4.0 x8 | | [14] [44] |
 | B760 | No | Yes | CPU: PCIe 5.0 1x16, PCIe 4.0 1x4. Chipset: 14 lanes max per ARK; the datasheet gives 4 Gen3 + 10 Gen4 and is internally inconsistent. DMI 4.0 x4 | Quote 14 as "per ARK", flag the inconsistency | [14] [16] |
-| Z690 | Yes | Yes | PCIe 3.0/4.0; lane count not verified | | [14] |
-| H670 / B660 | No | Yes | PCIe 3.0/4.0; lane counts not verified | | [14] |
-| H610 | No (nothing listed) | Not listed (blank on ARK) | Chipset PCIe 3.0 only | | [14] |
+| Z690 | Yes | Yes | Chipset: up to 28 lanes, PCIe 3.0/4.0, DMI 4.0 x8 | | [14] [44] |
+| H670 | No | Yes | Chipset: up to 24 lanes, PCIe 3.0/4.0, DMI 4.0 x8 | | [14] [44] |
+| B660 | No | Yes | Chipset: up to 14 lanes, PCIe 3.0/4.0, DMI 4.0 x4 | | [14] [44] |
+| H610 | No (nothing listed) | Not listed (blank on ARK) | Chipset: up to 8 lanes, PCIe 3.0 only, DMI 4.0 x4 | | [14] [44] |
 | Z890 | Yes (IA, BCLK, Memory) | Yes | CPU: PCIe 5.0 1x16+1x4, 2x8+1x4 or 1x8+3x4; PCIe 4.0 1x4. Chipset: 24 lanes PCIe 4.0, DMI 4.0 x8 | 2 DPC; launch Q4 2024. Only 800-series chipset with CPU OC and "200S Boost" | [3] [14] |
 | B860 | No | Yes | CPU: PCIe 5.0 1x16+1x4. Chipset: 14 lanes PCIe 4.0, DMI 4.0 x4 | 2 DPC; launch Q1 2025 | [14] [17] |
-| H810 | No | No | CPU: PCIe 5.0 x16 only. Chipset: 8 lanes PCIe 4.0, DMI x4 | 1 DIMM per channel (boards have 2 slots total); launch Q1 2025 | [14] [18] |
+| H810 | No | No | CPU: PCIe 5.0 x16 only. Chipset: 8 lanes PCIe 4.0, DMI 4.0 x4 | 1 DIMM per channel (boards have 2 slots total); launch Q1 2025 | [14] [18] [44] |
 
 "200S Boost" (Intel) requires a Z890 board plus XMP memory [4].
 
-## AMD chipset capabilities (checked 2026-11-07, amd.com blocked)
+## AMD chipset capabilities (amd.com table read 2026-11-26 in the browser; older rows checked 2026-11-07)
 
-AMD's chipset pages could not be read. The table mixes ASUS (high for ASUS products, medium as a chipset rule), HWCooling (pre-launch, 2024-08-28 / 2024-09-05), and a Corsair comparison table that appears to mirror AMD's. Anything marked "not re-verified" is recalled or from a search summary.
+AMD's AM5 chipset page, read in full in the browser on 2026-11-26 [45]. Values as published ("up to"); the graphics and NVMe columns are the processor's direct lanes, the USB and SATA columns come from the chipset. B650 and B650E are not in this table.
+
+| Chipset | Graphics (CPU lanes) | NVMe (plus PCIe GPP, up to) | Usable PCIe lanes total / PCIe 5.0 (up to) | CPU OC | DDR5 OC (EXPO) | USB 5 / 10 / 20 Gbps (up to) | SATA (or PCIe 3.0, up to) | USB4 | Source |
+|---|---|---|---|---|---|---|---|---|---|
+| X870E | 1x16 or 2x8, PCIe 5.0 | 1x4 PCIe 5.0 plus 4x PCIe GPP | 44 / 24 | Yes | Yes | 2 / 12 / 2 | 8 | Standard | [45] |
+| X870 | 1x16 or 2x8, PCIe 5.0 | 1x4 PCIe 5.0 plus 4x PCIe GPP | 36 / 24 | Yes | Yes | 1 / 6 / 1 | 4 | Standard | [45] |
+| B850 | 1x16 or 2x8, PCIe 4.0 | 1x4 PCIe 5.0 | 36 / 4 | Yes | Yes | 1 / 6 / 1 | 4 | Optional | [45] |
+| B840 | 1x16, PCIe 4.0 | 1x4 PCIe 4.0 | 34 / 0 | No | Yes | 2 / 2 / - | 4 | Optional | [45] |
+| X670E | 1x16 or 2x8, PCIe 5.0 | 1x4 PCIe 5.0 plus 4x PCIe GPP | 44 / 24 | Yes | Yes | 2 / 12 / 2 | 8 | Optional | [45] |
+| X670 | 1x16 or 2x8, PCIe 4.0 | 1x4 PCIe 5.0 plus 4x PCIe GPP | 44 / 8 | Yes | Yes | 2 / 12 / 2 | 8 | Optional | [45] |
+| A620 / A620A | 1x16, PCIe 4.0 | 1x4 PCIe 4.0 | 32 / 0 | No | Yes | 2 / 2 / - | 4 | Optional | [45] |
+
+Chipset link (CPU to chipset): AMD's table does not give it. PCIe Simulator board sheets read on 2026-11-26 give "x4 lien CPU ↔ chipset" for one board each of A620, B650, B650E, X670E, B840, B850, X870 and X870E, without its PCIe generation [46]. Use x4 with `medium` confidence at best (secondary); X670 was not read.
+
+### Older AMD rows (checked 2026-11-07, before amd.com was readable)
+
+Where these rows disagree with AMD's table above, AMD's table wins. They are kept for B650 and B650E, which AMD's table leaves out, and for the notes.
+
+The table mixes ASUS (high for ASUS products, medium as a chipset rule), HWCooling (pre-launch, 2024-08-28 / 2024-09-05), and a Corsair comparison table that appears to mirror AMD's. Anything marked "not re-verified" is recalled or from a search summary.
 
 | Chipset | CPU OC | Memory OC | GPU slot (CPU lanes) | M.2 (CPU lanes) | USB4 | Notes | Source | Confidence |
 |---|---|---|---|---|---|---|---|---|
@@ -61,7 +80,7 @@ Conflicts, shown side by side:
 - B840 GPU slot generation: Corsair table says PCIe 4.0 x16 or 2x8 [20]; the ASUS board page (PRIME B840-PLUS WIFI techspec, read 2026-11-08) says "1 x PCIe 4.0 x16 slot (supports x16 mode)"; the ASUS microsite says B840 is "PCIe 4.0 ready" and lists PCIe 4.0 and 3.0 M.2 [21]. A HWCooling pre-launch value of 3.0 is not supported by either and is dropped.
 - B850 GPU slot generation: Corsair table says PCIe 4.0 x16/2x8 [20]; HWCooling pre-launch says PCIe 5.0 x16 optional, x8/x8 supported [19]; the ASUS microsite (read 2026-11-08) says B850 boards are "PCIe 5.0 ready", X870/X870E offer up to two PCIe 5.0 x16 slots, and B850 has PCIe 5.0 M.2 [21]. ASUS and HWCooling agree on 5.0 per board; Corsair says 4.0.
 
-Do not state the B840 or B850 GPU-slot generation, or any 600-series GPU/M.2 rule, as fact. Read the specific board's spec page and quote it.
+AMD's own table [45] gives PCIe 4.0 for the B840 and B850 graphics slot and PCIe 5.0 for the B850 NVMe. A board page that claims PCIe 5.0 on a B850 graphics slot still decides for that board: quote it. For B650 and B650E, read the specific board's spec page and quote it.
 
 AMD's own rule, as relayed through a search summary of its chipset page (low): all AM5 boards with 600 or 800 series chipsets work with all AM5 processors, but a BIOS update may be needed for some Ryzen 8000/9000 on 600-series boards [12].
 
@@ -143,12 +162,13 @@ Use: when the user plans to upgrade only the CPU later, compare this with the AM
 
 ## Not verified
 
-- amd.com blocked (timeout) on 2026-11-07: AM4 and AM5 chipset pages, Computex blog, CPU spec pages, EXPO page, FAQ cpu-99. All AMD-primary items remain open. Try once, then use board-vendor pages or a user screenshot.
+- amd.com: the AM5 chipset page was read in the browser on 2026-11-26 [45]. Blocked (timeout) on 2026-11-07, and not re-tried since: AM4 chipset page, Computex blog, CPU spec pages, EXPO page, FAQ cpu-99. All AMD-primary items remain open. Try once, then use board-vendor pages or a user screenshot.
 - AM5 chipset tables for 600 series (A620, B650, B650E GPU/M.2 rules) not re-read on an AMD page; B840/B850 GPU slot generation in conflict (above).
 - Full AM4 official matrix not captured; only ASUS B450M-A II and A520M-K lists. ASUS X370/B350/A320 pages returned no CPU list; an MSI page returned HTTP 403 (not bypassed).
 - AGESA minimum per SKU (Ryzen 9000, 9800X3D on 600 series): not found on a primary page.
 - CPU lane totals for Ryzen 7000/9000 (28/24) and 8000G (20): not confirmed on an AMD page.
-- Intel lane counts for H770, Z690, H670, B660, H610; B760 datasheet inconsistent (14 vs other values).
+- B760 datasheet inconsistent (14 vs other values).
+- AMD chipset link: width only from PCIe Simulator (x4, secondary), generation not found; X670 not read. The two-die design of X670, X670E and X870E comes from HWCooling [19], not from AMD.
 - Whether Intel's Vmin scope is K-only or not: Intel names no SKU list. Microcode 0x129 and 0x125 content not read.
 - Intel article 000092983 (ME firmware on ASUS 600 boards) not read.
 - Nova Lake: nothing official beyond "2026" guidance; product, socket and chipset names are leaks. Zen 6 status relies on press.
@@ -200,3 +220,6 @@ All checked 2026-11-07.
 41. Club386, Intel confirms Arrow Lake refresh and Nova Lake (2025-09-10, read 2026-11-14; Intel quote via Seeking Alpha, socket line is the writer's): https://www.club386.com/intel-confirms-arrow-lake-refresh-and-nova-lake-will-arrive-in-2026/
 42. PC Games Hardware, LGA1851 and Nova Lake-S socket leak (2025-06-02, read 2026-11-14; Intel did not confirm): https://www.pcgameshardware.de/Arrow-Lake-S-Codename-280890/News/LGA1851-Desktop-CPU-Intel-Bestaetigung-1474085/
 43. Pause Hardware, LGA1954 for Nova Lake-S from an Intel validation-tool listing (updated 2026-08-29, read 2026-11-14 via summary): https://pausehardware.com/lga1954-intel-nova-lake-s/
+44. Intel ARK chipset specification pages, "Expansion Options" (DMI revision, max DMI lanes, max PCIe lanes), read 2026-11-26: H770 https://www.intel.com/content/www/us/en/products/sku/229720/intel-h770-chipset/specifications.html ; Z690 https://www.intel.com/content/www/us/en/products/sku/218833/intel-z690-chipset/specifications.html ; H670 https://www.intel.com/content/www/us/en/products/sku/218831/intel-h670-chipset/specifications.html ; B660 https://www.intel.com/content/www/us/en/products/sku/218832/intel-b660-chipset/specifications.html ; H610 https://www.intel.com/content/www/us/en/products/sku/218829/intel-h610-chipset/specifications.html ; H810 https://www.intel.com/content/www/us/en/products/sku/241150/intel-h810-chipset/specifications.html (full; B660, Z690 and H610 re-read in the browser)
+45. AMD Socket AM5 Chipsets, specifications table: https://www.amd.com/en/products/processors/chipsets/am5.html, read 2026-11-26 in the browser: full (the fetch tool timed out)
+46. PCIe Simulator board sheets, "En bref" block, read 2026-11-26 (secondary, indicative): https://www.pcie-simulator.fr/carte/asrock-a620am-pro-rs.html ; .../asus-prime-b650-plus.html ; .../asus-tuf-gaming-b650e-plus-wifi.html ; .../asrock-x670e-taichi.html ; .../asus-prime-b840-plus-wifi.html ; .../asus-prime-b850-plus.html ; .../asrock-x870-nova-wifi.html ; .../asus-rog-crosshair-x870e-hero.html
