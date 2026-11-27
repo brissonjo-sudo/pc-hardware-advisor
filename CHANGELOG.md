@@ -6,6 +6,16 @@ The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.1.0/),
 
 ## [Unreleased]
 
+## [0.8.39] - 2026-11-27
+
+### Fixed
+
+- `plan-upgrade`: the budget verdict needs product pages of 3 direct retailers, read in a new Step 2 item 4 before the answer; "fewer" means fewer sell the part, not fewer were read. A cheaper listing or snippet is read on its product page first, or the verdict says it may change and never states that no part fits. Step 4 point 1 counts the retailers before the verdict is written.
+
+### Added
+
+- Case 37 grader `verdict-three-retailers`.
+
 ## [0.8.38] - 2026-11-27
 
 ### Fixed
