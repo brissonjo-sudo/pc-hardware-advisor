@@ -6,6 +6,17 @@ The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.1.0/),
 
 ## [Unreleased]
 
+## [0.8.40] - 2026-11-27
+
+### Fixed
+
+- `plan-upgrade` Step 2 item 4: on LDLC, Rue du Commerce, Amazon and the other marketplaces, the seller line of each product page is read and types the row; a site name alone never makes a row `direct retailer`.
+- `plan-upgrade` Rules, Prices: an unread cheaper offer forbids "no part fits the budget" only when it is at or under the budget; an offer above the budget may still change the cheapest price and is kept as a lead.
+
+### Added
+
+- Case 37 grader `marketplace-seller-typed`; `verdict-three-retailers` clause 2 limited to unread offers at or under the budget.
+
 ## [0.8.39] - 2026-11-27
 
 ### Fixed
